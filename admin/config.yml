@@ -17,10 +17,6 @@ locale: tr
 
 media_folder: "images/photos"
 public_folder: "images/photos"
-media_library:
-  name: default
-  config:
-    max_file_size: 6000000  # 6 MB
 
 # Not: Metin alanlarında *iki yıldız arasına* yazdığın kelimeler sitede italik görünür (tür adları için).
 # İngilizce (EN) alanları boş bırakırsan sitede Türkçe metin kullanılır.
