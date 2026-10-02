@@ -1,6 +1,12 @@
 {
   "photos": [
     {
+      "image": "images/photos/img_8861.jpg",
+      "tr_name": "Step Kertenkelesi",
+      "latin": "*Eremias strauchii*",
+      "date": "2017"
+    },
+    {
       "image": "images/photos/ablepharus-anatolicus-01.jpg",
       "thumb": "images/photos/ablepharus-anatolicus-01-k.jpg",
       "tr_name": "Anadolu İnce Kertenkelesi",
