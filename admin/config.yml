@@ -4,6 +4,8 @@ backend:
   name: github
   repo: MKurnaz61/muammerkurnaz.com
   branch: main
+  base_url: https://api.netlify.com
+  site_domain: splendid-faun-77c026.netlify.app
   commit_messages:
     create: "{{collection}}: {{slug}} eklendi"
     update: "{{collection}}: {{slug}} güncellendi"
