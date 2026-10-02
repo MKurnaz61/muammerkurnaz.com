@@ -1,0 +1,211 @@
+{
+  "positions": [
+    {
+      "period_tr": "2023’ten beri",
+      "period_en": "2023 to present",
+      "title_tr": "Doçent",
+      "title_en": "Associate Professor",
+      "place_tr": "Gümüşhane Üniversitesi, Kelkit Sema Doğan Sağlık Hizmetleri MYO, Tıbbi Hizmetler ve Teknikler Bölümü",
+      "place_en": "Gümüşhane University, Kelkit Sema Doğan Vocational School of Health Services, Department of Medical Services and Techniques"
+    },
+    {
+      "period_tr": "2020–2023",
+      "period_en": "2020–2023",
+      "title_tr": "Doktor Öğretim Üyesi",
+      "title_en": "Assistant Professor",
+      "place_tr": "Gümüşhane Üniversitesi, Kelkit Sağlık Hizmetleri MYO, Tıbbi Hizmetler ve Teknikler Bölümü",
+      "place_en": "Gümüşhane University, Kelkit Vocational School of Health Services, Department of Medical Services and Techniques"
+    }
+  ],
+  "education": [
+    {
+      "period": "2015–2019",
+      "degree_tr": "Doktora, Biyoloji",
+      "degree_en": "PhD, Biology",
+      "school_tr": "Karadeniz Teknik Üniversitesi",
+      "school_en": "Karadeniz Technical University"
+    },
+    {
+      "period": "2013–2015",
+      "degree_tr": "Yüksek Lisans, Biyoloji",
+      "degree_en": "MSc, Biology",
+      "school_tr": "Karadeniz Teknik Üniversitesi",
+      "school_en": "Karadeniz Technical University"
+    },
+    {
+      "period": "2007–2013",
+      "degree_tr": "Lisans, Biyoloji",
+      "degree_en": "BSc, Biology",
+      "school_tr": "Karadeniz Teknik Üniversitesi",
+      "school_en": "Karadeniz Technical University"
+    }
+  ],
+  "theses": [
+    {
+      "year": "2019",
+      "type_tr": "Doktora tezi",
+      "type_en": "PhD thesis",
+      "title": "Türkiye'deki *Darevskia parvula* (Lantz ve Cyren, 1913) popülasyonları arasındaki filogenetik ilişkilerin incelenmesi.",
+      "supervisor": "Prof. Dr. Bilal Kutrup, KTÜ Fen Bilimleri Enstitüsü."
+    },
+    {
+      "year": "2015",
+      "type_tr": "Yüksek lisans tezi",
+      "type_en": "MSc thesis",
+      "title": "Artvin Kertenkelesi (*Darevskia derjugini*; Nikolsky, 1898)'nin Türkiye'de yayılış gösteren iki alttürüne ait morfolojik varyasyonların incelenmesi.",
+      "supervisor": "Prof. Dr. Bilal Kutrup, KTÜ Fen Bilimleri Enstitüsü."
+    }
+  ],
+  "editorial": [
+    {
+      "period_tr": "2021’den beri",
+      "period_en": "2021 to present",
+      "journal": "Bulletin of Basrah Natural History Museum"
+    },
+    {
+      "period_tr": "2021–2025",
+      "period_en": "2021–2025",
+      "journal": "Environmental Toxicology and Ecology"
+    },
+    {
+      "period_tr": "2021–2025",
+      "period_en": "2021–2025",
+      "journal": "Zoological and Entomological Letters"
+    },
+    {
+      "period_tr": "2019–2020",
+      "period_en": "2019–2020",
+      "journal": "Journal of Zoological Research"
+    }
+  ],
+  "reviews": [
+    {
+      "journal": "Turkish Journal of Zoology",
+      "count": 7
+    },
+    {
+      "journal": "Diversity",
+      "count": 7
+    },
+    {
+      "journal": "Biology",
+      "count": 6
+    },
+    {
+      "journal": "Journal of Wildlife and Biodiversity",
+      "count": 3
+    },
+    {
+      "journal": "Communications Faculty of Sciences University of Ankara Series C Biology",
+      "count": 3
+    },
+    {
+      "journal": "Animals",
+      "count": 2
+    },
+    {
+      "journal": "Commagene Journal of Biology",
+      "count": 2
+    },
+    {
+      "journal": "Doğanın Sesi",
+      "count": 2
+    },
+    {
+      "journal": "Ecology and Evolution",
+      "count": 2
+    },
+    {
+      "journal": "Frontiers in Amphibians and Reptiles",
+      "count": 2
+    },
+    {
+      "journal": "Journal of Animal Diversity",
+      "count": 2
+    },
+    {
+      "journal": "Journal of Biogeography",
+      "count": 2
+    },
+    {
+      "journal": "Zoology in the Middle East",
+      "count": 2
+    },
+    {
+      "journal": "Academia Edu",
+      "count": 1
+    },
+    {
+      "journal": "Annals of Animal Science",
+      "count": 1
+    },
+    {
+      "journal": "Bulletin of Basrah Natural History Museum",
+      "count": 1
+    },
+    {
+      "journal": "Celal Bayar University Journal of Science",
+      "count": 1
+    },
+    {
+      "journal": "Clinical and Experimental Pharmacology and Physiology",
+      "count": 1
+    },
+    {
+      "journal": "Environmental Toxicology and Ecology",
+      "count": 1
+    },
+    {
+      "journal": "Food Bioscience",
+      "count": 1
+    },
+    {
+      "journal": "Frontiers in Cellular and Infection Microbiology",
+      "count": 1
+    },
+    {
+      "journal": "Gümüşhane Üniversitesi Fen Bilimleri Dergisi",
+      "count": 1
+    },
+    {
+      "journal": "International Journal of Biometeorology",
+      "count": 1
+    },
+    {
+      "journal": "Italian Journal of Zoology",
+      "count": 1
+    },
+    {
+      "journal": "Journal of Apitherapy and Nature",
+      "count": 1
+    },
+    {
+      "journal": "Journal of Marine Science and Engineering",
+      "count": 1
+    },
+    {
+      "journal": "Journal of Thermal Biology",
+      "count": 1
+    },
+    {
+      "journal": "Journal of Zoological Research",
+      "count": 1
+    },
+    {
+      "journal": "Nature Conservation Research",
+      "count": 1
+    },
+    {
+      "journal": "Smyrna Journal of Natural and Data Sciences",
+      "count": 1
+    },
+    {
+      "journal": "Şırnak Üniversitesi Fen Bilimleri Dergisi",
+      "count": 1
+    },
+    {
+      "journal": "Tropical Ecology",
+      "count": 1
+    }
+  ]
+}

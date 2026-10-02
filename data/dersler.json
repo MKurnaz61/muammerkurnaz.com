@@ -1,0 +1,16 @@
+{
+  "courses": [
+    {
+      "tr": "Anatomi",
+      "en": "Anatomy"
+    },
+    {
+      "tr": "Fizyoloji",
+      "en": "Physiology"
+    },
+    {
+      "tr": "Tıbbi Terminoloji",
+      "en": "Medical Terminology"
+    }
+  ]
+}

@@ -1,0 +1,77 @@
+muammerkurnaz.com - Yayına alma ve düzenleme rehberi
+=====================================================
+
+KLASÖRDEKİLER
+  index.html        Ana sayfa
+  yazilar.html      Yazılar sayfası
+  data/             Sitedeki tüm metinler (genel bilgiler, araştırma, projeler, yayınlar, özgeçmiş, dersler)
+  photos.json       Fotoğraf listesi
+  posts.json        Yazı listesi
+  images/photos/    Fotoğraf dosyaları
+  admin/            Yönetim paneli (muammerkurnaz.com/admin)
+
+A. BİR KEZ YAPILACAK KURULUM
+-----------------------------
+1. GitHub hesabı
+   github.com'da ücretsiz hesap aç. Sağ üstteki "+" > "New repository".
+   Adı: muammerkurnaz.com   Görünürlük: Public   > "Create repository".
+
+2. Panel ayarı
+   admin/config.yml içinde depo adresi hazır: MKurnaz61/muammerkurnaz.com
+
+3. Dosyaları GitHub'a yükle
+   Depo sayfasında "uploading an existing file" bağlantısına tıkla.
+   GitHub bir seferde en fazla 100 dosya kabul eder. Bu yüzden iki adımda yükle:
+     a) index.html, yazilar.html, photos.json, posts.json, YAYIN_REHBERI.txt,
+        admin ve data klasörleri  > "Commit changes"
+     b) images klasörü (içinde 130'dan fazla fotoğraf var; gerekirse
+        images/photos içindekileri iki yarıya bölüp ayrı ayrı yükle)
+   Klasörleri sürükleyip bırakınca içindeki yapı korunur.
+
+4. Netlify'a bağla
+   app.netlify.com > "Add new site" > "Import an existing project" > GitHub
+   > muammerkurnaz.com deposunu seç. Ayarlara dokunmadan "Deploy".
+
+5. Alan adını bağla
+   Netlify'da: Domain management > Add a domain > muammerkurnaz.com
+   Alan adını aldığın firmanın DNS panelinde:
+     A kaydı      @     75.2.60.5
+     CNAME kaydı  www   (Netlify'ın verdiği ...netlify.app adresi)
+   Netlify'ın "Pending DNS verification" penceresinde farklı değer görürsen onu kullan.
+   HTTPS sertifikası birkaç dakika ile birkaç saat içinde kendiliğinden kurulur.
+
+6. Panel girişini aç
+   GitHub'da: sağ üstte profil resmi > Settings > Developer settings > OAuth Apps > New OAuth App
+     Application name:            muammerkurnaz.com
+     Homepage URL:                https://muammerkurnaz.com
+     Authorization callback URL:  https://api.netlify.com/auth/done
+   "Register application" > "Generate a new client secret".
+   Client ID ve Client Secret değerlerini kopyala.
+   Netlify'da: Site configuration > Access & security > OAuth > Install provider > GitHub
+   İki değeri yapıştır, kaydet.
+
+B. GÜNLÜK KULLANIM
+------------------
+   https://muammerkurnaz.com/admin  >  "Login with GitHub"
+   Panelde 8 bölüm var:
+     1. Ana sayfa ve iletişim   2. Araştırma alanları   3. Projeler   4. Yayınlar
+     5. Özgeçmiş                6. Dersler              7. Fotoğraflar 8. Yazılar
+   Her listede: "Ekle" ile yeni kayıt, kaydın yanındaki çöp kutusu ile silme,
+   tutup sürükleyerek sıra değiştirme.
+   "Publish" (Yayınla) dediğinde site 1-2 dakika içinde güncellenir.
+
+   İpuçları
+   - Tür adlarını italik yapmak için yıldız kullan:  *Darevskia clarkorum*
+   - İngilizce (EN) alanları boş bırakırsan sitede Türkçe metin görünür.
+   - Makalelerde DOI'yi yalnızca numara olarak yaz: 10.3390/d18070429
+
+   Yetki: Panele yalnızca bu GitHub deposuna yazma yetkisi olan hesap girebilir,
+   yani yalnızca sen.
+
+C. ELLE DÜZENLEME
+-----------------
+   Panel dışındaki her şeyi (renkler, sayfa düzeni, kod) GitHub'da düzenleyebilirsin:
+   Depoda dosyaya tıkla > sağ üstteki kalem simgesi > değiştir > "Commit changes".
+   Netlify değişikliği 1-2 dakika içinde yayına alır.
+   Bir değişiklik bir şeyi bozarsa: Netlify > Deploys > önceki sürüm > "Publish deploy"
+   ile anında eski haline dönebilirsin.

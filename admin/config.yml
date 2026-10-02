@@ -1,0 +1,324 @@
+# muammerkurnaz.com yönetim paneli (Decap CMS)
+# Tek değiştirmen gereken satır: "repo". GitHub kullanıcı adını yaz.
+backend:
+  name: github
+  repo: MKurnaz61/muammerkurnaz.com
+  branch: main
+  commit_messages:
+    create: "{{collection}}: {{slug}} eklendi"
+    update: "{{collection}}: {{slug}} güncellendi"
+    delete: "{{collection}}: {{slug}} silindi"
+    uploadMedia: "Dosya yüklendi: {{path}}"
+    deleteMedia: "Dosya silindi: {{path}}"
+
+site_url: https://muammerkurnaz.com
+display_url: https://muammerkurnaz.com
+locale: tr
+
+media_folder: "images/photos"
+public_folder: "images/photos"
+media_library:
+  name: default
+  config:
+    max_file_size: 6000000  # 6 MB
+
+# Not: Metin alanlarında *iki yıldız arasına* yazdığın kelimeler sitede italik görünür (tür adları için).
+# İngilizce (EN) alanları boş bırakırsan sitede Türkçe metin kullanılır.
+
+collections:
+
+  # ---------------------------------------------------------------- 1. Genel bilgiler
+  - name: "genel"
+    label: "1. Ana sayfa ve iletişim"
+    editor: { preview: false }
+    files:
+      - name: "genel"
+        label: "Ana sayfa, rakamlar ve iletişim bilgileri"
+        file: "data/genel.json"
+        fields:
+          - { label: "Üst satır (TR)", name: "eyebrow_tr", widget: "string" }
+          - { label: "Üst satır (EN)", name: "eyebrow_en", widget: "string", required: false }
+          - { label: "Ana başlık (TR)", name: "headline_tr", widget: "text" }
+          - { label: "Ana başlık (EN)", name: "headline_en", widget: "text", required: false }
+          - { label: "Tanıtım paragrafı (TR)", name: "lede_tr", widget: "text" }
+          - { label: "Tanıtım paragrafı (EN)", name: "lede_en", widget: "text", required: false }
+          - { label: "Unvan satırı (TR)", name: "role_tr", widget: "string" }
+          - { label: "Unvan satırı (EN)", name: "role_en", widget: "string", required: false }
+          - { label: "Son çalışmalar kutusundaki yıl", name: "recent_year", widget: "string", required: false }
+          - label: "Son çalışmalar"
+            name: "recent"
+            widget: "list"
+            summary: "{{fields.title}}"
+            fields:
+              - { label: "Başlık", name: "title", widget: "string" }
+              - { label: "Dergi", name: "venue", widget: "string" }
+              - { label: "DOI (ör. 10.21426/b6.65700) veya tam bağlantı", name: "doi", widget: "string", required: false }
+          - label: "Rakamlar (makale, atıf, h-indeksi...)"
+            name: "stats"
+            widget: "list"
+            summary: "{{fields.value}} {{fields.tr}}"
+            fields:
+              - { label: "Sayı", name: "value", widget: "string" }
+              - { label: "Açıklama (TR)", name: "tr", widget: "string" }
+              - { label: "Açıklama (EN)", name: "en", widget: "string", required: false }
+          - label: "Tanımlanan yeni türler"
+            name: "species"
+            widget: "list"
+            summary: "{{fields.name}}"
+            fields:
+              - { label: "Tür adı", name: "name", widget: "string" }
+              - { label: "Tanım makalesinin DOI'si", name: "doi", widget: "string", required: false }
+          - { label: "Ek atıf bilgisi satırı (TR)", name: "metrics_tr", widget: "string", required: false }
+          - { label: "Ek atıf bilgisi satırı (EN)", name: "metrics_en", widget: "string", required: false }
+          - { label: "Adres (TR)", name: "address_tr", widget: "text" }
+          - { label: "Adres (EN)", name: "address_en", widget: "text", required: false }
+          - label: "E-posta adresleri"
+            name: "emails"
+            widget: "list"
+            summary: "{{fields.email}}"
+            fields:
+              - { label: "E-posta", name: "email", widget: "string" }
+          - label: "Profil bağlantıları"
+            name: "links"
+            widget: "object"
+            fields:
+              - { label: "Google Scholar", name: "scholar", widget: "string", required: false }
+              - { label: "YÖK Akademik", name: "yok", widget: "string", required: false }
+              - { label: "ResearchGate", name: "researchgate", widget: "string", required: false }
+              - { label: "ORCID numarası", name: "orcid", widget: "string", required: false }
+              - { label: "OpenAlex", name: "openalex", widget: "string", required: false }
+
+  # ---------------------------------------------------------------- 2. Araştırma
+  - name: "arastirma"
+    label: "2. Araştırma alanları"
+    editor: { preview: false }
+    files:
+      - name: "arastirma"
+        label: "Çalışma alanları ve uzmanlık etiketleri"
+        file: "data/arastirma.json"
+        fields:
+          - label: "Çalışma alanları"
+            name: "themes"
+            widget: "list"
+            summary: "{{fields.title_tr}}"
+            fields:
+              - { label: "Başlık (TR)", name: "title_tr", widget: "string" }
+              - { label: "Başlık (EN)", name: "title_en", widget: "string", required: false }
+              - { label: "Açıklama (TR)", name: "text_tr", widget: "text" }
+              - { label: "Açıklama (EN)", name: "text_en", widget: "text", required: false }
+          - label: "Uzmanlık alanları"
+            name: "expertise"
+            widget: "list"
+            summary: "{{fields.tr}}"
+            fields:
+              - { label: "TR", name: "tr", widget: "string" }
+              - { label: "EN", name: "en", widget: "string", required: false }
+
+  # ---------------------------------------------------------------- 3. Projeler
+  - name: "projeler"
+    label: "3. Projeler"
+    editor: { preview: false }
+    files:
+      - name: "projeler"
+        label: "Süren ve tamamlanan projeler"
+        file: "data/projeler.json"
+        fields:
+          - label: "Süren projeler"
+            name: "ongoing"
+            widget: "list"
+            summary: "{{fields.title_tr}}"
+            fields:
+              - { label: "Proje adı (TR)", name: "title_tr", widget: "text" }
+              - { label: "Proje adı (EN)", name: "title_en", widget: "text", required: false }
+              - { label: "Kurum / destek (TR)", name: "funder_tr", widget: "string" }
+              - { label: "Kurum / destek (EN)", name: "funder_en", widget: "string", required: false }
+              - { label: "Görev (TR)", name: "role_tr", widget: "string" }
+              - { label: "Görev (EN)", name: "role_en", widget: "string", required: false }
+              - { label: "Süre (ay)", name: "months", widget: "string", required: false }
+          - label: "Tamamlanan projeler"
+            name: "completed"
+            widget: "list"
+            summary: "{{fields.title}}"
+            fields:
+              - { label: "Proje adı", name: "title", widget: "text" }
+              - { label: "Kurum / destek", name: "funder", widget: "string" }
+              - { label: "Görev (TR)", name: "role_tr", widget: "string" }
+              - { label: "Görev (EN)", name: "role_en", widget: "string", required: false }
+              - { label: "Süre (ay)", name: "months", widget: "string", required: false }
+
+  # ---------------------------------------------------------------- 4. Yayınlar
+  - name: "yayinlar"
+    label: "4. Yayınlar"
+    editor: { preview: false }
+    files:
+      - name: "yayinlar"
+        label: "Makaleler, kitap bölümleri ve bildiriler"
+        file: "data/yayinlar.json"
+        fields:
+          - label: "Makaleler (en yeni en üstte)"
+            name: "articles"
+            widget: "list"
+            add_to_top: true
+            summary: "{{fields.year}} · {{fields.title}}"
+            fields:
+              - { label: "Yıl", name: "year", widget: "string" }
+              - { label: "Henüz yayımlanmadı (kabul edildi)", name: "accepted", widget: "boolean", default: false, required: false }
+              - { label: "Yazarlar (ör. Kurnaz M, Şahin MK)", name: "authors", widget: "string" }
+              - { label: "Başlık", name: "title", widget: "text" }
+              - { label: "Dergi, cilt, sayfa", name: "venue", widget: "string" }
+              - { label: "DOI (ör. 10.3390/d18070429)", name: "doi", widget: "string", required: false }
+              - label: "Konu (filtre)"
+                name: "topic"
+                widget: "select"
+                options:
+                  - { label: "Taksonomi", value: "tax" }
+                  - { label: "Niş modelleme", value: "niche" }
+                  - { label: "Biyocoğrafya", value: "bio" }
+                  - { label: "Ekoloji", value: "eco" }
+                  - { label: "Doğal tarih", value: "nat" }
+          - label: "Kitap bölümleri"
+            name: "chapters"
+            widget: "list"
+            add_to_top: true
+            summary: "{{fields.year}} · {{fields.title}}"
+            fields:
+              - { label: "Yıl", name: "year", widget: "string" }
+              - { label: "Yazarlar", name: "authors", widget: "string" }
+              - { label: "Bölüm başlığı", name: "title", widget: "text" }
+              - { label: "Kitap bilgisi (editör, kitap adı, yayınevi, sayfa)", name: "details", widget: "text" }
+          - label: "Kongre bildirileri"
+            name: "presentations"
+            widget: "list"
+            add_to_top: true
+            summary: "{{fields.year}} · {{fields.title}}"
+            fields:
+              - { label: "Yıl", name: "year", widget: "string" }
+              - { label: "Yazarlar", name: "authors", widget: "string" }
+              - { label: "Başlık", name: "title", widget: "text" }
+              - { label: "Kongre, yer, tarih, sayfa", name: "event", widget: "string" }
+              - label: "Sunum türü"
+                name: "type"
+                widget: "select"
+                options:
+                  - { label: "Sözlü", value: "oral" }
+                  - { label: "Sözlü, tam metin", value: "oral_full" }
+                  - { label: "Poster", value: "poster" }
+
+  # ---------------------------------------------------------------- 5. Özgeçmiş
+  - name: "ozgecmis"
+    label: "5. Özgeçmiş"
+    editor: { preview: false }
+    files:
+      - name: "ozgecmis"
+        label: "Unvanlar, eğitim, tezler, editörlük, hakemlik"
+        file: "data/ozgecmis.json"
+        fields:
+          - label: "Akademik unvanlar"
+            name: "positions"
+            widget: "list"
+            summary: "{{fields.period_tr}} · {{fields.title_tr}}"
+            fields:
+              - { label: "Dönem (TR)", name: "period_tr", widget: "string" }
+              - { label: "Dönem (EN)", name: "period_en", widget: "string", required: false }
+              - { label: "Unvan (TR)", name: "title_tr", widget: "string" }
+              - { label: "Unvan (EN)", name: "title_en", widget: "string", required: false }
+              - { label: "Kurum (TR)", name: "place_tr", widget: "string" }
+              - { label: "Kurum (EN)", name: "place_en", widget: "string", required: false }
+          - label: "Eğitim"
+            name: "education"
+            widget: "list"
+            summary: "{{fields.period}} · {{fields.degree_tr}}"
+            fields:
+              - { label: "Dönem", name: "period", widget: "string" }
+              - { label: "Derece (TR)", name: "degree_tr", widget: "string" }
+              - { label: "Derece (EN)", name: "degree_en", widget: "string", required: false }
+              - { label: "Üniversite (TR)", name: "school_tr", widget: "string" }
+              - { label: "Üniversite (EN)", name: "school_en", widget: "string", required: false }
+          - label: "Tezler"
+            name: "theses"
+            widget: "list"
+            summary: "{{fields.year}} · {{fields.type_tr}}"
+            fields:
+              - { label: "Yıl", name: "year", widget: "string" }
+              - { label: "Tez türü (TR)", name: "type_tr", widget: "string" }
+              - { label: "Tez türü (EN)", name: "type_en", widget: "string", required: false }
+              - { label: "Tez başlığı", name: "title", widget: "text" }
+              - { label: "Danışman ve enstitü", name: "supervisor", widget: "string", required: false }
+          - label: "Dergi editörlükleri"
+            name: "editorial"
+            widget: "list"
+            summary: "{{fields.period_tr}} · {{fields.journal}}"
+            fields:
+              - { label: "Dönem (TR)", name: "period_tr", widget: "string" }
+              - { label: "Dönem (EN)", name: "period_en", widget: "string", required: false }
+              - { label: "Dergi", name: "journal", widget: "string" }
+          - label: "Hakemlikler (dergi ve hakemlik sayısı)"
+            name: "reviews"
+            widget: "list"
+            summary: "{{fields.journal}} ×{{fields.count}}"
+            fields:
+              - { label: "Dergi", name: "journal", widget: "string" }
+              - { label: "Sayı", name: "count", widget: "number", value_type: "int", default: 1, min: 1 }
+
+  # ---------------------------------------------------------------- 6. Dersler
+  - name: "dersler"
+    label: "6. Dersler"
+    editor: { preview: false }
+    files:
+      - name: "dersler"
+        label: "Verdiğim dersler"
+        file: "data/dersler.json"
+        fields:
+          - label: "Dersler"
+            name: "courses"
+            widget: "list"
+            summary: "{{fields.tr}}"
+            fields:
+              - { label: "Ders adı (TR)", name: "tr", widget: "string" }
+              - { label: "Ders adı (EN)", name: "en", widget: "string", required: false }
+
+  # ---------------------------------------------------------------- 7. Fotoğraflar
+  - name: "galeri"
+    label: "7. Fotoğraflar"
+    editor: { preview: false }
+    files:
+      - name: "photos"
+        label: "Saha fotoğrafları (en yeni en üstte)"
+        file: "photos.json"
+        fields:
+          - label: "Fotoğraflar"
+            name: "photos"
+            widget: "list"
+            add_to_top: true
+            summary: "{{fields.latin}} · {{fields.tr_name}}"
+            fields:
+              - { label: "Fotoğraf", name: "image", widget: "image" }
+              - { label: "Küçük görsel (boş bırakılabilir)", name: "thumb", widget: "image", required: false }
+              - { label: "Türkçe adı", name: "tr_name", widget: "string", required: false }
+              - { label: "Latince adı", name: "latin", widget: "string" }
+              - { label: "Yer", name: "place", widget: "string", required: false }
+              - { label: "Yıl veya tarih", name: "date", widget: "string", required: false }
+              - { label: "Not", name: "note", widget: "text", required: false }
+
+  # ---------------------------------------------------------------- 8. Yazılar
+  - name: "yazilar"
+    label: "8. Yazılar"
+    editor: { preview: false }
+    files:
+      - name: "posts"
+        label: "Herpetoloji yazıları"
+        file: "posts.json"
+        fields:
+          - label: "Yazılar"
+            name: "posts"
+            widget: "list"
+            add_to_top: true
+            summary: "{{fields.date}} · {{fields.title}}"
+            fields:
+              - { label: "Başlık", name: "title", widget: "string" }
+              - { label: "Tarih", name: "date", widget: "datetime", date_format: "YYYY-MM-DD", time_format: false, format: "YYYY-MM-DD" }
+              - { label: "Dil", name: "lang", widget: "select", options: [{ label: "Türkçe", value: "tr" }, { label: "English", value: "en" }], default: "tr" }
+              - { label: "Kısa özet (1-2 cümle)", name: "summary", widget: "text" }
+              - { label: "Kapak fotoğrafı", name: "cover", widget: "image", required: false }
+              - { label: "Etiketler (virgülle)", name: "tags", widget: "string", required: false }
+              - { label: "Metin", name: "body", widget: "markdown" }

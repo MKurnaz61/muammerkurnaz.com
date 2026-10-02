@@ -1,0 +1,607 @@
+{
+  "photos": [
+    {
+      "image": "images/photos/ablepharus-anatolicus-01.jpg",
+      "thumb": "images/photos/ablepharus-anatolicus-01-k.jpg",
+      "tr_name": "Anadolu İnce Kertenkelesi",
+      "latin": "Ablepharus anatolicus",
+      "place": "",
+      "date": "",
+      "note": ""
+    },
+    {
+      "image": "images/photos/darevskia-derjugini-01.jpg",
+      "thumb": "images/photos/darevskia-derjugini-01-k.jpg",
+      "tr_name": "Artvin Kertenkelesi",
+      "latin": "Darevskia derjugini",
+      "place": "",
+      "date": "",
+      "note": ""
+    },
+    {
+      "image": "images/photos/darevskia-salihae-01.jpg",
+      "thumb": "images/photos/darevskia-salihae-01-k.jpg",
+      "tr_name": "Saliha Kertenkelesi",
+      "latin": "Darevskia salihae",
+      "place": "",
+      "date": "",
+      "note": ""
+    },
+    {
+      "image": "images/photos/zamenis-longissimus-01.jpg",
+      "thumb": "images/photos/zamenis-longissimus-01-k.jpg",
+      "tr_name": "Eskülap Yılanı",
+      "latin": "Zamenis longissimus",
+      "place": "",
+      "date": "",
+      "note": ""
+    },
+    {
+      "image": "images/photos/testudo-graeca-01.jpg",
+      "thumb": "images/photos/testudo-graeca-01-k.jpg",
+      "tr_name": "Tosbağa",
+      "latin": "Testudo graeca",
+      "place": "",
+      "date": "",
+      "note": ""
+    },
+    {
+      "image": "images/photos/laudakia-stellio-01.jpg",
+      "thumb": "images/photos/laudakia-stellio-01-k.jpg",
+      "tr_name": "Dikenli Keler",
+      "latin": "Laudakia stellio",
+      "place": "",
+      "date": "",
+      "note": ""
+    },
+    {
+      "image": "images/photos/laudakia-stellio-02.jpg",
+      "thumb": "images/photos/laudakia-stellio-02-k.jpg",
+      "tr_name": "Dikenli Keler",
+      "latin": "Laudakia stellio",
+      "place": "",
+      "date": "",
+      "note": ""
+    },
+    {
+      "image": "images/photos/rana-tavasensis-01.jpg",
+      "thumb": "images/photos/rana-tavasensis-01-k.jpg",
+      "tr_name": "Tavas Kurbağası",
+      "latin": "Rana tavasensis",
+      "place": "",
+      "date": "",
+      "note": ""
+    },
+    {
+      "image": "images/photos/rana-macrocnemis-01.jpg",
+      "thumb": "images/photos/rana-macrocnemis-01-k.jpg",
+      "tr_name": "Uludağ Kurbağası",
+      "latin": "Rana macrocnemis",
+      "place": "",
+      "date": "",
+      "note": ""
+    },
+    {
+      "image": "images/photos/rana-dalmatina-01.jpg",
+      "thumb": "images/photos/rana-dalmatina-01-k.jpg",
+      "tr_name": "Çevik Kurbağa",
+      "latin": "Rana dalmatina",
+      "place": "",
+      "date": "",
+      "note": ""
+    },
+    {
+      "image": "images/photos/pelodytes-caucasicus-01.jpg",
+      "thumb": "images/photos/pelodytes-caucasicus-01-k.jpg",
+      "tr_name": "Kafkas Kurbağası",
+      "latin": "Pelodytes caucasicus",
+      "place": "",
+      "date": "",
+      "note": ""
+    },
+    {
+      "image": "images/photos/pelobates-syriacus-01.jpg",
+      "thumb": "images/photos/pelobates-syriacus-01-k.jpg",
+      "tr_name": "Toprak Kurbağası",
+      "latin": "Pelobates syriacus",
+      "place": "",
+      "date": "",
+      "note": ""
+    },
+    {
+      "image": "images/photos/ommatotriton-nesterovi-01.jpg",
+      "thumb": "images/photos/ommatotriton-nesterovi-01-k.jpg",
+      "tr_name": "Anadolu Bantlı Semenderi",
+      "latin": "Ommatotriton nesterovi",
+      "place": "",
+      "date": "",
+      "note": ""
+    },
+    {
+      "image": "images/photos/ommatotriton-nesterovi-02.jpg",
+      "thumb": "images/photos/ommatotriton-nesterovi-02-k.jpg",
+      "tr_name": "Anadolu Bantlı Semenderi",
+      "latin": "Ommatotriton nesterovi",
+      "place": "",
+      "date": "",
+      "note": ""
+    },
+    {
+      "image": "images/photos/natrix-tessellata-01.jpg",
+      "thumb": "images/photos/natrix-tessellata-01-k.jpg",
+      "tr_name": "Su Yılanı",
+      "latin": "Natrix tessellata",
+      "place": "",
+      "date": "",
+      "note": ""
+    },
+    {
+      "image": "images/photos/lyciasalamandra-fazilae-01.jpg",
+      "thumb": "images/photos/lyciasalamandra-fazilae-01-k.jpg",
+      "tr_name": "Göcek Semenderi",
+      "latin": "Lyciasalamandra fazilae",
+      "place": "",
+      "date": "",
+      "note": ""
+    },
+    {
+      "image": "images/photos/lacerta-media-01.jpg",
+      "thumb": "images/photos/lacerta-media-01-k.jpg",
+      "tr_name": "Doğu Yeşil Kertenkelesi",
+      "latin": "Lacerta media",
+      "place": "",
+      "date": "",
+      "note": ""
+    },
+    {
+      "image": "images/photos/lacerta-agilis-01.jpg",
+      "thumb": "images/photos/lacerta-agilis-01-k.jpg",
+      "tr_name": "Çevik Kertenkele",
+      "latin": "Lacerta agilis",
+      "place": "",
+      "date": "",
+      "note": ""
+    },
+    {
+      "image": "images/photos/lacerta-agilis-02.jpg",
+      "thumb": "images/photos/lacerta-agilis-02-k.jpg",
+      "tr_name": "Çevik Kertenkele",
+      "latin": "Lacerta agilis",
+      "place": "",
+      "date": "",
+      "note": ""
+    },
+    {
+      "image": "images/photos/eremias-strauchi-01.jpg",
+      "thumb": "images/photos/eremias-strauchi-01-k.jpg",
+      "tr_name": "Step Kertenkelesi",
+      "latin": "Eremias strauchi",
+      "place": "",
+      "date": "",
+      "note": ""
+    },
+    {
+      "image": "images/photos/mauremys-01.jpg",
+      "thumb": "images/photos/mauremys-01-k.jpg",
+      "tr_name": "Hazar Çizgili Kaplumbağası",
+      "latin": "Mauremys caspica",
+      "place": "",
+      "date": "",
+      "note": ""
+    },
+    {
+      "image": "images/photos/mediodactylus-danilewskii-01.jpg",
+      "thumb": "images/photos/mediodactylus-danilewskii-01-k.jpg",
+      "tr_name": "Danilewski İnce Parmaklı Keleri",
+      "latin": "Mediodactylus danilewskii",
+      "place": "",
+      "date": "",
+      "note": ""
+    },
+    {
+      "image": "images/photos/mediodactylus-orientalis-01.jpg",
+      "thumb": "images/photos/mediodactylus-orientalis-01-k.jpg",
+      "tr_name": "Doğu İnce Parmaklı Keleri",
+      "latin": "Mediodactylus orientalis",
+      "place": "",
+      "date": "",
+      "note": ""
+    },
+    {
+      "image": "images/photos/ophisops-02.jpg",
+      "thumb": "images/photos/ophisops-02-k.jpg",
+      "tr_name": "Tarla Kertenkelesi",
+      "latin": "Ophisops elegans",
+      "place": "",
+      "date": "",
+      "note": ""
+    },
+    {
+      "image": "images/photos/podarcis-muralis-01.jpg",
+      "thumb": "images/photos/podarcis-muralis-01-k.jpg",
+      "tr_name": "Duvar Kertenkelesi",
+      "latin": "Podarcis muralis",
+      "place": "",
+      "date": "",
+      "note": ""
+    },
+    {
+      "image": "images/photos/parvilacerta-02.jpg",
+      "thumb": "images/photos/parvilacerta-02-k.jpg",
+      "tr_name": "Cüce Kertenkele",
+      "latin": "Parvilacerta parva",
+      "place": "",
+      "date": "",
+      "note": ""
+    },
+    {
+      "image": "images/photos/parvilacerta-03.jpg",
+      "thumb": "images/photos/parvilacerta-03-k.jpg",
+      "tr_name": "Cüce Kertenkele",
+      "latin": "Parvilacerta parva",
+      "place": "",
+      "date": "",
+      "note": ""
+    },
+    {
+      "image": "images/photos/podarcis-muralis-02.jpg",
+      "thumb": "images/photos/podarcis-muralis-02-k.jpg",
+      "tr_name": "Duvar Kertenkelesi",
+      "latin": "Podarcis muralis",
+      "place": "",
+      "date": "",
+      "note": ""
+    },
+    {
+      "image": "images/photos/pseudopus-01.jpg",
+      "thumb": "images/photos/pseudopus-01-k.jpg",
+      "tr_name": "Oluklu Kertenkele",
+      "latin": "Pseudopus apodus",
+      "place": "",
+      "date": "",
+      "note": ""
+    },
+    {
+      "image": "images/photos/testudo-hermanni-01.jpg",
+      "thumb": "images/photos/testudo-hermanni-01-k.jpg",
+      "tr_name": "Trakya Tosbağası",
+      "latin": "Testudo hermanni",
+      "place": "",
+      "date": "",
+      "note": ""
+    },
+    {
+      "image": "images/photos/vipera-meridionalis-01.jpg",
+      "thumb": "images/photos/vipera-meridionalis-01-k.jpg",
+      "tr_name": "Doğu Burunlu Engereği",
+      "latin": "Vipera meridionalis",
+      "place": "",
+      "date": "",
+      "note": ""
+    },
+    {
+      "image": "images/photos/zamenis-hohenackeri-01.jpg",
+      "thumb": "images/photos/zamenis-hohenackeri-01-k.jpg",
+      "tr_name": "Kafkas Yılanı",
+      "latin": "Zamenis hohenackeri",
+      "place": "",
+      "date": "",
+      "note": ""
+    },
+    {
+      "image": "images/photos/bombina-02.jpg",
+      "thumb": "images/photos/bombina-02-k.jpg",
+      "tr_name": "Sarılı Kurbağa",
+      "latin": "Bombina variegata",
+      "place": "",
+      "date": "",
+      "note": ""
+    },
+    {
+      "image": "images/photos/bombina-03.jpg",
+      "thumb": "images/photos/bombina-03-k.jpg",
+      "tr_name": "Sarılı Kurbağa",
+      "latin": "Bombina variegata",
+      "place": "",
+      "date": "",
+      "note": ""
+    },
+    {
+      "image": "images/photos/lacerta-viridis-01.jpg",
+      "thumb": "images/photos/lacerta-viridis-01-k.jpg",
+      "tr_name": "Yeşil Kertenkele",
+      "latin": "Lacerta viridis",
+      "place": "",
+      "date": "",
+      "note": ""
+    },
+    {
+      "image": "images/photos/anatololacerta-02.jpg",
+      "thumb": "images/photos/anatololacerta-02-k.jpg",
+      "tr_name": "Pelasg Kaya Kertenkelesi",
+      "latin": "Anatololacerta pelasgiana",
+      "place": "",
+      "date": "",
+      "note": ""
+    },
+    {
+      "image": "images/photos/ophisops-01.jpg",
+      "thumb": "images/photos/ophisops-01-k.jpg",
+      "tr_name": "Tarla Kertenkelesi",
+      "latin": "Ophisops elegans",
+      "place": "",
+      "date": "",
+      "note": ""
+    },
+    {
+      "image": "images/photos/tuniyevi-02.jpg",
+      "thumb": "images/photos/tuniyevi-02-k.jpg",
+      "tr_name": "Tuniyev Kertenkelesi",
+      "latin": "Darevskia tuniyevi",
+      "place": "",
+      "date": "",
+      "note": ""
+    },
+    {
+      "image": "images/photos/emys-01.jpg",
+      "thumb": "images/photos/emys-01-k.jpg",
+      "tr_name": "Benekli Kaplumbağa",
+      "latin": "Emys orbicularis",
+      "place": "",
+      "date": "",
+      "note": ""
+    },
+    {
+      "image": "images/photos/parvilacerta-01.jpg",
+      "thumb": "images/photos/parvilacerta-01-k.jpg",
+      "tr_name": "Cüce Kertenkele",
+      "latin": "Parvilacerta parva",
+      "place": "",
+      "date": "",
+      "note": ""
+    },
+    {
+      "image": "images/photos/diplochondrodes-01.jpg",
+      "thumb": "images/photos/diplochondrodes-01-k.jpg",
+      "tr_name": "Büyük Yeşil Kertenkele",
+      "latin": "Lacerta diplochondrodes",
+      "place": "",
+      "date": "",
+      "note": ""
+    },
+    {
+      "image": "images/photos/coronella-01.jpg",
+      "thumb": "images/photos/coronella-01-k.jpg",
+      "tr_name": "Avusturya Yılanı",
+      "latin": "Coronella austriaca",
+      "place": "",
+      "date": "",
+      "note": ""
+    },
+    {
+      "image": "images/photos/natrix-01.jpg",
+      "thumb": "images/photos/natrix-01-k.jpg",
+      "tr_name": "Küpeli Su Yılanı",
+      "latin": "Natrix natrix",
+      "place": "",
+      "date": "",
+      "note": ""
+    },
+    {
+      "image": "images/photos/parvula-02.jpg",
+      "thumb": "images/photos/parvula-02-k.jpg",
+      "tr_name": "Kırmızı Karınlı Kertenkele",
+      "latin": "Darevskia parvula",
+      "place": "",
+      "date": "",
+      "note": ""
+    },
+    {
+      "image": "images/photos/hemorrhois-01.jpg",
+      "thumb": "images/photos/hemorrhois-01-k.jpg",
+      "tr_name": "Kocabaş Yılan",
+      "latin": "Hemorrhois ravergieri",
+      "place": "",
+      "date": "",
+      "note": ""
+    },
+    {
+      "image": "images/photos/paralaudakia-01.jpg",
+      "thumb": "images/photos/paralaudakia-01-k.jpg",
+      "tr_name": "Kafkas Keleri",
+      "latin": "Paralaudakia caucasia",
+      "place": "",
+      "date": "",
+      "note": ""
+    },
+    {
+      "image": "images/photos/unisexualis-01.jpg",
+      "thumb": "images/photos/unisexualis-01-k.jpg",
+      "tr_name": "Ağrı Kertenkelesi",
+      "latin": "Darevskia unisexualis",
+      "place": "",
+      "date": "",
+      "note": ""
+    },
+    {
+      "image": "images/photos/clarkorum-01.jpg",
+      "thumb": "images/photos/clarkorum-01-k.jpg",
+      "tr_name": "Clark Kertenkelesi",
+      "latin": "Darevskia clarkorum",
+      "place": "",
+      "date": "",
+      "note": ""
+    },
+    {
+      "image": "images/photos/podarcis-tauricus-01.jpg",
+      "thumb": "images/photos/podarcis-tauricus-01-k.jpg",
+      "tr_name": "Balkan Kertenkelesi",
+      "latin": "Podarcis tauricus",
+      "place": "",
+      "date": "",
+      "note": ""
+    },
+    {
+      "image": "images/photos/anguis-01.jpg",
+      "thumb": "images/photos/anguis-01-k.jpg",
+      "tr_name": "Yılan Kertenkele",
+      "latin": "Anguis colchica",
+      "place": "",
+      "date": "2017",
+      "note": ""
+    },
+    {
+      "image": "images/photos/anguis-02.jpg",
+      "thumb": "images/photos/anguis-02-k.jpg",
+      "tr_name": "Yılan Kertenkele",
+      "latin": "Anguis colchica",
+      "place": "",
+      "date": "2017",
+      "note": ""
+    },
+    {
+      "image": "images/photos/blanus-01.jpg",
+      "thumb": "images/photos/blanus-01-k.jpg",
+      "tr_name": "Kör Kertenkele",
+      "latin": "Blanus strauchi",
+      "place": "",
+      "date": "",
+      "note": ""
+    },
+    {
+      "image": "images/photos/bombina-01.jpg",
+      "thumb": "images/photos/bombina-01-k.jpg",
+      "tr_name": "Sarılı Kurbağa",
+      "latin": "Bombina variegata",
+      "place": "",
+      "date": "2016",
+      "note": ""
+    },
+    {
+      "image": "images/photos/darevskia-01.jpg",
+      "thumb": "images/photos/darevskia-01-k.jpg",
+      "tr_name": "Adjara Kertenkelesi",
+      "latin": "Darevskia adjarica",
+      "place": "",
+      "date": "",
+      "note": ""
+    },
+    {
+      "image": "images/photos/darevskia-02.jpg",
+      "thumb": "images/photos/darevskia-02-k.jpg",
+      "tr_name": "Kırmızı Karınlı Kertenkele",
+      "latin": "Darevskia parvula",
+      "place": "",
+      "date": "",
+      "note": ""
+    },
+    {
+      "image": "images/photos/darevskia-03.jpg",
+      "thumb": "images/photos/darevskia-03-k.jpg",
+      "tr_name": "Trabzon Kertenkelesi",
+      "latin": "Darevskia rudis",
+      "place": "",
+      "date": "",
+      "note": ""
+    },
+    {
+      "image": "images/photos/lacertid-01.jpg",
+      "thumb": "images/photos/lacertid-01-k.jpg",
+      "tr_name": "Tuniyev Kertenkelesi",
+      "latin": "Darevskia tuniyevi",
+      "place": "",
+      "date": "",
+      "note": ""
+    },
+    {
+      "image": "images/photos/snake-01.jpg",
+      "thumb": "images/photos/snake-01-k.jpg",
+      "tr_name": "Uysal Yılan",
+      "latin": "Eirenis modestus",
+      "place": "",
+      "date": "",
+      "note": ""
+    },
+    {
+      "image": "images/photos/gecko-01.jpg",
+      "thumb": "images/photos/gecko-01-k.jpg",
+      "tr_name": "Geniş Parmaklı Keler",
+      "latin": "Hemidactylus turcicus",
+      "place": "",
+      "date": "2014",
+      "note": ""
+    },
+    {
+      "image": "images/photos/skink-01.jpg",
+      "thumb": "images/photos/skink-01-k.jpg",
+      "tr_name": "Şeritli Kertenkele",
+      "latin": "Heremites vittatus",
+      "place": "",
+      "date": "2017",
+      "note": ""
+    },
+    {
+      "image": "images/photos/skink-02.jpg",
+      "thumb": "images/photos/skink-02-k.jpg",
+      "tr_name": "Şeritli Kertenkele",
+      "latin": "Heremites vittatus",
+      "place": "",
+      "date": "2017",
+      "note": ""
+    },
+    {
+      "image": "images/photos/hyla-01.jpg",
+      "thumb": "images/photos/hyla-01-k.jpg",
+      "tr_name": "Ağaç Kurbağası",
+      "latin": "Hyla orientalis",
+      "place": "",
+      "date": "",
+      "note": ""
+    },
+    {
+      "image": "images/photos/acantho-01.jpg",
+      "thumb": "images/photos/acantho-01-k.jpg",
+      "tr_name": "Ilgaz Tarak Parmaklı Kertenkelesi",
+      "latin": "Acanthodactylus ilgazi",
+      "place": "",
+      "date": "",
+      "note": ""
+    },
+    {
+      "image": "images/photos/lacertid-02.jpg",
+      "thumb": "images/photos/lacertid-02-k.jpg",
+      "tr_name": "Pelasg Kaya Kertenkelesi",
+      "latin": "Anatololacerta pelasgiana",
+      "place": "",
+      "date": "",
+      "note": ""
+    },
+    {
+      "image": "images/photos/mertensiella-01.jpg",
+      "thumb": "images/photos/mertensiella-01-k.jpg",
+      "tr_name": "Kafkas Semenderi",
+      "latin": "Mertensiella djanashvili",
+      "place": "",
+      "date": "",
+      "note": ""
+    },
+    {
+      "image": "images/photos/lacertid-03.jpg",
+      "thumb": "images/photos/lacertid-03-k.jpg",
+      "tr_name": "",
+      "latin": "Darevskia obscura",
+      "place": "",
+      "date": "",
+      "note": ""
+    },
+    {
+      "image": "images/photos/semender-001.jpg",
+      "tr_name": "",
+      "latin": "Ommatotriton ophryticus",
+      "place": "",
+      "date": "",
+      "note": "",
+      "thumb": "images/photos/semender-001-k.jpg"
+    }
+  ]
+}

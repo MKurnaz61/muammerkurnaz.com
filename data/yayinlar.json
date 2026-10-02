@@ -1,0 +1,762 @@
+{
+  "articles": [
+    {
+      "year": "2026",
+      "accepted": true,
+      "authors": "Kurnaz M, Şahin MK",
+      "title": "Spatial structure and core–periphery contraction in an endemic amphibian (Triturus anatolicus)",
+      "venue": "Turkish Journal of Zoology",
+      "doi": "",
+      "topic": "bio"
+    },
+    {
+      "year": "2026",
+      "accepted": false,
+      "authors": "Bülbül U, Özkan H, Özkan FŞ, Çalışkan D, Koç-Gür H, Özalp Y, Eroğlu Aİ, Kurnaz M",
+      "title": "Age and body size of the endemic newt Lissotriton kosswigi (Freytag, 1955) (Urodela: Salamandridae) in Türkiye",
+      "venue": "Biology Bulletin, 53: 254",
+      "doi": "",
+      "topic": "nat"
+    },
+    {
+      "year": "2026",
+      "accepted": false,
+      "authors": "Kurnaz M",
+      "title": "Spatial turnover and bioregional structure of reptile assemblages across Türkiye",
+      "venue": "Biogeographia, 41(2): a077",
+      "doi": "10.21426/b6.65700",
+      "topic": "bio"
+    },
+    {
+      "year": "2026",
+      "accepted": false,
+      "authors": "Bekircan Ç, Kurnaz M",
+      "title": "Marine microsporidia: hidden diversity, aquatic emergence and zoonotic risks",
+      "venue": "Microbial Pathogenesis, 220: 108778",
+      "doi": "10.1016/j.micpath.2026.108778",
+      "topic": "eco"
+    },
+    {
+      "year": "2026",
+      "accepted": false,
+      "authors": "Kurnaz M",
+      "title": "Quaternary palaeoenvironmental archives of the Indian subcontinent and their imprint on herpetofaunal biogeography: a multi-proxy synthesis",
+      "venue": "Quaternary Science Reviews, 391: 110203",
+      "doi": "10.1016/j.quascirev.2026.110203",
+      "topic": "bio"
+    },
+    {
+      "year": "2026",
+      "accepted": false,
+      "authors": "Kurnaz M, Berber AA, Akbulut C",
+      "title": "Citizen-science data reveal global diversity patterns in the gecko genus Hemidactylus",
+      "venue": "Diversity, 18: 429",
+      "doi": "10.3390/d18070429",
+      "topic": "bio"
+    },
+    {
+      "year": "2026",
+      "accepted": false,
+      "authors": "Berber AA, Yıldız E, Berber N, Kurnaz M, Akıncı-Kenanoğlu N",
+      "title": "Nanoplastic translocation across biological barriers (blood–brain, placental, intestinal): transport mechanisms, tissue-specific vulnerabilities, and a corona-driven barrier selectivity framework",
+      "venue": "Biology, 15: 1133",
+      "doi": "10.3390/biology15141133",
+      "topic": "eco"
+    },
+    {
+      "year": "2026",
+      "accepted": false,
+      "authors": "Kurnaz M",
+      "title": "Amphibians and reptiles as bioindicator organisms: an ecotoxicological and ecological review",
+      "venue": "Environmental Toxicology and Ecology, 6(1): 1–15",
+      "doi": "10.59838/etoxec.1914565",
+      "topic": "eco"
+    },
+    {
+      "year": "2026",
+      "accepted": false,
+      "authors": "Tosun O, Bekircan Ç, Kurnaz M",
+      "title": "Spatial heterogeneity of microscopically detected Nosema spp. infection in honeybees: climate-associated patterns in the Eastern Black Sea Region of Türkiye",
+      "venue": "Veterinary Parasitology, 346: 110835",
+      "doi": "10.1016/j.vetpar.2026.110835",
+      "topic": "eco"
+    },
+    {
+      "year": "2026",
+      "accepted": false,
+      "authors": "Şahin MK, Topal A, Kurnaz M",
+      "title": "Core–periphery organization and spatial heterogeneity in Pseudopus apodus (Anguidae) across its western Palearctic range",
+      "venue": "Diversity, 18: 367",
+      "doi": "10.3390/d18060367",
+      "topic": "bio"
+    },
+    {
+      "year": "2026",
+      "accepted": false,
+      "authors": "Berber AA, Akbulut C, Demir ŞN, Kurnaz M",
+      "title": "Microplastic contamination in amphibians and reptiles: an ecotoxicological synthesis of exposure, mechanisms, and risk implications",
+      "venue": "Toxics, 14: 522",
+      "doi": "10.3390/toxics14060522",
+      "topic": "eco"
+    },
+    {
+      "year": "2026",
+      "accepted": false,
+      "authors": "Kurnaz M",
+      "title": "Physiological responses and adaptive mechanisms of amphibians and reptiles to multiple interacting environmental stressors: an integrative review",
+      "venue": "Frontiers in Physiology, 17: 1785483",
+      "doi": "10.3389/fphys.2026.1785483",
+      "topic": "eco"
+    },
+    {
+      "year": "2026",
+      "accepted": false,
+      "authors": "Çelebi TM, Çelikağı Y, Kınay T, Kuyucu AC, Kurnaz M, Şahin MK",
+      "title": "Blinking without eyelids: first record of a blink-like reflex in Ophisops elegans from Anatolia",
+      "venue": "Turkish Journal of Zoology, 50: 52–55",
+      "doi": "10.55730/1300-0179.3249",
+      "topic": "nat"
+    },
+    {
+      "year": "2025",
+      "accepted": false,
+      "authors": "Bayram Ç, Çelebi TM, Çevik E, Kuyucu AC, Kurnaz M, Şahin MK",
+      "title": "A rare case of tail bifurcation in Ophisops elegans from western Anatolia",
+      "venue": "Commagene Journal of Biology, 9(2): 240–242",
+      "doi": "10.31594/commagene.1763581",
+      "topic": "nat"
+    },
+    {
+      "year": "2025",
+      "accepted": false,
+      "authors": "Şahin MK, Çetintaş O, Yanchukov A, Kurnaz M",
+      "title": "A record of the Lebanese lizard (Phoenicolacerta laevis) in northern Türkiye: evidence of possible human-mediated dispersal",
+      "venue": "Zoology in the Middle East, 71(3): 282–288",
+      "doi": "10.1080/09397140.2025.2544965",
+      "topic": "nat"
+    },
+    {
+      "year": "2025",
+      "accepted": false,
+      "authors": "Bayram Ç, Şahin MK, Kurnaz M",
+      "title": "Unusual activity patterns in anuran and caudata species during the hibernation period",
+      "venue": "Karamanoğlu Mehmetbey University Journal of Engineering and Natural Sciences, 7(1): 6–10",
+      "doi": "10.55213/kmujens.1641713",
+      "topic": "nat"
+    },
+    {
+      "year": "2025",
+      "accepted": false,
+      "authors": "Bayram Ç, Şahin MK, Kurnaz M",
+      "title": "Unusual winter activity of the Ottoman viper (Montivipera xanthina) in Türkiye",
+      "venue": "Journal of Anatolian Environmental and Animal Sciences, 10(3): 288–291",
+      "doi": "10.35229/jaes.1644558",
+      "topic": "nat"
+    },
+    {
+      "year": "2025",
+      "accepted": false,
+      "authors": "Batum T, Şahin MK, Kurnaz M",
+      "title": "Winter activity of reptiles in the Anatolian Peninsula",
+      "venue": "Environmental Toxicology and Ecology, 5: 1–10",
+      "doi": "",
+      "topic": "nat"
+    },
+    {
+      "year": "2025",
+      "accepted": false,
+      "authors": "Bozkurt E, Kurnaz M, Avcı A, Şahin MK, Üzüm N, Olgun K",
+      "title": "First evidence of the genetic structure of Neurergus strauchii munzurensis",
+      "venue": "Journal of Wildlife and Biodiversity, 9(2): 152–161",
+      "doi": "",
+      "topic": "tax"
+    },
+    {
+      "year": "2025",
+      "accepted": false,
+      "authors": "Vaissi S, Şahin MK, Kurnaz M",
+      "title": "Niche dynamics and climate change sensitivity in western Palearctic Zamenis ratsnakes (Reptilia: Colubridae)",
+      "venue": "Amphibia-Reptilia, 46(1): 33–50",
+      "doi": "10.1163/15685381-bja10209",
+      "topic": "niche"
+    },
+    {
+      "year": "2024",
+      "accepted": false,
+      "authors": "Kurnaz M, Şahin MK",
+      "title": "Exceptional winter activity record from blunt-nosed viper (Macrovipera lebetinus) in Türkiye",
+      "venue": "Turkish Journal of Nature and Science, 13(4): 1–4",
+      "doi": "10.46810/tdfd.1436083",
+      "topic": "nat"
+    },
+    {
+      "year": "2024",
+      "accepted": false,
+      "authors": "Şahin MK, Kurnaz M",
+      "title": "Potential geographic distribution and habitat utilization of Lacerta viridis (Squamata: Lacertidae) in northern Türkiye",
+      "venue": "Journal of Taibah University for Science, 18(1): 2378548",
+      "doi": "10.1080/16583655.2024.2378548",
+      "topic": "niche"
+    },
+    {
+      "year": "2023",
+      "accepted": false,
+      "authors": "Vaissi S, Kurnaz M, Şahin MK, Hernández A",
+      "title": "Climatic niche divergence and conservatism promote speciation in snake-eyed skinks (Sauria: Scincidae): new insight into the evolution and diversification of Ablepharus species",
+      "venue": "Evolutionary Biology, 50: 249–263",
+      "doi": "10.1007/s11692-023-09603-6",
+      "topic": "niche"
+    },
+    {
+      "year": "2023",
+      "accepted": false,
+      "authors": "Kurnaz M",
+      "title": "Geographic distribution of two Montivipera taxa using ecological niche modeling",
+      "venue": "Journal of Biosciences, 48: 7",
+      "doi": "10.1007/s12038-023-00333-7",
+      "topic": "niche"
+    },
+    {
+      "year": "2023",
+      "accepted": false,
+      "authors": "Bülbül U, Koç H, Eroğlu Aİ, Odabaş Y, Kurnaz M, Kutrup B",
+      "title": "Age structure and body size in a Turkish population of the green lizard, Lacerta viridis (Laurenti, 1768)",
+      "venue": "Russian Journal of Herpetology, 30(1): 5–10",
+      "doi": "10.30906/1026-2296-2023-30-1-5-10",
+      "topic": "nat"
+    },
+    {
+      "year": "2022",
+      "accepted": false,
+      "authors": "Kurnaz M",
+      "title": "Predicted current and future distribution of the fire salamander, Salamandra infraimmaculata, in Turkey",
+      "venue": "Journal of Wildlife and Biodiversity, 6(4): 82–96",
+      "doi": "",
+      "topic": "niche"
+    },
+    {
+      "year": "2022",
+      "accepted": false,
+      "authors": "Kurnaz M, Şahin MK, Eroğlu Aİ",
+      "title": "Hidden diversity in a narrow valley: description of new endemic Palearctic rock lizard Darevskia (Squamata: Lacertidae) species from northeastern Turkey",
+      "venue": "Zoological Studies, 61: 44",
+      "doi": "10.6620/zs.2022.61-44",
+      "topic": "tax"
+    },
+    {
+      "year": "2022",
+      "accepted": false,
+      "authors": "Arribas Ó, Candan K, Kurnaz M, Kumlutaş Y, Yıldırım-Caynak E, Ilgaz Ç",
+      "title": "A new cryptic species of the Darevskia parvula group from NE Anatolia (Squamata, Lacertidae)",
+      "venue": "Organisms Diversity & Evolution, 22: 475–490",
+      "doi": "10.1007/s13127-022-00540-4",
+      "topic": "tax"
+    },
+    {
+      "year": "2022",
+      "accepted": false,
+      "authors": "Kurnaz M, Şahin MK",
+      "title": "Formal description of the new lizard species inhabiting Eastern Anatolia, Turkey",
+      "venue": "Zoological and Entomological Letters, 2(1): 23–25",
+      "doi": "",
+      "topic": "tax"
+    },
+    {
+      "year": "2021",
+      "accepted": false,
+      "authors": "Kurnaz M, Hosseinian Yousefkhani SS",
+      "title": "A contribution to the biogeography of Ablepharus anatolicus and A. budaki (Squamata: Scincidae) using ecological niche modeling in Turkey",
+      "venue": "Folia Biologica (Kraków), 69(4): 159–166",
+      "doi": "10.3409/fb_69-4.17",
+      "topic": "niche"
+    },
+    {
+      "year": "2021",
+      "accepted": false,
+      "authors": "Kurnaz M, Şahin MK",
+      "title": "Contribution to the taxonomic knowledge of Acanthodactylus (Squamata, Lacertidae): description of a new lacertid lizard species from Eastern Anatolia, Turkey",
+      "venue": "Journal of Wildlife and Biodiversity, 5(3): 100–119",
+      "doi": "10.22120/jwb.2021.523523.1214",
+      "topic": "tax"
+    },
+    {
+      "year": "2021",
+      "accepted": false,
+      "authors": "Kurnaz M, Şahin MK",
+      "title": "Unusual winter activity observations of two newt species (Ommatotriton ophryticus & Triturus ivanbureschi) from the Anatolian Peninsula",
+      "venue": "International Journal of Agricultural and Wildlife Sciences, 7(2): 337–342",
+      "doi": "10.24180/ijaws.877193",
+      "topic": "nat"
+    },
+    {
+      "year": "2021",
+      "accepted": false,
+      "authors": "Kurnaz M, Eroğlu Aİ",
+      "title": "Habitat preferences of Testudo graeca Linnaeus, 1758 (Testudines: Testudinidae) with a new locality record from the eastern Black Sea region of Turkey",
+      "venue": "Scientific Reports in Life Sciences, 2(2): 30–38",
+      "doi": "10.22034/srls.2021.527238.1015",
+      "topic": "nat"
+    },
+    {
+      "year": "2021",
+      "accepted": false,
+      "authors": "Koç H, Kutrup B, Bülbül U, Kurnaz M",
+      "title": "The allelic variants in microsatellite loci and phylogenetic relationships of Darevskia rudis (Bedriaga, 1886) and D. bithynica (Méhely, 1909) based on mitochondrial DNA in Turkey",
+      "venue": "Russian Journal of Herpetology, 28(2): 73–88",
+      "doi": "10.30906/1026-2296-2021-28-2-73-88",
+      "topic": "tax"
+    },
+    {
+      "year": "2021",
+      "accepted": false,
+      "authors": "Şahin MK, Kurnaz M",
+      "title": "New locality records for Eumeces schneiderii (Daudin, 1802) and Trapelus ruderatus (Olivier, 1804) with morphological data from eastern Anatolia, Turkey",
+      "venue": "Communications Faculty of Sciences University of Ankara Series C Biology, 30(1): 47–57",
+      "doi": "10.53447/communc.817740",
+      "topic": "nat"
+    },
+    {
+      "year": "2021",
+      "accepted": false,
+      "authors": "Kurnaz M, Şahin MK",
+      "title": "A contribution to the biogeography and taxonomy of two Anatolian mountain brook newts, Neurergus barani and N. strauchii (Amphibia: Salamandridae), using ecological niche modeling",
+      "venue": "Turkish Journal of Zoology, 45(1): 54–64",
+      "doi": "10.3906/zoo-2007-37",
+      "topic": "niche"
+    },
+    {
+      "year": "2020",
+      "accepted": false,
+      "authors": "Kurnaz M",
+      "title": "Species list of amphibians and reptiles from Turkey",
+      "venue": "Journal of Animal Diversity, 2(4): 10–32",
+      "doi": "10.52547/jad.2020.2.4.2",
+      "topic": "bio"
+    },
+    {
+      "year": "2020",
+      "accepted": false,
+      "authors": "Kurnaz M, Eroğlu Aİ",
+      "title": "Eremias strauchi'nin Türkiye'deki potansiyel yayılışı ve en batı lokalite kaydı",
+      "venue": "Kommagene Biyoloji Dergisi, 4(2): 82–85",
+      "doi": "10.31594/commagene.749989",
+      "topic": "niche"
+    },
+    {
+      "year": "2020",
+      "accepted": false,
+      "authors": "Kurnaz M, Hosseinian Yousefkhani SS",
+      "title": "Ecological niche divergence between Darevskia rudis and D. bithynica (Lacertidae) in Turkey",
+      "venue": "Biologia, 75: 1307–1312",
+      "doi": "10.2478/s11756-019-00374-0",
+      "topic": "niche"
+    },
+    {
+      "year": "2020",
+      "accepted": false,
+      "authors": "Bülbül U, Koç H, Odabaş Y, Eroğlu Aİ, Kurnaz M, Kutrup B",
+      "title": "Life history traits in a population of Pelobates syriacus (Boettger, 1889) from Turkey",
+      "venue": "Russian Journal of Herpetology, 27(4): 195–200",
+      "doi": "10.30906/1026-2296-2020-27-4-195-200",
+      "topic": "nat"
+    },
+    {
+      "year": "2019",
+      "accepted": false,
+      "authors": "Bülbül U, Eroğlu Aİ, Kutrup B, Kurnaz M, Koç-Gür H, Odabaş Y",
+      "title": "Road kills of amphibian and reptile species in Edirne and Kırklareli provinces of Turkey",
+      "venue": "Sinop University Journal of Natural Sciences, 4(2): 109–121",
+      "doi": "10.33484/sinopfbd.532723",
+      "topic": "nat"
+    },
+    {
+      "year": "2019",
+      "accepted": false,
+      "authors": "Kurnaz M, Bülbül U, Eroğlu Aİ, Kutrup B, Koç H",
+      "title": "The potential distribution and morphological data of Podarcis siculus (Rafinesque-Schmaltz, 1810) with new locality records from Turkey (Squamata: Sauria: Lacertidae)",
+      "venue": "Russian Journal of Herpetology, 26(2): 77–86",
+      "doi": "10.30906/1026-2296-2019-26-2-77-86",
+      "topic": "niche"
+    },
+    {
+      "year": "2019",
+      "accepted": false,
+      "authors": "Kurnaz M, Kutrup B, Hosseinian Yousefkhani SS, Koç H, Bülbül U, Eroğlu Aİ",
+      "title": "Phylogeography of the red-bellied lizard, Darevskia parvula, in Turkey",
+      "venue": "Mitochondrial DNA Part A, 30(3): 556–566",
+      "doi": "10.1080/24701394.2019.1580270",
+      "topic": "tax"
+    },
+    {
+      "year": "2019",
+      "accepted": false,
+      "authors": "Odabaş Y, Bülbül U, Eroğlu Aİ, Koç H, Kurnaz M, Kutrup B",
+      "title": "Age structure and growth in a Turkish population of the Balkan green lizard, Lacerta trilineata Bedriaga, 1886 (Squamata: Sauria: Lacertidae)",
+      "venue": "Herpetozoa, 31(3/4): 183–193",
+      "doi": "",
+      "topic": "nat"
+    },
+    {
+      "year": "2019",
+      "accepted": false,
+      "authors": "Kurnaz M, Kutrup B",
+      "title": "New distribution data of the vulnerable Mertensiella caucasica from Gümüşhane, Turkey",
+      "venue": "Nature Conservation Research, 4(1): 109–111",
+      "doi": "10.24189/ncr.2019.006",
+      "topic": "nat"
+    },
+    {
+      "year": "2018",
+      "accepted": false,
+      "authors": "Bülbül U, Kurnaz M, Eroğlu Aİ, Koç H, Kutrup B",
+      "title": "Restricted distribution area, threat conditions and two additional new localities of Bombina variegata (L., 1758) (Anura: Bombinatoridae) in Turkey",
+      "venue": "Russian Journal of Herpetology, 25: 236–238",
+      "doi": "10.30906/1026-2296-2018-25-3-236-238",
+      "topic": "nat"
+    },
+    {
+      "year": "2018",
+      "accepted": false,
+      "authors": "Bülbül U, Eroğlu Aİ, Kurnaz M, Mutanoğlu Kaya Z, Koç H, Altınkaynak Eroğlu S",
+      "title": "Age structure and some growth parameters in a population of Bombina bombina (L., 1761) from Turkey",
+      "venue": "Russian Journal of Herpetology, 25: 221–226",
+      "doi": "10.30906/1026-2296-2018-25-3-221-226",
+      "topic": "nat"
+    },
+    {
+      "year": "2018",
+      "accepted": false,
+      "authors": "Kurnaz M, Kutrup B",
+      "title": "Southernmost locality for the endangered lizard Darevskia clarkorum (Lacertidae: Squamata) from the eastern Black Sea of Turkey",
+      "venue": "Nature Conservation Research, 3(Suppl. 1): 136–139",
+      "doi": "10.24189/ncr.2018.054",
+      "topic": "nat"
+    },
+    {
+      "year": "2018",
+      "accepted": false,
+      "authors": "Bülbül U, Kutrup B, Eroğlu Aİ, Koç H, Kurnaz M, Odabaş Y",
+      "title": "Life history traits of a Turkish population of the yellow-bellied toad, Bombina variegata (Linnaeus, 1758) (Anura: Bombinatoridae)",
+      "venue": "Herpetozoa, 31(1/2): 11–19",
+      "doi": "",
+      "topic": "nat"
+    },
+    {
+      "year": "2018",
+      "accepted": false,
+      "authors": "Koç H, Bülbül U, Kurnaz M, Eroğlu Aİ, Kutrup B",
+      "title": "Phylogenetic relationships of Podarcis siculus (Rafinesque-Schmaltz, 1810) and Podarcis tauricus (Pallas, 1814) in Turkey, based on mitochondrial DNA",
+      "venue": "Mitochondrial DNA Part A, 29(5): 664–673",
+      "doi": "10.1080/24701394.2017.1342245",
+      "topic": "tax"
+    },
+    {
+      "year": "2018",
+      "accepted": false,
+      "authors": "Eroğlu Aİ, Bülbül U, Kurnaz M, Odabaş Y",
+      "title": "Age and growth of the common wall lizard, Podarcis muralis (Laurenti, 1768)",
+      "venue": "Animal Biology, 68(2): 147–159",
+      "doi": "10.1163/15707563-17000019",
+      "topic": "nat"
+    },
+    {
+      "year": "2018",
+      "accepted": false,
+      "authors": "Kurnaz M, Bülbül U, Eroğlu Aİ, Kutrup B, Koç H",
+      "title": "Northwesternmost locality record of Montivipera xanthina (Gray, 1849) in Turkey",
+      "venue": "Herpetozoa, 30(3/4): 218–221",
+      "doi": "",
+      "topic": "nat"
+    },
+    {
+      "year": "2018",
+      "accepted": false,
+      "authors": "Kurnaz M, Bülbül U, Eroğlu Aİ, Uzun F, Koç H, Kutrup B",
+      "title": "Age and growth of the Artvin lizard, Darevskia derjugini (Nikolsky, 1898), in Turkey (Squamata: Sauria: Lacertidae)",
+      "venue": "Herpetozoa, 30(3/4): 147–158",
+      "doi": "",
+      "topic": "nat"
+    },
+    {
+      "year": "2017",
+      "accepted": false,
+      "authors": "Kurnaz M, Eroğlu Aİ, Bülbül U, Kutrup B, Koç H",
+      "title": "The life-history traits in a breeding population of Darevskia valentini from Turkey",
+      "venue": "Acta Herpetologica, 12(2): 167–173",
+      "doi": "10.13128/acta_herpetol-17658",
+      "topic": "nat"
+    },
+    {
+      "year": "2017",
+      "accepted": false,
+      "authors": "Koç H, Kutrup B, Eroğlu O, Bülbül U, Kurnaz M, Afan F, Eroğlu Aİ",
+      "title": "Phylogenetic relationships of D. rudis (Bedriaga, 1886) and D. bithynica (Méhely, 1909) based on microsatellite and mitochondrial DNA in Turkey",
+      "venue": "Mitochondrial DNA Part A, 28(6): 814–825",
+      "doi": "10.1080/24701394.2016.1197215",
+      "topic": "tax"
+    },
+    {
+      "year": "2017",
+      "accepted": false,
+      "authors": "Kurnaz M, Bülbül U, Eroğlu Aİ, Koç H, Kutrup B",
+      "title": "Morphological reevaluation on the subspecific position of Darevskia derjugini in Turkey",
+      "venue": "Russian Journal of Herpetology, 24(3): 209–216",
+      "doi": "10.30906/1026-2296-2017-24-3-209-216",
+      "topic": "tax"
+    },
+    {
+      "year": "2017",
+      "accepted": false,
+      "authors": "Eroğlu Aİ, Bülbül U, Kurnaz M",
+      "title": "Age structure and growth in a Turkish population of the Italian wall lizard Podarcis siculus (Rafinesque-Schmaltz, 1810) (Reptilia: Lacertidae)",
+      "venue": "Acta Zoologica Bulgarica, 69(2): 209–214",
+      "doi": "",
+      "topic": "nat"
+    },
+    {
+      "year": "2017",
+      "accepted": false,
+      "authors": "Eroğlu Aİ, Bülbül U, Kurnaz M",
+      "title": "Age structure and growth in a Turkish population of the Crimean wall lizard, Podarcis tauricus (Pallas, 1814) (Squamata: Sauria: Lacertidae)",
+      "venue": "Herpetozoa, 29(3/4): 125–133",
+      "doi": "",
+      "topic": "nat"
+    },
+    {
+      "year": "2016",
+      "accepted": false,
+      "authors": "Kurnaz M, Kutrup B, Bülbül U",
+      "title": "An exceptional activity for Darevskia derjugini (Nikolsky, 1898) from Turkey",
+      "venue": "Ecologia Balkanica, 8(2): 91–93",
+      "doi": "",
+      "topic": "nat"
+    },
+    {
+      "year": "2016",
+      "accepted": false,
+      "authors": "Bülbül U, Kurnaz M, Eroğlu Aİ, Koç H, Kutrup B",
+      "title": "Body size and age structure of the endangered Clark's lizard (Darevskia clarkorum) populations from two different altitudes in Turkey",
+      "venue": "Amphibia-Reptilia, 37(4): 450–456",
+      "doi": "10.1163/15685381-00003073",
+      "topic": "nat"
+    },
+    {
+      "year": "2016",
+      "accepted": false,
+      "authors": "Bülbül U, Kurnaz M, Eroğlu Aİ, Szymura JM, Koç H, Kutrup B",
+      "title": "First record of Bombina variegata (L., 1758) (Anura: Bombinatoridae) from Turkey",
+      "venue": "Turkish Journal of Zoology, 40: 630–636",
+      "doi": "10.3906/zoo-1508-40",
+      "topic": "nat"
+    },
+    {
+      "year": "2016",
+      "accepted": false,
+      "authors": "Bülbül U, Kurnaz M, Eroğlu Aİ, Koç H, Kutrup B",
+      "title": "Age and growth of the red-bellied lizard, Darevskia parvula",
+      "venue": "Animal Biology, 66: 81–95",
+      "doi": "10.1163/15707563-00002489",
+      "topic": "nat"
+    },
+    {
+      "year": "2015",
+      "accepted": false,
+      "authors": "Bülbül U, Kurnaz M, Eroğlu Aİ, Koç H, Kutrup B",
+      "title": "New locality record of Podarcis tauricus tauricus (Pallas, 1814) (Squamata: Lacertidae) from the Western Black Sea Region of Turkey",
+      "venue": "Turkish Journal of Zoology, 39: 981–986",
+      "doi": "10.3906/zoo-1411-25",
+      "topic": "nat"
+    }
+  ],
+  "chapters": [
+    {
+      "year": "2019",
+      "authors": "Kurnaz M, Eroğlu Aİ, Kutrup B",
+      "title": "Distribution and habitat preferences of Mauremys caspica Gmelin, 1774 in Turkey",
+      "details": "In: Ganguly S (ed.), *Latest Trends in Zoology and Entomology Sciences*, Vol. 7. Akinik Publications, pp. 47–61"
+    },
+    {
+      "year": "2016",
+      "authors": "Kurnaz M, Gül S, Bülbül U, Kutrup B",
+      "title": "The potential distribution of Darevskia derjugini (Nikolsky, 1898) with new locality records from Turkey",
+      "details": "In: Efe R, Matchavariani L, Yaldır A, Lévai L (eds), *Developments in Science and Engineering*. St. Kliment Ohridski University Press, pp. 189–195"
+    }
+  ],
+  "presentations": [
+    {
+      "year": "2026",
+      "authors": "Çelebi TM, Kınay T, Topal A, Aydın Ç, Ceylan Y, Balıkçı AK, Doğan HO, Kurnaz M, Şahin MK",
+      "title": "Ekolojik sınır boyunca termal performans: Akdeniz-Avrasya geçiş kuşağında kertenkele türlerinde lokomotor kapasite üzerine ilk bulgular",
+      "event": "EurasianBioChem 2026, 19–21 October 2026",
+      "type": "oral"
+    },
+    {
+      "year": "2024",
+      "authors": "Bayram Ç, Şahin M, Kurnaz M",
+      "title": "Unusual activity patterns in anuran and caudata species during the hibernation period",
+      "event": "7th National Zoology Congress, 13–15 December 2024, p. 27",
+      "type": "oral"
+    },
+    {
+      "year": "2024",
+      "authors": "Batum T, Şahin M, Kurnaz M",
+      "title": "Winter activity of reptiles in the Anatolian Peninsula",
+      "event": "7th National Zoology Congress, 13–15 December 2024, p. 28",
+      "type": "oral"
+    },
+    {
+      "year": "2023",
+      "authors": "Şahin MK, Kurnaz M",
+      "title": "Niche partitioning between two sympatric lizards in a Mediterranean biodiversity hotspot",
+      "event": "EurasianBioChem 2023, 11–13 October 2023",
+      "type": "oral"
+    },
+    {
+      "year": "2022",
+      "authors": "Şahin MK, Kurnaz M",
+      "title": "Current EUNIS habitat preferences of Darevskia derjugini and its possible fates under different future climate scenarios",
+      "event": "EurasianBioChem 2022, 23–25 November 2022",
+      "type": "oral"
+    },
+    {
+      "year": "2021",
+      "authors": "Kurnaz M, Şahin MK",
+      "title": "Expanding to the north: assessing the Anatolian distribution of the genus Acanthodactylus",
+      "event": "International Conference on Wildlife Ecology and Biodiversity Conservation (ICWEB), 17–21 June 2021",
+      "type": "oral"
+    },
+    {
+      "year": "2021",
+      "authors": "Şahin MK, Kurnaz M",
+      "title": "Distribution patterns and habitat preferences for the Anatolian endemic lizard Lacerta pamphylica in a Mediterranean biodiversity hotspot",
+      "event": "4th Agriculture, Environment and Health Congress, 20–22 May 2021",
+      "type": "oral_full"
+    },
+    {
+      "year": "2021",
+      "authors": "Kurnaz M",
+      "title": "The impact of climatic change on the distribution of the critically endangered Anatolian meadow viper, Pelias anatolica",
+      "event": "USBIK 2021 Natural Science, 26–28 February 2021",
+      "type": "oral_full"
+    },
+    {
+      "year": "2018",
+      "authors": "Kutrup B, Bülbül U, Kurnaz M, Koç H",
+      "title": "Morphometric differences between sexes of Darevskia rudis in a breeding population",
+      "event": "International Symposium on Morphological Sciences (ISMS) 2018, Prague, 5–7 July 2018",
+      "type": "poster"
+    },
+    {
+      "year": "2018",
+      "authors": "Kutrup B, Koç H, Bülbül U, Odabaş Y, Eroğlu Aİ, Kurnaz M",
+      "title": "Life-history traits of the eastern spadefoot (Pelobates syriacus) from Kızılırmak Delta, Samsun Province",
+      "event": "International Symposium Ecology 2018, Kastamonu, 19–23 June 2018, p. 375",
+      "type": "oral"
+    },
+    {
+      "year": "2018",
+      "authors": "Odabaş Y, Bülbül U, Kutrup B, Eroğlu Aİ, Koç H, Kurnaz M",
+      "title": "Age and growth in a Turkish population of the Balkan green lizard, Lacerta trilineata (Bedriaga, 1886)",
+      "event": "International Symposium Ecology 2018, Kastamonu, 19–23 June 2018, p. 376",
+      "type": "oral"
+    },
+    {
+      "year": "2018",
+      "authors": "Koç H, Kutrup B, Bülbül U, Odabaş Y, Kurnaz M, Eroğlu Aİ",
+      "title": "The morphological comparison of Darevskia rudis (Bedriaga, 1886) and Darevskia bithynica (Méhely, 1909) from Turkey",
+      "event": "International Symposium Ecology 2018, Kastamonu, 19–23 June 2018, p. 424",
+      "type": "oral"
+    },
+    {
+      "year": "2017",
+      "authors": "Bülbül U, Kurnaz M, Eroğlu Aİ, Kutrup B, Odabaş Y, Koç H",
+      "title": "Herpetological observations in Vize District of Kırklareli Province",
+      "event": "XIII Congress of Ecology and Environment with International Participation, Edirne, 12–15 September 2017, p. 234",
+      "type": "poster"
+    },
+    {
+      "year": "2017",
+      "authors": "Kutrup B, Koç H, Bülbül U, Eroğlu Aİ, Odabaş Y, Kurnaz M",
+      "title": "An exceptional activity for Darevskia rudis (Bedriaga, 1886) from Turkey",
+      "event": "XIII Congress of Ecology and Environment with International Participation, Edirne, 12–15 September 2017, p. 437",
+      "type": "poster"
+    },
+    {
+      "year": "2017",
+      "authors": "Bülbül U, Eroğlu Aİ, Kutrup B, Kurnaz M, Koç H, Odabaş Y",
+      "title": "Amphibian and reptile road-kills in Edirne and Kırklareli provinces of Turkey",
+      "event": "XIII Congress of Ecology and Environment with International Participation, Edirne, 12–15 September 2017, p. 692",
+      "type": "poster"
+    },
+    {
+      "year": "2017",
+      "authors": "Bülbül U, Kutrup B, Eroğlu Aİ, Koç H, Kurnaz M, Odabaş Y",
+      "title": "Age structure and body size of Bombina bombina arifiyensis (Özeti and Yılmaz, 1987)",
+      "event": "Ecology 2017 International Symposium, Kayseri, 11–13 May 2017, p. 425",
+      "type": "poster"
+    },
+    {
+      "year": "2017",
+      "authors": "Kutrup B, Bülbül U, Odabaş Y, Kurnaz M, Koç H, Eroğlu Aİ",
+      "title": "Herpetological observations in Artvin and Trabzon provinces of Turkey",
+      "event": "Ecology 2017 International Symposium, Kayseri, 11–13 May 2017, p. 619",
+      "type": "poster"
+    },
+    {
+      "year": "2017",
+      "authors": "Kutrup B, Bülbül U, Koç H, Kurnaz M, Eroğlu Aİ, Odabaş Y",
+      "title": "Distributional model of Montivipera xanthina (Gray, 1849) in Turkey",
+      "event": "Ecology 2017 International Symposium, Kayseri, 11–13 May 2017, p. 523",
+      "type": "poster"
+    },
+    {
+      "year": "2017",
+      "authors": "Bülbül U, Kutrup B, Eroğlu Aİ, Koç H, Kurnaz M, Odabaş Y",
+      "title": "Life-history traits in a Turkish population of Bombina variegata (L., 1758)",
+      "event": "Ecology 2017 International Symposium, Kayseri, 11–13 May 2017, p. 230",
+      "type": "oral"
+    },
+    {
+      "year": "2017",
+      "authors": "Kutrup B, Kurnaz M, Koç H, Odabaş Y, Eroğlu Aİ, Bülbül U",
+      "title": "Vertebrate fauna of Dilek Village in Arsin, Trabzon",
+      "event": "Ecology 2017 International Symposium, Kayseri, 11–13 May 2017, p. 861",
+      "type": "poster"
+    },
+    {
+      "year": "2016",
+      "authors": "Eroğlu Aİ, Bülbül U, Kutrup B, Koç H, Kurnaz M",
+      "title": "Age structure and some growth parameters of Bombina bombina (L., 1761) in Turkey",
+      "event": "ICBS 2016, Konya, 21–23 October 2016, p. 11",
+      "type": "oral"
+    },
+    {
+      "year": "2016",
+      "authors": "Koç H, Kutrup B, Bülbül U, Kurnaz M, Eroğlu Aİ",
+      "title": "Body size and age structure of the endangered Clark's lizard (Darevskia clarkorum) populations from two different altitudes in Turkey",
+      "event": "ICBS 2016, Konya, 21–23 October 2016, p. 76",
+      "type": "oral"
+    },
+    {
+      "year": "2016",
+      "authors": "Kurnaz M, Kutrup B, Bülbül U, Eroğlu Aİ, Koç H",
+      "title": "Age and growth of Derjugin's lizard, Darevskia derjugini, in Turkey",
+      "event": "ICBS 2016, Konya, 21–23 October 2016, p. 62",
+      "type": "oral"
+    },
+    {
+      "year": "2016",
+      "authors": "Bülbül U, Kutrup B, Kurnaz M, Eroğlu Aİ, Koç H",
+      "title": "Herpetological observations in Edirne Province of Turkey",
+      "event": "ICBS 2016, Konya, 21–23 October 2016, p. 250",
+      "type": "poster"
+    },
+    {
+      "year": "2016",
+      "authors": "Kutrup B, Söğüt Ş, Bülbül U, Kurnaz M, Eroğlu Aİ, Koç H",
+      "title": "Age determination and some growth parameters of Pelodytes caucasicus Boulenger, 1896 (Caucasian parsley frog) population from Hıdırnebi (Trabzon)",
+      "event": "ICBS 2016, Konya, 21–23 October 2016, p. 249",
+      "type": "poster"
+    }
+  ]
+}

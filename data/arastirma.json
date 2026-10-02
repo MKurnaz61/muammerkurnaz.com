@@ -1,0 +1,100 @@
+{
+  "themes": [
+    {
+      "title_tr": "Taksonomi ve filocoğrafya",
+      "title_en": "Taxonomy and phylogeography",
+      "text_tr": "Üç yeni kertenkele türünün tanımı (*Acanthodactylus ilgazi*, *Darevskia salihae*, *Darevskia tuniyevi*), *Darevskia parvula* grubundaki kriptik çeşitlilik ve Anadolu kaya kertenkelelerinin mitokondriyal ve mikrosatellit yapısı.",
+      "text_en": "Descriptions of three new lizard species (*Acanthodactylus ilgazi*, *Darevskia salihae*, *Darevskia tuniyevi*), cryptic diversity in the *Darevskia parvula* group, and mitochondrial and microsatellite structure of Anatolian rock lizards."
+    },
+    {
+      "title_tr": "Ekolojik niş modelleme",
+      "title_en": "Ecological niche modeling",
+      "text_tr": "Kertenkeleler, sıçan yılanları, dağ engerekleri, dağ semenderleri ve yeşil kertenkelelerde niş ayrışması, niş korunumu ve iklim değişikliğine duyarlılık.",
+      "text_en": "Niche divergence, conservatism and climate-change sensitivity in skinks, ratsnakes, mountain vipers, brook newts and green lizards."
+    },
+    {
+      "title_tr": "Biyocoğrafya ve makroekoloji",
+      "title_en": "Biogeography and macroecology",
+      "text_tr": "Türkiye'de sürüngen topluluklarının değişimi ve biyobölgeler, vatandaş bilimi verisiyle *Hemidactylus*'un küresel çeşitliliği, *Pseudopus apodus*'un yayılış yapısı ve Hint altkıtasının Kuvaterner arşivleri.",
+      "text_en": "Reptile turnover and bioregions in Türkiye, global diversity of *Hemidactylus* from citizen-science data, range structure of *Pseudopus apodus*, and Quaternary archives of the Indian subcontinent."
+    },
+    {
+      "title_tr": "Ekotoksikoloji ve fizyoloji",
+      "title_en": "Ecotoxicology and physiology",
+      "text_tr": "Mikro ve nanoplastikler, biyoindikatör olarak amfibi ve sürüngenler, etkileşen çevresel stres etkenlerine verilen yanıtlar ve mikrosporidian patojenler.",
+      "text_en": "Micro- and nanoplastics, amphibians and reptiles as bioindicators, responses to interacting environmental stressors, and microsporidian pathogens."
+    },
+    {
+      "title_tr": "Doğal tarih ve yaşam öyküsü",
+      "title_en": "Natural history and life history",
+      "text_tr": "İskeletokronoloji ile yaş yapısı ve büyüme, engerek ve semenderlerde kış aktivitesi, yeni lokalite kayıtları ve sıra dışı morfoloji.",
+      "text_en": "Age structure and growth from skeletochronology, winter activity of vipers and newts, new locality records and unusual morphology."
+    }
+  ],
+  "expertise": [
+    {
+      "tr": "Amfibi ve sürüngen türlerinin günümüz ve gelecek projeksiyonları",
+      "en": "Present and future projections of amphibian and reptile species"
+    },
+    {
+      "tr": "Biyocoğrafya",
+      "en": "Biogeography"
+    },
+    {
+      "tr": "Ekolojik niş modelleme",
+      "en": "Ecological niche modeling"
+    },
+    {
+      "tr": "Ekoloji",
+      "en": "Ecology"
+    },
+    {
+      "tr": "Filocoğrafya",
+      "en": "Phylogeography"
+    },
+    {
+      "tr": "Filogeni",
+      "en": "Phylogeny"
+    },
+    {
+      "tr": "Herpetoloji",
+      "en": "Herpetology"
+    },
+    {
+      "tr": "İskelet kronolojisi",
+      "en": "Skeletochronology"
+    },
+    {
+      "tr": "Morfoloji",
+      "en": "Morphology"
+    },
+    {
+      "tr": "Popülasyon ekolojisi",
+      "en": "Population ecology"
+    },
+    {
+      "tr": "Sistematik",
+      "en": "Systematics"
+    },
+    {
+      "tr": "Taksonomi",
+      "en": "Taxonomy"
+    },
+    {
+      "tr": "Termal biyoloji",
+      "en": "Thermal biology"
+    },
+    {
+      "tr": "Türlerin yayılışları",
+      "en": "Species distributions"
+    },
+    {
+      "tr": "Yaş analizi (amfibi ve sürüngenlerin demografik analizi)",
+      "en": "Age analysis (demography of amphibians and reptiles)"
+    },
+    {
+      "tr": "Zooloji",
+      "en": "Zoology"
+    }
+  ]
+}
