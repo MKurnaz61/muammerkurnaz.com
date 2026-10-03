@@ -295,6 +295,7 @@ footer .addr{color:#C3D0E0}
 .post-card p{margin:0;font-size:15px;color:var(--ink2)}
 .posts .empty{margin:0;color:var(--muted);grid-column:1/-1;border:1px dashed var(--rule);border-radius:10px;padding:28px;text-align:center}
 @media (prefers-reduced-motion:reduce){.post-card{transition:none}.post-card:hover{transform:none}}
+#visits b{color:#DCE6F2;font-weight:500}
 .copyright{max-width:1180px;margin:0 auto;padding:18px 24px 28px;border-top:1px solid var(--dark-rule);font-family:var(--mono);font-size:12px;color:#A8B6C8;text-align:center}
 </style>
 <style>
@@ -365,7 +366,7 @@ footer .addr{color:#C3D0E0}
       <a href="admin/"><span class="en">Edit site (admin)</span><span class="tr">Siteyi düzenle (yönetici)</span></a>
     </div>
   </div>
-  <div class="copyright"><span class="en">© 2026 Muammer Kurnaz. All rights reserved.</span><span class="tr">© 2026 Muammer Kurnaz. Tüm hakları saklıdır.</span></div>
+  <div class="copyright"><span class="en">© 2026 Muammer Kurnaz. All rights reserved.</span><span class="tr">© 2026 Muammer Kurnaz. Tüm hakları saklıdır.</span><span id="visits" hidden> · <span class="en">Total visits</span><span class="tr">Toplam ziyaret</span>: <b id="visitsN"></b></span></div>
 </footer>
 <script type="application/json" id="genel-data">{"eyebrow_tr": "Herpetoloji · Biyocoğrafya · Ekoloji", "eyebrow_en": "Herpetology · Biogeography · Ecology", "headline_tr": "Türkiye'nin amfibi ve sürüngenleri: çeşitlilikleri, dağılımları ve üzerlerindeki baskılar", "headline_en": "Amphibians and reptiles of Türkiye: their diversity, their distributions and the pressures on them", "lede_tr": "Çalışmalarım saha çalışması, taksonomi, filocoğrafya ve ekolojik niş modellemeyi bir araya getiriyor. Kuzeydoğu Anadolu'dan yeni kertenkele türlerinin tanımlanmasından, ülke genelinde sürüngen topluluklarının değişiminin haritalanmasına ve kirleticilerin amfibi ve sürüngenler üzerindeki etkilerine kadar uzanıyor.", "lede_en": "My work combines fieldwork, taxonomy, phylogeography and ecological niche modeling. It runs from describing new lacertid species in northeastern Anatolia to mapping reptile turnover across the country and reviewing how pollutants affect amphibians and reptiles.", "role_tr": "Doç. Dr. · Gümüşhane Üniversitesi, Kelkit Sema Doğan Sağlık Hizmetleri Meslek Yüksekokulu, Tıbbi Hizmetler ve Teknikler Bölümü", "role_en": "Associate Professor · Gümüşhane University, Kelkit Sema Doğan Vocational School of Health Services, Department of Medical Services and Techniques", "recent_year": "2026", "recent": [{"title": "Spatial turnover and bioregional structure of reptile assemblages across Türkiye", "venue": "Biogeographia", "doi": "10.21426/b6.65700"}, {"title": "Physiological responses and adaptive mechanisms of amphibians and reptiles to multiple interacting environmental stressors", "venue": "Frontiers in Physiology", "doi": "10.3389/fphys.2026.1785483"}, {"title": "Quaternary palaeoenvironmental archives of the Indian subcontinent and their imprint on herpetofaunal biogeography", "venue": "Quaternary Science Reviews", "doi": "10.1016/j.quascirev.2026.110203"}], "stats": [{"value": "63", "tr": "indeksli dergide makale", "en": "articles in indexed journals"}, {"value": "548", "tr": "atıf (Google Akademik)", "en": "citations (Google Scholar)"}, {"value": "13", "tr": "h-indeksi (Google Akademik)", "en": "h-index (Google Scholar)"}, {"value": "3", "tr": "tanımlanan yeni kertenkele türü", "en": "new lizard species described"}], "species": [{"name": "Acanthodactylus ilgazi", "doi": "10.22120/jwb.2021.523523.1214"}, {"name": "Darevskia salihae", "doi": "10.6620/zs.2022.61-44"}, {"name": "Darevskia tuniyevi", "doi": "10.1007/s13127-022-00540-4"}], "metrics_tr": "Google Akademik i10-indeksi 22 · Web of Science: 271 atıf, h-indeksi 10 · Scopus h-indeksi 9", "metrics_en": "Google Scholar i10-index 22 · Web of Science: 271 citations, h-index 10 · Scopus h-index 9", "address_tr": "Doç. Dr., Gümüşhane Üniversitesi, Kelkit Sema Doğan Sağlık Hizmetleri MYO, Tıbbi Hizmetler ve Teknikler Bölümü, İlk ve Acil Yardım Programı, 29600 Kelkit / Gümüşhane", "address_en": "Assoc. Prof., Gümüşhane University, Kelkit Sema Doğan Vocational School of Health Services, Department of Medical Services and Techniques, First and Emergency Aid Programme, 29600 Kelkit, Gümüşhane, Türkiye", "emails": [{"email": "muammer.kurnaz@gumushane.edu.tr"}, {"email": "muammerkurnazz@gmail.com"}], "links": {"scholar": "https://scholar.google.com/citations?user=mRiSe1EAAAAJ", "yok": "https://akademik.yok.gov.tr/AkademikArama/view/viewAuthor.jsp", "researchgate": "https://www.researchgate.net/profile/Muammer-Kurnaz-2", "orcid": "0000-0002-0498-0208", "openalex": "https://openalex.org/A5042961734"}}</script>
 <script>
@@ -469,5 +470,12 @@ window.postSlug = function (p) {
 })();
 </script>
 <script data-goatcounter="https://muammerkurnaz.goatcounter.com/count" async src="https://gc.zgo.at/count.js"></script>
+<script>
+/* public visit counter from GoatCounter (shown only when the counter is enabled in GoatCounter settings) */
+fetch('https://muammerkurnaz.goatcounter.com/counter/TOTAL.json')
+  .then(function (r) { if (!r.ok) throw 0; return r.json(); })
+  .then(function (d) { if (d && d.count) { document.getElementById('visitsN').textContent = d.count; document.getElementById('visits').hidden = false; } })
+  .catch(function () {});
+</script>
 </body>
 </html>
