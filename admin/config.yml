@@ -274,6 +274,14 @@ collections:
             fields:
               - { label: "Ders adı (TR)", name: "tr", widget: "string" }
               - { label: "Ders adı (EN)", name: "en", widget: "string", required: false }
+              - label: "Ders dosyaları (PDF, Word, Excel, PowerPoint)"
+                name: "files"
+                widget: "list"
+                required: false
+                summary: "{{fields.title}}"
+                fields:
+                  - { label: "Dosya adı (sitede görünecek)", name: "title", widget: "string" }
+                  - { label: "Dosya", name: "file", widget: "file", media_folder: "/files/dersler", public_folder: "/files/dersler", choose_url: false }
 
   # ---------------------------------------------------------------- 7. Fotoğraflar
   - name: "galeri"

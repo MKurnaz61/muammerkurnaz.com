@@ -144,6 +144,11 @@ dialog.lb .close{position:absolute;top:8px;right:8px;min-width:44px;min-height:4
 .courses div{border-top:2px solid var(--ink);padding-top:14px;display:flex;flex-direction:column;gap:6px}
 .courses h3{margin:0;font-weight:600;font-size:20px}
 .courses p{margin:0;font-size:15px;color:var(--ink2)}
+.cfiles{list-style:none;margin:6px 0 0;padding:0;display:flex;flex-direction:column;gap:8px}
+.cfiles a{display:flex;align-items:center;gap:10px;font-size:15px;color:var(--ink);text-decoration:none;line-height:1.35}
+.cfiles a:hover{text-decoration:underline}
+.ft{flex:none;font:600 10.5px/1 ui-monospace,Menlo,monospace;letter-spacing:.04em;color:#fff;background:#6b7280;border-radius:3px;padding:5px 0;width:38px;text-align:center}
+.ft-pdf{background:#B3261E}.ft-doc{background:#2B579A}.ft-xls{background:#217346}.ft-ppt{background:#C4501E}
 
 footer{border-top:1px solid var(--ink)}
 footer .wrap{padding-block:56px 64px;display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:32px;font-size:15px}
@@ -573,7 +578,14 @@ window.postSlug = function (p) {
     put('reviewHead', bi('Peer review: ' + tot + ' manuscripts for ' + rv.length + ' journals', 'Hakemlik: ' + rv.length + ' dergide ' + tot + ' makale'));
     put('reviews', rv.map(function (r) { var n = parseInt(r.count, 10) || 1; return '<li>' + fmt(r.journal) + (n > 1 ? ' <span class="x">×' + n + '</span>' : '') + '</li>'; }).join(''));
 
-    put('courses', list((D.dersler || {}).courses).map(function (c) { return '<div><h3>' + bi(c.en, c.tr) + '</h3></div>'; }).join(''));
+    var FT = { pdf: 'PDF', doc: 'DOC', docx: 'DOC', xls: 'XLS', xlsx: 'XLS', ppt: 'PPT', pptx: 'PPT' };
+    put('courses', list((D.dersler || {}).courses).map(function (c) {
+      var fs = list(c.files).filter(function (f) { return f && f.file; });
+      return '<div><h3>' + bi(c.en, c.tr) + '</h3>' + (fs.length ? '<ul class="cfiles">' + fs.map(function (f) {
+        var x = String(f.file).split('?')[0].split('.').pop().toLowerCase(), k = FT[x] || x.toUpperCase().slice(0, 4);
+        return '<li><a href="' + e(f.file) + '" target="_blank" rel="noopener" download><span class="ft ft-' + e(k.toLowerCase()) + '">' + e(k) + '</span>' + fmt(f.title || f.file.split('/').pop()) + '</a></li>';
+      }).join('') + '</ul>' : '') + '</div>';
+    }).join(''));
 
     put('address', bi(g.address_en, g.address_tr));
     put('emails', list(g.emails).map(function (m) { return '<a href="mailto:' + e(m.email) + '">' + e(m.email) + '</a>'; }).join(''));
