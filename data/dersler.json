@@ -16,7 +16,13 @@
     },
     {
       "tr": "Tıbbi Terminoloji",
-      "en": "Medical Terminology"
+      "en": "Medical Terminology",
+      "files": [
+        {
+          "title": "Tıbbi Terminoloji Ders Notları",
+          "file": "/files/dersler/tibbi_terminoloji_guncel.pptx"
+        }
+      ]
     }
   ]
 }
