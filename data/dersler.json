@@ -2,7 +2,13 @@
   "courses": [
     {
       "tr": "Anatomi",
-      "en": "Anatomy"
+      "en": "Anatomy",
+      "files": [
+        {
+          "title": "Anatomi Ders Notları",
+          "file": "/files/dersler/anatomi_guncel.pptx"
+        }
+      ]
     },
     {
       "tr": "Fizyoloji",
