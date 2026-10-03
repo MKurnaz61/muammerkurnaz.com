@@ -85,6 +85,9 @@ collections:
               - { label: "ResearchGate", name: "researchgate", widget: "string", required: false }
               - { label: "ORCID numarası", name: "orcid", widget: "string", required: false }
               - { label: "OpenAlex", name: "openalex", widget: "string", required: false }
+              - { label: "Facebook", name: "facebook", widget: "string", required: false }
+              - { label: "Instagram", name: "instagram", widget: "string", required: false }
+              - { label: "LinkedIn", name: "linkedin", widget: "string", required: false }
 
   # ---------------------------------------------------------------- 2. Araştırma
   - name: "arastirma"
@@ -111,6 +114,16 @@ collections:
             fields:
               - { label: "TR", name: "tr", widget: "string" }
               - { label: "EN", name: "en", widget: "string", required: false }
+              - label: "Grup (ağaçtaki rengi ve yeri)"
+                name: "group"
+                widget: "select"
+                default: "eco"
+                options:
+                  - { label: "Temel alan (ortada)", value: "core" }
+                  - { label: "Sistematik ve evrim", value: "sys" }
+                  - { label: "Biyocoğrafya ve modelleme", value: "bio" }
+                  - { label: "Ekoloji ve fizyoloji", value: "eco" }
+                  - { label: "Demografi", value: "demo" }
 
   # ---------------------------------------------------------------- 3. Projeler
   - name: "projeler"
@@ -165,6 +178,8 @@ collections:
               - { label: "Başlık", name: "title", widget: "text" }
               - { label: "Dergi, cilt, sayfa", name: "venue", widget: "string" }
               - { label: "DOI (ör. 10.3390/d18070429)", name: "doi", widget: "string", required: false }
+              - { label: "PDF dosyası", name: "pdf", widget: "file", required: false, media_folder: "/files/yayinlar", public_folder: "/files/yayinlar", choose_url: false, hint: "Ücretli (kapalı erişim) yayınların PDF'ini yükleme. Yüklenen her dosya, düğme kapalı olsa bile bağlantıyı bilen herkesçe indirilebilir." }
+              - { label: "PDF herkese açık", name: "pdf_open", widget: "boolean", default: false, required: false, hint: "Açık ve PDF yüklüyse sitede PDF düğmesi ve indirme sayısı görünür. Kapalıysa ziyaretçiye 'PDF iste' düğmesi gösterilir." }
               - label: "Konu (filtre)"
                 name: "topic"
                 widget: "select"
@@ -184,6 +199,8 @@ collections:
               - { label: "Yazarlar", name: "authors", widget: "string" }
               - { label: "Bölüm başlığı", name: "title", widget: "text" }
               - { label: "Kitap bilgisi (editör, kitap adı, yayınevi, sayfa)", name: "details", widget: "text" }
+              - { label: "PDF dosyası", name: "pdf", widget: "file", required: false, media_folder: "/files/yayinlar", public_folder: "/files/yayinlar", choose_url: false, hint: "Ücretli (kapalı erişim) yayınların PDF'ini yükleme. Yüklenen her dosya, düğme kapalı olsa bile bağlantıyı bilen herkesçe indirilebilir." }
+              - { label: "PDF herkese açık", name: "pdf_open", widget: "boolean", default: false, required: false, hint: "Açık ve PDF yüklüyse sitede PDF düğmesi ve indirme sayısı görünür. Kapalıysa ziyaretçiye 'PDF iste' düğmesi gösterilir." }
           - label: "Kongre bildirileri"
             name: "presentations"
             widget: "list"
@@ -194,6 +211,8 @@ collections:
               - { label: "Yazarlar", name: "authors", widget: "string" }
               - { label: "Başlık", name: "title", widget: "text" }
               - { label: "Kongre, yer, tarih, sayfa", name: "event", widget: "string" }
+              - { label: "PDF dosyası", name: "pdf", widget: "file", required: false, media_folder: "/files/yayinlar", public_folder: "/files/yayinlar", choose_url: false, hint: "Ücretli (kapalı erişim) yayınların PDF'ini yükleme. Yüklenen her dosya, düğme kapalı olsa bile bağlantıyı bilen herkesçe indirilebilir." }
+              - { label: "PDF herkese açık", name: "pdf_open", widget: "boolean", default: false, required: false, hint: "Açık ve PDF yüklüyse sitede PDF düğmesi ve indirme sayısı görünür. Kapalıysa bildiride düğme görünmez." }
               - label: "Sunum türü"
                 name: "type"
                 widget: "select"
@@ -242,6 +261,8 @@ collections:
               - { label: "Tez türü (EN)", name: "type_en", widget: "string", required: false }
               - { label: "Tez başlığı", name: "title", widget: "text" }
               - { label: "Danışman ve enstitü", name: "supervisor", widget: "string", required: false }
+              - { label: "PDF dosyası", name: "pdf", widget: "file", required: false, media_folder: "/files/yayinlar", public_folder: "/files/yayinlar", choose_url: false, hint: "Ücretli (kapalı erişim) yayınların PDF'ini yükleme. Yüklenen her dosya, düğme kapalı olsa bile bağlantıyı bilen herkesçe indirilebilir." }
+              - { label: "PDF herkese açık", name: "pdf_open", widget: "boolean", default: false, required: false, hint: "Açık ve PDF yüklüyse sitede PDF düğmesi ve indirme sayısı görünür. Kapalıysa ziyaretçiye 'PDF iste' düğmesi gösterilir." }
           - label: "Dergi editörlükleri"
             name: "editorial"
             widget: "list"
@@ -321,10 +342,12 @@ collections:
             add_to_top: true
             summary: "{{fields.date}} · {{fields.title}}"
             fields:
-              - { label: "Başlık", name: "title", widget: "string" }
+              - { label: "Başlık (TR)", name: "title", widget: "string" }
+              - { label: "Başlık (EN, isteğe bağlı)", name: "title_en", widget: "string", required: false }
               - { label: "Tarih", name: "date", widget: "datetime", date_format: "YYYY-MM-DD", time_format: false, format: "YYYY-MM-DD" }
-              - { label: "Dil", name: "lang", widget: "select", options: [{ label: "Türkçe", value: "tr" }, { label: "English", value: "en" }], default: "tr" }
-              - { label: "Kısa özet (1-2 cümle)", name: "summary", widget: "text" }
-              - { label: "Kapak fotoğrafı", name: "cover", widget: "image", required: false }
+              - { label: "Kapak fotoğrafı (yatay, en az 1600 piksel genişlik önerilir)", name: "cover", widget: "image", required: false, media_folder: "/images/posts", public_folder: "/images/posts", choose_url: false }
+              - { label: "Kısa özet (TR, 1-2 cümle)", name: "summary", widget: "text", hint: "Tür adlarını italik yapmak için yıldız kullan: *Darevskia clarkorum*" }
+              - { label: "Kısa özet (EN, isteğe bağlı)", name: "summary_en", widget: "text", required: false }
               - { label: "Etiketler (virgülle)", name: "tags", widget: "string", required: false }
-              - { label: "Metin", name: "body", widget: "markdown" }
+              - { label: "Metin (TR)", name: "body", widget: "markdown" }
+              - { label: "Metin (EN, isteğe bağlı)", name: "body_en", widget: "markdown", required: false, hint: "Boş bırakırsan sitenin İngilizce görünümünde de Türkçe metin gösterilir." }

@@ -18,6 +18,7 @@
   --display:'Bricolage Grotesque',system-ui,sans-serif; --body:'Source Serif 4',Georgia,serif; --mono:'IBM Plex Mono',ui-monospace,monospace;
 }
 *{box-sizing:border-box}
+[hidden]{display:none !important}
 html{scroll-behavior:smooth}
 @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
 body{margin:0;background:var(--ground);color:var(--ink);font-family:var(--body);font-size:17px;line-height:1.6}
@@ -321,6 +322,47 @@ footer .addr{color:#C3D0E0}
 .tags{display:flex;gap:8px;flex-wrap:wrap;margin-top:28px}
 .tags span{background:#E3EAF3;color:var(--navy);border-radius:999px;padding:3px 12px;font-family:var(--display);font-size:13px}
 @media (max-width:760px){.post-title{font-size:32px}.prose{font-size:17px}}
+
+/* ---------- simplified footer, back to top ---------- */
+footer .wrap.simple{display:flex;flex-direction:column;align-items:center;text-align:center;gap:8px;padding-block:44px 34px}
+footer .simple .addr{max-width:72ch;font-size:15px;line-height:1.55}
+.to-top{position:fixed;right:20px;bottom:20px;width:50px;height:50px;border-radius:50%;border:0;background:var(--ochre);color:var(--navy-deep);box-shadow:0 10px 24px -8px rgba(0,0,0,.45);cursor:pointer;display:flex;align-items:center;justify-content:center;opacity:0;transform:translateY(14px);pointer-events:none;transition:opacity .2s ease,transform .2s ease;z-index:30}
+.to-top.show{opacity:1;transform:none;pointer-events:auto}
+.to-top:hover{background:#F0B547}
+@media (prefers-reduced-motion:reduce){.to-top{transition:none}}
+/* ---------- magazine list ---------- */
+.feat{display:flex;min-width:0}
+.feat-card{display:grid;grid-template-columns:minmax(0,1.5fr) minmax(0,1fr);width:100%;border-radius:14px;overflow:hidden;color:#fff;text-decoration:none;background:var(--navy);box-shadow:0 18px 40px -24px rgba(14,31,53,.6);min-height:400px}
+.feat-card.nocover{grid-template-columns:minmax(0,1fr);min-height:0}
+.feat-card .fc-img{position:relative;overflow:hidden;background:var(--navy-deep);min-height:260px}
+.feat-card .fc-img img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:transform .6s ease}
+.feat-card:hover .fc-img img{transform:scale(1.03)}
+.feat-card .fc-body{padding:36px;display:flex;flex-direction:column;justify-content:center;gap:14px}
+.feat-card .kicker{font-family:var(--mono);font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--ochre)}
+.feat-card h3{margin:0;font-family:var(--display);font-weight:800;font-size:30px;line-height:1.12;letter-spacing:-.02em;color:#fff}
+.feat-card p{margin:0;font-size:17px;line-height:1.55;color:#DCE6F2}
+.feat-card .go{font-family:var(--display);font-weight:600;font-size:15px;color:var(--ochre)}
+.feat-card:hover .go{text-decoration:underline}
+.mag.n2 .feat-card,.mag.n3 .feat-card{grid-template-columns:minmax(0,1fr);grid-template-rows:auto 1fr;min-height:0}
+.mag.n2 .feat-card .fc-img,.mag.n3 .feat-card .fc-img{aspect-ratio:2/1;min-height:0}
+@media (prefers-reduced-motion:reduce){.feat-card .fc-img img{transition:none}.feat-card:hover .fc-img img{transform:none}}
+@media (max-width:760px){.feat-card{grid-template-columns:minmax(0,1fr);min-height:0}.feat-card .fc-img{aspect-ratio:2/1;min-height:0}.feat-card .fc-body{padding:22px}.feat-card h3{font-size:24px}.feat-card p{font-size:16px}}
+.rest{margin-top:24px}
+/* ---------- article page ---------- */
+.post-hero{max-width:1000px;margin:0 auto;padding:60px 24px 28px;display:flex;flex-direction:column;gap:16px}
+.post-hero .kicker{font-family:var(--mono);font-size:13px;letter-spacing:.08em;text-transform:uppercase;color:var(--ochre-text)}
+.post-hero h1{margin:0;font-family:var(--display);font-weight:800;font-size:50px;line-height:1.06;letter-spacing:-.025em;color:var(--navy)}
+.post-hero .dek{margin:0;max-width:64ch;font-size:21px;line-height:1.5;color:var(--ink2)}
+.post-hero .byline{display:flex;align-items:center;gap:10px;font-family:var(--display);font-weight:600;font-size:15px;color:var(--navy);padding-top:14px;border-top:1px solid var(--rule)}
+.post-hero .byline::before{content:"";width:26px;height:26px;border-radius:50%;background:radial-gradient(circle at 35% 40%,var(--spot) 0 2px,transparent 3px),radial-gradient(circle at 65% 60%,var(--spot) 0 2px,transparent 3px),radial-gradient(circle at 45% 75%,var(--spot) 0 1.5px,transparent 2.5px),var(--navy)}
+.post-fig{max-width:1180px;margin:8px auto 0;padding-inline:24px}
+.post-fig img{display:block;width:100%;height:auto;border-radius:14px;box-shadow:0 18px 40px -24px rgba(14,31,53,.6)}
+#postView .article-wrap{padding-top:32px}
+.prose .lng > p:first-child::first-letter{float:left;font-family:var(--display);font-weight:800;font-size:4.1em;line-height:.82;margin:8px 12px 0 0;color:var(--navy)}
+.prose strong{color:var(--navy)}
+.more-posts{margin-top:56px;padding-top:28px;border-top:1px solid var(--rule);display:flex;flex-direction:column;gap:20px}
+.more-posts h2{font-size:26px;color:var(--navy)}
+@media (max-width:760px){.post-hero{padding-top:36px}.post-hero h1{font-size:32px}.post-hero .dek{font-size:18px}}
 </style>
 </head>
 <body>
@@ -347,28 +389,25 @@ footer .addr{color:#C3D0E0}
   <section class="wrap page-head" id="listHead">
     <div class="head"><div class="eyebrow"><span class="en">Writings</span><span class="tr">Yazılar</span></div><h2><span class="en">Notes on herpetology</span><span class="tr">Herpetoloji üzerine yazılar</span></h2></div>
   </section>
-  <section class="wrap sec" id="listView" style="padding-top:24px"><div class="posts" id="allPosts"></div></section>
-  <article class="article-wrap" id="postView" hidden>
-    <a class="back" href="yazilar.html"><span aria-hidden="true">‹</span> <span class="en">All writings</span><span class="tr">Tüm yazılar</span></a>
-    <div id="postBody"></div>
+  <section class="wrap sec" id="listView" style="padding-top:24px"><div id="allPosts"></div></section>
+  <article id="postView" hidden>
+    <header class="post-hero" id="postHero"></header>
+    <figure class="post-fig" id="postFig"></figure>
+    <div class="article-wrap">
+      <a class="back" href="yazilar.html"><span aria-hidden="true">‹</span> <span class="en">All writings</span><span class="tr">Tüm yazılar</span></a>
+      <div id="postBody"></div>
+    </div>
   </article>
 </main>
-<footer id="contact">
-  <div class="wrap">
-    <div class="col">
-      <span class="name">Muammer Kurnaz</span>
-      <span class="addr" id="address"></span>
-    </div>
-    <div class="col m"><span class="eyebrow"><span class="en">E-mail</span><span class="tr">E-posta</span></span><span id="emails" style="display:flex;flex-direction:column;gap:6px"></span></div>
-    <div class="col m"><span class="eyebrow"><span class="en">Profiles</span><span class="tr">Profiller</span></span><span id="footProfiles" style="display:flex;flex-direction:column;gap:6px"></span></div>
-    <div class="col m">
-      <span class="eyebrow"><span class="en">Site</span><span class="tr">Site</span></span>
-      <a href="admin/"><span class="en">Edit site (admin)</span><span class="tr">Siteyi düzenle (yönetici)</span></a>
-    </div>
+<footer>
+  <div class="wrap simple">
+    <span class="name"><span class="en">Assoc. Prof. Muammer Kurnaz</span><span class="tr">Doç. Dr. Muammer Kurnaz</span></span>
+    <span class="addr" id="address"></span>
   </div>
   <div class="copyright"><span class="en">© 2026 Muammer Kurnaz. All rights reserved.</span><span class="tr">© 2026 Muammer Kurnaz. Tüm hakları saklıdır.</span><span id="visits" hidden> · <span class="en">Total visits</span><span class="tr">Toplam ziyaret</span>: <b id="visitsN"></b></span></div>
 </footer>
-<script type="application/json" id="genel-data">{"eyebrow_tr": "Herpetoloji · Biyocoğrafya · Ekoloji", "eyebrow_en": "Herpetology · Biogeography · Ecology", "headline_tr": "Türkiye'nin amfibi ve sürüngenleri: çeşitlilikleri, dağılımları ve üzerlerindeki baskılar", "headline_en": "Amphibians and reptiles of Türkiye: their diversity, their distributions and the pressures on them", "lede_tr": "Çalışmalarım saha çalışması, taksonomi, filocoğrafya ve ekolojik niş modellemeyi bir araya getiriyor. Kuzeydoğu Anadolu'dan yeni kertenkele türlerinin tanımlanmasından, ülke genelinde sürüngen topluluklarının değişiminin haritalanmasına ve kirleticilerin amfibi ve sürüngenler üzerindeki etkilerine kadar uzanıyor.", "lede_en": "My work combines fieldwork, taxonomy, phylogeography and ecological niche modeling. It runs from describing new lacertid species in northeastern Anatolia to mapping reptile turnover across the country and reviewing how pollutants affect amphibians and reptiles.", "role_tr": "Doç. Dr. · Gümüşhane Üniversitesi, Kelkit Sema Doğan Sağlık Hizmetleri Meslek Yüksekokulu, Tıbbi Hizmetler ve Teknikler Bölümü", "role_en": "Associate Professor · Gümüşhane University, Kelkit Sema Doğan Vocational School of Health Services, Department of Medical Services and Techniques", "recent_year": "2026", "recent": [{"title": "Spatial turnover and bioregional structure of reptile assemblages across Türkiye", "venue": "Biogeographia", "doi": "10.21426/b6.65700"}, {"title": "Physiological responses and adaptive mechanisms of amphibians and reptiles to multiple interacting environmental stressors", "venue": "Frontiers in Physiology", "doi": "10.3389/fphys.2026.1785483"}, {"title": "Quaternary palaeoenvironmental archives of the Indian subcontinent and their imprint on herpetofaunal biogeography", "venue": "Quaternary Science Reviews", "doi": "10.1016/j.quascirev.2026.110203"}], "stats": [{"value": "63", "tr": "indeksli dergide makale", "en": "articles in indexed journals"}, {"value": "548", "tr": "atıf (Google Akademik)", "en": "citations (Google Scholar)"}, {"value": "13", "tr": "h-indeksi (Google Akademik)", "en": "h-index (Google Scholar)"}, {"value": "3", "tr": "tanımlanan yeni kertenkele türü", "en": "new lizard species described"}], "species": [{"name": "Acanthodactylus ilgazi", "doi": "10.22120/jwb.2021.523523.1214"}, {"name": "Darevskia salihae", "doi": "10.6620/zs.2022.61-44"}, {"name": "Darevskia tuniyevi", "doi": "10.1007/s13127-022-00540-4"}], "metrics_tr": "Google Akademik i10-indeksi 22 · Web of Science: 271 atıf, h-indeksi 10 · Scopus h-indeksi 9", "metrics_en": "Google Scholar i10-index 22 · Web of Science: 271 citations, h-index 10 · Scopus h-index 9", "address_tr": "Doç. Dr., Gümüşhane Üniversitesi, Kelkit Sema Doğan Sağlık Hizmetleri MYO, Tıbbi Hizmetler ve Teknikler Bölümü, İlk ve Acil Yardım Programı, 29600 Kelkit / Gümüşhane", "address_en": "Assoc. Prof., Gümüşhane University, Kelkit Sema Doğan Vocational School of Health Services, Department of Medical Services and Techniques, First and Emergency Aid Programme, 29600 Kelkit, Gümüşhane, Türkiye", "emails": [{"email": "muammer.kurnaz@gumushane.edu.tr"}, {"email": "muammerkurnazz@gmail.com"}], "links": {"scholar": "https://scholar.google.com/citations?user=mRiSe1EAAAAJ", "yok": "https://akademik.yok.gov.tr/AkademikArama/view/viewAuthor.jsp", "researchgate": "https://www.researchgate.net/profile/Muammer-Kurnaz-2", "orcid": "0000-0002-0498-0208", "openalex": "https://openalex.org/A5042961734"}}</script>
+<button type="button" class="to-top" id="toTop" aria-label="Back to top" title="En üste / Back to top"><svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true"><path d="M5 15l7-7 7 7" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+<script type="application/json" id="genel-data">{"recent_year": "2026", "lede_tr": "Çalışmalarım saha çalışması, taksonomi, filocoğrafya ve ekolojik niş modellemeyi bir araya getiriyor. Kuzeydoğu Anadolu'dan yeni kertenkele türlerinin tanımlanmasından, ülke genelinde sürüngen topluluklarının değişiminin haritalanmasına ve kirleticilerin amfibi ve sürüngenler üzerindeki etkilerine kadar uzanıyor.", "metrics_en": "Google Scholar i10-index 22 · Web of Science: 272 citations, h-index 10 · Scopus h-index 9", "role_tr": "Doç. Dr. · Gümüşhane Üniversitesi, Kelkit Sema Doğan Sağlık Hizmetleri Meslek Yüksekokulu, Tıbbi Hizmetler ve Teknikler Bölümü", "headline_tr": "Türkiye'nin amfibi ve sürüngenleri: çeşitlilikleri, dağılımları ve üzerlerindeki baskılar", "address_tr": "Gümüşhane Üniversitesi, Kelkit Sema Doğan Sağlık Hizmetleri MYO, Tıbbi Hizmetler ve Teknikler Bölümü, İlk ve Acil Yardım Programı, 29600 Kelkit / Gümüşhane", "lede_en": "My work combines fieldwork, taxonomy, phylogeography and ecological niche modeling. It runs from describing new lacertid species in northeastern Anatolia to mapping reptile turnover across the country and reviewing how pollutants affect amphibians and reptiles.", "role_en": "Associate Professor · Gümüşhane University, Kelkit Sema Doğan Vocational School of Health Services, Department of Medical Services and Techniques", "address_en": "Gümüşhane University, Kelkit Sema Doğan Vocational School of Health Services, Department of Medical Services and Techniques, First and Emergency Aid Programme, 29600 Kelkit, Gümüşhane, Türkiye", "eyebrow_tr": "Herpetoloji · Biyocoğrafya · Ekoloji", "headline_en": "Amphibians and reptiles of Türkiye: their diversity, their distributions and the pressures on them", "emails": [{"email": "muammer.kurnaz@gumushane.edu.tr"}, {"email": "muammerkurnazz@gmail.com"}], "links": {"scholar": "https://scholar.google.com/citations?user=mRiSe1EAAAAJ", "yok": "https://akademik.yok.gov.tr/AkademikArama/view/viewAuthor.jsp", "researchgate": "https://www.researchgate.net/profile/Muammer-Kurnaz-2", "orcid": "0000-0002-0498-0208", "openalex": "https://openalex.org/A5042961734", "facebook": "https://www.facebook.com/muammer.kurnaz.3/", "instagram": "https://www.instagram.com/muammerkurnazz/", "linkedin": "https://www.linkedin.com/in/muammer-kurnaz-8072b29b/"}, "metrics_tr": "Google Akademik i10-indeksi 22 · Web of Science: 272 atıf, h-indeksi 10 · Scopus h-indeksi 9", "recent": [{"title": "Spatial turnover and bioregional structure of reptile assemblages across Türkiye", "venue": "Biogeographia", "doi": "10.21426/b6.65700"}, {"title": "Physiological responses and adaptive mechanisms of amphibians and reptiles to multiple interacting environmental stressors", "venue": "Frontiers in Physiology", "doi": "10.3389/fphys.2026.1785483"}, {"title": "Quaternary palaeoenvironmental archives of the Indian subcontinent and their imprint on herpetofaunal biogeography", "venue": "Quaternary Science Reviews", "doi": "10.1016/j.quascirev.2026.110203"}], "species": [{"name": "Acanthodactylus ilgazi", "doi": "10.22120/jwb.2021.523523.1214"}, {"name": "Darevskia salihae", "doi": "10.6620/zs.2022.61-44"}, {"name": "Darevskia tuniyevi", "doi": "10.1007/s13127-022-00540-4"}], "stats": [{"value": "63", "tr": "indeksli dergide makale", "en": "articles in indexed journals"}, {"value": "548", "tr": "atıf (Google Akademik)", "en": "citations (Google Scholar)"}, {"value": "13", "tr": "h-indeksi (Google Akademik)", "en": "h-index (Google Scholar)"}, {"value": "3", "tr": "tanımlanan yeni kertenkele türü", "en": "new lizard species described"}], "eyebrow_en": "Herpetology · Biogeography · Ecology"}</script>
 <script>
 /* small built-in Markdown renderer: headings, bold, italic, links, images, quotes, lists, paragraphs */
 function mdToHtml(src) {
@@ -419,13 +458,30 @@ window.postSlug = function (p) {
   setLang(start === 'en' ? 'en' : 'tr');
 
   function esc(t) { return String(t || '').replace(/[&<>"]/g, function (c) { return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]; }); }
+  function fmt(t) { return esc(t).replace(/\*([^*]+)\*/g, '<i>$1</i>'); }
+  function bi(en, tr) { en = en || tr || ''; tr = tr || en || ''; return '<span class="en">' + fmt(en) + '</span><span class="tr">' + fmt(tr) + '</span>'; }
+  var MON = { en: ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'],
+              tr: ['Ocak', 'Şubat', 'Mart', 'Nisan', 'Mayıs', 'Haziran', 'Temmuz', 'Ağustos', 'Eylül', 'Ekim', 'Kasım', 'Aralık'] };
+  function niceDate(d) {
+    var m = String(d || '').match(/^(\d{4})-(\d{2})-(\d{2})/);
+    if (!m) return esc(d);
+    var i = +m[2] - 1, dd = +m[3];
+    return bi(dd + ' ' + MON.en[i] + ' ' + m[1], dd + ' ' + MON.tr[i] + ' ' + m[1]);
+  }
+  function readMin(t) { return Math.max(1, Math.round(String(t || '').split(/\s+/).filter(Boolean).length / 200)); }
+  function postMeta(p) { return niceDate(p.date) + ' · ' + bi(readMin(p.body_en || p.body) + ' min read', readMin(p.body) + ' dk okuma'); }
   var posts = [];
   var listBox = document.getElementById('allPosts');
+  function href(p) { return '#' + encodeURIComponent(postSlug(p)); }
+  function featCard(p) {
+    return '<a class="feat-card' + (p.cover ? '' : ' nocover') + '" href="' + href(p) + '">' + (p.cover ? '<div class="fc-img"><img src="' + esc(p.cover) + '" alt="" loading="lazy"></div>' : '') +
+      '<div class="fc-body"><span class="kicker">' + postMeta(p) + '</span><h3>' + bi(p.title_en, p.title) + '</h3>' +
+      (p.summary ? '<p>' + bi(p.summary_en, p.summary) + '</p>' : '') + '<span class="go">' + bi('Read the article', 'Yazıyı oku') + '</span></div></a>';
+  }
   function card(p) {
-    return '<a class="post-card" href="#' + encodeURIComponent(postSlug(p)) + '" lang="' + esc(p.lang || 'tr') + '">' +
-      (p.cover ? '<img src="' + esc(p.cover) + '" alt="" loading="lazy">' : '') +
-      '<div class="pc-body"><div class="pc-meta"><span>' + esc(String(p.date || '').slice(0, 10)) + '</span><span class="pc-lang">' + esc(p.lang || 'tr') + '</span></div>' +
-      '<h3>' + esc(p.title) + '</h3><p>' + esc(p.summary) + '</p></div></a>';
+    return '<a class="post-card" href="' + href(p) + '">' + (p.cover ? '<img src="' + esc(p.cover) + '" alt="" loading="lazy">' : '') +
+      '<div class="pc-body"><div class="pc-meta">' + postMeta(p) + '</div><h3>' + bi(p.title_en, p.title) + '</h3>' +
+      (p.summary ? '<p>' + bi(p.summary_en, p.summary) + '</p>' : '') + '</div></a>';
   }
   function render() {
     var id = decodeURIComponent(location.hash.slice(1));
@@ -434,37 +490,43 @@ window.postSlug = function (p) {
     document.getElementById('listView').hidden = !!p;
     document.getElementById('postView').hidden = !p;
     if (p) {
-      var html = mdToHtml(p.body);
       var tags = String(p.tags || '').split(',').map(function (t) { return t.trim(); }).filter(Boolean);
+      document.getElementById('postHero').innerHTML = '<span class="kicker">' + postMeta(p) + '</span><h1>' + bi(p.title_en, p.title) + '</h1>' +
+        (p.summary ? '<p class="dek">' + bi(p.summary_en, p.summary) + '</p>' : '') +
+        '<span class="byline">' + bi('Assoc. Prof. Muammer Kurnaz', 'Doç. Dr. Muammer Kurnaz') + '</span>';
+      var fig = document.getElementById('postFig');
+      fig.hidden = !p.cover;
+      fig.innerHTML = p.cover ? '<img src="' + esc(p.cover) + '" alt="">' : '';
+      var others = posts.filter(function (x) { return x !== p; }).slice(0, 3);
       document.getElementById('postBody').innerHTML =
-        '<div class="post-meta"><span>' + esc(String(p.date || '').slice(0, 10)) + '</span><span class="pc-lang" style="background:#E3EAF3;color:var(--navy);border-radius:999px;padding:1px 8px;font-size:11px;text-transform:uppercase">' + esc(p.lang || 'tr') + '</span></div>' +
-        '<h1 class="post-title" lang="' + esc(p.lang || 'tr') + '">' + esc(p.title) + '</h1>' +
-        (p.summary ? '<p class="post-summary">' + esc(p.summary) + '</p>' : '') +
-        (p.cover ? '<img class="post-cover" src="' + esc(p.cover) + '" alt="">' : '') +
-        '<div class="prose" lang="' + esc(p.lang || 'tr') + '">' + html + '</div>' +
-        (tags.length ? '<div class="tags">' + tags.map(function (t) { return '<span>' + esc(t) + '</span>'; }).join('') + '</div>' : '');
+        '<div class="prose"><div class="lng en" lang="' + (p.body_en ? 'en' : 'tr') + '">' + mdToHtml(p.body_en || p.body) + '</div>' +
+        '<div class="lng tr" lang="tr">' + mdToHtml(p.body) + '</div></div>' +
+        (tags.length ? '<div class="tags">' + tags.map(function (t) { return '<span>' + esc(t) + '</span>'; }).join('') + '</div>' : '') +
+        (others.length ? '<div class="more-posts"><h2>' + bi('More writings', 'Diğer yazılar') + '</h2><div class="posts">' + others.map(card).join('') + '</div></div>' : '');
       document.title = p.title + ' | Muammer Kurnaz';
       window.scrollTo(0, 0);
     } else {
       document.title = 'Yazılar | Muammer Kurnaz';
-      listBox.innerHTML = posts.length ? posts.map(card).join('') :
+      listBox.innerHTML = posts.length ? featCard(posts[0]) + (posts.length > 1 ? '<div class="posts rest">' + posts.slice(1).map(card).join('') + '</div>' : '') :
         '<p class="empty"><span class="en">No writings yet.</span><span class="tr">Henüz yazı eklenmedi.</span></p>';
     }
   }
 
-  /* footer contact details from data/genel.json */
+  /* footer: affiliation from data/genel.json */
   fetch('data/genel.json', { cache: 'no-cache' }).then(function (r) { if (!r.ok) throw 0; return r.json(); }).catch(function () { return JSON.parse(document.getElementById('genel-data').textContent); }).then(function (g) {
-    function bi(en, tr) { en = en || tr || ''; tr = tr || en || ''; return '<span class="en">' + esc(en) + '</span><span class="tr">' + esc(tr) + '</span>'; }
-    var L = g.links || {}, orc = L.orcid ? (/^https?:/.test(L.orcid) ? L.orcid : 'https://orcid.org/' + L.orcid) : '';
     document.getElementById('address').innerHTML = bi(g.address_en, g.address_tr);
-    document.getElementById('emails').innerHTML = (g.emails || []).map(function (m) { return '<a href="mailto:' + esc(m.email) + '">' + esc(m.email) + '</a>'; }).join('');
-    document.getElementById('footProfiles').innerHTML = [[L.scholar, 'Google Scholar'], [L.yok, 'YÖK Akademik'], [L.researchgate, 'ResearchGate'], [orc, 'ORCID'], [L.openalex, 'OpenAlex']]
-      .filter(function (p) { return p[0]; }).map(function (p) { return '<a href="' + esc(p[0]) + '">' + p[1] + '</a>'; }).join('');
   }).catch(function () {});
+
+  /* back to top */
+  var toTop = document.getElementById('toTop');
+  function onScroll() { toTop.classList.toggle('show', window.scrollY > 700); }
+  window.addEventListener('scroll', onScroll, { passive: true });
+  onScroll();
+  toTop.addEventListener('click', function () { window.scrollTo({ top: 0, behavior: 'smooth' }); });
   window.addEventListener('hashchange', render);
   fetch('posts.json', { cache: 'no-cache' })
     .then(function (r) { if (!r.ok) throw 0; return r.json(); })
-    .then(function (d) { posts = (d.posts || []).slice().sort(function (a, b) { return String(b.date).localeCompare(String(a.date)); }); })
+    .then(function (d) { posts = (d.posts || []).filter(function (p) { return p && p.title; }).sort(function (a, b) { return String(b.date).localeCompare(String(a.date)); }); })
     .catch(function () { posts = []; })
     .then(render);
 })();

@@ -34,67 +34,83 @@
   "expertise": [
     {
       "tr": "Amfibi ve sürüngen türlerinin günümüz ve gelecek projeksiyonları",
-      "en": "Present and future projections of amphibian and reptile species"
+      "en": "Present and future projections of amphibian and reptile species",
+      "group": "bio"
     },
     {
       "tr": "Biyocoğrafya",
-      "en": "Biogeography"
+      "en": "Biogeography",
+      "group": "bio"
     },
     {
       "tr": "Ekolojik niş modelleme",
-      "en": "Ecological niche modeling"
+      "en": "Ecological niche modeling",
+      "group": "bio"
     },
     {
       "tr": "Ekoloji",
-      "en": "Ecology"
+      "en": "Ecology",
+      "group": "eco"
     },
     {
       "tr": "Filocoğrafya",
-      "en": "Phylogeography"
+      "en": "Phylogeography",
+      "group": "sys"
     },
     {
       "tr": "Filogeni",
-      "en": "Phylogeny"
+      "en": "Phylogeny",
+      "group": "sys"
     },
     {
       "tr": "Herpetoloji",
-      "en": "Herpetology"
+      "en": "Herpetology",
+      "group": "core"
     },
     {
       "tr": "İskelet kronolojisi",
-      "en": "Skeletochronology"
+      "en": "Skeletochronology",
+      "group": "demo"
     },
     {
       "tr": "Morfoloji",
-      "en": "Morphology"
+      "en": "Morphology",
+      "group": "sys"
     },
     {
       "tr": "Popülasyon ekolojisi",
-      "en": "Population ecology"
+      "en": "Population ecology",
+      "group": "eco"
     },
     {
       "tr": "Sistematik",
-      "en": "Systematics"
+      "en": "Systematics",
+      "group": "sys"
     },
     {
       "tr": "Taksonomi",
-      "en": "Taxonomy"
+      "en": "Taxonomy",
+      "group": "sys"
     },
     {
       "tr": "Termal biyoloji",
-      "en": "Thermal biology"
+      "en": "Thermal biology",
+      "group": "eco"
     },
     {
       "tr": "Türlerin yayılışları",
-      "en": "Species distributions"
+      "en": "Species distributions",
+      "group": "bio"
     },
     {
       "tr": "Yaş analizi (amfibi ve sürüngenlerin demografik analizi)",
-      "en": "Age analysis (demography of amphibians and reptiles)"
+      "en": "Age analysis (demography of amphibians and reptiles)",
+      "group": "demo"
     },
     {
       "tr": "Zooloji",
-      "en": "Zoology"
+      "en": "Zoology",
+      "group": "core"
     }
   ]
 }
