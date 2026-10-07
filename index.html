@@ -459,7 +459,7 @@ dialog.lb .cnt{font-family:var(--mono);font-size:12px;color:#A8B6C8;white-space:
   <div class="wrap">
     <a class="brand" href="#top">Muammer Kurnaz</a>
     <nav class="links" aria-label="Main">
-      <a href="#turler"><span class="en">Species</span><span class="tr">Türler</span></a>
+      <a href="#turler" id="navTurler" hidden><span class="en">Species</span><span class="tr">Türler</span></a>
       <a href="#research"><span class="en">Research</span><span class="tr">Araştırma</span></a>
       <a href="#projects"><span class="en">Projects</span><span class="tr">Projeler</span></a>
       <a href="#publications"><span class="en">Publications</span><span class="tr">Yayınlar</span></a>
@@ -1128,7 +1128,7 @@ window.postSlug = function (p) {
       .then(function (d) {
         list = (d.species || []).filter(function (c) { return c && c.latin && c.onay === true; });
         if (!list.length) return;
-        sec.hidden = false; tick(); setInterval(tick, 1000);
+        sec.hidden = false; var nt = document.getElementById('navTurler'); if (nt) nt.hidden = false; tick(); setInterval(tick, 1000);
       })
       .catch(function () {});
   })();
