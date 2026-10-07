@@ -1,0 +1,1447 @@
+{
+ "img_2042.jpg": {
+  "box": [
+   0,
+   370,
+   3840,
+   2829
+  ],
+  "orig": [
+   6000,
+   3368
+  ],
+  "out": [
+   2000,
+   1281
+  ],
+  "note": "tail touches left edge; kept edge"
+ },
+ "img_0635.jpg": {
+  "box": [
+   311,
+   0,
+   4873,
+   2903
+  ],
+  "orig": [
+   5184,
+   3456
+  ],
+  "out": [
+   2000,
+   1273
+  ],
+  "note": "tail tip reaches near top; kept top edge"
+ },
+ "lacertid-02.jpg": {
+  "box": [
+   288,
+   313,
+   1200,
+   715
+  ],
+  "orig": [
+   1600,
+   1117
+  ],
+  "out": [
+   912,
+   402
+  ],
+  "note": "rear body hidden behind rock; watermark excluded"
+ },
+ "img_1978.jpg": {
+  "box": [
+   1503,
+   933,
+   3110,
+   2074
+  ],
+  "orig": [
+   5184,
+   3456
+  ],
+  "out": [
+   1607,
+   1141
+  ],
+  "note": "Blanus"
+ },
+ "blanus-01.jpg": {
+  "box": [
+   352,
+   92,
+   1344,
+   851
+  ],
+  "orig": [
+   1600,
+   1025
+  ],
+  "out": [
+   992,
+   759
+  ],
+  "note": "anterior coil out of focus; widened for landscape"
+ },
+ "img_7122.jpg": {
+  "box": [
+   1296,
+   1382,
+   3344,
+   2765
+  ],
+  "orig": [
+   5184,
+   3456
+  ],
+  "out": [
+   2000,
+   1351
+  ],
+  "note": "toad on rock"
+ },
+ "img_7866.jpg": {
+  "box": [
+   547,
+   620,
+   5253,
+   3502
+  ],
+  "orig": [
+   5472,
+   3648
+  ],
+  "out": [
+   2000,
+   1225
+  ],
+  "note": "two toads (amplexus/pair), both included"
+ },
+ "img_5916.jpg": {
+  "box": [
+   360,
+   808,
+   4740,
+   3267
+  ],
+  "orig": [
+   6000,
+   3368
+  ],
+  "out": [
+   2000,
+   1123
+  ],
+  "note": "two toads, large one and small juvenile both included"
+ },
+ "img_5909.jpg": {
+  "box": [
+   1740,
+   909,
+   4920,
+   2694
+  ],
+  "orig": [
+   6000,
+   3368
+  ],
+  "out": [
+   2000,
+   1123
+  ],
+  "note": "toad"
+ },
+ "img_6706.jpg": {
+  "box": [
+   1200,
+   909,
+   4380,
+   3368
+  ],
+  "orig": [
+   6000,
+   3368
+  ],
+  "out": [
+   2000,
+   1547
+  ],
+  "note": "tail tip near bottom edge"
+ },
+ "img_6712.jpg": {
+  "box": [
+   0,
+   1111,
+   3840,
+   3368
+  ],
+  "orig": [
+   6000,
+   3368
+  ],
+  "out": [
+   2000,
+   1176
+  ],
+  "note": "tail loop near left edge; kept left and bottom edges"
+ },
+ "img_5632.jpg": {
+  "box": [
+   2134,
+   839,
+   5472,
+   2809
+  ],
+  "orig": [
+   5472,
+   3648
+  ],
+  "out": [
+   2000,
+   1180
+  ],
+  "note": "tail runs off right edge in original; kept edge"
+ },
+ "img_5622.jpg": {
+  "box": [
+   109,
+   1605,
+   3666,
+   3083
+  ],
+  "orig": [
+   5472,
+   3648
+  ],
+  "out": [
+   2000,
+   831
+  ],
+  "note": "lizard on ground"
+ },
+ "img_3258.jpg": {
+  "box": [
+   467,
+   933,
+   5184,
+   3214
+  ],
+  "orig": [
+   5184,
+   3456
+  ],
+  "out": [
+   2000,
+   967
+  ],
+  "note": "tail tip reaches right edge; kept edge"
+ },
+ "clarkorum-01.jpg": {
+  "box": [
+   0,
+   140,
+   1408,
+   727
+  ],
+  "orig": [
+   1600,
+   932
+  ],
+  "out": [
+   1408,
+   587
+  ],
+  "note": "tail runs off left edge in original; watermark excluded"
+ },
+ "img_0139.jpg": {
+  "box": [
+   104,
+   726,
+   3577,
+   3456
+  ],
+  "orig": [
+   5184,
+   3456
+  ],
+  "out": [
+   2000,
+   1572
+  ],
+  "note": "tail runs off bottom edge in original; kept edge"
+ },
+ "darevskia-03.jpg": {
+  "box": [
+   213,
+   99,
+   1370,
+   989
+  ],
+  "orig": [
+   1600,
+   989
+  ],
+  "out": [
+   1157,
+   890
+  ],
+  "note": "tail runs off bottom edge in original; kept edge"
+ },
+ "img_6616.jpg": {
+  "box": [
+   547,
+   948,
+   3557,
+   2444
+  ],
+  "orig": [
+   5472,
+   3648
+  ],
+  "out": [
+   2000,
+   994
+  ],
+  "note": "lizard on rock"
+ },
+ "tuniyevi-02.jpg": {
+  "box": [
+   448,
+   326,
+   1600,
+   887
+  ],
+  "orig": [
+   1600,
+   1019
+  ],
+  "out": [
+   1152,
+   561
+  ],
+  "note": "tail runs off right edge; kept edge; watermark excluded"
+ },
+ "lacertid-01.jpg": {
+  "box": [
+   0,
+   114,
+   1280,
+   1032
+  ],
+  "orig": [
+   1600,
+   1032
+  ],
+  "out": [
+   1280,
+   918
+  ],
+  "note": "tail runs off left/bottom edge; kept edges"
+ },
+ "img_6428.jpg": {
+  "box": [
+   0,
+   0,
+   4614,
+   3145
+  ],
+  "orig": [
+   5184,
+   3456
+  ],
+  "out": [
+   2000,
+   1363
+  ],
+  "note": "animal fills frame; tail loop touches left edge, kept top/left edges"
+ },
+ "img_6731.jpg": {
+  "box": [
+   1800,
+   606,
+   6000,
+   2896
+  ],
+  "orig": [
+   6000,
+   3368
+  ],
+  "out": [
+   2000,
+   1090
+  ],
+  "note": "tail runs off right edge; kept edge"
+ },
+ "img_1022.jpg": {
+  "box": [
+   0,
+   795,
+   3940,
+   2454
+  ],
+  "orig": [
+   5184,
+   3456
+  ],
+  "out": [
+   2000,
+   842
+  ],
+  "note": "coiled snake"
+ },
+ "img_8861.jpg": {
+  "box": [
+   96,
+   267,
+   1152,
+   886
+  ],
+  "orig": [
+   1600,
+   1067
+  ],
+  "out": [
+   1056,
+   619
+  ],
+  "note": "lizard on rock"
+ },
+ "eremias-strauchi-01.jpg": {
+  "box": [
+   0,
+   267,
+   1152,
+   950
+  ],
+  "orig": [
+   1600,
+   1067
+  ],
+  "out": [
+   1152,
+   683
+  ],
+  "note": "tail loop reaches left edge; kept edge"
+ },
+ "ablepharus-anatolicus-01.jpg": {
+  "box": [
+   80,
+   233,
+   1456,
+   806
+  ],
+  "orig": [
+   1600,
+   1110
+  ],
+  "out": [
+   1376,
+   573
+  ],
+  "note": "skink; watermark excluded"
+ },
+ "darevskia-derjugini-01.jpg": {
+  "box": [
+   272,
+   158,
+   1504,
+   800
+  ],
+  "orig": [
+   1600,
+   988
+  ],
+  "out": [
+   1232,
+   642
+  ],
+  "note": "thin tail tip curls back to the left (dark, low contrast); watermark excluded"
+ },
+ "darevskia-salihae-01.jpg": {
+  "box": [
+   0,
+   49,
+   792,
+   492
+  ],
+  "orig": [
+   900,
+   541
+  ],
+  "out": [
+   792,
+   443
+  ],
+  "note": "hind foot at left edge; kept edge"
+ },
+ "zamenis-longissimus-01.jpg": {
+  "box": [
+   0,
+   309,
+   1328,
+   875
+  ],
+  "orig": [
+   1600,
+   1067
+  ],
+  "out": [
+   1328,
+   566
+  ],
+  "note": "snake partly hidden in leaf litter, body runs off left edge; low contrast"
+ },
+ "testudo-graeca-01.jpg": {
+  "box": [
+   0,
+   128,
+   1040,
+   800
+  ],
+  "orig": [
+   1600,
+   1067
+  ],
+  "out": [
+   1040,
+   672
+  ],
+  "note": "shell touches left edge; kept edge"
+ },
+ "laudakia-stellio-01.jpg": {
+  "box": [
+   96,
+   384,
+   1024,
+   832
+  ],
+  "orig": [
+   1600,
+   1067
+  ],
+  "out": [
+   928,
+   448
+  ],
+  "note": "agamid on rock"
+ },
+ "laudakia-stellio-02.jpg": {
+  "box": [
+   352,
+   245,
+   1600,
+   1067
+  ],
+  "orig": [
+   1600,
+   1067
+  ],
+  "out": [
+   1248,
+   822
+  ],
+  "note": "tail runs off bottom edge; kept edge"
+ },
+ "rana-tavasensis-01.jpg": {
+  "box": [
+   208,
+   267,
+   1104,
+   939
+  ],
+  "orig": [
+   1600,
+   1067
+  ],
+  "out": [
+   896,
+   672
+  ],
+  "note": "frog among vegetation"
+ },
+ "rana-macrocnemis-01.jpg": {
+  "box": [
+   512,
+   108,
+   1568,
+   871
+  ],
+  "orig": [
+   1600,
+   898
+  ],
+  "out": [
+   1056,
+   763
+  ],
+  "note": "frog on rock"
+ },
+ "rana-dalmatina-01.jpg": {
+  "box": [
+   208,
+   320,
+   1104,
+   939
+  ],
+  "orig": [
+   1600,
+   1067
+  ],
+  "out": [
+   896,
+   619
+  ],
+  "note": "frog on rock"
+ },
+ "pelodytes-caucasicus-01.jpg": {
+  "box": [
+   400,
+   277,
+   1136,
+   811
+  ],
+  "orig": [
+   1600,
+   1067
+  ],
+  "out": [
+   736,
+   534
+  ],
+  "note": "frog largely hidden under grass blades and water; hard to see"
+ },
+ "pelobates-syriacus-01.jpg": {
+  "box": [
+   496,
+   299,
+   1472,
+   950
+  ],
+  "orig": [
+   1600,
+   1067
+  ],
+  "out": [
+   976,
+   651
+  ],
+  "note": "spadefoot on rock"
+ },
+ "ommatotriton-nesterovi-01.jpg": {
+  "box": [
+   208,
+   245,
+   1600,
+   826
+  ],
+  "orig": [
+   1600,
+   1067
+  ],
+  "out": [
+   1392,
+   581
+  ],
+  "note": "newt; tail tip close to right edge"
+ },
+ "ommatotriton-nesterovi-02.jpg": {
+  "box": [
+   208,
+   192,
+   1168,
+   822
+  ],
+  "orig": [
+   1600,
+   1067
+  ],
+  "out": [
+   960,
+   630
+  ],
+  "note": "newt"
+ },
+ "natrix-tessellata-01.jpg": {
+  "box": [
+   0,
+   171,
+   1504,
+   1067
+  ],
+  "orig": [
+   1600,
+   1067
+  ],
+  "out": [
+   1504,
+   896
+  ],
+  "note": "tail runs off bottom edge; kept edge"
+ },
+ "lyciasalamandra-fazilae-01.jpg": {
+  "box": [
+   112,
+   43,
+   1056,
+   768
+  ],
+  "orig": [
+   1600,
+   1067
+  ],
+  "out": [
+   944,
+   725
+  ],
+  "note": "salamander in grass, tail slightly out of focus"
+ },
+ "lacerta-media-01.jpg": {
+  "box": [
+   16,
+   107,
+   1600,
+   779
+  ],
+  "orig": [
+   1600,
+   1067
+  ],
+  "out": [
+   1584,
+   672
+  ],
+  "note": "long slender lizard, tail tip near right edge"
+ },
+ "lacerta-agilis-01.jpg": {
+  "box": [
+   224,
+   0,
+   1472,
+   682
+  ],
+  "orig": [
+   1600,
+   898
+  ],
+  "out": [
+   1248,
+   682
+  ],
+  "note": "hind toes near top edge; kept top edge; tail blurred toward left"
+ },
+ "lacerta-agilis-02.jpg": {
+  "box": [
+   32,
+   135,
+   1168,
+   709
+  ],
+  "orig": [
+   1600,
+   898
+  ],
+  "out": [
+   1136,
+   574
+  ],
+  "note": "lizard on rock"
+ },
+ "mauremys-01.jpg": {
+  "box": [
+   0,
+   152,
+   1280,
+   922
+  ],
+  "orig": [
+   1600,
+   1013
+  ],
+  "out": [
+   1280,
+   770
+  ],
+  "note": "terrapin; watermark excluded"
+ },
+ "mediodactylus-danilewskii-01.jpg": {
+  "box": [
+   72,
+   12,
+   839,
+   418
+  ],
+  "orig": [
+   1023,
+   615
+  ],
+  "out": [
+   767,
+   406
+  ],
+  "note": "gecko"
+ },
+ "mediodactylus-orientalis-01.jpg": {
+  "box": [
+   0,
+   109,
+   1376,
+   1054
+  ],
+  "orig": [
+   1600,
+   1087
+  ],
+  "out": [
+   1376,
+   945
+  ],
+  "note": "gecko; left hand toes near left edge"
+ },
+ "ophisops-02.jpg": {
+  "box": [
+   0,
+   180,
+   991,
+   621
+  ],
+  "orig": [
+   991,
+   621
+  ],
+  "out": [
+   991,
+   441
+  ],
+  "note": "close-up, tail runs off right edge; whole frame width kept"
+ },
+ "ophisops-01.jpg": {
+  "box": [
+   496,
+   120,
+   1456,
+   811
+  ],
+  "orig": [
+   1600,
+   1001
+  ],
+  "out": [
+   960,
+   691
+  ],
+  "note": "watermark partly inside crop (ignored)"
+ },
+ "podarcis-muralis-01.jpg": {
+  "box": [
+   0,
+   332,
+   1232,
+   938
+  ],
+  "orig": [
+   1600,
+   977
+  ],
+  "out": [
+   1232,
+   606
+  ],
+  "note": "tail out of focus; signature partly cut"
+ },
+ "podarcis-muralis-02.jpg": {
+  "box": [
+   63,
+   100,
+   855,
+   457
+  ],
+  "orig": [
+   900,
+   557
+  ],
+  "out": [
+   792,
+   357
+  ],
+  "note": "lizard with long tail curling back"
+ },
+ "parvilacerta-02.jpg": {
+  "box": [
+   128,
+   0,
+   896,
+   584
+  ],
+  "orig": [
+   1067,
+   615
+  ],
+  "out": [
+   768,
+   584
+  ],
+  "note": "frontal view; tail out of focus, runs to top edge; kept edge"
+ },
+ "parvilacerta-03.jpg": {
+  "box": [
+   62,
+   93,
+   1033,
+   500
+  ],
+  "orig": [
+   1033,
+   617
+  ],
+  "out": [
+   971,
+   407
+  ],
+  "note": "two lizards: foreground one fully included (tail to right edge); blurred background lizard partly cut"
+ },
+ "parvilacerta-01.jpg": {
+  "box": [
+   368,
+   229,
+   1440,
+   743
+  ],
+  "orig": [
+   1600,
+   917
+  ],
+  "out": [
+   1072,
+   514
+  ],
+  "note": "rear body and tail blurred (shallow depth of field); watermark excluded"
+ },
+ "pseudopus-01.jpg": {
+  "box": [
+   18,
+   0,
+   900,
+   498
+  ],
+  "orig": [
+   900,
+   600
+  ],
+  "out": [
+   882,
+   498
+  ],
+  "note": "coiled legless lizard; tail continues to top edge"
+ },
+ "testudo-hermanni-01.jpg": {
+  "box": [
+   0,
+   39,
+   873,
+   642
+  ],
+  "orig": [
+   900,
+   655
+  ],
+  "out": [
+   873,
+   603
+  ],
+  "note": "tortoise seen from rear-side; head hidden; fills frame"
+ },
+ "vipera-meridionalis-01.jpg": {
+  "box": [
+   208,
+   164,
+   1418,
+   1095
+  ],
+  "orig": [
+   1600,
+   1095
+  ],
+  "out": [
+   1210,
+   931
+  ],
+  "note": "viper on moss; tail tip near bottom edge"
+ },
+ "zamenis-hohenackeri-01.jpg": {
+  "box": [
+   144,
+   0,
+   1568,
+   900
+  ],
+  "orig": [
+   1600,
+   900
+  ],
+  "out": [
+   1424,
+   900
+  ],
+  "note": "snake; rear coils out of focus, body touches top edge"
+ },
+ "bombina-02.jpg": {
+  "box": [
+   90,
+   90,
+   810,
+   633
+  ],
+  "orig": [
+   900,
+   646
+  ],
+  "out": [
+   720,
+   543
+  ],
+  "note": "toad in water, slightly murky"
+ },
+ "bombina-03.jpg": {
+  "box": [
+   0,
+   0,
+   864,
+   666
+  ],
+  "orig": [
+   900,
+   666
+  ],
+  "out": [
+   864,
+   666
+  ],
+  "note": "ventral view; animal is portrait-shaped, toes near top edge"
+ },
+ "bombina-01.jpg": {
+  "box": [
+   176,
+   109,
+   1520,
+   901
+  ],
+  "orig": [
+   1600,
+   1086
+  ],
+  "out": [
+   1344,
+   792
+  ],
+  "note": "unken reflex posture; watermark excluded"
+ },
+ "lacerta-viridis-01.jpg": {
+  "box": [
+   320,
+   245,
+   1600,
+   928
+  ],
+  "orig": [
+   1600,
+   1067
+  ],
+  "out": [
+   1280,
+   683
+  ],
+  "note": "close-up, body/tail run off right edge; watermark excluded"
+ },
+ "anatololacerta-02.jpg": {
+  "box": [
+   0,
+   295,
+   1280,
+   1010
+  ],
+  "orig": [
+   1600,
+   1052
+  ],
+  "out": [
+   1280,
+   715
+  ],
+  "note": "tail runs off left edge under rock; watermark excluded"
+ },
+ "darevskia-01.jpg": {
+  "box": [
+   0,
+   210,
+   1328,
+   762
+  ],
+  "orig": [
+   1600,
+   912
+  ],
+  "out": [
+   1328,
+   552
+  ],
+  "note": "tail runs off left edge; kept edge"
+ },
+ "emys-01.jpg": {
+  "box": [
+   186,
+   12,
+   600,
+   264
+  ],
+  "orig": [
+   600,
+   400
+  ],
+  "out": [
+   414,
+   252
+  ],
+  "note": "low-resolution source (600x400), dark turtle partly hidden in grass; shell touches right edge"
+ },
+ "diplochondrodes-01.jpg": {
+  "box": [
+   0,
+   300,
+   1280,
+   939
+  ],
+  "orig": [
+   1600,
+   999
+  ],
+  "out": [
+   1280,
+   639
+  ],
+  "note": "hind toes near left edge; watermark partly inside (ignored)"
+ },
+ "coronella-01.jpg": {
+  "box": [
+   0,
+   68,
+   432,
+   400
+  ],
+  "orig": [
+   600,
+   400
+  ],
+  "out": [
+   432,
+   332
+  ],
+  "note": "low-resolution source (600x400); body runs off left/bottom edges"
+ },
+ "natrix-01.jpg": {
+  "box": [
+   48,
+   72,
+   600,
+   400
+  ],
+  "orig": [
+   600,
+   400
+  ],
+  "out": [
+   552,
+   328
+  ],
+  "note": "low-resolution source (600x400); coils run off right/bottom edges"
+ },
+ "parvula-02.jpg": {
+  "box": [
+   144,
+   277,
+   1184,
+   1067
+  ],
+  "orig": [
+   1600,
+   1067
+  ],
+  "out": [
+   1040,
+   790
+  ],
+  "note": "tail runs off bottom edge; kept edge"
+ },
+ "darevskia-02.jpg": {
+  "box": [
+   80,
+   312,
+   1376,
+   855
+  ],
+  "orig": [
+   1600,
+   1096
+  ],
+  "out": [
+   1296,
+   543
+  ],
+  "note": "lizard on rock"
+ },
+ "hemorrhois-01.jpg": {
+  "box": [
+   80,
+   153,
+   1600,
+   898
+  ],
+  "orig": [
+   1600,
+   898
+  ],
+  "out": [
+   1520,
+   745
+  ],
+  "note": "tail runs off bottom-right corner; watermark partly inside (ignored)"
+ },
+ "paralaudakia-01.jpg": {
+  "box": [
+   0,
+   239,
+   1056,
+   1038
+  ],
+  "orig": [
+   1600,
+   1038
+  ],
+  "out": [
+   1056,
+   799
+  ],
+  "note": "tail runs off bottom-left edge; kept edges"
+ },
+ "unisexualis-01.jpg": {
+  "box": [
+   400,
+   274,
+   1600,
+   870
+  ],
+  "orig": [
+   1600,
+   946
+  ],
+  "out": [
+   1200,
+   596
+  ],
+  "note": "rear body and tail run off right edge; watermark excluded"
+ },
+ "podarcis-tauricus-01.jpg": {
+  "box": [
+   0,
+   336,
+   1184,
+   829
+  ],
+  "orig": [
+   1600,
+   1017
+  ],
+  "out": [
+   1184,
+   493
+  ],
+  "note": "lizard on rock; watermark excluded"
+ },
+ "anguis-01.jpg": {
+  "box": [
+   400,
+   341,
+   1600,
+   846
+  ],
+  "orig": [
+   1600,
+   1032
+  ],
+  "out": [
+   1200,
+   505
+  ],
+  "note": "tail runs off right edge; kept edge"
+ },
+ "anguis-02.jpg": {
+  "box": [
+   0,
+   30,
+   1264,
+   997
+  ],
+  "orig": [
+   1600,
+   997
+  ],
+  "out": [
+   1264,
+   967
+  ],
+  "note": "S-shaped slow worm, widened for landscape"
+ },
+ "snake-01.jpg": {
+  "box": [
+   0,
+   148,
+   1424,
+   984
+  ],
+  "orig": [
+   1600,
+   984
+  ],
+  "out": [
+   1424,
+   836
+  ],
+  "note": "body and tail run off left/bottom edges; watermark partly inside (ignored)"
+ },
+ "gecko-01.jpg": {
+  "box": [
+   0,
+   49,
+   995,
+   463
+  ],
+  "orig": [
+   1081,
+   617
+  ],
+  "out": [
+   995,
+   414
+  ],
+  "note": "very elongated pose; extra vertical background kept to reach 2.4 ratio; watermark excluded"
+ },
+ "skink-01.jpg": {
+  "box": [
+   496,
+   232,
+   1456,
+   633
+  ],
+  "orig": [
+   1600,
+   911
+  ],
+  "out": [
+   960,
+   401
+  ],
+  "note": "skink partly hidden in moss; legs/tail not clearly visible"
+ },
+ "skink-02.jpg": {
+  "box": [
+   0,
+   280,
+   992,
+   888
+  ],
+  "orig": [
+   1600,
+   1168
+  ],
+  "out": [
+   992,
+   608
+  ],
+  "note": "head/forebody close-up only; body runs off left edge; watermark excluded"
+ },
+ "hyla-01.jpg": {
+  "box": [
+   65,
+   62,
+   790,
+   619
+  ],
+  "orig": [
+   1007,
+   619
+  ],
+  "out": [
+   725,
+   557
+  ],
+  "note": "tree frog; toes reach near bottom edge"
+ },
+ "acantho-01.jpg": {
+  "box": [
+   0,
+   302,
+   1360,
+   869
+  ],
+  "orig": [
+   1600,
+   1079
+  ],
+  "out": [
+   1360,
+   567
+  ],
+  "note": "tail runs off left edge; watermark excluded"
+ },
+ "mertensiella-01.jpg": {
+  "box": [
+   357,
+   149,
+   1147,
+   758
+  ],
+  "orig": [
+   1600,
+   1067
+  ],
+  "out": [
+   790,
+   609
+  ],
+  "note": "salamander small in frame, posterior body/tail partly hidden in moss"
+ },
+ "lacertid-03.jpg": {
+  "box": [
+   0,
+   0,
+   1248,
+   763
+  ],
+  "orig": [
+   1600,
+   919
+  ],
+  "out": [
+   1248,
+   763
+  ],
+  "note": "body curves back; out-of-focus tail runs along top to left edge; kept top/left edges; watermark excluded"
+ },
+ "semender-001.jpg": {
+  "box": [
+   304,
+   192,
+   1216,
+   885
+  ],
+  "orig": [
+   1600,
+   1066
+  ],
+  "out": [
+   912,
+   693
+  ],
+  "note": "newt in aquarium; translucent tail extends down-left (low contrast)"
+ }
+}

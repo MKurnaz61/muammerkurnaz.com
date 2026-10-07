@@ -360,6 +360,15 @@ footer .simple .addr{max-width:72ch;font-size:15px;line-height:1.55}
 #postView .article-wrap{padding-top:32px}
 .prose .lng > p:first-child::first-letter{float:left;font-family:var(--display);font-weight:800;font-size:4.1em;line-height:.82;margin:8px 12px 0 0;color:var(--navy)}
 .prose strong{color:var(--navy)}
+.share{margin-top:32px;padding:20px 22px;border-radius:14px;background:#fff;box-shadow:0 1px 0 var(--rule),0 12px 32px -22px rgba(19,34,53,.4);display:flex;flex-direction:column;gap:14px}
+.share h3{margin:0;font-family:var(--display);font-size:18px;color:var(--navy)}
+.share .row{display:flex;gap:10px;flex-wrap:wrap}
+.share button,.share a{display:inline-flex;align-items:center;gap:8px;min-height:44px;padding:8px 16px;border-radius:999px;border:1px solid var(--rule);background:#fff;color:var(--navy);font-family:var(--display);font-weight:600;font-size:14px;text-decoration:none;cursor:pointer}
+.share button:hover,.share a:hover{border-color:var(--navy)}
+.share .ig{border:0;color:#fff;background:linear-gradient(45deg,#F58529,#DD2A7B 55%,#8134AF)}
+.share .ig:hover{filter:brightness(1.08)}
+.share .note{margin:0;font-family:var(--mono);font-size:12px;color:var(--muted);min-height:1em}
+.share svg{flex:none}
 .more-posts{margin-top:56px;padding-top:28px;border-top:1px solid var(--rule);display:flex;flex-direction:column;gap:20px}
 .more-posts h2{font-size:26px;color:var(--navy)}
 @media (max-width:760px){.post-hero{padding-top:36px}.post-hero h1{font-size:32px}.post-hero .dek{font-size:18px}}
@@ -490,7 +499,9 @@ window.postSlug = function (p) {
     document.getElementById('listView').hidden = !!p;
     document.getElementById('postView').hidden = !p;
     if (p) {
-      var tags = String(p.tags || '').split(',').map(function (t) { return t.trim(); }).filter(Boolean);
+      function tagList(t) { return String(t || '').split(',').map(function (x) { return x.trim(); }).filter(Boolean); }
+      var tagsTr = tagList(p.tags), tagsEn = tagList(p.tags_en);
+      function tagHtml(a) { return a.map(function (t) { return '<span>' + esc(t) + '</span>'; }).join(''); }
       document.getElementById('postHero').innerHTML = '<span class="kicker">' + postMeta(p) + '</span><h1>' + bi(p.title_en, p.title) + '</h1>' +
         (p.summary ? '<p class="dek">' + bi(p.summary_en, p.summary) + '</p>' : '') +
         '<span class="byline">' + bi('Assoc. Prof. Muammer Kurnaz', 'Doç. Dr. Muammer Kurnaz') + '</span>';
@@ -501,16 +512,125 @@ window.postSlug = function (p) {
       document.getElementById('postBody').innerHTML =
         '<div class="prose"><div class="lng en" lang="' + (p.body_en ? 'en' : 'tr') + '">' + mdToHtml(p.body_en || p.body) + '</div>' +
         '<div class="lng tr" lang="tr">' + mdToHtml(p.body) + '</div></div>' +
-        (tags.length ? '<div class="tags">' + tags.map(function (t) { return '<span>' + esc(t) + '</span>'; }).join('') + '</div>' : '') +
+        (tagsTr.length || tagsEn.length ? '<div class="tags en">' + tagHtml(tagsEn.length ? tagsEn : tagsTr) + '</div><div class="tags tr">' + tagHtml(tagsTr.length ? tagsTr : tagsEn) + '</div>' : '') +
+        shareBox() +
         (others.length ? '<div class="more-posts"><h2>' + bi('More writings', 'Diğer yazılar') + '</h2><div class="posts">' + others.map(card).join('') + '</div></div>' : '');
-      document.title = p.title + ' | Muammer Kurnaz';
+      current = p;
+      document.title = plainT(p.title) + ' | Muammer Kurnaz';
       window.scrollTo(0, 0);
     } else {
+      current = null;
       document.title = 'Yazılar | Muammer Kurnaz';
       listBox.innerHTML = posts.length ? featCard(posts[0]) + (posts.length > 1 ? '<div class="posts rest">' + posts.slice(1).map(card).join('') + '</div>' : '') :
         '<p class="empty"><span class="en">No writings yet.</span><span class="tr">Henüz yazı eklenmedi.</span></p>';
     }
   }
+
+
+  /* ---------- sharing: Instagram story image, copy link, WhatsApp, LinkedIn, Facebook ---------- */
+  var current = null;
+  var SVG = {
+    ig: '<svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true"><rect x="4" y="4" width="16" height="16" rx="5" fill="none" stroke="#fff" stroke-width="2"/><circle cx="12" cy="12" r="3.8" fill="none" stroke="#fff" stroke-width="2"/><circle cx="17.2" cy="6.8" r="1.2" fill="#fff"/></svg>',
+    link: '<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M10 14a4 4 0 0 0 5.7 0l3-3a4 4 0 0 0-5.7-5.7l-1 1"/><path d="M14 10a4 4 0 0 0-5.7 0l-3 3a4 4 0 0 0 5.7 5.7l1-1"/></svg>'
+  };
+  function postUrl(p) { return location.origin + location.pathname + '#' + encodeURIComponent(postSlug(p)); }
+  function plainT(t) { return String(t || '').replace(/\*/g, ''); }
+  function lang() { return document.documentElement.lang === 'en' ? 'en' : 'tr'; }
+  function shareBox() {
+    return '<div class="share"><h3>' + bi('Share this article', 'Bu yazıyı paylaş') + '</h3><div class="row">' +
+      '<button type="button" class="ig" data-share="story">' + SVG.ig + bi('Instagram story', 'Instagram hikayesi') + '</button>' +
+      '<button type="button" data-share="copy">' + SVG.link + bi('Copy link', 'Bağlantıyı kopyala') + '</button>' +
+      '<button type="button" data-share="wa">WhatsApp</button>' +
+      '<button type="button" data-share="li">LinkedIn</button>' +
+      '<button type="button" data-share="fb">Facebook</button>' +
+      '</div><p class="note" id="shareNote" aria-live="polite"></p></div>';
+  }
+  function note(en, tr) { var n = document.getElementById('shareNote'); if (n) n.innerHTML = bi(en, tr); }
+  function copyText(t) {
+    if (navigator.clipboard && navigator.clipboard.writeText) return navigator.clipboard.writeText(t);
+    return new Promise(function (ok, no) {
+      var ta = document.createElement('textarea'); ta.value = t; ta.style.position = 'fixed'; ta.style.opacity = '0'; document.body.appendChild(ta); ta.select();
+      try { document.execCommand('copy') ? ok() : no(); } catch (e) { no(e); } ta.remove();
+    });
+  }
+  function openWin(u) { window.open(u, '_blank', 'noopener'); }
+  /* draws text with *italic* runs, wrapped to a width; returns the y below the last line */
+  function drawRich(ctx, text, x, y, maxW, size, weight, family, lineH, color, maxLines) {
+    var words = [], it = false;
+    String(text || '').split(/(\*)/).forEach(function (part) {
+      if (part === '*') { it = !it; return; }
+      part.split(/\s+/).filter(Boolean).forEach(function (w) { words.push({ w: w, it: it }); });
+    });
+    function font(wd) { return (wd.it ? 'italic ' : '') + weight + ' ' + size + 'px ' + family; }
+    var lines = [[]], lw = 0, space;
+    ctx.font = weight + ' ' + size + 'px ' + family; space = ctx.measureText(' ').width;
+    words.forEach(function (wd) {
+      ctx.font = font(wd); var w = ctx.measureText(wd.w).width;
+      if (lines[lines.length - 1].length && lw + space + w > maxW) { lines.push([]); lw = 0; }
+      lw += (lines[lines.length - 1].length ? space : 0) + w; lines[lines.length - 1].push({ w: wd.w, it: wd.it, width: w });
+    });
+    if (maxLines && lines.length > maxLines) { lines = lines.slice(0, maxLines); var last = lines[maxLines - 1]; last[last.length - 1].w += '…'; }
+    ctx.fillStyle = color; ctx.textBaseline = 'alphabetic';
+    lines.forEach(function (ln, i) {
+      var cx = x;
+      ln.forEach(function (wd, j) { ctx.font = font(wd); ctx.fillText(wd.w, cx, y + i * lineH); cx += ctx.measureText(wd.w).width + space; });
+    });
+    return y + (lines.length - 1) * lineH;
+  }
+  function roundRect(ctx, x, y, w, h, r) { ctx.beginPath(); ctx.moveTo(x + r, y); ctx.arcTo(x + w, y, x + w, y + h, r); ctx.arcTo(x + w, y + h, x, y + h, r); ctx.arcTo(x, y + h, x, y, r); ctx.arcTo(x, y, x + w, y, r); ctx.closePath(); }
+  function loadImg(src) { return new Promise(function (ok, no) { if (!src) return ok(null); var im = new Image(); im.onload = function () { ok(im); }; im.onerror = function () { ok(null); }; im.src = src; }); }
+  function makeStory(p) {
+    var L = lang(), W = 1080, H = 1920;
+    var title = L === 'en' ? (p.title_en || p.title) : p.title, sum = L === 'en' ? (p.summary_en || p.summary) : p.summary;
+    return Promise.all([loadImg(p.cover), document.fonts ? document.fonts.ready : null]).then(function (r) {
+      var im = r[0], cv = document.createElement('canvas'); cv.width = W; cv.height = H;
+      var ctx = cv.getContext('2d');
+      var g = ctx.createLinearGradient(0, 0, 0, H); g.addColorStop(0, '#16304F'); g.addColorStop(1, '#0B1A2E');
+      ctx.fillStyle = g; ctx.fillRect(0, 0, W, H);
+      if (im) { ctx.save(); ctx.globalAlpha = .28; ctx.filter = 'blur(40px)'; var sc = Math.max(W / im.width, H / im.height); ctx.drawImage(im, (W - im.width * sc) / 2, (H - im.height * sc) / 2, im.width * sc, im.height * sc); ctx.restore(); }
+      var DISP = '"Bricolage Grotesque", system-ui, sans-serif', SER = '"Source Serif 4", Georgia, serif', MONO = '"IBM Plex Mono", monospace';
+      ctx.fillStyle = '#E0A12E'; ctx.beginPath(); ctx.arc(88, 152, 9, 0, 7); ctx.fill();
+      ctx.font = '500 34px ' + MONO; ctx.fillStyle = '#E0A12E'; ctx.fillText(L === 'en' ? 'NEW ARTICLE' : 'YENİ YAZI', 116, 164);
+      ctx.font = '800 44px ' + DISP; ctx.fillStyle = '#fff'; ctx.fillText('Muammer Kurnaz', 72, 236);
+      var y = 300;
+      if (im) {
+        var bw = W - 144, bh = Math.min(640, bw * im.height / im.width), iw = Math.min(bw, bh * im.width / im.height);
+        ctx.save(); roundRect(ctx, (W - iw) / 2, y, iw, bh, 28); ctx.clip(); ctx.drawImage(im, (W - iw) / 2, y, iw, bh); ctx.restore();
+        y += bh + 90;
+      } else y += 60;
+      y = drawRich(ctx, title, 72, y, W - 144, 72, '800', DISP, 84, '#FFFFFF', 5);
+      if (sum) y = drawRich(ctx, sum, 72, y + 84, W - 144, 38, '400', SER, 54, '#DCE6F2', 5);
+      var by = H - 330;
+      ctx.setLineDash([14, 12]); ctx.lineWidth = 3; ctx.strokeStyle = 'rgba(255,255,255,.5)'; roundRect(ctx, 72, by, W - 144, 150, 30); ctx.stroke(); ctx.setLineDash([]);
+      ctx.textAlign = 'center'; ctx.font = '600 36px ' + DISP; ctx.fillStyle = 'rgba(255,255,255,.75)';
+      ctx.fillText(L === 'en' ? 'Tap the link sticker to read' : 'Okumak için bağlantıya dokunun', W / 2, by + 90);
+      ctx.font = '500 40px ' + MONO; ctx.fillStyle = '#E0A12E'; ctx.fillText('muammerkurnaz.com', W / 2, H - 100);
+      ctx.textAlign = 'left';
+      return new Promise(function (ok) { cv.toBlob(function (b) { ok(b); }, 'image/png'); });
+    });
+  }
+  document.addEventListener('click', function (ev) {
+    var b = ev.target.closest && ev.target.closest('[data-share]'); if (!b || !current) return;
+    var p = current, url = postUrl(p), L = lang(), title = plainT(L === 'en' ? (p.title_en || p.title) : p.title), kind = b.getAttribute('data-share');
+    if (kind === 'copy') { copyText(url).then(function () { note('Link copied.', 'Bağlantı kopyalandı.'); }, function () { note(url, url); }); return; }
+    if (kind === 'wa') return openWin('https://wa.me/?text=' + encodeURIComponent(title + ' ' + url));
+    if (kind === 'li') return openWin('https://www.linkedin.com/sharing/share-offsite/?url=' + encodeURIComponent(url));
+    if (kind === 'fb') return openWin('https://www.facebook.com/sharer/sharer.php?u=' + encodeURIComponent(url));
+    if (kind === 'story') {
+      note('Preparing the story image…', 'Hikaye görseli hazırlanıyor…');
+      copyText(url).catch(function () {});
+      makeStory(p).then(function (blob) {
+        if (!blob) throw 0;
+        var file = new File([blob], 'hikaye-' + postSlug(p).slice(0, 40) + '.png', { type: 'image/png' });
+        if (navigator.canShare && navigator.canShare({ files: [file] })) {
+          note('Choose Instagram, then Story. The article link is copied: add it with the link sticker.', 'Instagram ve ardından Hikaye\'yi seç. Yazının bağlantısı kopyalandı: bağlantı çıkartmasıyla ekle.');
+          return navigator.share({ files: [file] }).catch(function () {});
+        }
+        var a = document.createElement('a'); a.href = URL.createObjectURL(blob); a.download = file.name; document.body.appendChild(a); a.click(); a.remove();
+        note('The story image was downloaded. Share it from your phone; the article link is copied.', 'Hikaye görseli indirildi. Telefonundan paylaşabilirsin; yazının bağlantısı kopyalandı.');
+      }).catch(function () { note('The story image could not be created.', 'Hikaye görseli oluşturulamadı.'); });
+    }
+  });
 
   /* footer: affiliation from data/genel.json */
   fetch('data/genel.json', { cache: 'no-cache' }).then(function (r) { if (!r.ok) throw 0; return r.json(); }).catch(function () { return JSON.parse(document.getElementById('genel-data').textContent); }).then(function (g) {

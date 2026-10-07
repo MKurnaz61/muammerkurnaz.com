@@ -1,0 +1,99 @@
+{
+ "filters": [
+  {
+   "code": "tax",
+   "tr": "Taksonomi ve filocoğrafya",
+   "en": "Taxonomy and phylogeography"
+  },
+  {
+   "code": "niche",
+   "tr": "Ekolojik niş modelleme",
+   "en": "Ecological niche modelling"
+  },
+  {
+   "code": "bio",
+   "tr": "Biyocoğrafya ve makroekoloji",
+   "en": "Biogeography and macroecology"
+  },
+  {
+   "code": "life",
+   "tr": "Yaşam öyküsü ve iskeletokronoloji",
+   "en": "Life history and skeletochronology"
+  },
+  {
+   "code": "nat",
+   "tr": "Doğal tarih, yayılış ve fenoloji",
+   "en": "Natural history, distribution and phenology"
+  },
+  {
+   "code": "eco",
+   "tr": "Ekotoksikoloji ve çevre sağlığı",
+   "en": "Ecotoxicology and environmental health"
+  }
+ ],
+ "articles": {
+  "Spatial structure and core–periphery contraction in an endemic amphibian (Triturus anatolicus)": "bio",
+  "Age and body size of the endemic newt Lissotriton kosswigi (Freytag, 1955) (Urodela: Salamandridae) in Türkiye": "life",
+  "Spatial turnover and bioregional structure of reptile assemblages across Türkiye": "bio",
+  "Marine microsporidia: hidden diversity, aquatic emergence and zoonotic risks": "eco",
+  "Quaternary palaeoenvironmental archives of the Indian subcontinent and their imprint on herpetofaunal biogeography: a multi-proxy synthesis": "bio",
+  "Citizen-science data reveal global diversity patterns in the gecko genus Hemidactylus": "bio",
+  "Nanoplastic translocation across biological barriers (blood–brain, placental, intestinal): transport mechanisms, tissue-specific vulnerabilities, and a corona-driven barrier selectivity framework": "eco",
+  "Amphibians and reptiles as bioindicator organisms: an ecotoxicological and ecological review": "eco",
+  "Spatial heterogeneity of microscopically detected Nosema spp. infection in honeybees: climate-associated patterns in the Eastern Black Sea Region of Türkiye": "eco",
+  "Core–periphery organization and spatial heterogeneity in Pseudopus apodus (Anguidae) across its western Palearctic range": "bio",
+  "Microplastic contamination in amphibians and reptiles: an ecotoxicological synthesis of exposure, mechanisms, and risk implications": "eco",
+  "Physiological responses and adaptive mechanisms of amphibians and reptiles to multiple interacting environmental stressors: an integrative review": "eco",
+  "Blinking without eyelids: first record of a blink-like reflex in Ophisops elegans from Anatolia": "nat",
+  "A rare case of tail bifurcation in Ophisops elegans from western Anatolia": "nat",
+  "A record of the Lebanese lizard (Phoenicolacerta laevis) in northern Türkiye: evidence of possible human-mediated dispersal": "nat",
+  "Unusual activity patterns in anuran and caudata species during the hibernation period": "nat",
+  "Unusual winter activity of the Ottoman viper (Montivipera xanthina) in Türkiye": "nat",
+  "Winter activity of reptiles in the Anatolian Peninsula": "nat",
+  "First evidence of the genetic structure of Neurergus strauchii munzurensis": "tax",
+  "Niche dynamics and climate change sensitivity in western Palearctic Zamenis ratsnakes (Reptilia: Colubridae)": "niche",
+  "Exceptional winter activity record from blunt-nosed viper (Macrovipera lebetinus) in Türkiye": "nat",
+  "Potential geographic distribution and habitat utilization of Lacerta viridis (Squamata: Lacertidae) in northern Türkiye": "niche",
+  "Climatic niche divergence and conservatism promote speciation in snake-eyed skinks (Sauria: Scincidae): new insight into the evolution and diversification of Ablepharus species": "niche",
+  "Geographic distribution of two Montivipera taxa using ecological niche modeling": "niche",
+  "Age structure and body size in a Turkish population of the green lizard, Lacerta viridis (Laurenti, 1768)": "life",
+  "Predicted current and future distribution of the fire salamander, Salamandra infraimmaculata, in Turkey": "niche",
+  "Hidden diversity in a narrow valley: description of new endemic Palearctic rock lizard Darevskia (Squamata: Lacertidae) species from northeastern Turkey": "tax",
+  "A new cryptic species of the Darevskia parvula group from NE Anatolia (Squamata, Lacertidae)": "tax",
+  "Formal description of the new lizard species inhabiting Eastern Anatolia, Turkey": "tax",
+  "A contribution to the biogeography of Ablepharus anatolicus and A. budaki (Squamata: Scincidae) using ecological niche modeling in Turkey": "niche",
+  "Contribution to the taxonomic knowledge of Acanthodactylus (Squamata, Lacertidae): description of a new lacertid lizard species from Eastern Anatolia, Turkey": "tax",
+  "Unusual winter activity observations of two newt species (Ommatotriton ophryticus & Triturus ivanbureschi) from the Anatolian Peninsula": "nat",
+  "Habitat preferences of Testudo graeca Linnaeus, 1758 (Testudines: Testudinidae) with a new locality record from the eastern Black Sea region of Turkey": "nat",
+  "The allelic variants in microsatellite loci and phylogenetic relationships of Darevskia rudis (Bedriaga, 1886) and D. bithynica (Méhely, 1909) based on mitochondrial DNA in Turkey": "tax",
+  "New locality records for Eumeces schneiderii (Daudin, 1802) and Trapelus ruderatus (Olivier, 1804) with morphological data from eastern Anatolia, Turkey": "nat",
+  "A contribution to the biogeography and taxonomy of two Anatolian mountain brook newts, Neurergus barani and N. strauchii (Amphibia: Salamandridae), using ecological niche modeling": "niche",
+  "Species list of amphibians and reptiles from Turkey": "bio",
+  "Eremias strauchi'nin Türkiye'deki potansiyel yayılışı ve en batı lokalite kaydı": "niche",
+  "Ecological niche divergence between Darevskia rudis and D. bithynica (Lacertidae) in Turkey": "niche",
+  "Life history traits in a population of Pelobates syriacus (Boettger, 1889) from Turkey": "life",
+  "Road kills of amphibian and reptile species in Edirne and Kırklareli provinces of Turkey": "nat",
+  "The potential distribution and morphological data of Podarcis siculus (Rafinesque-Schmaltz, 1810) with new locality records from Turkey (Squamata: Sauria: Lacertidae)": "niche",
+  "Phylogeography of the red-bellied lizard, Darevskia parvula, in Turkey": "tax",
+  "Age structure and growth in a Turkish population of the Balkan green lizard, Lacerta trilineata Bedriaga, 1886 (Squamata: Sauria: Lacertidae)": "life",
+  "New distribution data of the vulnerable Mertensiella caucasica from Gümüşhane, Turkey": "nat",
+  "Restricted distribution area, threat conditions and two additional new localities of Bombina variegata (L., 1758) (Anura: Bombinatoridae) in Turkey": "nat",
+  "Age structure and some growth parameters in a population of Bombina bombina (L., 1761) from Turkey": "life",
+  "Southernmost locality for the endangered lizard Darevskia clarkorum (Lacertidae: Squamata) from the eastern Black Sea of Turkey": "nat",
+  "Life history traits of a Turkish population of the yellow-bellied toad, Bombina variegata (Linnaeus, 1758) (Anura: Bombinatoridae)": "life",
+  "Phylogenetic relationships of Podarcis siculus (Rafinesque-Schmaltz, 1810) and Podarcis tauricus (Pallas, 1814) in Turkey, based on mitochondrial DNA": "tax",
+  "Age and growth of the common wall lizard, Podarcis muralis (Laurenti, 1768)": "life",
+  "Northwesternmost locality record of Montivipera xanthina (Gray, 1849) in Turkey": "nat",
+  "Age and growth of the Artvin lizard, Darevskia derjugini (Nikolsky, 1898), in Turkey (Squamata: Sauria: Lacertidae)": "life",
+  "The life-history traits in a breeding population of Darevskia valentini from Turkey": "life",
+  "Phylogenetic relationships of D. rudis (Bedriaga, 1886) and D. bithynica (Méhely, 1909) based on microsatellite and mitochondrial DNA in Turkey": "tax",
+  "Morphological reevaluation on the subspecific position of Darevskia derjugini in Turkey": "tax",
+  "Age structure and growth in a Turkish population of the Italian wall lizard Podarcis siculus (Rafinesque-Schmaltz, 1810) (Reptilia: Lacertidae)": "life",
+  "Age structure and growth in a Turkish population of the Crimean wall lizard, Podarcis tauricus (Pallas, 1814) (Squamata: Sauria: Lacertidae)": "life",
+  "An exceptional activity for Darevskia derjugini (Nikolsky, 1898) from Turkey": "nat",
+  "Body size and age structure of the endangered Clark's lizard (Darevskia clarkorum) populations from two different altitudes in Turkey": "life",
+  "First record of Bombina variegata (L., 1758) (Anura: Bombinatoridae) from Turkey": "nat",
+  "Age and growth of the red-bellied lizard, Darevskia parvula": "life",
+  "New locality record of Podarcis tauricus tauricus (Pallas, 1814) (Squamata: Lacertidae) from the Western Black Sea Region of Turkey": "nat"
+ }
+}

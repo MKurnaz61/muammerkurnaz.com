@@ -363,6 +363,74 @@ footer .simple .addr{max-width:72ch;font-size:15px;line-height:1.55}
 .exp-list ul{list-style:none;margin:0 0 0 18px;padding:2px 0 2px 14px;display:flex;flex-wrap:wrap;gap:8px;border-left:2px solid var(--c)}
 .exp-list li{border:1.5px solid var(--c);color:var(--c);background:#fff;border-radius:999px;padding:5px 13px;font-family:var(--display);font-weight:500;font-size:15px;line-height:1.3}
 @media (max-width:760px){.exp-tree{display:none}.exp-list{display:flex}}
+
+/* ---------- species of the moment (tür kartları) ---------- */
+#turler{position:relative;overflow:hidden;background:#0B1A2E;color:#E8EEF6;padding:64px 0 68px}
+#turler[hidden]{display:none}
+#turler .bgfill{position:absolute;inset:-60px;background-size:cover;background-position:center;filter:blur(48px) saturate(1.3);opacity:.35;transition:background-image .6s}
+#turler::after{content:"";position:absolute;inset:0;background:radial-gradient(1200px 600px at 20% 0%,rgba(166,214,90,.16),transparent 60%),linear-gradient(180deg,rgba(11,26,46,.55),rgba(11,26,46,.93));pointer-events:none}
+#turler .in{position:relative;z-index:1;display:flex;flex-direction:column;gap:26px}
+.tk-head{display:flex;justify-content:space-between;align-items:flex-end;gap:20px;flex-wrap:wrap}
+.tk-kick{font-family:var(--mono);font-size:13px;letter-spacing:.12em;text-transform:uppercase;color:var(--ochre);display:flex;align-items:center;gap:10px}
+.tk-live{width:9px;height:9px;border-radius:50%;background:#FF5A4E;animation:tkpulse 1.8s infinite}
+@keyframes tkpulse{0%{box-shadow:0 0 0 0 rgba(255,90,78,.7)}70%{box-shadow:0 0 0 10px rgba(255,90,78,0)}100%{box-shadow:0 0 0 0 rgba(255,90,78,0)}}
+#turler h2{margin:8px 0 0;color:#fff}
+.tk-ring{display:flex;align-items:center;gap:14px;font-family:var(--mono);font-size:12px;color:#A8B6C8;text-transform:uppercase;letter-spacing:.08em}
+.tk-ring svg{display:block}.tk-ring b{display:block;font-family:var(--display);font-size:26px;color:#fff;letter-spacing:0;text-transform:none;font-variant-numeric:tabular-nums}
+.tk-card{border-radius:22px;overflow:hidden;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.12);box-shadow:0 40px 80px -40px rgba(0,0,0,.8)}
+.tk-ph{position:relative;display:flex;flex-direction:column;gap:14px;padding:20px 22px 18px;overflow:hidden}
+.tk-ph .fill{position:absolute;inset:-30px;background-size:cover;background-position:center;filter:blur(26px) brightness(.55) saturate(1.2)}
+.tk-top,.tk-bot{position:relative;z-index:1;display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap}
+.tk-badges{display:flex;gap:8px;flex-wrap:wrap}
+.tk-b{font-family:var(--display);font-weight:700;font-size:13px;padding:6px 13px;border-radius:999px}
+.tk-b.cls{background:var(--ochre);color:#1B1300}
+.tk-b.reg{background:rgba(255,255,255,.18);color:#fff;border:1px solid rgba(255,255,255,.35)}
+.tk-b.end{background:#A6D65A;color:#16240A}
+.tk-motto{display:flex;align-items:center;gap:10px;padding:8px 16px;border-radius:999px;background:rgba(11,26,46,.62);border:1px solid rgba(255,255,255,.28);font-family:var(--display);font-weight:800;font-size:15px;letter-spacing:.14em;color:#fff}
+.tk-motto i{font-style:normal;color:var(--ochre)}.tk-motto .d{width:5px;height:5px;border-radius:50%;background:#A6D65A}
+.tk-shot{position:relative;z-index:1;display:flex;justify-content:center}
+.tk-shot img{display:block;max-width:100%;max-height:620px;border-radius:14px;box-shadow:0 24px 50px -18px rgba(0,0,0,.8);transition:opacity .35s}
+.tk-big{font-family:var(--body);font-style:italic;font-weight:600;font-size:40px;line-height:1.05;color:#fff;text-shadow:0 2px 18px rgba(0,0,0,.45)}
+.tk-dots{display:flex;gap:8px}
+.tk-dots button{width:46px;height:32px;border-radius:6px;border:2px solid rgba(255,255,255,.35);padding:0;overflow:hidden;cursor:pointer;background:#000}
+.tk-dots button img{width:100%;height:100%;object-fit:cover;display:block}
+.tk-dots button[aria-pressed="true"]{border-color:var(--ochre)}
+.tk-credit{font-family:var(--mono);font-size:11px;color:#DCE6F2;opacity:.85}
+.tk-bd{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.1fr);gap:22px 40px;padding:30px 34px;background:linear-gradient(160deg,rgba(22,48,79,.94),rgba(11,26,46,.97))}
+.tk-colA,.tk-colB{display:flex;flex-direction:column;gap:20px;min-width:0}
+.tk-num{font-family:var(--mono);font-size:12px;color:#A8B6C8;letter-spacing:.08em}
+.tk-bd h3{margin:4px 0 0;font-family:var(--display);font-weight:800;font-size:38px;line-height:1.04;letter-spacing:-.02em;color:#fff}
+.tk-lat{margin:6px 0 0;font-size:19px;color:var(--spot)}.tk-lat i{font-weight:600}.tk-lat span{font-size:14px;color:#A8B6C8}
+.tk-tax{display:flex;gap:8px;flex-wrap:wrap}
+.tk-tax span{font-family:var(--mono);font-size:12px;color:#DCE6F2;border:1px solid rgba(255,255,255,.22);border-radius:6px;padding:4px 9px}
+.tk-iucn .lbl{display:flex;justify-content:space-between;font-family:var(--mono);font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:#A8B6C8;margin-bottom:8px}
+.tk-iucn .lbl b{font-weight:500}
+.tk-scale{display:grid;grid-template-columns:repeat(7,1fr);gap:4px}
+.tk-scale span{font-family:var(--display);font-weight:700;font-size:12px;text-align:center;padding:7px 0;border-radius:6px;color:rgba(255,255,255,.45);background:rgba(255,255,255,.07)}
+.tk-scale .on{color:#fff;box-shadow:0 0 0 2px rgba(255,255,255,.85),0 0 22px var(--glow);transform:scale(1.08)}
+.tk-ne{font-family:var(--mono);font-size:12px;color:#A8B6C8;margin-top:8px}
+.tk-facts{display:flex;flex-direction:column;gap:14px}
+.tk-f{display:grid;grid-template-columns:38px minmax(0,1fr);gap:12px;align-items:start}
+.tk-f .ic{width:38px;height:38px;border-radius:10px;display:flex;align-items:center;justify-content:center;background:rgba(156,203,234,.14);color:var(--spot)}
+.tk-f small{display:block;font-family:var(--mono);font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:#A8B6C8}
+.tk-f p{margin:2px 0 0;font-size:16px;line-height:1.45;color:#E8EEF6}
+.tk-dyk{border-radius:14px;padding:14px 16px;background:linear-gradient(135deg,rgba(224,161,46,.22),rgba(224,161,46,.06));border:1px solid rgba(224,161,46,.45);font-size:15.5px;line-height:1.5;color:#F6E7C8}
+.tk-dyk b{display:block;font-family:var(--display);font-size:14px;color:var(--ochre);margin-bottom:2px}
+.tk-ctrl{display:flex;gap:10px;flex-wrap:wrap}
+.tk-ctrl button,.tk-ctrl a{font-family:var(--display);font-weight:600;font-size:14px;border-radius:999px;padding:10px 18px;cursor:pointer;text-decoration:none;min-height:44px;display:inline-flex;align-items:center}
+.tk-ctrl .p{background:var(--ochre);color:#1B1300;border:0}
+.tk-ctrl .g{background:transparent;color:#fff;border:1px solid rgba(255,255,255,.4)}
+.tk-ctrl .g:hover{border-color:#fff}
+.tk-next{display:flex;flex-direction:column;gap:12px}
+.tk-next .t{font-family:var(--mono);font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:#A8B6C8}
+.tk-strip{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px}
+.tk-th{position:relative;border-radius:14px;overflow:hidden;aspect-ratio:4/3;border:1px solid rgba(255,255,255,.14);padding:0;cursor:pointer;background:#000}
+.tk-th img{width:100%;height:100%;object-fit:cover;display:block;filter:saturate(.9) brightness(.8);transition:filter .2s}
+.tk-th:hover img{filter:none}
+.tk-th span{position:absolute;left:10px;bottom:8px;right:10px;text-align:left;font-family:var(--body);font-style:italic;font-size:14px;color:#fff;text-shadow:0 1px 8px rgba(0,0,0,.7)}
+.tk-th em{position:absolute;right:8px;top:8px;font-style:normal;font-family:var(--mono);font-size:11px;color:#fff;background:rgba(11,26,46,.7);border-radius:4px;padding:2px 6px}
+@media (prefers-reduced-motion:reduce){.tk-live{animation:none}}
+@media (max-width:820px){#turler{padding:44px 0 48px}.tk-ph{padding:14px}.tk-shot img{max-height:none;width:100%}.tk-bd{grid-template-columns:minmax(0,1fr);padding:22px}.tk-bd h3{font-size:30px}.tk-big{font-size:26px}.tk-motto{font-size:13px;padding:6px 14px}.tk-strip{grid-template-columns:repeat(2,minmax(0,1fr))}}
 /* ---------- photo viewer navigation ---------- */
 dialog.lb .nav{position:absolute;top:calc(50% - 24px);transform:translateY(-50%);width:54px;height:54px;border-radius:50%;border:1px solid rgba(232,236,230,.55);background:rgba(12,18,16,.55);color:#E8ECE6;cursor:pointer;display:flex;align-items:center;justify-content:center;z-index:2}
 dialog.lb .nav:hover{background:rgba(12,18,16,.85)}
@@ -391,6 +459,7 @@ dialog.lb .cnt{font-family:var(--mono);font-size:12px;color:#A8B6C8;white-space:
   <div class="wrap">
     <a class="brand" href="#top">Muammer Kurnaz</a>
     <nav class="links" aria-label="Main">
+      <a href="#turler"><span class="en">Species</span><span class="tr">Türler</span></a>
       <a href="#research"><span class="en">Research</span><span class="tr">Araştırma</span></a>
       <a href="#projects"><span class="en">Projects</span><span class="tr">Projeler</span></a>
       <a href="#publications"><span class="en">Publications</span><span class="tr">Yayınlar</span></a>
@@ -442,6 +511,18 @@ dialog.lb .cnt{font-family:var(--mono);font-size:12px;color:#A8B6C8;white-space:
     <ul id="recentList"></ul>
   </aside>
   <div class="stats" id="stats"></div>
+</section>
+
+<section id="turler" hidden>
+  <div class="bgfill" id="tkBg"></div>
+  <div class="wrap in">
+    <div class="tk-head">
+      <div><div class="tk-kick"><span class="tk-live"></span><span class="en">Featured right now</span><span class="tr">Şu an tanıtılan tür</span></div><h2><span class="en">Species of the moment</span><span class="tr">Bu 10 dakikanın türü</span></h2></div>
+      <div class="tk-ring"><svg width="62" height="62" viewBox="0 0 62 62" aria-hidden="true"><circle cx="31" cy="31" r="26" fill="none" stroke="rgba(255,255,255,.12)" stroke-width="6"/><circle id="tkArc" cx="31" cy="31" r="26" fill="none" stroke="#E0A12E" stroke-width="6" stroke-linecap="round" stroke-dasharray="163.4" stroke-dashoffset="0" transform="rotate(-90 31 31)"/></svg><div><span class="en">Next species</span><span class="tr">Sonraki tür</span><b id="tkTime">10:00</b></div></div>
+    </div>
+    <article class="tk-card" id="tkCard" aria-live="polite"></article>
+    <div class="tk-next"><span class="t"><span class="en">Coming up</span><span class="tr">Sıradaki türler</span></span><div class="tk-strip" id="tkStrip"></div></div>
+  </div>
 </section>
 
 <section id="research" class="band">
@@ -964,6 +1045,92 @@ window.postSlug = function (p) {
     tx = null;
     if (Math.abs(dx) > 50 && Math.abs(dx) > Math.abs(dy) * 1.2) showAt(cur + (dx < 0 ? 1 : -1));
   }, { passive: true });
+
+
+  /* species of the moment: one card every 10 minutes, the same species for every visitor at a given time */
+  (function () {
+    var sec = document.getElementById('turler');
+    if (!sec) return;
+    var SLOT = 600000, list = [], view = -1, viewPhoto = 0, liveIdx = -1;
+    var GR = { kertenkele: ['Reptile · Lizard', 'Sürüngen · Kertenkele'], yilan: ['Reptile · Snake', 'Sürüngen · Yılan'], kaplumbaga: ['Reptile · Turtle', 'Sürüngen · Kaplumbağa'],
+               kurbaga: ['Amphibian · Frog', 'Amfibi · Kurbağa'], semender: ['Amphibian · Salamander', 'Amfibi · Semender'] };
+    var CATS = ['LC', 'NT', 'VU', 'EN', 'CR', 'EW', 'EX'];
+    var CCOL = { LC: '#3E9B4F', NT: '#8DB33A', VU: '#E3A21A', EN: '#E2412A', CR: '#C0172B', EW: '#5B2A6E', EX: '#222' };
+    var CNAME = { LC: ['Least Concern', 'Düşük endişe'], NT: ['Near Threatened', 'Tehdide yakın'], VU: ['Vulnerable', 'Hassas'], EN: ['Endangered', 'Tehlikede'],
+                  CR: ['Critically Endangered', 'Kritik tehlikede'], EW: ['Extinct in the Wild', 'Doğada tükenmiş'], EX: ['Extinct', 'Tükenmiş'],
+                  DD: ['Data Deficient', 'Veri yetersiz'], NE: ['Not Evaluated', 'Değerlendirilmemiş'] };
+    var IC = {
+      pin: '<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg>',
+      hab: '<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M3 20l6-10 4 6 3-4 5 8z"/><circle cx="17" cy="6" r="2"/></svg>',
+      id: '<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="11" cy="11" r="6"/><path d="M20 20l-4.5-4.5"/></svg>'
+    };
+    function thumbOf(src) { var f = String(src).split('/').pop(); return 'images/photos/' + f.replace(/\.jpg$/i, '-k.jpg'); }
+    function slotNow() { return Math.floor(Date.now() / SLOT); }
+    function hhmm(t) { var d = new Date(t); return ('0' + d.getHours()).slice(-2) + ':' + ('0' + d.getMinutes()).slice(-2); }
+    function render() {
+      var c = list[view]; if (!c) return;
+      var ph = (c.photos || []).filter(Boolean), src = ph[viewPhoto] || ph[0] || '';
+      var g = GR[c.group] || GR.kertenkele;
+      document.getElementById('tkBg').style.backgroundImage = src ? 'url("' + src + '")' : '';
+      var cat = String(c.iucn || 'NE').toUpperCase(), assessed = CATS.indexOf(cat) >= 0, cn = CNAME[cat] || CNAME.NE;
+      document.getElementById('tkCard').innerHTML =
+        '<div class="tk-ph">' + (src ? '<div class="fill" style="background-image:url(&quot;' + e(src) + '&quot;)"></div>' : '') +
+          '<div class="tk-top"><div class="tk-badges"><span class="tk-b cls">' + bi(g[0], g[1]) + '</span>' +
+            ((c.region_tr || c.region_en) ? '<span class="tk-b reg">' + bi(c.region_en, c.region_tr) + '</span>' : '') +
+            (c.endemic ? '<span class="tk-b end">' + bi('Endemic to Türkiye', 'Türkiye endemiği') + '</span>' : '') + '</div>' +
+            '<div class="tk-motto"><span class="en">KNOW</span><span class="tr">TANI</span><span class="d"></span><span class="en">LOVE</span><span class="tr">SEV</span><span class="d"></span><i><span class="en">PROTECT</span><span class="tr">KORU</span></i></div></div>' +
+          (src ? '<div class="tk-shot"><img src="' + e(src) + '" alt="' + e(c.latin) + '"></div>' : '') +
+          '<div class="tk-bot"><span class="tk-big">' + e(c.latin) + '</span>' +
+            (ph.length > 1 ? '<div class="tk-dots">' + ph.map(function (x, i) { return '<button type="button" data-ph="' + i + '" aria-pressed="' + (i === viewPhoto) + '" aria-label="' + (i + 1) + '"><img src="' + e(thumbOf(x)) + '" alt=""></button>'; }).join('') + '</div>' : '') +
+            '<span class="tk-credit">' + bi('Photo: M. Kurnaz', 'Fotoğraf: M. Kurnaz') + '</span></div>' +
+        '</div>' +
+        '<div class="tk-bd"><div class="tk-colA">' +
+          '<div><span class="tk-num">' + bi('SPECIES ' + (view + 1) + ' / ' + list.length, 'TÜR ' + (view + 1) + ' / ' + list.length) + '</span>' +
+            '<h3>' + bi(c.en || c.tr, c.tr || c.en) + '</h3><p class="tk-lat"><i>' + e(c.latin) + '</i> <span>' + e(c.author) + '</span></p></div>' +
+          '<div class="tk-tax">' + [c.order, c.family, String(c.latin).split(' ')[0]].filter(Boolean).map(function (t) { return '<span>' + e(t) + '</span>'; }).join('') + '</div>' +
+          '<div class="tk-iucn"><div class="lbl"><span>' + bi('IUCN Red List', 'IUCN Kırmızı Liste') + '</span><b style="color:' + (assessed ? CCOL[cat] : '#A8B6C8') + '">' + bi(cn[0], cn[1]) + '</b></div>' +
+            '<div class="tk-scale">' + CATS.map(function (k) { return '<span' + (k === cat ? ' class="on" style="background:' + CCOL[k] + ';--glow:' + CCOL[k] + '"' : '') + '>' + k + '</span>'; }).join('') + '</div>' +
+            (assessed ? '' : '<p class="tk-ne">' + bi(cat + ': no separate global assessment yet', cat + ': henüz ayrı bir küresel değerlendirmesi yok') + '</p>') + '</div>' +
+          '<div class="tk-ctrl"><button type="button" class="p" data-go="1">' + bi('Next species', 'Sonraki tür') + '</button><button type="button" class="g" data-go="-1">' + bi('Previous', 'Önceki') + '</button>' +
+            (view !== liveIdx ? '<button type="button" class="g" data-go="0">' + bi('Back to now', 'Şu anki türe dön') + '</button>' : '') +
+            '<a class="g" href="#photos">' + bi('See in photos', 'Fotoğraflarda gör') + '</a></div>' +
+        '</div><div class="tk-colB"><div class="tk-facts">' +
+          ((c.dist_tr || c.dist_en) ? '<div class="tk-f"><span class="ic">' + IC.pin + '</span><div><small>' + bi('Distribution', 'Yayılış') + '</small><p>' + bi(c.dist_en, c.dist_tr) + '</p></div></div>' : '') +
+          ((c.hab_tr || c.hab_en) ? '<div class="tk-f"><span class="ic">' + IC.hab + '</span><div><small>' + bi('Habitat', 'Yaşam alanı') + '</small><p>' + bi(c.hab_en, c.hab_tr) + '</p></div></div>' : '') +
+          ((c.id_tr || c.id_en) ? '<div class="tk-f"><span class="ic">' + IC.id + '</span><div><small>' + bi('Identification', 'Tanı') + '</small><p>' + bi(c.id_en, c.id_tr) + '</p></div></div>' : '') +
+        '</div>' + ((c.fact_tr || c.fact_en) ? '<div class="tk-dyk"><b>' + bi('Did you know?', 'Biliyor muydunuz?') + '</b>' + bi(c.fact_en, c.fact_tr) + '</div>' : '') + '</div></div>';
+      var strip = [], base = slotNow();
+      for (var k = 1; k <= 4; k++) {
+        var i = (liveIdx + k) % list.length, n = list[i];
+        strip.push('<button type="button" class="tk-th" data-idx="' + i + '"><img src="' + e(thumbOf((n.photos || [])[0] || '')) + '" alt="" loading="lazy"><em>' + hhmm((base + k) * SLOT) + '</em><span>' + e(n.latin) + '</span></button>');
+      }
+      document.getElementById('tkStrip').innerHTML = strip.join('');
+    }
+    function tick() {
+      var now = Date.now(), s = slotNow(), idx = s % list.length;
+      if (idx !== liveIdx) { var follow = view === liveIdx || view < 0; liveIdx = idx; if (follow) { view = idx; viewPhoto = 0; } render(); }
+      var left = SLOT - (now % SLOT), m = Math.floor(left / 60000), sec2 = Math.floor((left % 60000) / 1000);
+      document.getElementById('tkTime').textContent = ('0' + m).slice(-2) + ':' + ('0' + sec2).slice(-2);
+      document.getElementById('tkArc').setAttribute('stroke-dashoffset', (163.4 * (1 - left / SLOT)).toFixed(1));
+    }
+    sec.addEventListener('click', function (ev) {
+      var b = ev.target.closest('button'); if (!b) return;
+      if (b.hasAttribute('data-ph')) { viewPhoto = +b.getAttribute('data-ph'); render(); return; }
+      if (b.hasAttribute('data-idx')) { view = +b.getAttribute('data-idx'); viewPhoto = 0; render(); document.getElementById('tkCard').scrollIntoView({ behavior: 'smooth', block: 'start' }); return; }
+      if (b.hasAttribute('data-go')) {
+        var d = +b.getAttribute('data-go');
+        view = d === 0 ? liveIdx : (view + d + list.length) % list.length; viewPhoto = 0; render();
+      }
+    });
+    fetch('data/turler.json', { cache: 'no-cache' })
+      .then(function (r) { if (!r.ok) throw 0; return r.json(); })
+      .then(function (d) {
+        list = (d.species || []).filter(function (c) { return c && c.latin && c.hidden !== true; });
+        if (!list.length) return;
+        sec.hidden = false; tick(); setInterval(tick, 1000);
+      })
+      .catch(function () {});
+  })();
 
   /* back to top */
   var toTop = document.getElementById('toTop');

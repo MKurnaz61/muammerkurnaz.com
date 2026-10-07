@@ -348,6 +348,58 @@ collections:
               - { label: "Kapak fotoğrafı (yatay, en az 1600 piksel genişlik önerilir)", name: "cover", widget: "image", required: false, media_folder: "/images/posts", public_folder: "/images/posts", choose_url: false }
               - { label: "Kısa özet (TR, 1-2 cümle)", name: "summary", widget: "text", hint: "Tür adlarını italik yapmak için yıldız kullan: *Darevskia clarkorum*" }
               - { label: "Kısa özet (EN, isteğe bağlı)", name: "summary_en", widget: "text", required: false }
-              - { label: "Etiketler (virgülle)", name: "tags", widget: "string", required: false }
+              - { label: "Etiketler (TR, virgülle)", name: "tags", widget: "string", required: false }
+              - { label: "Etiketler (EN, virgülle)", name: "tags_en", widget: "string", required: false }
               - { label: "Metin (TR)", name: "body", widget: "markdown" }
               - { label: "Metin (EN, isteğe bağlı)", name: "body_en", widget: "markdown", required: false, hint: "Boş bırakırsan sitenin İngilizce görünümünde de Türkçe metin gösterilir." }
+
+  # ---------------------------------------------------------------- 9. Tür kartları
+  - name: "turler"
+    label: "9. Tür kartları"
+    editor: { preview: false }
+    files:
+      - name: "turler"
+        label: "Bu 10 dakikanın türü (kartlar sırayla 10'ar dakika gösterilir)"
+        file: "data/turler.json"
+        fields:
+          - label: "Türler (sıra = gösterim sırası)"
+            name: "species"
+            widget: "list"
+            summary: "{{fields.tr}} · {{fields.latin}}"
+            fields:
+              - { label: "Latince adı", name: "latin", widget: "string" }
+              - { label: "Tanımlayan ve yıl, ör. (Darevsky & Vedmederja, 1977)", name: "author", widget: "string", required: false }
+              - { label: "Türkçe adı", name: "tr", widget: "string" }
+              - { label: "İngilizce adı", name: "en", widget: "string", required: false }
+              - label: "Grup"
+                name: "group"
+                widget: "select"
+                options:
+                  - { label: "Kertenkele", value: "kertenkele" }
+                  - { label: "Yılan", value: "yilan" }
+                  - { label: "Kaplumbağa", value: "kaplumbaga" }
+                  - { label: "Kurbağa", value: "kurbaga" }
+                  - { label: "Semender", value: "semender" }
+              - { label: "Takım", name: "order", widget: "string", required: false }
+              - { label: "Familya", name: "family", widget: "string", required: false }
+              - label: "IUCN kategorisi"
+                name: "iucn"
+                widget: "select"
+                default: "NE"
+                options: ["LC", "NT", "VU", "EN", "CR", "EW", "EX", "DD", "NE"]
+              - { label: "Bölge etiketi (TR), ör. Doğu Karadeniz", name: "region_tr", widget: "string", required: false }
+              - { label: "Bölge etiketi (EN)", name: "region_en", widget: "string", required: false }
+              - { label: "Türkiye endemiği", name: "endemic", widget: "boolean", default: false, required: false }
+              - { label: "Yayılış (TR)", name: "dist_tr", widget: "text", required: false }
+              - { label: "Yayılış (EN)", name: "dist_en", widget: "text", required: false }
+              - { label: "Yaşam alanı (TR)", name: "hab_tr", widget: "text", required: false }
+              - { label: "Yaşam alanı (EN)", name: "hab_en", widget: "text", required: false }
+              - { label: "Tanı (TR)", name: "id_tr", widget: "text", required: false }
+              - { label: "Tanı (EN)", name: "id_en", widget: "text", required: false }
+              - { label: "Biliyor muydunuz? (TR)", name: "fact_tr", widget: "text", required: false }
+              - { label: "Biliyor muydunuz? (EN)", name: "fact_en", widget: "text", required: false }
+              - label: "Fotoğraflar (ilk fotoğraf kartta önce görünür; hayvana göre kırpılmış yatay fotoğraf önerilir)"
+                name: "photos"
+                widget: "list"
+                field: { label: "Fotoğraf", name: "photo", widget: "image", media_folder: "/images/kart", public_folder: "images/kart", choose_url: false }
+              - { label: "Kartı gizle", name: "hidden", widget: "boolean", default: false, required: false }

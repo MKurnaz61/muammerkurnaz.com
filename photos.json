@@ -4,105 +4,122 @@
       "image": "images/photos/img_2042.jpg",
       "tr_name": "Anadolu Kaya Kertenkelesi",
       "latin": "Anatololacerta anatolica",
-      "date": "2025"
+      "date": "2025",
+      "thumb": "images/photos/img_2042-k.jpg"
     },
     {
       "image": "images/photos/img_0635.jpg",
       "tr_name": "Pelasg Kaya Kertenkelesi",
       "latin": "Anatololacerta pelasgiana",
-      "date": "2021"
+      "date": "2021",
+      "thumb": "images/photos/img_0635-k.jpg"
     },
     {
       "image": "images/photos/img_1978.jpg",
       "tr_name": "Kör Kertenkele",
       "latin": "Blanus strauchi",
-      "date": "2020"
+      "date": "2020",
+      "thumb": "images/photos/img_1978-k.jpg"
     },
     {
       "image": "images/photos/img_7122.jpg",
       "tr_name": "Siğilli Kurbağa",
       "latin": "Bufo bufo",
-      "date": "2017"
+      "date": "2017",
+      "thumb": "images/photos/img_7122-k.jpg"
     },
     {
       "image": "images/photos/img_7866.jpg",
       "tr_name": "Siğilli Kurbağa",
       "latin": "Bufo bufo",
-      "date": "2023"
+      "date": "2023",
+      "thumb": "images/photos/img_7866-k.jpg"
     },
     {
       "image": "images/photos/img_5916.jpg",
       "tr_name": "Gece Kurbağası",
       "latin": "Bufotes viridis",
-      "date": "2026"
+      "date": "2026",
+      "thumb": "images/photos/img_5916-k.jpg"
     },
     {
       "image": "images/photos/img_5909.jpg",
       "tr_name": "Gece Kurbağası",
       "latin": "Bufotes viridis",
-      "date": "2026"
+      "date": "2026",
+      "thumb": "images/photos/img_5909-k.jpg"
     },
     {
       "image": "images/photos/img_6706.jpg",
       "tr_name": "Hemşin Kertenkelesi",
       "latin": "Darevskia armeniaca",
-      "date": "2026"
+      "date": "2026",
+      "thumb": "images/photos/img_6706-k.jpg"
     },
     {
       "image": "images/photos/img_6712.jpg",
       "tr_name": "Hemşin Kertenkelesi",
       "latin": "Darevskia armeniaca",
-      "date": "2026"
+      "date": "2026",
+      "thumb": "images/photos/img_6712-k.jpg"
     },
     {
       "image": "images/photos/img_5632.jpg",
       "tr_name": "Uludağ Kertenkelesi",
       "latin": "Darevskia bithynica",
-      "date": "2022"
+      "date": "2022",
+      "thumb": "images/photos/img_5632-k.jpg"
     },
     {
       "image": "images/photos/img_5622.jpg",
       "tr_name": "Uludağ Kertenkelesi",
       "latin": "Darevskia bithynica",
-      "date": "2022"
+      "date": "2022",
+      "thumb": "images/photos/img_5622-k.jpg"
     },
     {
       "image": "images/photos/img_3258.jpg",
       "tr_name": "Clark Kertenkelesi",
       "latin": "Darevskia clarkorum",
-      "date": "2014"
+      "date": "2014",
+      "thumb": "images/photos/img_3258-k.jpg"
     },
     {
       "image": "images/photos/img_0139.jpg",
       "tr_name": "Trabzon Kertenkelesi",
       "latin": "Darevskia rudis",
-      "date": "2020"
+      "date": "2020",
+      "thumb": "images/photos/img_0139-k.jpg"
     },
     {
       "image": "images/photos/img_6616.jpg",
       "tr_name": "Tuniyev Kertenkelesi",
       "latin": "Darevskia tuniyevi",
-      "date": "2022"
+      "date": "2022",
+      "thumb": "images/photos/img_6616-k.jpg"
     },
     {
       "image": "images/photos/img_6428.jpg",
       "tr_name": "Uzzel Kertenkelesi",
       "latin": "Darevskia uzzelli",
-      "date": "2017"
+      "date": "2017",
+      "thumb": "images/photos/img_6428-k.jpg"
     },
     {
       "image": "images/photos/img_6731.jpg",
       "tr_name": "Valentin Kertenkelesi",
       "latin": "Darevskia valentini",
       "place": "",
-      "date": "2026"
+      "date": "2026",
+      "thumb": "images/photos/img_6731-k.jpg"
     },
     {
       "image": "images/photos/img_1022.jpg",
       "tr_name": "Urartu Yılanı",
       "latin": "Elaphe urartica",
       "place": "",
-      "date": "2021"
+      "date": "2021",
+      "thumb": "images/photos/img_1022-k.jpg"
     },
     {
       "image": "images/photos/img_8861.jpg",
