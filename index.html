@@ -1125,7 +1125,7 @@ window.postSlug = function (p) {
     fetch('data/turler.json', { cache: 'no-cache' })
       .then(function (r) { if (!r.ok) throw 0; return r.json(); })
       .then(function (d) {
-        list = (d.species || []).filter(function (c) { return c && c.latin && c.hidden !== true; });
+        list = (d.species || []).filter(function (c) { return c && c.latin && c.onay === true; });
         if (!list.length) return;
         sec.hidden = false; tick(); setInterval(tick, 1000);
       })

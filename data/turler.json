@@ -22,7 +22,9 @@
       "fact_en": "The genus Anatololacerta was erected in 2007 for the Anatolian rock lizards, which were previously placed in Lacerta.",
       "photos": [
         "images/kart/img_2042.jpg"
-      ]
+      ],
+      "onay": false,
+      "not": "IUCN LC shown on Reptile Database; assessment year not verified. Diagnostic colour description is generic; expert should refine id text. Genus year (Arnold, Arribas & Carranza 2007) from drafter's general knowledge, not web-verified."
     },
     {
       "latin": "Bufo bufo",
@@ -47,7 +49,9 @@
       "photos": [
         "images/kart/img_7122.jpg",
         "images/kart/img_7866.jpg"
-      ]
+      ],
+      "onay": false,
+      "not": "Northeastern Türkiye (Caucasus) populations have been treated as Bufo verrucosissimus by some authors; check photo locality. IUCN year shown as 2009 on Wikipedia, possibly reassessed later; left null."
     },
     {
       "latin": "Elaphe urartica",
@@ -71,7 +75,9 @@
       "fact_en": "It was split from E. sauromates and described in 2019; it is named after the ancient kingdom of Urartu.",
       "photos": [
         "images/kart/img_1022.jpg"
-      ]
+      ],
+      "onay": false,
+      "not": "Not yet assessed by IUCN. Colour description generic; expert may refine. Older Turkish records of E. sauromates from the east refer to this species."
     },
     {
       "latin": "Anatololacerta pelasgiana",
@@ -96,7 +102,9 @@
       "photos": [
         "images/kart/img_0635.jpg",
         "images/kart/lacertid-02.jpg"
-      ]
+      ],
+      "onay": false,
+      "not": "No IUCN category shown on Reptile Database for this split taxon; set NE, expert should check the Red List. English common name not standardised. Synonymy of A. budaki follows Karakasi et al. (2021) as cited by Reptile Database; check whether the site treats budaki separately."
     },
     {
       "latin": "Ommatotriton nesterovi",
@@ -121,7 +129,9 @@
       "photos": [
         "images/kart/ommatotriton-nesterovi-01.jpg",
         "images/kart/ommatotriton-nesterovi-02.jpg"
-      ]
+      ],
+      "onay": false,
+      "not": "IUCN: not found as separately assessed; set NE, check the Red List. Üzüm et al. (2019, Salamandra 55: 131-134) describe external characters separating it from O. ophryticus; abstract not accessible, expert may add them."
     },
     {
       "latin": "Testudo graeca",
@@ -145,7 +155,9 @@
       "fact_en": "Its English name refers to the spurs on its thighs; international trade is regulated under CITES Appendix II.",
       "photos": [
         "images/kart/testudo-graeca-01.jpg"
-      ]
+      ],
+      "onay": false,
+      "not": "IUCN VU dates from 1996 (A1cd) and is outdated. Subspecies taxonomy in Türkiye (ibera, armeniaca, terrestris, buxtoni) remains debated."
     },
     {
       "latin": "Blanus strauchi",
@@ -170,7 +182,9 @@
       "photos": [
         "images/kart/img_1978.jpg",
         "images/kart/blanus-01.jpg"
-      ]
+      ],
+      "onay": false,
+      "not": "Group set to 'kertenkele' per instructions (amphisbaenian). IUCN LC per Reptile Database; year not verified. Check that photos are not B. aporus or B. alexandri (southern and southeastern Türkiye)."
     },
     {
       "latin": "Bufotes viridis",
@@ -195,7 +209,9 @@
       "photos": [
         "images/kart/img_5916.jpg",
         "images/kart/img_5909.jpg"
-      ]
+      ],
+      "onay": false,
+      "not": "TAXONOMY: following Dufresnes et al. (2019), Anatolian green toads are usually assigned to Bufotes sitibundus (Pallas, 1771); B. viridis s. str. in Türkiye is restricted mainly to Thrace. If the photos are from Anatolia, latin_valid should be Bufotes sitibundus. IUCN 2023 year per Wikipedia infobox."
     },
     {
       "latin": "Zamenis longissimus",
@@ -219,7 +235,9 @@
       "fact_en": "It is thought to be the snake associated with Asclepius, the ancient god of medicine, and depicted on the rod used as a symbol of medicine.",
       "photos": [
         "images/kart/zamenis-longissimus-01.jpg"
-      ]
+      ],
+      "onay": false,
+      "not": "Presence in Turkish Thrace not confirmed here; region kept as northern Türkiye. Check whether the Ararat enclave is accepted in current Turkish checklists."
     },
     {
       "latin": "Darevskia armeniaca",
@@ -244,7 +262,9 @@
       "photos": [
         "images/kart/img_6706.jpg",
         "images/kart/img_6712.jpg"
-      ]
+      ],
+      "onay": false,
+      "not": "TURKISH NAME: 'Hemşin Kertenkelesi' is unusual for this species (Hemşin is in Rize, outside its main range); 'Ermeni Kertenkelesi' is the literal equivalent of the English name. Expert should confirm. Colour description generic."
     },
     {
       "latin": "Lyciasalamandra fazilae",
@@ -268,7 +288,9 @@
       "fact_en": "Lyciasalamandra species are viviparous: females give birth to fully metamorphosed young, with no aquatic larval stage.",
       "photos": [
         "images/kart/lyciasalamandra-fazilae-01.jpg"
-      ]
+      ],
+      "onay": false,
+      "not": "Exact range limits (east and west of Göcek) should be confirmed by the expert, who has fieldwork experience in the Fethiye-Göcek SEPA. Colour description general."
     },
     {
       "latin": "Mauremys caspica",
@@ -292,7 +314,9 @@
       "fact_en": "Although aquatic, it can form dense populations in small streams in very arid regions.",
       "photos": [
         "images/kart/mauremys-01.jpg"
-      ]
+      ],
+      "onay": false,
+      "not": "IUCN category LC (1996) as reported by the 2024 TFTSG account; under the 1996 system this may appear as LR/lc, verify on the Red List. Check that photos are not Mauremys rivulata (western Anatolia)."
     },
     {
       "latin": "Darevskia bithynica",
@@ -317,7 +341,9 @@
       "photos": [
         "images/kart/img_5632.jpg",
         "images/kart/img_5622.jpg"
-      ]
+      ],
+      "onay": false,
+      "not": "No separate IUCN category found (formerly a subspecies of D. rudis); set NE, check the Red List. Reptile Database distribution field oddly reads 'C/E Great Caucasus' (likely an error). Colour description generic."
     },
     {
       "latin": "Rana tavasensis",
@@ -341,7 +367,9 @@
       "fact_en": "It is listed as Endangered (EN) on the IUCN Red List because of forest loss and the pollution and drainage of its breeding sites.",
       "photos": [
         "images/kart/rana-tavasensis-01.jpg"
-      ]
+      ],
+      "onay": false,
+      "not": "Species status relative to R. macrocnemis has been questioned in some molecular studies; expert should confirm current treatment. ID text general."
     },
     {
       "latin": "Natrix tessellata",
@@ -365,7 +393,9 @@
       "fact_en": "When threatened it may feign death and release a foul-smelling secretion from the cloaca; it is non-venomous.",
       "photos": [
         "images/kart/natrix-tessellata-01.jpg"
-      ]
+      ],
+      "onay": false,
+      "not": "Family given as Natricidae (current Reptile Database usage); use Colubridae if the site follows the older arrangement."
     },
     {
       "latin": "Darevskia clarkorum",
@@ -390,7 +420,9 @@
       "photos": [
         "images/kart/img_3258.jpg",
         "images/kart/clarkorum-01.jpg"
-      ]
+      ],
+      "onay": false,
+      "not": "ID text kept deliberately general; expert should add diagnostic characters (user has a GENOA/COST project on this species). Etymology (Richard and Erica Clark) not web-verified, so not used."
     },
     {
       "latin": "Mertensiella djanaschvilii",
@@ -414,7 +446,9 @@
       "fact_en": "Long treated as a subspecies of M. caucasica, it was raised to species rank in 2022 on molecular grounds; the male's tail protuberance is used during mating.",
       "photos": [
         "images/kart/mertensiella-01.jpg"
-      ]
+      ],
+      "onay": false,
+      "not": "SPELLING: the site name 'Mertensiella djanashvili' should be 'Mertensiella djanaschvilii' (Amphibian Species of the World, AmphibiaWeb). TURKISH NAME: 'Kafkas Semenderi' is the established name for M. caucasica; consider a distinct name if both are shown. IUCN: not separately assessed; M. caucasica s. lato is VU. Elevation by Raffaëlli (2022) is a book treatment; check whether Turkish checklists accept it."
     },
     {
       "latin": "Testudo hermanni",
@@ -438,7 +472,9 @@
       "fact_en": "In its 2024 reassessment it was listed as Vulnerable (VU) on the IUCN Red List; international trade is regulated under CITES Appendix II.",
       "photos": [
         "images/kart/testudo-hermanni-01.jpg"
-      ]
+      ],
+      "onay": false,
+      "not": "IUCN VU 2024 per Wikipedia (Luiselli 2024); previously NT (2004)."
     },
     {
       "latin": "Darevskia rudis",
@@ -463,7 +499,9 @@
       "photos": [
         "images/kart/img_0139.jpg",
         "images/kart/darevskia-03.jpg"
-      ]
+      ],
+      "onay": false,
+      "not": "Arribas et al. (2022, Zootaxa) revised D. rudis/D. valentini: D. obscura, D. mirabilis and D. spitzenbergerae were raised to species and 'lantzicyreni' moved to D. rudis. Check the photo locality to confirm the photographed population is still D. rudis."
     },
     {
       "latin": "Rana macrocnemis",
@@ -487,7 +525,9 @@
       "fact_en": "Uludağ is one of its classic localities; names such as Rana camerani and Rana holtzi are now treated as synonyms of this species.",
       "photos": [
         "images/kart/rana-macrocnemis-01.jpg"
-      ]
+      ],
+      "onay": false,
+      "not": "IUCN year 2023 per Wikipedia (text said 'not threatened'; category assumed LC, verify). The Taurus 'holtzi' populations are treated as distinct by some authors."
     },
     {
       "latin": "Vipera meridionalis",
@@ -511,7 +551,9 @@
       "fact_en": "It is venomous and its bite may need medical treatment; the nose horn is not bone but a scale-covered fleshy projection.",
       "photos": [
         "images/kart/vipera-meridionalis-01.jpg"
-      ]
+      ],
+      "onay": false,
+      "not": "TAXONOMY: formerly Vipera ammodytes meridionalis/transcaucasiana. Reptile Database (following Dufresnes et al. 2024) places transcaucasiana under V. meridionalis and lists N Turkey; treatment of western Anatolian and Thracian nose-horned vipers is unclear. Confirm photo locality. IUCN: V. ammodytes is LC; V. meridionalis not separately assessed."
     },
     {
       "latin": "Darevskia tuniyevi",
@@ -537,7 +579,9 @@
         "images/kart/img_6616.jpg",
         "images/kart/tuniyevi-02.jpg",
         "images/kart/lacertid-01.jpg"
-      ]
+      ],
+      "onay": false,
+      "not": "Not yet assessed by IUCN. Habitat sentence is general; author may refine."
     },
     {
       "latin": "Ommatotriton ophryticus",
@@ -561,7 +605,9 @@
       "fact_en": "It is listed as Near Threatened (NT) on the IUCN Red List because of forest loss, dam construction, wetland degradation and collection for the pet trade.",
       "photos": [
         "images/kart/semender-001.jpg"
-      ]
+      ],
+      "onay": false,
+      "not": "TURKISH NAME: no established Turkish name found; 'Kuzey Bantlı Semenderi' proposed from the English 'northern banded newt' and to pair with 'Anadolu Bantlı Semenderi'. IUCN 2009 assessment may predate the O. nesterovi split."
     },
     {
       "latin": "Emys orbicularis",
@@ -585,7 +631,9 @@
       "fact_en": "Hatchling sex is determined by incubation temperature, with warmer nests producing more females.",
       "photos": [
         "images/kart/emys-01.jpg"
-      ]
+      ],
+      "onay": false,
+      "not": "IUCN category is LR/nt from 1996 (shown here as NT); outdated. Turkish subspecies include hellenica, luteofusca and eiselti."
     },
     {
       "latin": "Darevskia uzzelli",
@@ -609,7 +657,9 @@
       "fact_en": "No males are known; females reproduce without fertilisation. It is listed as Endangered (EN) on the IUCN Red List.",
       "photos": [
         "images/kart/img_6428.jpg"
-      ]
+      ],
+      "onay": false,
+      "not": "SPELLING: the epithet honours Thomas Uzzell, so the Turkish name should probably read 'Uzzell Kertenkelesi' (double l). Reptile Database notes it is absent from Armenia, hence endemic=true. ID text general."
     },
     {
       "latin": "Rana dalmatina",
@@ -633,7 +683,9 @@
       "fact_en": "Its long hind legs allow it to jump up to 2 m.",
       "photos": [
         "images/kart/rana-dalmatina-01.jpg"
-      ]
+      ],
+      "onay": false,
+      "not": "Authority year varies between sources (1838, 1839, 1840); check Amphibian Species of the World. IUCN year not verified."
     },
     {
       "latin": "Zamenis hohenackeri",
@@ -657,7 +709,9 @@
       "fact_en": "It occurs over a wide altitudinal range, from near sea level to 3000 m.",
       "photos": [
         "images/kart/zamenis-hohenackeri-01.jpg"
-      ]
+      ],
+      "onay": false,
+      "not": "Wikipedia confirms a 2009 IUCN assessment but the category was not visible; LC from drafter's general knowledge, verify."
     },
     {
       "latin": "Darevskia valentini",
@@ -681,7 +735,9 @@
       "fact_en": "It is the paternal ancestor of several parthenogenetic Darevskia species, such as D. armeniaca and D. unisexualis.",
       "photos": [
         "images/kart/img_6731.jpg"
-      ]
+      ],
+      "onay": false,
+      "not": "Arribas et al. (2022) raised D. spitzenbergerae to species and described D. josefschmidtleri from populations formerly in D. valentini; check the photo locality."
     },
     {
       "latin": "Eremias strauchi",
@@ -706,7 +762,9 @@
       "photos": [
         "images/kart/img_8861.jpg",
         "images/kart/eremias-strauchi-01.jpg"
-      ]
+      ],
+      "onay": false,
+      "not": "SPELLING: 'Eremias strauchi' (Kessler, 1878) is correct per Reptile Database; 'strauchii' is an incorrect spelling and the site entries were rightly merged. Turkish name 'Step Kertenkelesi' is generic (applies to the whole genus Eremias); consider 'Strauch Step Kertenkelesi'. Strauch identity of honoree from drafter's general knowledge."
     },
     {
       "latin": "Pelodytes caucasicus",
@@ -730,7 +788,9 @@
       "fact_en": "In summer it may shelter in limestone caves, reportedly favouring caves with bat colonies where insects gather around the guano.",
       "photos": [
         "images/kart/pelodytes-caucasicus-01.jpg"
-      ]
+      ],
+      "onay": false,
+      "not": ""
     },
     {
       "latin": "Coronella austriaca",
@@ -754,7 +814,9 @@
       "fact_en": "It gives birth to live young and catches its prey, mostly lizards, by wrapping its body around it.",
       "photos": [
         "images/kart/coronella-01.jpg"
-      ]
+      ],
+      "onay": false,
+      "not": "Turkish range description general."
     },
     {
       "latin": "Ablepharus anatolicus",
@@ -778,7 +840,9 @@
       "fact_en": "It was described in 1997 as a subspecies of A. budaki and later raised to species rank; ecological niche modelling showed its niche differs from that of A. budaki.",
       "photos": [
         "images/kart/ablepharus-anatolicus-01.jpg"
-      ]
+      ],
+      "onay": false,
+      "not": "A 2024 study reportedly notes morphological similarity to A. chernovi that may suggest synonymy (per Wikipedia); expert should check. Niche-modelling fact from Kurnaz & Hosseinian Yousefkhani (2021, Folia Biologica). Colour description generic."
     },
     {
       "latin": "Darevskia derjugini",
@@ -802,7 +866,9 @@
       "fact_en": "Turkish populations were assigned to the subspecies D. d. barani, but studies suggest they may not differ from the nominate subspecies.",
       "photos": [
         "images/kart/darevskia-derjugini-01.jpg"
-      ]
+      ],
+      "onay": false,
+      "not": "Subspecies remark follows Reptile Database citing Kurnaz et al. (2017)."
     },
     {
       "latin": "Pelobates syriacus",
@@ -826,7 +892,9 @@
       "fact_en": "It buries itself by digging backwards with the spade-like tubercle on its hind feet.",
       "photos": [
         "images/kart/pelobates-syriacus-01.jpg"
-      ]
+      ],
+      "onay": false,
+      "not": "Region badge kept vague; expert may specify Turkish regions."
     },
     {
       "latin": "Natrix natrix",
@@ -850,7 +918,9 @@
       "fact_en": "When threatened it can go limp and feign death and release a garlic-smelling secretion; it is non-venomous.",
       "photos": [
         "images/kart/natrix-01.jpg"
-      ]
+      ],
+      "onay": false,
+      "not": "IUCN year not verified. Family Natricidae as in Reptile Database; use Colubridae if preferred."
     },
     {
       "latin": "Darevskia salihae",
@@ -874,7 +944,9 @@
       "fact_en": "Described in 2022, it belongs to a subclade separate from the rudis-valentini-portschinskii subclade.",
       "photos": [
         "images/kart/darevskia-salihae-01.jpg"
-      ]
+      ],
+      "onay": false,
+      "not": "Not yet assessed by IUCN. Etymology not stated here."
     },
     {
       "latin": "Laudakia stellio",
@@ -899,7 +971,9 @@
       "photos": [
         "images/kart/laudakia-stellio-01.jpg",
         "images/kart/laudakia-stellio-02.jpg"
-      ]
+      ],
+      "onay": false,
+      "not": "IUCN LC per Wikipedia; year not verified."
     },
     {
       "latin": "Bombina variegata",
@@ -925,7 +999,9 @@
         "images/kart/bombina-02.jpg",
         "images/kart/bombina-03.jpg",
         "images/kart/bombina-01.jpg"
-      ]
+      ],
+      "onay": false,
+      "not": "Distribution corrected using his own papers (first Turkish record from Enez, 2016; two new sites, about 3,000 ha, 2018). Turkish name to confirm."
     },
     {
       "latin": "Hemorrhois ravergieri",
@@ -949,7 +1025,9 @@
       "fact_en": "It is non-venomous, diurnal and fast-moving, and may try to bite when handled.",
       "photos": [
         "images/kart/hemorrhois-01.jpg"
-      ]
+      ],
+      "onay": false,
+      "not": "Turkish name 'Kocabaş Yılan' not verified in literature; check. Defensive biting statement is general colubrid behaviour, not source-verified."
     },
     {
       "latin": "Lacerta media",
@@ -973,7 +1051,9 @@
       "fact_en": "It is one of the largest lizards in Türkiye; adults can exceed 40 cm in total length.",
       "photos": [
         "images/kart/lacerta-media-01.jpg"
-      ]
+      ],
+      "onay": false,
+      "not": "Total length figure from drafter's general knowledge, not web-verified. English name not standardised (also 'medium lizard')."
     },
     {
       "latin": "Lacerta agilis",
@@ -998,7 +1078,9 @@
       "photos": [
         "images/kart/lacerta-agilis-01.jpg",
         "images/kart/lacerta-agilis-02.jpg"
-      ]
+      ],
+      "onay": false,
+      "not": "Wikipedia states it is absent from European Turkey. Subspecies in Türkiye (e.g. brevicaudata, grusinica) not specified."
     },
     {
       "latin": "Hyla orientalis",
@@ -1022,7 +1104,9 @@
       "fact_en": "These populations were formerly included in Hyla arborea and have been recognised as a separate species on genetic grounds.",
       "photos": [
         "images/kart/hyla-01.jpg"
-      ]
+      ],
+      "onay": false,
+      "not": "Lateral-stripe contrast with H. savignyi from drafter's general knowledge; verify. Check southern Turkish photos are not H. savignyi or H. felixarabica."
     },
     {
       "latin": "Eirenis modestus",
@@ -1046,7 +1130,9 @@
       "fact_en": "It is harmless and feeds mainly on arthropods such as insects, spiders and centipedes.",
       "photos": [
         "images/kart/snake-01.jpg"
-      ]
+      ],
+      "onay": false,
+      "not": "Diet statement from drafter's general knowledge, not source-verified."
     },
     {
       "latin": "Mediodactylus danilewskii",
@@ -1070,7 +1156,9 @@
       "fact_en": "The complex formerly known as Mediodactylus kotschyi was split into five species in 2018 on the basis of genetic studies.",
       "photos": [
         "images/kart/mediodactylus-danilewskii-01.jpg"
-      ]
+      ],
+      "onay": false,
+      "not": "Turkish range is incompletely known after the 2018 split (Kotsakiozi et al.); M. kotschyi s. str. and M. orientalis also occur in Anatolia. Confirm photo locality. English common name not standardised."
     },
     {
       "latin": "Mediodactylus orientalis",
@@ -1094,7 +1182,9 @@
       "fact_en": "It was described from Jerusalem in 1937 as a subspecies of M. kotschyi and raised to species rank in 2018.",
       "photos": [
         "images/kart/mediodactylus-orientalis-01.jpg"
-      ]
+      ],
+      "onay": false,
+      "not": "Turkish range boundaries with M. danilewskii and M. kotschyi uncertain; confirm photo locality. English common name not standardised."
     },
     {
       "latin": "Ophisops elegans",
@@ -1119,7 +1209,9 @@
       "photos": [
         "images/kart/ophisops-02.jpg",
         "images/kart/ophisops-01.jpg"
-      ]
+      ],
+      "onay": false,
+      "not": ""
     },
     {
       "latin": "Podarcis muralis",
@@ -1144,7 +1236,9 @@
       "photos": [
         "images/kart/podarcis-muralis-01.jpg",
         "images/kart/podarcis-muralis-02.jpg"
-      ]
+      ],
+      "onay": false,
+      "not": "IUCN year per Wikipedia (2009); may have been reassessed."
     },
     {
       "latin": "Parvilacerta parva",
@@ -1170,7 +1264,9 @@
         "images/kart/parvilacerta-02.jpg",
         "images/kart/parvilacerta-03.jpg",
         "images/kart/parvilacerta-01.jpg"
-      ]
+      ],
+      "onay": false,
+      "not": "Global IUCN category LC from drafter's general knowledge (Wikipedia mentions only national CR status in Armenia); verify. Colour description generic."
     },
     {
       "latin": "Pseudopus apodus",
@@ -1194,7 +1290,9 @@
       "fact_en": "It favours snails; its teeth and jaws are well suited to crushing their shells.",
       "photos": [
         "images/kart/pseudopus-01.jpg"
-      ]
+      ],
+      "onay": false,
+      "not": "Reptile Database lists P. a. thracius and P. a. levantinus as subspecies, both relevant to Türkiye."
     },
     {
       "latin": "Lacerta viridis",
@@ -1218,7 +1316,9 @@
       "fact_en": "Males develop a bright blue throat in the breeding season, which is used in displays to rival males.",
       "photos": [
         "images/kart/lacerta-viridis-01.jpg"
-      ]
+      ],
+      "onay": false,
+      "not": "Exact eastern limit along the Black Sea coast not verified."
     },
     {
       "latin": "Darevskia adjarica",
@@ -1243,7 +1343,9 @@
       "photos": [
         "images/kart/anatololacerta-02.jpg",
         "images/kart/darevskia-01.jpg"
-      ]
+      ],
+      "onay": false,
+      "not": "TURKISH NAME: Adjara is 'Acara' in Turkish; 'Acara Kertenkelesi' may read more naturally. Not separately assessed by IUCN (formerly within D. parvula); set NE. ID text general."
     },
     {
       "latin": "Lacerta diplochondrodes",
@@ -1267,7 +1369,9 @@
       "fact_en": "Long treated as a subspecies of L. trilineata, it has been recognised as a separate species on the basis of phylogenomic studies.",
       "photos": [
         "images/kart/diplochondrodes-01.jpg"
-      ]
+      ],
+      "onay": false,
+      "not": "'Büyük Yeşil Kertenkele' has traditionally been used for L. trilineata in Turkish literature. Not separately assessed by IUCN (L. trilineata is LC); set NE. English name not standardised."
     },
     {
       "latin": "Darevskia parvula",
@@ -1292,7 +1396,9 @@
       "photos": [
         "images/kart/parvula-02.jpg",
         "images/kart/darevskia-02.jpg"
-      ]
+      ],
+      "onay": false,
+      "not": "Second sentence of fact assumes D. tuniyevi populations were formerly attributed to D. parvula; Reptile Database calls them cryptic, not sister, species. Expert should confirm wording."
     },
     {
       "latin": "Paralaudakia caucasia",
@@ -1316,7 +1422,9 @@
       "fact_en": "Its type localities are Tbilisi and Baku; the genus Paralaudakia contains the rock agamas of Central Asia and the Caucasus.",
       "photos": [
         "images/kart/paralaudakia-01.jpg"
-      ]
+      ],
+      "onay": false,
+      "not": "ID text general; expert should add diagnostic characters versus L. stellio. IUCN year not verified."
     },
     {
       "latin": "Darevskia unisexualis",
@@ -1340,7 +1448,9 @@
       "fact_en": "It is parthenogenetic and originated from hybridisation between D. raddei and D. valentini.",
       "photos": [
         "images/kart/unisexualis-01.jpg"
-      ]
+      ],
+      "onay": false,
+      "not": "Parental species (D. raddei nairensis x D. valentini) from drafter's general knowledge; Wikipedia only confirms hybrid origin. English common name uncertain. Turkish name 'Ağrı Kertenkelesi' not verified."
     },
     {
       "latin": "Podarcis tauricus",
@@ -1364,7 +1474,9 @@
       "fact_en": "Despite its English name it lives on the ground in open grassland rather than on walls, escaping into vegetation or burrows.",
       "photos": [
         "images/kart/podarcis-tauricus-01.jpg"
-      ]
+      ],
+      "onay": false,
+      "not": ""
     },
     {
       "latin": "Anguis colchica",
@@ -1389,7 +1501,9 @@
       "photos": [
         "images/kart/anguis-01.jpg",
         "images/kart/anguis-02.jpg"
-      ]
+      ],
+      "onay": false,
+      "not": "Reptile Database distribution excerpt did not mention Turkey explicitly; Turkish populations of Anguis are generally referred to A. colchica, but check. IUCN year not verified."
     },
     {
       "latin": "Hemidactylus turcicus",
@@ -1413,7 +1527,9 @@
       "fact_en": "It is one of the most successful colonising geckos, with established populations in the USA, the Caribbean and South America.",
       "photos": [
         "images/kart/gecko-01.jpg"
-      ]
+      ],
+      "onay": false,
+      "not": ""
     },
     {
       "latin": "Heremites vittatus",
@@ -1438,7 +1554,9 @@
       "photos": [
         "images/kart/skink-01.jpg",
         "images/kart/skink-02.jpg"
-      ]
+      ],
+      "onay": false,
+      "not": "Habitat and generic history from drafter's general knowledge, not source-verified. IUCN LC per Reptile Database; year not verified."
     },
     {
       "latin": "Acanthodactylus ilgazi",
@@ -1462,7 +1580,9 @@
       "fact_en": "It was described in 2021 and is so far known only from the area around its type locality.",
       "photos": [
         "images/kart/acantho-01.jpg"
-      ]
+      ],
+      "onay": false,
+      "not": "Habitat sentence is general; author should refine. Etymology and comparison species (e.g. A. harranensis, A. schreiberi, A. boskianus) not verified here."
     },
     {
       "latin": "Darevskia obscura",
@@ -1486,7 +1606,9 @@
       "fact_en": "Formerly a subspecies of D. rudis, this taxon has been raised to species rank; the subspecies bischoffi and macromaculata are now placed under D. obscura.",
       "photos": [
         "images/kart/lacertid-03.jpg"
-      ]
+      ],
+      "onay": false,
+      "not": "TURKISH NAME: no established Turkish name found; 'Koyu Kaya Kertenkelesi' proposed from the Latin 'obscura' (dark). English name also proposed. Sources conflict on who raised it to species: Reptile Database cites Gabelaia et al. (2018), Arribas et al. (2022, Zootaxa) list 'D. obscura stat. nov.'. Reptile Database calls the elevation 'a bit preliminary'. ID text general."
     }
   ]
 }

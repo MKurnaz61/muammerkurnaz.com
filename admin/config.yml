@@ -356,10 +356,10 @@ collections:
   # ---------------------------------------------------------------- 9. Tür kartları
   - name: "turler"
     label: "9. Tür kartları"
-    editor: { preview: false }
+    editor: { preview: true }
     files:
       - name: "turler"
-        label: "Bu 10 dakikanın türü (kartlar sırayla 10'ar dakika gösterilir)"
+        label: "Tür kartları (yalnızca onaylananlar sitede görünür)"
         file: "data/turler.json"
         fields:
           - label: "Türler (sıra = gösterim sırası)"
@@ -367,6 +367,7 @@ collections:
             widget: "list"
             summary: "{{fields.tr}} · {{fields.latin}}"
             fields:
+              - { label: "ONAYLANDI: kartı sitede yayınla", name: "onay", widget: "boolean", default: false, required: false, hint: "Açık olan kartlar sitede sırayla 10'ar dakika gösterilir. Kapalı olanları yalnızca sen panelde görürsün." }
               - { label: "Latince adı", name: "latin", widget: "string" }
               - { label: "Tanımlayan ve yıl, ör. (Darevsky & Vedmederja, 1977)", name: "author", widget: "string", required: false }
               - { label: "Türkçe adı", name: "tr", widget: "string" }
@@ -402,4 +403,4 @@ collections:
                 name: "photos"
                 widget: "list"
                 field: { label: "Fotoğraf", name: "photo", widget: "image", media_folder: "/images/kart", public_folder: "images/kart", choose_url: false }
-              - { label: "Kartı gizle", name: "hidden", widget: "boolean", default: false, required: false }
+              - { label: "Kontrol notu (sitede görünmez)", name: "not", widget: "text", required: false }
