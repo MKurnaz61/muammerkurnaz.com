@@ -189,6 +189,7 @@ collections:
                   - { label: "Biyocoğrafya", value: "bio" }
                   - { label: "Ekoloji", value: "eco" }
                   - { label: "Doğal tarih", value: "nat" }
+                  - { label: "Yaşam öyküsü", value: "life" }
           - label: "Kitap bölümleri"
             name: "chapters"
             widget: "list"
