@@ -1,6 +1,98 @@
 {
   "photos": [
     {
+      "image": "images/photos/podarcis-siculus.jpg",
+      "tr_name": "İstanbul Kertenkelesi",
+      "latin": "Podarcis siculus"
+    },
+    {
+      "image": "images/photos/lacerta-viridis.jpg",
+      "tr_name": "Yeşil Kertenkele",
+      "latin": "Lacerta viridis",
+      "date": "2017"
+    },
+    {
+      "image": "images/photos/img_7730.jpg",
+      "tr_name": "Koca Engerek",
+      "latin": "Macrovipera lebetinus",
+      "date": "2026"
+    },
+    {
+      "image": "images/photos/img_7725.jpg",
+      "tr_name": "Koca Engerek",
+      "latin": "Macrovipera lebetinus",
+      "date": "2026"
+    },
+    {
+      "image": "images/photos/img_7910.jpg",
+      "tr_name": "Mahmuzlu Yılan",
+      "latin": "Eryx jaculus",
+      "date": "2026"
+    },
+    {
+      "image": "images/photos/img_7794.jpg",
+      "tr_name": "Mahmuzlu Yılan",
+      "latin": "Eryx jaculus",
+      "date": "2026"
+    },
+    {
+      "image": "images/photos/img_7790.jpg",
+      "tr_name": "Mahmuzlu Yılan",
+      "latin": "Eryx jaculus",
+      "date": "2026"
+    },
+    {
+      "image": "images/photos/img_7173.jpg",
+      "tr_name": "Valentin Kertenkelesi",
+      "latin": "Darevskia valentini",
+      "date": "2026"
+    },
+    {
+      "image": "images/photos/img_7051.jpg",
+      "tr_name": "Valentin Kertenkelesi",
+      "latin": "Darevskia valentini",
+      "date": "2026"
+    },
+    {
+      "image": "images/photos/img_7543.jpg",
+      "latin": "Darevskia josefschmidtleri",
+      "date": "2026"
+    },
+    {
+      "image": "images/photos/img_7704.jpg",
+      "latin": "Darevskia josefschmidtleri",
+      "date": "2026"
+    },
+    {
+      "image": "images/photos/img_7421.jpg",
+      "latin": "Darevskia josefschmidtleri",
+      "date": "2026"
+    },
+    {
+      "tr_name": "Ağrı Kertenkelesi",
+      "latin": "Darevskia unisexualis",
+      "date": "2026",
+      "image": "images/photos/img_6940.jpg"
+    },
+    {
+      "image": "images/photos/pelobates-syriacus.jpg",
+      "tr_name": "Toprak Kurbağası",
+      "latin": "Pelobates syriacus",
+      "date": "2017"
+    },
+    {
+      "image": "images/photos/lacerta-diplochondrodes.jpg",
+      "tr_name": "Büyük Yeşik Kertenkele",
+      "latin": "Lacerta diplochondrodes",
+      "date": "2014"
+    },
+    {
+      "image": "images/photos/hyla-orientalis.jpg",
+      "tr_name": "Ağaç Kurbağası",
+      "latin": "Hyla orientalis",
+      "date": "2017"
+    },
+    {
       "image": "images/photos/img_2042.jpg",
       "tr_name": "Anadolu Kaya Kertenkelesi",
       "latin": "Anatololacerta anatolica",
@@ -724,7 +816,7 @@
     },
     {
       "image": "images/photos/semender-001.jpg",
-      "tr_name": "",
+      "tr_name": "Kuzey Bantlı Semenderi",
       "latin": "Ommatotriton ophryticus",
       "place": "",
       "date": "",
