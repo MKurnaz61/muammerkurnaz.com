@@ -190,6 +190,37 @@ collections:
                   - { label: "Ekoloji", value: "eco" }
                   - { label: "Doğal tarih", value: "nat" }
                   - { label: "Yaşam öyküsü", value: "life" }
+              - label: "Scopus çeyreklik dilimi"
+                name: "scopus"
+                widget: "select"
+                default: "Diğer"
+                required: false
+                hint: "Yayın yılına ait Scopus (SJR) çeyreklik dilimi."
+                options:
+                  - { label: "Q1", value: "Q1" }
+                  - { label: "Q2", value: "Q2" }
+                  - { label: "Q3", value: "Q3" }
+                  - { label: "Q4", value: "Q4" }
+                  - { label: "TR Dizin", value: "TR Dizin" }
+                  - { label: "SCI / SCIE (çeyreklik belirtilmemiş)", value: "SCI" }
+                  - { label: "ESCI (çeyreklik belirtilmemiş)", value: "ESCI" }
+                  - { label: "Diğer indeksler / indekste değil", value: "Diğer" }
+              - label: "Web of Science (WoS) çeyreklik dilimi"
+                name: "wos"
+                widget: "select"
+                default: "Diğer"
+                required: false
+                hint: "Yayın yılına ait WoS (JCR) çeyreklik dilimi."
+                options:
+                  - { label: "Q1", value: "Q1" }
+                  - { label: "Q2", value: "Q2" }
+                  - { label: "Q3", value: "Q3" }
+                  - { label: "Q4", value: "Q4" }
+                  - { label: "TR Dizin", value: "TR Dizin" }
+                  - { label: "SCI / SCIE (çeyreklik belirtilmemiş)", value: "SCI" }
+                  - { label: "ESCI (çeyreklik belirtilmemiş)", value: "ESCI" }
+                  - { label: "Diğer indeksler / indekste değil", value: "Diğer" }
+              - { label: "Dergi ESCI kapsamında", name: "esci", widget: "boolean", default: false, required: false, hint: "Açıksa WoS etiketinin yanında ESCI yazar." }
           - label: "Kitap bölümleri"
             name: "chapters"
             widget: "list"

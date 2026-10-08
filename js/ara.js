@@ -240,6 +240,7 @@
     /* make sure it is visible: reset the topic filter, show all articles, open folded lists */
     if (el.hidden || el.offsetParent === null) {
       var all = sec.querySelector('[data-f="all"]'); if (all && all.getAttribute('aria-pressed') !== 'true') all.click();
+      var qa = sec.querySelector('#qFilters [data-q="all"]'); if (qa && qa.getAttribute('aria-pressed') !== 'true') qa.click();
       var more = sec.querySelector('.pub-more[aria-expanded="false"]'); if (el.hidden && more && !more.hidden) more.click();
     }
     for (var p = el.parentElement; p && p !== document.body; p = p.parentElement) { if (p.tagName === 'DETAILS') p.open = true; }
