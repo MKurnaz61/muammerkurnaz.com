@@ -143,9 +143,9 @@ dialog.lbx button{position:absolute;top:8px;right:8px;border:0;border-radius:50%
 
 <section class="hero">
   <div class="wrap">
-    <div class="eyebrow"><span class="en">Herpetofauna of Türkiye</span><span class="tr">Türkiye herpetofaunası</span></div>
-    <h1><span class="en">Amphibians and reptiles of Türkiye</span><span class="tr">Türkiye'nin amfibi ve sürüngenleri</span></h1>
-    <p class="lede"><span class="en">An up-to-date checklist of the species occurring in Türkiye, with authors, Turkish names, endemism and IUCN categories. Select a species to see its details and photographs.</span><span class="tr">Türkiye'de yayılış gösteren türlerin güncel listesi; yazarlar, Türkçe adlar, endemizm ve IUCN kategorileriyle. Ayrıntıları ve fotoğrafları görmek için bir türe tıklayın.</span>
+    <div class="eyebrow" id="pUst"><span class="en">Herpetofauna of Türkiye</span><span class="tr">Türkiye herpetofaunası</span></div>
+    <h1 id="pBaslik"><span class="en">Amphibians and reptiles of Türkiye</span><span class="tr">Türkiye'nin amfibi ve sürüngenleri</span></h1>
+    <p class="lede"><span id="pGiris"><span class="en">An up-to-date checklist of the species occurring in Türkiye, with authors, Turkish names, endemism and IUCN categories. Select a species to see its details and photographs.</span><span class="tr">Türkiye'de yayılış gösteren türlerin güncel listesi; yazarlar, Türkçe adlar, endemizm ve IUCN kategorileriyle. Ayrıntıları ve fotoğrafları görmek için bir türe tıklayın.</span></span>
       <small id="basis"></small></p>
     <div class="tally" id="tally"></div>
   </div>
@@ -304,6 +304,11 @@ dialog.lbx button{position:absolute;top:8px;right:8px;border:0;border-radius:50%
     (r[2].species || []).forEach(function (c) { if (c && c.onay === true) CARD[key(c.latin)] = c; });
     var b = r[0].kaynak_tr || r[0].kaynak_en;
     if (b) document.getElementById('basis').innerHTML = bi(md(r[0].kaynak_en || r[0].kaynak_tr), md(r[0].kaynak_tr || r[0].kaynak_en));
+    var P = r[0];
+    function set(id, en, tr) { if (en || tr) document.getElementById(id).innerHTML = bi(md(en), md(tr)); }
+    set('pUst', P.ust_en, P.ust_tr); set('pBaslik', P.baslik_en, P.baslik_tr); set('pGiris', P.giris_en, P.giris_tr);
+    if (P.baslik_tr) document.title = String(P.baslik_tr).replace(/[*_]/g, '') + ' · Muammer Kurnaz';
+    (P.gruplar || []).forEach(function (g) { GROUPS.forEach(function (G) { if (g && g.kod === G[0]) { if (g.ad_en) G[1] = g.ad_en; if (g.ad_tr) G[2] = g.ad_tr; if (g.alt) G[3] = g.alt; } }); });
     chips(); render();
     function fromHash() { if (!location.hash) return; var li = document.getElementById(decodeURIComponent(location.hash.slice(1))); if (li) { toggle(li, true); setTimeout(function () { li.scrollIntoView({ block: 'start' }); }, 400); } }
     fromHash(); window.addEventListener('hashchange', fromHash);

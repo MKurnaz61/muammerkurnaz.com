@@ -1,6 +1,44 @@
 {
+ "ust_tr": "Türkiye herpetofaunası",
+ "ust_en": "Herpetofauna of Türkiye",
+ "baslik_tr": "Türkiye'nin amfibi ve sürüngenleri",
+ "baslik_en": "Amphibians and reptiles of Türkiye",
+ "giris_tr": "Türkiye'de yayılış gösteren türlerin güncel listesi; yazarlar, Türkçe adlar, endemizm ve IUCN kategorileriyle. Ayrıntıları ve fotoğrafları görmek için bir türe tıklayın.",
+ "giris_en": "An up-to-date checklist of the species occurring in Türkiye, with authors, Turkish names, endemism and IUCN categories. Select a species to see its details and photographs.",
  "kaynak_tr": "Hazırlayan: Doç. Dr. Muammer Kurnaz · Son güncelleme: Ekim 2026",
  "kaynak_en": "Compiled by Assoc. Prof. Muammer Kurnaz · Last updated: October 2026",
+ "gruplar": [
+  {
+   "kod": "kurbaga",
+   "ad_tr": "Kurbağalar",
+   "ad_en": "Frogs and toads",
+   "alt": "Anura"
+  },
+  {
+   "kod": "semender",
+   "ad_tr": "Semenderler",
+   "ad_en": "Salamanders and newts",
+   "alt": "Caudata"
+  },
+  {
+   "kod": "kertenkele",
+   "ad_tr": "Kertenkeleler",
+   "ad_en": "Lizards",
+   "alt": "Squamata: Sauria"
+  },
+  {
+   "kod": "yilan",
+   "ad_tr": "Yılanlar",
+   "ad_en": "Snakes",
+   "alt": "Squamata: Serpentes"
+  },
+  {
+   "kod": "kaplumbaga",
+   "ad_tr": "Kaplumbağalar",
+   "ad_en": "Turtles and tortoises",
+   "alt": "Testudines"
+  }
+ ],
  "species": [
   {
    "grup": "kurbaga",

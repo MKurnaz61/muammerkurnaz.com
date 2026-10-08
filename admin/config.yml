@@ -487,6 +487,23 @@ collections:
         label: "Türkiye amfibi ve sürüngen listesi"
         file: "data/turkiye-turleri.json"
         fields:
+          - { label: "Sayfa üst etiketi (TR)", name: "ust_tr", widget: "string", required: false }
+          - { label: "Sayfa üst etiketi (EN)", name: "ust_en", widget: "string", required: false }
+          - { label: "Sayfa başlığı (TR)", name: "baslik_tr", widget: "string", required: false }
+          - { label: "Sayfa başlığı (EN)", name: "baslik_en", widget: "string", required: false }
+          - { label: "Giriş metni (TR)", name: "giris_tr", widget: "markdown", buttons: ["bold", "italic"], editor_components: [], modes: ["rich_text", "raw"], minimal: true, required: false }
+          - { label: "Giriş metni (EN)", name: "giris_en", widget: "markdown", buttons: ["bold", "italic"], editor_components: [], modes: ["rich_text", "raw"], minimal: true, required: false }
+          - label: "Grup adları"
+            name: "gruplar"
+            widget: "list"
+            allow_add: false
+            summary: "{{fields.ad_tr}} · {{fields.alt}}"
+            hint: "Beş grubun sitede görünen adları. Grup kodu sabittir, türler bu koda göre gruplanır."
+            fields:
+              - { label: "Grup kodu (değiştirmeyin)", name: "kod", widget: "hidden" }
+              - { label: "Ad (TR)", name: "ad_tr", widget: "string" }
+              - { label: "Ad (EN)", name: "ad_en", widget: "string" }
+              - { label: "Alt başlık (takım)", name: "alt", widget: "string", required: false }
           - { label: "Liste altındaki kaynak satırı (TR)", name: "kaynak_tr", widget: "string", required: false }
           - { label: "Liste altındaki kaynak satırı (EN)", name: "kaynak_en", widget: "string", required: false }
           - label: "Türler"
