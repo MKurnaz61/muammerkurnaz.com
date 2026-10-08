@@ -973,8 +973,8 @@ window.postSlug = function (p) {
       .catch(function () {});
   })();
 
-  /* hero photo of the day: same photo for everyone on a given day, changes at midnight.
-     Picks from all gallery photos (including ones added later in the admin panel) and skips small or upright pictures. */
+  /* hero photos: starts with the photo of the day, then moves to the next landscape photo every 10 seconds.
+     Uses every gallery photo, so photos added later in the admin panel join the rotation by themselves. */
   (function () {
     var img = document.getElementById('heroImg');
     if (!img) return;
@@ -982,20 +982,34 @@ window.postSlug = function (p) {
     try { pool = JSON.parse(document.getElementById('hero-pool').textContent); } catch (err) {}
     var now = new Date();
     var day = Math.floor(Date.UTC(now.getFullYear(), now.getMonth(), now.getDate()) / 86400000);
-    function tryFrom(list, k) {
-      if (!list.length || k >= Math.min(list.length, 12)) return;
-      var src = list[(day + k) % list.length], probe = new Image();
+    var list = [], pos = 0, first = true, timer = null, still = window.matchMedia && matchMedia('(prefers-reduced-motion: reduce)').matches;
+    img.style.transition = 'opacity .9s ease';
+    function show(src) {
+      if (first || still) { img.style.objectPosition = '50% 50%'; img.src = src; first = false; return; }
+      img.style.opacity = '0';
+      setTimeout(function () { img.style.objectPosition = '50% 50%'; img.src = src; img.style.opacity = '1'; }, 900);
+    }
+    function next(tries) {
+      tries = tries || 0;
+      if (!list.length || tries > 15) return;
+      var src = list[pos % list.length]; pos++;
+      var probe = new Image();
       probe.onload = function () {
-        if (probe.naturalWidth >= 1200 && probe.naturalWidth / probe.naturalHeight >= 1.3) { img.style.objectPosition = '50% 50%'; img.src = src; }
-        else tryFrom(list, k + 1);
+        if (probe.naturalWidth >= 1200 && probe.naturalWidth / probe.naturalHeight >= 1.3) show(src);
+        else next(tries + 1);
       };
-      probe.onerror = function () { tryFrom(list, k + 1); };
+      probe.onerror = function () { next(tries + 1); };
       probe.src = src;
+    }
+    function start(l) {
+      list = l; pos = list.length ? day % list.length : 0; next();
+      if (still) return;
+      timer = setInterval(function () { if (!document.hidden) next(); }, 10000);
     }
     fetch('photos.json', { cache: 'no-cache' })
       .then(function (r) { if (!r.ok) throw 0; return r.json(); })
-      .then(function (d) { var l = (d.photos || []).map(function (p) { return p.image; }).filter(Boolean); tryFrom(l.length ? l : pool, 0); })
-      .catch(function () { tryFrom(pool, 0); });
+      .then(function (d) { var l = (d.photos || []).map(function (p) { return p.image; }).filter(Boolean); start(l.length ? l : pool); })
+      .catch(function () { start(pool); });
   })();
 
   /* photo gallery: reads photos.json (filled from the /admin panel), shows the 12 newest.
@@ -1040,7 +1054,7 @@ window.postSlug = function (p) {
         b.type = 'button';
         if (i >= SHOW) b.hidden = true;
         b.innerHTML =
-          '<img src="' + esc(p.thumb || p.image) + '" data-mini="' + esc(p.mini || '') + '" onerror="if(this.dataset.mini&&this.src!==this.dataset.mini)this.src=this.dataset.mini" loading="lazy" alt="' + esc(p.latin) + '">' +
+          '<img src="' + esc(p.thumb || String(p.image).replace(/(-k)?\.(jpe?g|png|webp)$/i, '-k.jpg')) + '" data-full="' + esc(p.image) + '" data-mini="' + esc(p.mini || '') + '" onerror="var d=this.dataset;if(d.full&&this.getAttribute(\'src\')!==d.full){this.src=d.full;d.full=\'\'}else if(d.mini&&this.src!==d.mini)this.src=d.mini" loading="lazy" alt="' + esc(p.latin) + '">' +
           '<span class="cap">' + (p.tr_name ? esc(p.tr_name) + '<br>' : '') + '<i>' + esc(p.latin) + '</i></span>' +
           (where ? '<span class="meta">' + esc(where) + '</span>' : '');
         b.addEventListener('click', function () {
@@ -1099,7 +1113,7 @@ window.postSlug = function (p) {
       hab: '<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M3 20l6-10 4 6 3-4 5 8z"/><circle cx="17" cy="6" r="2"/></svg>',
       id: '<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="11" cy="11" r="6"/><path d="M20 20l-4.5-4.5"/></svg>'
     };
-    function thumbOf(src) { var f = String(src).split('/').pop(); return 'images/photos/' + f.replace(/\.jpg$/i, '-k.jpg'); }
+    function thumbOf(src) { return String(src || '').replace(/(-k)?\.(jpe?g|png|webp)$/i, '-k.jpg'); }
     function slotNow() { return Math.floor(Date.now() / SLOT); }
     function hhmm(t) { var d = new Date(t); return ('0' + d.getHours()).slice(-2) + ':' + ('0' + d.getMinutes()).slice(-2); }
     function render() {
@@ -1117,7 +1131,7 @@ window.postSlug = function (p) {
             '<div class="tk-motto"><span class="en">KNOW</span><span class="tr">TANI</span><span class="d"></span><span class="en">LOVE</span><span class="tr">SEV</span><span class="d"></span><i><span class="en">PROTECT</span><span class="tr">KORU</span></i></div></div>' +
           (src ? '<div class="tk-shot"><img src="' + e(src) + '" alt="' + e(c.latin) + '"></div>' : '') +
           '<div class="tk-bot"><span class="tk-big">' + e(c.latin) + '</span>' +
-            (ph.length > 1 ? '<div class="tk-dots">' + ph.map(function (x, i) { return '<button type="button" data-ph="' + i + '" aria-pressed="' + (i === viewPhoto) + '" aria-label="' + (i + 1) + '"><img src="' + e(thumbOf(x)) + '" alt=""></button>'; }).join('') + '</div>' : '') +
+            (ph.length > 1 ? '<div class="tk-dots">' + ph.map(function (x, i) { return '<button type="button" data-ph="' + i + '" aria-pressed="' + (i === viewPhoto) + '" aria-label="' + (i + 1) + '"><img src="' + e(thumbOf(x)) + '" onerror="this.onerror=null;this.src=\'' + e(x) + '\'" alt=""></button>'; }).join('') + '</div>' : '') +
             '<span class="tk-credit">' + bi('Photo: M. Kurnaz', 'Fotoğraf: M. Kurnaz') + '</span></div>' +
         '</div>' +
         '<div class="tk-bd"><div class="tk-colA">' +
@@ -1140,7 +1154,7 @@ window.postSlug = function (p) {
       var strip = [], base = slotNow();
       for (var k = 1; k <= 4; k++) {
         var i = (liveIdx + k) % list.length, n = list[i];
-        strip.push('<button type="button" class="tk-th" data-idx="' + i + '"><img src="' + e(thumbOf((n.photos || [])[0] || '')) + '" alt="" loading="lazy"><em>' + hhmm((base + k) * SLOT) + '</em><span>' + e(n.latin) + '</span></button>');
+        strip.push('<button type="button" class="tk-th" data-idx="' + i + '"><img src="' + e(thumbOf((n.photos || [])[0] || '')) + '" onerror="this.onerror=null;this.src=\'' + e((n.photos || [])[0] || '') + '\'" alt="" loading="lazy"><em>' + hhmm((base + k) * SLOT) + '</em><span>' + e(n.latin) + '</span></button>');
       }
       document.getElementById('tkStrip').innerHTML = strip.join('');
     }
@@ -1165,6 +1179,17 @@ window.postSlug = function (p) {
       .then(function (d) {
         list = (d.species || []).filter(function (c) { return c && c.latin && c.onay === true; });
         if (!list.length) return;
+        /* add the gallery photos of the same species (matched by Latin name) after the card's own photos */
+        fetch('photos.json', { cache: 'no-cache' }).then(function (r) { return r.ok ? r.json() : {}; }).catch(function () { return {}; }).then(function (g) {
+          var by = {};
+          (g.photos || []).forEach(function (p) { var k = String(p.latin || '').replace(/[*_]/g, '').trim().toLowerCase(); if (k && p.image) (by[k] = by[k] || []).push(p.image); });
+          list.forEach(function (c) {
+            var own = (c.photos || []).filter(Boolean), names = own.map(function (x) { return String(x).split('/').pop(); });
+            (by[c.latin.trim().toLowerCase()] || []).forEach(function (x) { if (names.indexOf(String(x).split('/').pop()) < 0 && own.length < 8) { own.push(x); names.push(String(x).split('/').pop()); } });
+            c.photos = own;
+          });
+          if (view >= 0) render();
+        });
         sec.hidden = false; var nt = document.getElementById('navTurler'); if (nt) nt.hidden = false; tick(); setInterval(tick, 1000);
       })
       .catch(function () {});

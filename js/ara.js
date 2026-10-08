@@ -154,14 +154,14 @@
           if (seen[k]) { seen[k].n++; return; }
           var o = { g: ['Photos', 'Fotoğraflar'], n: 1, t: function () { return (p.tr_name ? p.tr_name + ' · ' : '') + p.latin; },
             s: function () { return o.n > 1 ? L(o.n + ' photos', o.n + ' fotoğraf') : L('1 photo', '1 fotoğraf'); },
-            head: p.latin + ' ' + p.tr_name, key: [p.latin, p.tr_name].join(' '), img: p.thumb || p.image, go: { sec: 'photos', photo: i } };
+            head: p.latin + ' ' + p.tr_name, key: [p.latin, p.tr_name].join(' '), img: p.thumb || thumb(p.image), go: { sec: 'photos', photo: i } };
           seen[k] = o; add(o);
         });
         items = out; return out;
       });
     return loading;
   }
-  function thumb(src) { return src ? String(src).replace(/(images\/photos\/[^/]+?)(-k)?\.jpg$/i, '$1-k.jpg') : ''; }
+  function thumb(src) { return src ? String(src).replace(/(-k)?\.(jpe?g|png|webp)$/i, '-k.jpg') : ''; }
 
   /* ---------- search ---------- */
   var current = [], sel = 0, timer;
@@ -191,7 +191,7 @@
       if (g !== last) { html += '<div class="ara-g">' + esc(L(h.it.g[0], h.it.g[1])) + '</div>'; last = g; }
       var i = current.length; current.push(h.it);
       var tag = h.it.href ? 'a href="' + esc(h.it.href) + '"' : 'button type="button"';
-      html += '<' + tag + ' class="ara-r" role="option" data-i="' + i + '">' + (h.it.img ? '<img src="' + esc(h.it.img) + '" alt="" loading="lazy">' : '') +
+      html += '<' + tag + ' class="ara-r" role="option" data-i="' + i + '">' + (h.it.img ? '<img src="' + esc(h.it.img) + '" alt="" loading="lazy" onerror="this.style.visibility=\'hidden\'">' : '') +
         '<span><b>' + mark(plain(h.it.t()), re) + '</b><small>' + mark(plain(h.it.s(terms) || ''), re) + '</small></span></' + (h.it.href ? 'a' : 'button') + '>';
     });
     var total = hits.length;

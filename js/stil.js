@@ -107,9 +107,11 @@
   }
 
   function lines(v) { return Array.isArray(v) ? v : String(v || '').split(/\r?\n|;/); }
+  /* Latin names from the photo gallery and the species cards are italicised automatically too */
+  var extra = [];
   function setConfig(d) {
     d = d || {};
-    cfg.italik = lines(d.italik); cfg.kalin = lines(d.kalin);
+    cfg.italik = lines(d.italik).concat(extra); cfg.kalin = lines(d.kalin);
     cfg.cins = d.cins !== false; cfg.kisaltma = d.kisaltma !== false;
     termRe = build(cfg.italik);
     var kc = cfg.cins, kk = cfg.kisaltma; cfg.cins = false; cfg.kisaltma = false;
@@ -118,7 +120,16 @@
 
   var ready = (typeof fetch === 'function' ? fetch('/data/stiller.json', { cache: 'no-cache' }).then(function (r) { if (!r.ok) throw 0; return r.json(); }) : Promise.reject())
     .catch(function () { var el = document.getElementById('stil-data'); try { return el ? JSON.parse(el.textContent) : {}; } catch (e) { return {}; } })
-    .then(function (d) { setConfig(d); return cfg; });
+    .then(function (d) {
+      function names(u, key, field) {
+        return fetch(u, { cache: 'no-cache' }).then(function (r) { return r.ok ? r.json() : {}; }).catch(function () { return {}; })
+          .then(function (j) { return (j[key] || []).map(function (x) { return String((x && x[field]) || '').replace(/[*_]/g, '').trim(); }); });
+      }
+      return Promise.all([names('/photos.json', 'photos', 'latin'), names('/data/turler.json', 'species', 'latin')]).then(function (r) {
+        extra = r[0].concat(r[1]).filter(function (n) { return /^[A-Z][a-z]+ [a-z]+( [a-z]+)?$/.test(n); });
+        setConfig(d); return cfg;
+      });
+    });
 
   window.MKStil = { ready: ready, apply: apply, stars: stars, setConfig: setConfig };
 
