@@ -454,6 +454,25 @@ dialog.lb .cnt{font-family:var(--mono);font-size:12px;color:#A8B6C8;white-space:
 .dl-n{font-family:var(--mono);font-size:11px;color:var(--dark-muted)}
 .cfiles .dl-n,.tl .dl-n{color:var(--muted)}
 .cfiles li{display:flex;align-items:center;gap:10px;flex-wrap:wrap}
+
+/* ---------- mobile menu (three-line button) ---------- */
+.menu-btn{display:none}
+@media (max-width:760px){
+  header.top .wrap{gap:10px 12px}
+  .menu-btn{display:inline-flex;align-items:center;gap:8px;order:3;min-height:40px;padding:6px 12px;border:1px solid rgba(255,255,255,.45);border-radius:6px;background:transparent;color:#fff;font:600 14px var(--display);cursor:pointer}
+  .menu-btn svg path{stroke:currentColor;stroke-width:2.2;stroke-linecap:round;transition:transform .2s,opacity .2s;transform-origin:12px 12px}
+  .menu-btn[aria-expanded="true"] .l1{transform:translateY(6px) rotate(45deg)}
+  .menu-btn[aria-expanded="true"] .l2{opacity:0}
+  .menu-btn[aria-expanded="true"] .l3{transform:translateY(-6px) rotate(-45deg)}
+  .menu-btn:focus-visible{outline:2px solid var(--ochre);outline-offset:2px}
+  header.top .lang{order:2;margin-left:auto}
+  header.top .lang button{min-width:40px}
+  header.top.open nav.links{display:flex;order:4;flex-direction:column;gap:0;width:100%;padding:6px 0 10px;border-top:1px solid rgba(255,255,255,.18);max-height:calc(100vh - 80px);overflow-y:auto}
+  header.top.open nav.links a{padding:13px 4px;font-size:18px;border-bottom:1px solid rgba(255,255,255,.1)}
+  header.top.open nav.links a[hidden]{display:none}
+}
+@media (max-width:440px){.menu-btn{padding:6px 9px}.menu-btn>span{display:none}header.top .brand{font-size:17px}}
+@media (prefers-reduced-motion:reduce){.menu-btn svg path{transition:none}}
 </style>
 </head>
 <body>
@@ -472,6 +491,7 @@ dialog.lb .cnt{font-family:var(--mono);font-size:12px;color:#A8B6C8;white-space:
       <a href="#teaching"><span class="en">Teaching</span><span class="tr">Dersler</span></a>
       <a href="#contact"><span class="en">Contact</span><span class="tr">İletişim</span></a>
     </nav>
+    <button type="button" class="menu-btn" aria-expanded="false" aria-controls="mainNav" aria-label="Menü / Menu"><span class="en">Menu</span><span class="tr">Menü</span><svg width="22" height="22" viewBox="0 0 24 24" aria-hidden="true"><path class="l1" d="M3 6h18"/><path class="l2" d="M3 12h18"/><path class="l3" d="M3 18h18"/></svg></button>
     <div class="lang" role="group" aria-label="Language">
       <button type="button" data-lang="en" aria-pressed="true">EN</button>
       <button type="button" data-lang="tr" aria-pressed="false">TR</button>
@@ -1162,6 +1182,20 @@ fetch('https://muammerkurnaz.goatcounter.com/counter/TOTAL.json')
   .then(function (r) { if (!r.ok) throw 0; return r.json(); })
   .then(function (d) { if (d && d.count) { document.getElementById('visitsN').textContent = d.count; document.getElementById('visits').hidden = false; } })
   .catch(function () {});
+</script>
+<script>
+/* mobile menu: the three-line button opens and closes the main links */
+(function () {
+  var hd = document.querySelector('header.top'), b = hd && hd.querySelector('.menu-btn'), nav = hd && hd.querySelector('nav.links');
+  if (!b || !nav) return;
+  nav.id = 'mainNav';
+  function set(open) { hd.classList.toggle('open', open); b.setAttribute('aria-expanded', open ? 'true' : 'false'); }
+  b.addEventListener('click', function () { set(!hd.classList.contains('open')); });
+  nav.addEventListener('click', function (e) { if (e.target.closest('a')) set(false); });
+  document.addEventListener('keydown', function (e) { if (e.key === 'Escape' && hd.classList.contains('open')) { set(false); b.focus(); } });
+  document.addEventListener('click', function (e) { if (hd.classList.contains('open') && !hd.contains(e.target)) set(false); });
+  window.addEventListener('resize', function () { if (window.innerWidth > 760) set(false); });
+})();
 </script>
 <script src="js/stil.js"></script>
 </body>
