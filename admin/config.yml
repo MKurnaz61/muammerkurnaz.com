@@ -405,3 +405,21 @@ collections:
                 widget: "list"
                 field: { label: "Fotoğraf", name: "photo", widget: "image", media_folder: "/images/kart", public_folder: "images/kart", choose_url: false }
               - { label: "Kontrol notu (sitede görünmez)", name: "not", widget: "text", required: false }
+
+  - name: "stiller"
+    label: "10. Yazım stilleri"
+    description: "Sitenin her yerinde geçerli yazım kuralları. Herhangi bir metin kutusunda bir sözcüğü *yıldızlar arasına* yazarsanız italik, **çift yıldız arasına** yazarsanız kalın görünür. Aşağıdaki listeye eklediğiniz adlar ise yıldız koymanıza gerek kalmadan her yerde kendiliğinden italik görünür."
+    files:
+      - name: "stiller"
+        label: "Yazım stilleri"
+        file: "data/stiller.json"
+        fields:
+          - label: "Her yerde italik yazılacak adlar (her satıra bir ad)"
+            name: "italik"
+            widget: "text"
+            required: false
+            hint: "Her satıra bir ad yazın, ör. Darevskia rudis. Büyük-küçük harf önemlidir. Sağdaki önizlemede listenin sitede nasıl görüneceğini ve bir deneme cümlesini görürsünüz."
+          - { label: "Tür adının cins kısmını tek başına da italik yap (Darevskia rudis eklenince 'Darevskia' da italik olur)", name: "cins", widget: "boolean", default: true, required: false }
+          - { label: "Kısaltılmış biçimi de italik yap (Darevskia rudis eklenince 'D. rudis' da italik olur)", name: "kisaltma", widget: "boolean", default: true, required: false }
+          - { label: "Her yerde kalın yazılacak sözcükler (isteğe bağlı, her satıra bir sözcük)", name: "kalin", widget: "text", required: false }
+          - { label: "Önizleme için deneme cümlesi (sitede görünmez)", name: "deneme", widget: "text", required: false, default: "Darevskia rudis ve D. valentini Kars Platosu'nda birlikte yaşar; *Rana camerani* ise elle italik yazılmıştır. **Kalın** yazım da böyle yapılır." }

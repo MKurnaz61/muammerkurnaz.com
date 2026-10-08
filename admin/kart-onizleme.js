@@ -8,7 +8,8 @@
   var CATS = ['LC', 'NT', 'VU', 'EN', 'CR', 'EW', 'EX'];
   var CCOL = { LC: '#3E9B4F', NT: '#8DB33A', VU: '#E3A21A', EN: '#E2412A', CR: '#C0172B', EW: '#5B2A6E', EX: '#222' };
   function italic(t) {
-    return String(t || '').split(/(\*[^*]+\*)/).map(function (p, i) { return /^\*[^*]+\*$/.test(p) ? h('i', { key: i }, p.slice(1, -1)) : p; });
+    t = window.MKStil ? MKStil.stars(t) : String(t || '');
+    return t.split(/(\*[^*]+\*)/).map(function (p, i) { return /^\*[^*]+\*$/.test(p) ? h('i', { key: i }, p.slice(1, -1)) : p; });
   }
   function src(p) { p = String(p || ''); return /^https?:/.test(p) ? p : '/' + p.replace(/^\/+/, ''); }
 
@@ -63,6 +64,33 @@
   });
 
   CMS.registerPreviewTemplate('turler', Preview);
+  /* preview for "10. Yazım stilleri": shows the italic list and a sample sentence as the site will show them */
+  function rich(t) {
+    t = window.MKStil ? MKStil.stars(t) : String(t || '');
+    return t.split(/(\*\*[^*]+\*\*|\*[^*]+\*)/).map(function (p, i) {
+      if (/^\*\*[^*]+\*\*$/.test(p)) return h('b', { key: i }, p.slice(2, -2));
+      if (/^\*[^*]+\*$/.test(p)) return h('i', { key: i }, p.slice(1, -1));
+      return p;
+    });
+  }
+  var StilPreview = createClass({
+    render: function () {
+      var d = this.props.entry.get('data'), js = d && d.toJS ? d.toJS() : {};
+      if (window.MKStil) MKStil.setConfig(js);
+      var names = String(js.italik || '').split(/\r?\n|;/).map(function (s) { return s.trim(); }).filter(Boolean);
+      return h('div', { className: 'pv' },
+        h('div', { className: 'pv-head' }, h('h1', {}, 'Yazım stilleri'),
+          h('p', {}, 'Bu listedeki ' + names.length + ' ad sitenin her yerinde kendiliğinden italik görünür. Bir metinde tek seferlik italik için sözcüğü *yıldızlar* arasına, kalın için **çift yıldız** arasına yazın.')),
+        h('div', { className: 'card' }, h('div', { className: 'bd' },
+          h('div', { className: 'num' }, 'DENEME CÜMLESİ'),
+          h('p', { style: { fontSize: '18px', lineHeight: 1.6, margin: '6px 0 0' } }, rich(js.deneme || '')))),
+        h('div', { className: 'card' }, h('div', { className: 'bd' },
+          h('div', { className: 'num' }, 'İTALİK LİSTE'),
+          h('div', { style: { columns: '220px', fontSize: '15px', lineHeight: 1.7, marginTop: '6px' } }, names.map(function (n, i) { return h('div', { key: i }, h('i', {}, n)); })))));
+    }
+  });
+  CMS.registerPreviewTemplate('stiller', StilPreview);
+
   CMS.registerPreviewStyle(
     "body{margin:0;background:#0B1A2E;color:#E8EEF6;font-family:Georgia,serif}" +
     ".pv{padding:20px;display:flex;flex-direction:column;gap:18px}" +
