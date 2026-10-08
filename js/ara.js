@@ -37,6 +37,7 @@
   var css = document.createElement('style');
   css.textContent =
     '.ara-btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:36px;min-width:40px;padding:4px 10px;border:1px solid rgba(255,255,255,.45);border-radius:6px;background:transparent;color:#fff;font:600 14px var(--display,system-ui),sans-serif;cursor:pointer}' +
+    '@media (min-width:761px) and (max-width:1500px){.ara-btn kbd,.ara-btn .t{display:none}header.top .wrap{gap:16px}}' +
     '.ara-btn:hover{border-color:#fff}.ara-btn:focus-visible{outline:2px solid #E0A12E;outline-offset:2px}' +
     '.ara-btn kbd{font:11px var(--mono,ui-monospace),monospace;opacity:.7;border:1px solid rgba(255,255,255,.35);border-radius:4px;padding:0 5px}' +
     'dialog.ara{width:min(720px,calc(100vw - 32px));max-height:min(82vh,760px);margin:8vh auto auto;padding:0;border:0;border-radius:14px;background:#F7F8F6;color:#132235;box-shadow:0 30px 80px -20px rgba(8,18,32,.6);overflow:hidden}' +
@@ -114,7 +115,7 @@
             head: c.latin + ' ' + c.tr + ' ' + c.en, key: [c.latin, c.tr, c.en, c.family, c.dist_tr, c.dist_en].join(' '), img: thumb((c.photos || [])[0]), go: { sec: 'turler', tur: c.latin } });
         });
         A(TL.species).filter(function (s) { return s && s.latin && !s.gizle; }).forEach(function (s) {
-          add({ g: ['Species list of Türkiye', 'Türkiye tür listesi'], t: function () { return s.latin + (s.tr ? ' · ' + s.tr : ''); }, s: function () { return [s.yazar, s.familya, s.endemik ? L('endemic', 'endemik') : ''].filter(Boolean).join(' · '); },
+          add({ g: ['TR Species List', 'TR Tür Listesi'], t: function () { return s.latin + (s.tr ? ' · ' + s.tr : ''); }, s: function () { return [s.yazar, s.familya, s.endemik ? L('endemic', 'endemik') : ''].filter(Boolean).join(' · '); },
             head: s.latin + ' ' + s.tr + ' ' + s.en, key: [s.latin, s.tr, s.en, s.familya, s.yazar].join(' '), href: 'turler-listesi.html#' + String(s.latin).trim().replace(/\s+/g, '-') });
         });
         A(W.posts).forEach(function (p) {
@@ -152,13 +153,18 @@
           add({ g: ['Courses', 'Dersler'], t: function () { return L(p.en, p.tr); }, s: function () { return files; },
             head: p.tr + ' ' + p.en, key: [p.tr, p.en, files].join(' '), go: { sec: 'teaching', textFn: function () { return L(p.en, p.tr); } } });
         });
+        /* photo names come from the TR species list: the photo stores the species code, the list holds the names */
+        var TLK = {};
+        A(TL.species).forEach(function (s) { if (s && s.latin) TLK[norm(s.latin)] = s; });
+        A(TL.species).forEach(function (s) { if (s && s.kod) TLK[norm(s.kod)] = s; });
         var seen = {};
         A(F.photos).filter(function (p) { return p && p.image; }).forEach(function (p, i) {
-          var k = norm(p.latin) + '|' + norm(p.tr_name);
+          var sp = TLK[norm(p.latin)], la = sp ? sp.latin : p.latin, tn = (sp && sp.tr) || p.tr_name || '', en = (sp && sp.en) || '';
+          var k = norm(la);
           if (seen[k]) { seen[k].n++; return; }
-          var o = { g: ['Photos', 'Fotoğraflar'], n: 1, t: function () { return (p.tr_name ? p.tr_name + ' · ' : '') + p.latin; },
+          var o = { g: ['Photos', 'Fotoğraflar'], n: 1, t: function () { var x = L(en || tn, tn || en); return (x ? x + ' · ' : '') + la; },
             s: function () { return o.n > 1 ? L(o.n + ' photos', o.n + ' fotoğraf') : L('1 photo', '1 fotoğraf'); },
-            head: p.latin + ' ' + p.tr_name, key: [p.latin, p.tr_name].join(' '), img: p.thumb || thumb(p.image), go: { sec: 'photos', photo: i } };
+            head: la + ' ' + tn + ' ' + en, key: [la, tn, en, p.latin].join(' '), img: p.thumb || thumb(p.image), go: { sec: 'photos', photo: i } };
           seen[k] = o; add(o);
         });
         items = out; return out;

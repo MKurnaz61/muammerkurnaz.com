@@ -3,199 +3,233 @@
     {
       "image": "images/photos/podarcis-siculus.jpg",
       "tr_name": "İstanbul Kertenkelesi",
-      "latin": "Podarcis siculus"
+      "latin": "Podarcis siculus",
+      "en_name": "Italian Wall Lizard"
     },
     {
       "image": "images/photos/lacerta-viridis.jpg",
       "tr_name": "Yeşil Kertenkele",
       "latin": "Lacerta viridis",
-      "date": "2017"
+      "date": "2017",
+      "en_name": "European Green Lizard"
     },
     {
       "image": "images/photos/img_7730.jpg",
       "tr_name": "Koca Engerek",
       "latin": "Macrovipera lebetinus",
-      "date": "2026"
+      "date": "2026",
+      "en_name": "Levantine Viper"
     },
     {
       "image": "images/photos/img_7725.jpg",
       "tr_name": "Koca Engerek",
       "latin": "Macrovipera lebetinus",
-      "date": "2026"
+      "date": "2026",
+      "en_name": "Levantine Viper"
     },
     {
       "image": "images/photos/img_7910.jpg",
       "tr_name": "Mahmuzlu Yılan",
       "latin": "Eryx jaculus",
-      "date": "2026"
+      "date": "2026",
+      "en_name": "Javelin Sand Boa"
     },
     {
       "image": "images/photos/img_7794.jpg",
       "tr_name": "Mahmuzlu Yılan",
       "latin": "Eryx jaculus",
-      "date": "2026"
+      "date": "2026",
+      "en_name": "Javelin Sand Boa"
     },
     {
       "image": "images/photos/img_7790.jpg",
       "tr_name": "Mahmuzlu Yılan",
       "latin": "Eryx jaculus",
-      "date": "2026"
+      "date": "2026",
+      "en_name": "Javelin Sand Boa"
     },
     {
       "image": "images/photos/img_7173.jpg",
       "tr_name": "Valentin Kertenkelesi",
       "latin": "Darevskia valentini",
-      "date": "2026"
+      "date": "2026",
+      "en_name": "Valentin's Lizard"
     },
     {
       "image": "images/photos/img_7051.jpg",
       "tr_name": "Valentin Kertenkelesi",
       "latin": "Darevskia valentini",
-      "date": "2026"
+      "date": "2026",
+      "en_name": "Valentin's Lizard"
     },
     {
       "image": "images/photos/img_7543.jpg",
       "latin": "Darevskia josefschmidtleri",
-      "date": "2026"
+      "date": "2026",
+      "tr_name": "Çaldıran Kertenkelesi",
+      "en_name": "Caldiran Rock Lizard"
     },
     {
       "image": "images/photos/img_7704.jpg",
       "latin": "Darevskia josefschmidtleri",
-      "date": "2026"
+      "date": "2026",
+      "tr_name": "Çaldıran Kertenkelesi",
+      "en_name": "Caldiran Rock Lizard"
     },
     {
       "image": "images/photos/img_7421.jpg",
       "latin": "Darevskia josefschmidtleri",
-      "date": "2026"
+      "date": "2026",
+      "tr_name": "Çaldıran Kertenkelesi",
+      "en_name": "Caldiran Rock Lizard"
     },
     {
       "tr_name": "Ağrı Kertenkelesi",
       "latin": "Darevskia unisexualis",
       "date": "2026",
-      "image": "images/photos/img_6940.jpg"
+      "image": "images/photos/img_6940.jpg",
+      "en_name": "White-bellied Lizard"
     },
     {
       "image": "images/photos/pelobates-syriacus.jpg",
       "tr_name": "Toprak Kurbağası",
       "latin": "Pelobates syriacus",
-      "date": "2017"
+      "date": "2017",
+      "en_name": "Eastern Spadefoot"
     },
     {
       "image": "images/photos/lacerta-diplochondrodes.jpg",
       "tr_name": "Büyük Yeşil Kertenkele",
       "latin": "Lacerta diplochondrodes",
-      "date": "2014"
+      "date": "2014",
+      "en_name": "Rhodos Green Lizard"
     },
     {
       "image": "images/photos/hyla-orientalis.jpg",
       "tr_name": "Ağaç Kurbağası",
       "latin": "Hyla orientalis",
-      "date": "2017"
+      "date": "2017",
+      "en_name": "Eastern Tree Frog"
     },
     {
       "image": "images/photos/img_2042.jpg",
       "tr_name": "Anadolu Kaya Kertenkelesi",
       "latin": "Anatololacerta anatolica",
       "date": "2025",
-      "thumb": "images/photos/img_2042-k.jpg"
+      "thumb": "images/photos/img_2042-k.jpg",
+      "en_name": "Anatolian Rock Lizard"
     },
     {
       "image": "images/photos/img_0635.jpg",
       "tr_name": "Pelasg Kaya Kertenkelesi",
       "latin": "Anatololacerta pelasgiana",
       "date": "2021",
-      "thumb": "images/photos/img_0635-k.jpg"
+      "thumb": "images/photos/img_0635-k.jpg",
+      "en_name": "Pelasgian Rock Lizard"
     },
     {
       "image": "images/photos/img_1978.jpg",
       "tr_name": "Kör Kertenkele",
       "latin": "Blanus strauchi",
       "date": "2020",
-      "thumb": "images/photos/img_1978-k.jpg"
+      "thumb": "images/photos/img_1978-k.jpg",
+      "en_name": "Turkish Worm Lizard"
     },
     {
       "image": "images/photos/img_7122.jpg",
       "tr_name": "Siğilli Kurbağa",
       "latin": "Bufo bufo",
       "date": "2017",
-      "thumb": "images/photos/img_7122-k.jpg"
+      "thumb": "images/photos/img_7122-k.jpg",
+      "en_name": "Common Toad"
     },
     {
       "image": "images/photos/img_7866.jpg",
       "tr_name": "Siğilli Kurbağa",
       "latin": "Bufo bufo",
       "date": "2023",
-      "thumb": "images/photos/img_7866-k.jpg"
+      "thumb": "images/photos/img_7866-k.jpg",
+      "en_name": "Common Toad"
     },
     {
       "image": "images/photos/img_5916.jpg",
       "tr_name": "Gece Kurbağası",
       "latin": "Bufotes viridis",
       "date": "2026",
-      "thumb": "images/photos/img_5916-k.jpg"
+      "thumb": "images/photos/img_5916-k.jpg",
+      "en_name": "Green Toad"
     },
     {
       "image": "images/photos/img_5909.jpg",
       "tr_name": "Gece Kurbağası",
       "latin": "Bufotes viridis",
       "date": "2026",
-      "thumb": "images/photos/img_5909-k.jpg"
+      "thumb": "images/photos/img_5909-k.jpg",
+      "en_name": "Green Toad"
     },
     {
       "image": "images/photos/img_6706.jpg",
       "tr_name": "Hemşin Kertenkelesi",
       "latin": "Darevskia armeniaca",
       "date": "2026",
-      "thumb": "images/photos/img_6706-k.jpg"
+      "thumb": "images/photos/img_6706-k.jpg",
+      "en_name": "Armenian Lizard"
     },
     {
       "image": "images/photos/img_6712.jpg",
       "tr_name": "Hemşin Kertenkelesi",
       "latin": "Darevskia armeniaca",
       "date": "2026",
-      "thumb": "images/photos/img_6712-k.jpg"
+      "thumb": "images/photos/img_6712-k.jpg",
+      "en_name": "Armenian Lizard"
     },
     {
       "image": "images/photos/img_5632.jpg",
       "tr_name": "Uludağ Kertenkelesi",
       "latin": "Darevskia bithynica",
       "date": "2022",
-      "thumb": "images/photos/img_5632-k.jpg"
+      "thumb": "images/photos/img_5632-k.jpg",
+      "en_name": "Bithynian Rock Lizard"
     },
     {
       "image": "images/photos/img_5622.jpg",
       "tr_name": "Uludağ Kertenkelesi",
       "latin": "Darevskia bithynica",
       "date": "2022",
-      "thumb": "images/photos/img_5622-k.jpg"
+      "thumb": "images/photos/img_5622-k.jpg",
+      "en_name": "Bithynian Rock Lizard"
     },
     {
       "image": "images/photos/img_3258.jpg",
       "tr_name": "Clark Kertenkelesi",
       "latin": "Darevskia clarkorum",
       "date": "2014",
-      "thumb": "images/photos/img_3258-k.jpg"
+      "thumb": "images/photos/img_3258-k.jpg",
+      "en_name": "Clark's Lizard"
     },
     {
       "image": "images/photos/img_0139.jpg",
       "tr_name": "Trabzon Kertenkelesi",
       "latin": "Darevskia rudis",
       "date": "2020",
-      "thumb": "images/photos/img_0139-k.jpg"
+      "thumb": "images/photos/img_0139-k.jpg",
+      "en_name": "Spiny-tailed Lizard"
     },
     {
       "image": "images/photos/img_6616.jpg",
       "tr_name": "Tuniyev Kertenkelesi",
       "latin": "Darevskia tuniyevi",
       "date": "2022",
-      "thumb": "images/photos/img_6616-k.jpg"
+      "thumb": "images/photos/img_6616-k.jpg",
+      "en_name": "Tuniyev's Rock Lizard"
     },
     {
       "image": "images/photos/img_6428.jpg",
       "tr_name": "Uzzel Kertenkelesi",
       "latin": "Darevskia uzzelli",
       "date": "2017",
-      "thumb": "images/photos/img_6428-k.jpg"
+      "thumb": "images/photos/img_6428-k.jpg",
+      "en_name": "Uzzell's Lizard"
     },
     {
       "image": "images/photos/img_6731.jpg",
@@ -203,7 +237,8 @@
       "latin": "Darevskia valentini",
       "place": "",
       "date": "2026",
-      "thumb": "images/photos/img_6731-k.jpg"
+      "thumb": "images/photos/img_6731-k.jpg",
+      "en_name": "Valentin's Lizard"
     },
     {
       "image": "images/photos/img_1022.jpg",
@@ -211,14 +246,16 @@
       "latin": "Elaphe urartica",
       "place": "",
       "date": "2021",
-      "thumb": "images/photos/img_1022-k.jpg"
+      "thumb": "images/photos/img_1022-k.jpg",
+      "en_name": "Urartian Rat Snake"
     },
     {
       "image": "images/photos/img_8861.jpg",
       "tr_name": "Step Kertenkelesi",
       "latin": "Eremias strauchi",
       "date": "2017",
-      "thumb": "images/photos/img_8861-k.jpg"
+      "thumb": "images/photos/img_8861-k.jpg",
+      "en_name": "Strauch's Racerunner"
     },
     {
       "image": "images/photos/ablepharus-anatolicus-01.jpg",
@@ -227,7 +264,8 @@
       "latin": "Ablepharus anatolicus",
       "place": "",
       "date": "",
-      "note": ""
+      "note": "",
+      "en_name": "Lycian Snake-eyed Skink"
     },
     {
       "image": "images/photos/darevskia-derjugini-01.jpg",
@@ -236,7 +274,8 @@
       "latin": "Darevskia derjugini",
       "place": "",
       "date": "",
-      "note": ""
+      "note": "",
+      "en_name": "Artvin Lizard"
     },
     {
       "image": "images/photos/darevskia-salihae-01.jpg",
@@ -245,7 +284,8 @@
       "latin": "Darevskia salihae",
       "place": "",
       "date": "",
-      "note": ""
+      "note": "",
+      "en_name": "Saliha's Rock Lizard"
     },
     {
       "image": "images/photos/zamenis-longissimus-01.jpg",
@@ -254,7 +294,8 @@
       "latin": "Zamenis longissimus",
       "place": "",
       "date": "",
-      "note": ""
+      "note": "",
+      "en_name": "Aesculapian Snake"
     },
     {
       "image": "images/photos/testudo-graeca-01.jpg",
@@ -263,7 +304,8 @@
       "latin": "Testudo graeca",
       "place": "",
       "date": "",
-      "note": ""
+      "note": "",
+      "en_name": "Mediterranean Spur-thighed Tortoise"
     },
     {
       "image": "images/photos/laudakia-stellio-01.jpg",
@@ -272,7 +314,8 @@
       "latin": "Laudakia stellio",
       "place": "",
       "date": "",
-      "note": ""
+      "note": "",
+      "en_name": "Roughtail Rock Agama"
     },
     {
       "image": "images/photos/laudakia-stellio-02.jpg",
@@ -281,7 +324,8 @@
       "latin": "Laudakia stellio",
       "place": "",
       "date": "",
-      "note": ""
+      "note": "",
+      "en_name": "Roughtail Rock Agama"
     },
     {
       "image": "images/photos/rana-tavasensis-01.jpg",
@@ -290,16 +334,18 @@
       "latin": "Rana tavasensis",
       "place": "",
       "date": "",
-      "note": ""
+      "note": "",
+      "en_name": "Tavas Frog"
     },
     {
       "image": "images/photos/rana-macrocnemis-01.jpg",
       "thumb": "images/photos/rana-macrocnemis-01-k.jpg",
-      "tr_name": "Uludağ Kurbağası",
+      "tr_name": "Uludağ Kurbağası/Yayla Kurbağası",
       "latin": "Rana macrocnemis",
       "place": "",
       "date": "",
-      "note": ""
+      "note": "",
+      "en_name": "Long-legged Wood Frog"
     },
     {
       "image": "images/photos/rana-dalmatina-01.jpg",
@@ -308,7 +354,8 @@
       "latin": "Rana dalmatina",
       "place": "",
       "date": "",
-      "note": ""
+      "note": "",
+      "en_name": "Agile Frog"
     },
     {
       "image": "images/photos/pelodytes-caucasicus-01.jpg",
@@ -317,7 +364,8 @@
       "latin": "Pelodytes caucasicus",
       "place": "",
       "date": "",
-      "note": ""
+      "note": "",
+      "en_name": "Caucasian Parsley Frog"
     },
     {
       "image": "images/photos/pelobates-syriacus-01.jpg",
@@ -326,25 +374,28 @@
       "latin": "Pelobates syriacus",
       "place": "",
       "date": "",
-      "note": ""
+      "note": "",
+      "en_name": "Eastern Spadefoot"
     },
     {
       "image": "images/photos/ommatotriton-nesterovi-01.jpg",
       "thumb": "images/photos/ommatotriton-nesterovi-01-k.jpg",
-      "tr_name": "Anadolu Bantlı Semenderi",
+      "tr_name": "Anadolu Şeritli Semenderi",
       "latin": "Ommatotriton nesterovi",
       "place": "",
       "date": "",
-      "note": ""
+      "note": "",
+      "en_name": "Anatolian Banded Newt"
     },
     {
       "image": "images/photos/ommatotriton-nesterovi-02.jpg",
       "thumb": "images/photos/ommatotriton-nesterovi-02-k.jpg",
-      "tr_name": "Anadolu Bantlı Semenderi",
+      "tr_name": "Anadolu Şeritli Semenderi",
       "latin": "Ommatotriton nesterovi",
       "place": "",
       "date": "",
-      "note": ""
+      "note": "",
+      "en_name": "Anatolian Banded Newt"
     },
     {
       "image": "images/photos/natrix-tessellata-01.jpg",
@@ -353,16 +404,18 @@
       "latin": "Natrix tessellata",
       "place": "",
       "date": "",
-      "note": ""
+      "note": "",
+      "en_name": "Dice Snake"
     },
     {
       "image": "images/photos/lyciasalamandra-fazilae-01.jpg",
       "thumb": "images/photos/lyciasalamandra-fazilae-01-k.jpg",
-      "tr_name": "Göcek Semenderi",
+      "tr_name": "Kırmızı Semender",
       "latin": "Lyciasalamandra fazilae",
       "place": "",
       "date": "",
-      "note": ""
+      "note": "",
+      "en_name": "Fazila's Salamander"
     },
     {
       "image": "images/photos/lacerta-media-01.jpg",
@@ -371,7 +424,8 @@
       "latin": "Lacerta media",
       "place": "",
       "date": "",
-      "note": ""
+      "note": "",
+      "en_name": "Medium Lizard"
     },
     {
       "image": "images/photos/lacerta-agilis-01.jpg",
@@ -380,7 +434,8 @@
       "latin": "Lacerta agilis",
       "place": "",
       "date": "",
-      "note": ""
+      "note": "",
+      "en_name": "Sand Lizard"
     },
     {
       "image": "images/photos/lacerta-agilis-02.jpg",
@@ -389,7 +444,8 @@
       "latin": "Lacerta agilis",
       "place": "",
       "date": "",
-      "note": ""
+      "note": "",
+      "en_name": "Sand Lizard"
     },
     {
       "image": "images/photos/eremias-strauchi-01.jpg",
@@ -398,7 +454,8 @@
       "latin": "Eremias strauchi",
       "place": "",
       "date": "",
-      "note": ""
+      "note": "",
+      "en_name": "Strauch's Racerunner"
     },
     {
       "image": "images/photos/mauremys-01.jpg",
@@ -407,7 +464,8 @@
       "latin": "Mauremys caspica",
       "place": "",
       "date": "",
-      "note": ""
+      "note": "",
+      "en_name": "Caspian Turtle"
     },
     {
       "image": "images/photos/mediodactylus-danilewskii-01.jpg",
@@ -416,7 +474,8 @@
       "latin": "Mediodactylus danilewskii",
       "place": "",
       "date": "",
-      "note": ""
+      "note": "",
+      "en_name": "Bulgarian Bent-toed Gecko"
     },
     {
       "image": "images/photos/mediodactylus-orientalis-01.jpg",
@@ -425,7 +484,8 @@
       "latin": "Mediodactylus orientalis",
       "place": "",
       "date": "",
-      "note": ""
+      "note": "",
+      "en_name": "Mediterranean Thin-toed Gecko"
     },
     {
       "image": "images/photos/ophisops-02.jpg",
@@ -434,7 +494,8 @@
       "latin": "Ophisops elegans",
       "place": "",
       "date": "",
-      "note": ""
+      "note": "",
+      "en_name": "Snake-eyed Lizard"
     },
     {
       "image": "images/photos/podarcis-muralis-01.jpg",
@@ -443,7 +504,8 @@
       "latin": "Podarcis muralis",
       "place": "",
       "date": "",
-      "note": ""
+      "note": "",
+      "en_name": "Common Wall Lizard"
     },
     {
       "image": "images/photos/parvilacerta-02.jpg",
@@ -452,7 +514,8 @@
       "latin": "Parvilacerta parva",
       "place": "",
       "date": "",
-      "note": ""
+      "note": "",
+      "en_name": "Dwarf Lizard"
     },
     {
       "image": "images/photos/parvilacerta-03.jpg",
@@ -461,7 +524,8 @@
       "latin": "Parvilacerta parva",
       "place": "",
       "date": "",
-      "note": ""
+      "note": "",
+      "en_name": "Dwarf Lizard"
     },
     {
       "image": "images/photos/podarcis-muralis-02.jpg",
@@ -470,7 +534,8 @@
       "latin": "Podarcis muralis",
       "place": "",
       "date": "",
-      "note": ""
+      "note": "",
+      "en_name": "Common Wall Lizard"
     },
     {
       "image": "images/photos/pseudopus-01.jpg",
@@ -479,7 +544,8 @@
       "latin": "Pseudopus apodus",
       "place": "",
       "date": "",
-      "note": ""
+      "note": "",
+      "en_name": "European Glass Lizard"
     },
     {
       "image": "images/photos/testudo-hermanni-01.jpg",
@@ -488,7 +554,8 @@
       "latin": "Testudo hermanni",
       "place": "",
       "date": "",
-      "note": ""
+      "note": "",
+      "en_name": "Hermann's Tortoise"
     },
     {
       "image": "images/photos/vipera-meridionalis-01.jpg",
@@ -497,7 +564,8 @@
       "latin": "Vipera meridionalis",
       "place": "",
       "date": "",
-      "note": ""
+      "note": "",
+      "en_name": "Eastern Sand Viper"
     },
     {
       "image": "images/photos/zamenis-hohenackeri-01.jpg",
@@ -506,25 +574,28 @@
       "latin": "Zamenis hohenackeri",
       "place": "",
       "date": "",
-      "note": ""
+      "note": "",
+      "en_name": "Transcaucasian Rat Snake"
     },
     {
       "image": "images/photos/bombina-02.jpg",
       "thumb": "images/photos/bombina-02-k.jpg",
-      "tr_name": "Sarılı Kurbağa",
+      "tr_name": "Sarı Karınlı Kurbağa",
       "latin": "Bombina variegata",
       "place": "",
       "date": "",
-      "note": ""
+      "note": "",
+      "en_name": "Yellow-bellied Toad"
     },
     {
       "image": "images/photos/bombina-03.jpg",
       "thumb": "images/photos/bombina-03-k.jpg",
-      "tr_name": "Sarılı Kurbağa",
+      "tr_name": "Sarı Karınlı Kurbağa",
       "latin": "Bombina variegata",
       "place": "",
       "date": "",
-      "note": ""
+      "note": "",
+      "en_name": "Yellow-bellied Toad"
     },
     {
       "image": "images/photos/lacerta-viridis-01.jpg",
@@ -533,7 +604,8 @@
       "latin": "Lacerta viridis",
       "place": "",
       "date": "",
-      "note": ""
+      "note": "",
+      "en_name": "European Green Lizard"
     },
     {
       "image": "images/photos/anatololacerta-02.jpg",
@@ -542,7 +614,8 @@
       "latin": "Darevskia adjarica",
       "place": "",
       "date": "",
-      "note": ""
+      "note": "",
+      "en_name": "Northern Red-bellied Rock Lizard"
     },
     {
       "image": "images/photos/ophisops-01.jpg",
@@ -551,7 +624,8 @@
       "latin": "Ophisops elegans",
       "place": "",
       "date": "",
-      "note": ""
+      "note": "",
+      "en_name": "Snake-eyed Lizard"
     },
     {
       "image": "images/photos/tuniyevi-02.jpg",
@@ -560,7 +634,8 @@
       "latin": "Darevskia tuniyevi",
       "place": "",
       "date": "",
-      "note": ""
+      "note": "",
+      "en_name": "Tuniyev's Rock Lizard"
     },
     {
       "image": "images/photos/emys-01.jpg",
@@ -569,7 +644,8 @@
       "latin": "Emys orbicularis",
       "place": "",
       "date": "",
-      "note": ""
+      "note": "",
+      "en_name": "European Pond Turtle"
     },
     {
       "image": "images/photos/parvilacerta-01.jpg",
@@ -578,7 +654,8 @@
       "latin": "Parvilacerta parva",
       "place": "",
       "date": "",
-      "note": ""
+      "note": "",
+      "en_name": "Dwarf Lizard"
     },
     {
       "image": "images/photos/diplochondrodes-01.jpg",
@@ -587,7 +664,8 @@
       "latin": "Lacerta diplochondrodes",
       "place": "",
       "date": "",
-      "note": ""
+      "note": "",
+      "en_name": "Rhodos Green Lizard"
     },
     {
       "image": "images/photos/coronella-01.jpg",
@@ -596,7 +674,8 @@
       "latin": "Coronella austriaca",
       "place": "",
       "date": "",
-      "note": ""
+      "note": "",
+      "en_name": "Smooth Snake"
     },
     {
       "image": "images/photos/natrix-01.jpg",
@@ -605,7 +684,8 @@
       "latin": "Natrix natrix",
       "place": "",
       "date": "",
-      "note": ""
+      "note": "",
+      "en_name": "Common Grass Snake"
     },
     {
       "image": "images/photos/parvula-02.jpg",
@@ -614,7 +694,8 @@
       "latin": "Darevskia parvula",
       "place": "",
       "date": "",
-      "note": ""
+      "note": "",
+      "en_name": "Red-bellied Lizard"
     },
     {
       "image": "images/photos/hemorrhois-01.jpg",
@@ -623,7 +704,8 @@
       "latin": "Hemorrhois ravergieri",
       "place": "",
       "date": "",
-      "note": ""
+      "note": "",
+      "en_name": "Spotted Whip Snake"
     },
     {
       "image": "images/photos/paralaudakia-01.jpg",
@@ -632,7 +714,8 @@
       "latin": "Paralaudakia caucasia",
       "place": "",
       "date": "",
-      "note": ""
+      "note": "",
+      "en_name": "Caucasian Agama"
     },
     {
       "image": "images/photos/unisexualis-01.jpg",
@@ -641,7 +724,8 @@
       "latin": "Darevskia unisexualis",
       "place": "",
       "date": "",
-      "note": ""
+      "note": "",
+      "en_name": "White-bellied Lizard"
     },
     {
       "image": "images/photos/clarkorum-01.jpg",
@@ -650,7 +734,8 @@
       "latin": "Darevskia clarkorum",
       "place": "",
       "date": "",
-      "note": ""
+      "note": "",
+      "en_name": "Clark's Lizard"
     },
     {
       "image": "images/photos/podarcis-tauricus-01.jpg",
@@ -659,7 +744,8 @@
       "latin": "Podarcis tauricus",
       "place": "",
       "date": "",
-      "note": ""
+      "note": "",
+      "en_name": "Crimean Wall Lizard"
     },
     {
       "image": "images/photos/anguis-01.jpg",
@@ -668,7 +754,8 @@
       "latin": "Anguis colchica",
       "place": "",
       "date": "2017",
-      "note": ""
+      "note": "",
+      "en_name": "Slow Worm"
     },
     {
       "image": "images/photos/anguis-02.jpg",
@@ -677,7 +764,8 @@
       "latin": "Anguis colchica",
       "place": "",
       "date": "2017",
-      "note": ""
+      "note": "",
+      "en_name": "Slow Worm"
     },
     {
       "image": "images/photos/blanus-01.jpg",
@@ -686,16 +774,18 @@
       "latin": "Blanus strauchi",
       "place": "",
       "date": "",
-      "note": ""
+      "note": "",
+      "en_name": "Turkish Worm Lizard"
     },
     {
       "image": "images/photos/bombina-01.jpg",
       "thumb": "images/photos/bombina-01-k.jpg",
-      "tr_name": "Sarılı Kurbağa",
+      "tr_name": "Sarı Karınlı Kurbağa",
       "latin": "Bombina variegata",
       "place": "",
       "date": "2016",
-      "note": ""
+      "note": "",
+      "en_name": "Yellow-bellied Toad"
     },
     {
       "image": "images/photos/darevskia-01.jpg",
@@ -704,7 +794,8 @@
       "latin": "Darevskia adjarica",
       "place": "",
       "date": "",
-      "note": ""
+      "note": "",
+      "en_name": "Northern Red-bellied Rock Lizard"
     },
     {
       "image": "images/photos/darevskia-02.jpg",
@@ -713,7 +804,8 @@
       "latin": "Darevskia rudis",
       "place": "",
       "date": "",
-      "note": ""
+      "note": "",
+      "en_name": "Spiny-tailed Lizard"
     },
     {
       "image": "images/photos/darevskia-03.jpg",
@@ -722,7 +814,8 @@
       "latin": "Darevskia parvula",
       "place": "",
       "date": "",
-      "note": ""
+      "note": "",
+      "en_name": "Red-bellied Lizard"
     },
     {
       "image": "images/photos/lacertid-01.jpg",
@@ -731,7 +824,8 @@
       "latin": "Darevskia tuniyevi",
       "place": "",
       "date": "",
-      "note": ""
+      "note": "",
+      "en_name": "Tuniyev's Rock Lizard"
     },
     {
       "image": "images/photos/snake-01.jpg",
@@ -740,7 +834,8 @@
       "latin": "Eirenis modestus",
       "place": "",
       "date": "",
-      "note": ""
+      "note": "",
+      "en_name": "Asia Minor Dwarf Racer"
     },
     {
       "image": "images/photos/gecko-01.jpg",
@@ -749,7 +844,8 @@
       "latin": "Hemidactylus turcicus",
       "place": "",
       "date": "2014",
-      "note": ""
+      "note": "",
+      "en_name": "Mediterranean House Gecko"
     },
     {
       "image": "images/photos/skink-01.jpg",
@@ -758,7 +854,8 @@
       "latin": "Heremites vittatus",
       "place": "",
       "date": "2017",
-      "note": ""
+      "note": "",
+      "en_name": "Bridled Mabuya"
     },
     {
       "image": "images/photos/skink-02.jpg",
@@ -767,7 +864,8 @@
       "latin": "Heremites vittatus",
       "place": "",
       "date": "2017",
-      "note": ""
+      "note": "",
+      "en_name": "Bridled Mabuya"
     },
     {
       "image": "images/photos/hyla-01.jpg",
@@ -776,7 +874,8 @@
       "latin": "Hyla orientalis",
       "place": "",
       "date": "",
-      "note": ""
+      "note": "",
+      "en_name": "Eastern Tree Frog"
     },
     {
       "image": "images/photos/acantho-01.jpg",
@@ -785,7 +884,8 @@
       "latin": "Acanthodactylus ilgazi",
       "place": "",
       "date": "",
-      "note": ""
+      "note": "",
+      "en_name": "Ilgaz's Fringe-fingered Lizard"
     },
     {
       "image": "images/photos/lacertid-02.jpg",
@@ -794,7 +894,8 @@
       "latin": "Anatololacerta pelasgiana",
       "place": "",
       "date": "",
-      "note": ""
+      "note": "",
+      "en_name": "Pelasgian Rock Lizard"
     },
     {
       "image": "images/photos/mertensiella-01.jpg",
@@ -803,25 +904,28 @@
       "latin": "Mertensiella caucasica",
       "place": "",
       "date": "",
-      "note": ""
+      "note": "",
+      "en_name": "Caucasian Salamander"
     },
     {
       "image": "images/photos/lacertid-03.jpg",
       "thumb": "images/photos/lacertid-03-k.jpg",
-      "tr_name": "",
+      "tr_name": "Gürcü Kertenkelesi",
       "latin": "Darevskia obscura",
       "place": "",
       "date": "",
-      "note": ""
+      "note": "",
+      "en_name": "Borjomi Rock Lizard"
     },
     {
       "image": "images/photos/semender-001.jpg",
-      "tr_name": "Kuzey Bantlı Semenderi",
+      "tr_name": "Kafkas Şeritli Semenderi",
       "latin": "Ommatotriton ophryticus",
       "place": "",
       "date": "",
       "note": "",
-      "thumb": "images/photos/semender-001-k.jpg"
+      "thumb": "images/photos/semender-001-k.jpg",
+      "en_name": "Northern Banded Newt"
     }
   ]
 }

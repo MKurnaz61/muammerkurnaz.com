@@ -358,8 +358,18 @@ collections:
             fields:
               - { label: "Fotoğraf", name: "image", widget: "image" }
               - { label: "Küçük görsel (boş bırakılabilir)", name: "thumb", widget: "image", required: false }
-              - { label: "Türkçe adı", name: "tr_name", widget: "string", required: false }
-              - { label: "Latince adı", name: "latin", widget: "string" }
+              - label: "Tür (birkaç harf yazın, listeden seçin)"
+                name: "latin"
+                widget: "relation"
+                collection: "turkiye_turleri"
+                file: "turkiye_turleri"
+                value_field: "species.*.kod"
+                search_fields: ["species.*.latin", "species.*.tr", "species.*.en"]
+                display_fields: ["species.*.latin", "species.*.tr", "species.*.en"]
+                options_length: 40
+                hint: "Örneğin 'Darev' yazınca Darevskia türleri sıralanır. Türkçe ve İngilizce ad listeden kendiliğinden gelir; tür listede adı değişirse fotoğrafta da değişir. Tür listede yoksa önce '11. TR Tür Listesi' bölümüne ekleyin."
+              - { label: "Türkçe adı", name: "tr_name", widget: "hidden", required: false }
+              - { label: "İngilizce adı", name: "en_name", widget: "hidden", required: false }
               - { label: "Yer (ör. Kelkit, Gümüşhane)", name: "place", widget: "string", required: false, hint: "İl ve ilçe yazman yeterli; fotoğraf saha haritasında bu yere kendiliğinden yerleşir. Kesin nokta istersen aşağıya enlem ve boylam gir." }
               - { label: "Yıl veya tarih", name: "date", widget: "string", required: false }
               - { label: "Enlem (ör. 40.9123)", name: "lat", widget: "string", required: false, hint: "Saha haritası için. Ondalık derece; boş bırakılırsa fotoğraf haritada görünmez." }
@@ -480,7 +490,7 @@ collections:
           - { label: "Önizleme için deneme cümlesi (sitede görünmez)", name: "deneme", widget: "text", required: false, default: "Darevskia rudis ve D. valentini Kars Platosu'nda birlikte yaşar; *Rana camerani* ise elle italik yazılmıştır. **Kalın** yazım da böyle yapılır." }
 
   - name: "turkiye_turleri"
-    label: "11. Türkiye tür listesi"
+    label: "11. TR Tür Listesi"
     description: "Sitede ayrı sekmede açılan 'Türkiye'nin amfibi ve sürüngenleri' listesi (muammerkurnaz.com/turler-listesi.html). Yeni tür eklemek için listenin sonundaki 'Ekle' düğmesini kullan; sıra, sitedeki gruplar içinde gösterim sırasıdır."
     files:
       - name: "turkiye_turleri"
@@ -511,7 +521,8 @@ collections:
             widget: "list"
             summary: "{{fields.latin}} · {{fields.tr}}"
             fields:
-              - { label: "Bilimsel ad", name: "latin", widget: "string" }
+              - { label: "Tür kodu", name: "kod", widget: "hidden", required: false }
+              - { label: "Bilimsel ad", name: "latin", widget: "string", hint: "Burada yapılan değişiklik fotoğraflarda, saha haritasında, aramada ve listede her yerde görünür. Fotoğraflar türe sabit bir kodla bağlıdır." }
               - { label: "Yazar ve yıl, ör. (Linnaeus, 1758)", name: "yazar", widget: "string", required: false }
               - { label: "Türkçe adı", name: "tr", widget: "string", required: false }
               - { label: "İngilizce adı", name: "en", widget: "string", required: false }
@@ -532,6 +543,7 @@ collections:
                 widget: "select"
                 default: "NE"
                 options: ["LC", "NT", "VU", "EN", "CR", "EW", "EX", "DD", "NE"]
+              - { label: "IUCN değerlendirme yılı", name: "iucn_yil", widget: "string", required: false, hint: "Ör. 2023. Sitede kategorinin yanında görünür." }
               - label: "IUCN Türkiye (Türkiye Kırmızı Listesi)"
                 name: "iucn_tr"
                 widget: "select"

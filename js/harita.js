@@ -24,7 +24,7 @@
   document.head.appendChild(css);
 
   function getJson(u) { return fetch(u, { cache: 'no-cache' }).then(function (r) { return r.ok ? r.json() : {}; }).catch(function () { return {}; }); }
-  Promise.all([getJson('photos.json'), getJson('data/geo.json')]).then(function (r) {
+  Promise.all([getJson('photos.json'), getJson('data/geo.json'), window.MKTur ? MKTur.ready : null]).then(function (r) {
     var d = r[0], geo = r[1] || {};
     function where(p) {
       if (num(p.lat) != null && num(p.lon) != null) return [num(p.lat), num(p.lon)];
@@ -36,7 +36,9 @@
       return { lat: lat, lon: lon, p: p };
     });
     if (!pts.length) return;
-    var sp = {}; pts.forEach(function (x) { sp[x.p.latin] = 1; });
+    /* names from the TR species list (js/tur-ortak.js) */
+    pts.forEach(function (x) { var n = window.MKTur ? MKTur.names(x.p) : { latin: x.p.latin, tr: x.p.tr_name, en: '' }; x.la = n.latin; x.tr = n.tr; x.en = n.en; });
+    var sp = {}; pts.forEach(function (x) { sp[x.la] = 1; });
     box.innerHTML = '<h3><span class="en">Field map</span><span class="tr">Saha haritası</span></h3>' +
       '<p class="n"><span class="en">' + pts.length + ' photos of ' + Object.keys(sp).length + ' species. Points of rare species are shown at about 10 km precision.</span>' +
       '<span class="tr">' + Object.keys(sp).length + ' türe ait ' + pts.length + ' fotoğraf. Nadir türlerin noktaları yaklaşık 10 km hassasiyetle gösterilir.</span></p>' +
@@ -54,10 +56,10 @@
         var icon = L.divIcon({ className: '', html: '<div class="pin"></div>', iconSize: [14, 14], iconAnchor: [7, 7] });
         var bounds = [];
         pts.forEach(function (x) {
-          var p = x.p, lang = document.documentElement.lang;
-          L.marker([x.lat, x.lon], { icon: icon, title: p.latin }).addTo(map).bindPopup(
+          var p = x.p, lang = document.documentElement.lang, vn = lang === 'en' ? (x.en || x.tr) : (x.tr || x.en);
+          L.marker([x.lat, x.lon], { icon: icon, title: x.la }).addTo(map).bindPopup(
             '<img src="' + esc(p.thumb || thumb(p.image)) + '" onerror="this.src=\'' + esc(p.image) + '\'" alt="">' +
-            (p.tr_name ? esc(p.tr_name) + '<br>' : '') + '<i>' + esc(p.latin) + '</i>' + (p.place ? '<br><small>' + esc(p.place) + '</small>' : ''));
+            (vn ? esc(vn) + '<br>' : '') + '<i>' + esc(x.la) + '</i>' + (p.place ? '<br><small>' + esc(p.place) + '</small>' : ''));
           bounds.push([x.lat, x.lon]);
         });
         if (bounds.length > 1) map.fitBounds(bounds, { padding: [30, 30], maxZoom: 8 });

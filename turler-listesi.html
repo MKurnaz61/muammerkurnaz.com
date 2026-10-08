@@ -2,6 +2,7 @@
 <html lang="tr">
 <head>
 <meta charset="utf-8">
+<script src="js/tur-ortak.js"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Türkiye'nin Amfibi ve Sürüngenleri · Muammer Kurnaz</title>
 <meta name="description" content="Türkiye'de yayılış gösteren amfibi ve sürüngen türlerinin güncel listesi: bilimsel adlar, yazarlar, Türkçe adlar, endemizm ve IUCN kategorileri.">
@@ -187,7 +188,10 @@ dialog.lbx button{position:absolute;top:8px;right:8px;border:0;border-radius:50%
   function norm(t) { return String(t || '').replace(/[İI]/g, 'i').replace(/ı/g, 'i').toLowerCase().normalize('NFD').replace(/[̀-ͯ]/g, ''); }
   function slug(l) { return String(l || '').trim().replace(/\s+/g, '-'); }
   function thumb(src) { return String(src || '').replace(/(-k)?\.(jpe?g|png|webp)$/i, '-k.jpg'); }
-  function key(l) { return String(l || '').replace(/[*_]/g, '').trim().toLowerCase(); }
+  /* photos and cards are linked by the species code ("kod"), so a renamed species keeps its photos */
+  var ALIAS = {};
+  function nk(l) { return String(l || '').replace(/[*_]/g, '').replace(/\s+/g, ' ').trim().toLowerCase(); }
+  function key(l) { var n = nk(l); return ALIAS[n] || n; }
   function get(u) { return fetch(u, { cache: 'no-cache' }).then(function (r) { return r.ok ? r.json() : {}; }).catch(function () { return {}; }); }
 
   /* language, shared with the main site */
@@ -227,7 +231,7 @@ dialog.lbx button{position:absolute;top:8px;right:8px;border:0;border-radius:50%
         (s.en ? '<dt>' + bi('English name', 'İngilizce ad') + '</dt><dd>' + esc(s.en) + '</dd>' : '') +
         '<dt>' + bi('Order · Family', 'Takım · Familya') + '</dt><dd>' + esc(s.takim || '') + ' · ' + esc(s.familya || '') + '</dd>' +
         '<dt>' + bi('Endemic', 'Endemizm') + '</dt><dd>' + (s.endemik ? bi('Endemic to Türkiye', 'Türkiye endemiği') : bi('Not endemic', 'Endemik değil')) + '</dd>' +
-        '<dt>IUCN</dt><dd>' + bi('Global: ', 'Küresel: ') + bi(INAME[gi] ? INAME[gi][0] : gi, INAME[gi] ? INAME[gi][1] : gi) + (ICOL[gi] ? ' (' + gi + ')' : '') + '<br>' +
+        '<dt>IUCN</dt><dd>' + bi('Global: ', 'Küresel: ') + bi(INAME[gi] ? INAME[gi][0] : gi, INAME[gi] ? INAME[gi][1] : gi) + (ICOL[gi] ? ' (' + gi + (s.iucn_yil ? ', ' + esc(s.iucn_yil) : '') + ')' : '') + '<br>' +
           bi('Türkiye: ', 'Türkiye: ') + (tri === 'NE' ? bi('national Red List not yet published', 'Türkiye Kırmızı Listesi henüz yayımlanmadı') : bi(INAME[tri] ? INAME[tri][0] : tri, INAME[tri] ? INAME[tri][1] : tri) + ' (' + esc(tri) + ')') + '</dd>' +
       '</dl>' +
       (c && (c.dist_tr || c.dist_en) ? '<div class="dist"><b>' + bi('Distribution', 'Yayılış') + '</b><span class="en">' + md(c.dist_en || c.dist_tr) + '</span><span class="tr">' + md(c.dist_tr || c.dist_en) + '</span></div>' : '') +
@@ -300,6 +304,7 @@ dialog.lbx button{position:absolute;top:8px;right:8px;border:0;border-radius:50%
 
   Promise.all([get('data/turkiye-turleri.json'), get('photos.json'), get('data/turler.json')]).then(function (r) {
     S = (r[0].species || []).filter(function (s) { return s && s.latin && s.gizle !== true; });
+    (r[0].species || []).forEach(function (s) { if (s && s.latin) { ALIAS[nk(s.latin)] = nk(s.latin); if (s.kod) ALIAS[nk(s.kod)] = nk(s.latin); } });
     (r[1].photos || []).forEach(function (p) { if (p && p.image) (PH[key(p.latin)] = PH[key(p.latin)] || []).push(p); });
     (r[2].species || []).forEach(function (c) { if (c && c.onay === true) CARD[key(c.latin)] = c; });
     var b = r[0].kaynak_tr || r[0].kaynak_en;

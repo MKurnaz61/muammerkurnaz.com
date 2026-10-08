@@ -125,8 +125,8 @@
         return fetch(u, { cache: 'no-cache' }).then(function (r) { return r.ok ? r.json() : {}; }).catch(function () { return {}; })
           .then(function (j) { return (j[key] || []).map(function (x) { return String((x && x[field]) || '').replace(/[*_]/g, '').trim(); }); });
       }
-      return Promise.all([names('/photos.json', 'photos', 'latin'), names('/data/turler.json', 'species', 'latin')]).then(function (r) {
-        extra = r[0].concat(r[1]).filter(function (n) { return /^[A-Z][a-z]+ [a-z]+( [a-z]+)?$/.test(n); });
+      return Promise.all([names('/photos.json', 'photos', 'latin'), names('/data/turler.json', 'species', 'latin'), names('/data/turkiye-turleri.json', 'species', 'latin')]).then(function (r) {
+        extra = r[0].concat(r[1], r[2]).filter(function (n) { return /^[A-Z][a-z]+ [a-z]+( [a-z]+)?$/.test(n); });
         setConfig(d); return cfg;
       });
     });

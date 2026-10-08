@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
+<script src="js/tur-ortak.js"></script>
 <meta name="google-site-verification" content="FevEKc5LWeu_9QfWJ4bddwh-dkOVvUArjA3Eqieq54U">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Muammer Kurnaz | Herpetology and Biogeography</title>
@@ -59,6 +60,7 @@ header.top{border-bottom:1px solid var(--rule);position:sticky;top:0;background:
 header.top .wrap{display:flex;align-items:center;justify-content:space-between;gap:24px;padding-block:16px;flex-wrap:wrap}
 .brand{font-family:var(--display);font-weight:700;font-size:19px;color:var(--ink);text-decoration:none}
 nav.links{display:flex;gap:24px;font-family:var(--display);font-size:15px;font-weight:500}
+@media (max-width:1500px){nav.links{gap:15px;font-size:14.5px}}
 nav.links a{color:var(--ink);text-decoration:none}
 nav.links a:hover{text-decoration:underline}
 .lang{display:flex;gap:4px;font-family:var(--mono);font-size:13px}
@@ -526,7 +528,7 @@ dialog.lb .cnt{font-family:var(--mono);font-size:12px;color:#A8B6C8;white-space:
       <a href="#photos" data-gallery-link><span class="en">Photos</span><span class="tr">Fotoğraflar</span></a>
       <a href="#cv"><span class="en">CV</span><span class="tr">Özgeçmiş</span></a>
       <a href="#teaching"><span class="en">Teaching</span><span class="tr">Dersler</span></a>
-      <a href="turler-listesi.html" target="_blank" rel="noopener"><span class="en">Species list</span><span class="tr">Tür listesi</span></a>
+      <a href="turler-listesi.html" target="_blank" rel="noopener"><span class="en">TR Species List</span><span class="tr">TR Tür Listesi</span></a>
       <a href="#contact"><span class="en">Contact</span><span class="tr">İletişim</span></a>
     </nav>
     <button type="button" class="menu-btn" aria-expanded="false" aria-controls="mainNav" aria-label="Menü / Menu"><span class="en">Menu</span><span class="tr">Menü</span><svg width="22" height="22" viewBox="0 0 24 24" aria-hidden="true"><path class="l1" d="M3 6h18"/><path class="l2" d="M3 12h18"/><path class="l3" d="M3 18h18"/></svg></button>
@@ -1114,14 +1116,17 @@ window.postSlug = function (p) {
   function fallback() {
     try { return JSON.parse(document.getElementById('photo-fallback').textContent); } catch (e) { return { photos: [] }; }
   }
+  /* species names come from the TR species list (js/tur-ortak.js); the photo's own fields are only a fallback */
+  function nameIt(p) { var n = window.MKTur ? MKTur.names(p) : { latin: p.latin, tr: p.tr_name, en: '' }; p.latin_g = n.latin; p.tr_g = n.tr; p.en_g = n.en; }
+  function nm(p, sep) { var en = p.en_g || p.tr_g, tr = p.tr_g || p.en_g; return en || tr ? '<span class="en">' + esc(en) + '</span><span class="tr">' + esc(tr) + '</span>' + sep : ''; }
   function whereOf(p) { return [p.place, p.date ? String(p.date).slice(0, 10) : ''].filter(Boolean).join(' · '); }
   function showAt(i) {
     if (!gal.length) return;
     cur = (i + gal.length) % gal.length;
     var p = gal[cur], where = whereOf(p);
     lbImg.onerror = function () { if (p.mini && lbImg.src.indexOf(p.mini) < 0) lbImg.src = p.mini; };
-    lbImg.src = p.image; lbImg.alt = p.latin || '';
-    lbCap.innerHTML = (p.tr_name ? esc(p.tr_name) + ' · ' : '') + '<i>' + esc(p.latin) + '</i>' + (where ? ' · ' + esc(where) : '') +
+    lbImg.src = p.image; lbImg.alt = p.latin_g || '';
+    lbCap.innerHTML = nm(p, ' · ') + '<i>' + esc(p.latin_g) + '</i>' + (where ? ' · ' + esc(where) : '') +
       ' <span class="cnt">' + (cur + 1) + ' / ' + gal.length + '</span>' + (p.note ? '<br>' + esc(p.note) : '');
     [cur + 1, cur - 1].forEach(function (k) { var q = gal[(k + gal.length) % gal.length]; if (q) { var im = new Image(); im.src = q.image; } });
   }
@@ -1133,8 +1138,10 @@ window.postSlug = function (p) {
     .then(function (r) { if (!r.ok) throw 0; return r.json(); })
     .then(function (data) { (data.photos || []).forEach(function (p) { if (!p.mini && mini[p.image]) p.mini = mini[p.image]; }); return data; })
     .catch(function () { return embedded; })
+    .then(function (data) { return (window.MKTur ? MKTur.ready : Promise.resolve()).then(function () { return data; }); })
     .then(function (data) {
       var list = ((data && data.photos) || []).filter(function (p) { return p && p.image; });
+      list.forEach(nameIt);
       gal = list;
       if (!list.length) {
         g.innerHTML = '<p class="empty"><span class="en">No photos yet.</span><span class="tr">Henüz fotoğraf eklenmedi.</span></p>';
@@ -1147,8 +1154,8 @@ window.postSlug = function (p) {
         b.type = 'button';
         if (i >= SHOW) b.hidden = true;
         b.innerHTML =
-          '<img src="' + esc(p.thumb || String(p.image).replace(/(-k)?\.(jpe?g|png|webp)$/i, '-k.jpg')) + '" data-full="' + esc(p.image) + '" data-mini="' + esc(p.mini || '') + '" onerror="var d=this.dataset;if(d.full&&this.getAttribute(\'src\')!==d.full){this.src=d.full;d.full=\'\'}else if(d.mini&&this.src!==d.mini)this.src=d.mini" loading="lazy" alt="' + esc(p.latin) + '">' +
-          '<span class="cap">' + (p.tr_name ? esc(p.tr_name) + '<br>' : '') + '<i>' + esc(p.latin) + '</i></span>' +
+          '<img src="' + esc(p.thumb || String(p.image).replace(/(-k)?\.(jpe?g|png|webp)$/i, '-k.jpg')) + '" data-full="' + esc(p.image) + '" data-mini="' + esc(p.mini || '') + '" onerror="var d=this.dataset;if(d.full&&this.getAttribute(\'src\')!==d.full){this.src=d.full;d.full=\'\'}else if(d.mini&&this.src!==d.mini)this.src=d.mini" loading="lazy" alt="' + esc(p.latin_g) + '">' +
+          '<span class="cap">' + nm(p, '<br>') + '<i>' + esc(p.latin_g) + '</i></span>' +
           (where ? '<span class="meta">' + esc(where) + '</span>' : '');
         b.addEventListener('click', function () {
           showAt(i);
@@ -1273,12 +1280,12 @@ window.postSlug = function (p) {
         list = (d.species || []).filter(function (c) { return c && c.latin && c.onay === true; });
         if (!list.length) return;
         /* add the gallery photos of the same species (matched by Latin name) after the card's own photos */
-        fetch('photos.json', { cache: 'no-cache' }).then(function (r) { return r.ok ? r.json() : {}; }).catch(function () { return {}; }).then(function (g) {
-          var by = {};
-          (g.photos || []).forEach(function (p) { var k = String(p.latin || '').replace(/[*_]/g, '').trim().toLowerCase(); if (k && p.image) (by[k] = by[k] || []).push(p.image); });
+        Promise.all([fetch('photos.json', { cache: 'no-cache' }).then(function (r) { return r.ok ? r.json() : {}; }).catch(function () { return {}; }), window.MKTur ? MKTur.ready : null]).then(function (rr) {
+          var g = rr[0], by = {}, K = function (t) { return window.MKTur ? MKTur.key(t) : String(t || '').replace(/[*_]/g, '').trim().toLowerCase(); };
+          (g.photos || []).forEach(function (p) { var k = K(p.latin); if (k && p.image) (by[k] = by[k] || []).push(p.image); });
           list.forEach(function (c) {
             var own = (c.photos || []).filter(Boolean), names = own.map(function (x) { return String(x).split('/').pop(); });
-            (by[c.latin.trim().toLowerCase()] || []).forEach(function (x) { if (names.indexOf(String(x).split('/').pop()) < 0 && own.length < 8) { own.push(x); names.push(String(x).split('/').pop()); } });
+            (by[K(c.latin)] || []).forEach(function (x) { if (names.indexOf(String(x).split('/').pop()) < 0 && own.length < 8) { own.push(x); names.push(String(x).split('/').pop()); } });
             c.photos = own;
           });
           if (view >= 0) render();
