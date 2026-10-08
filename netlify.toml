@@ -2,4 +2,4 @@
 # The repository itself is not changed. If anything in this step fails, the site is published as is.
 [build]
   publish = "."
-  command = "(python3 -m pip install --quiet Pillow && python3 tools/optimize.py) || echo 'optimize step skipped'"
+  command = "(python3 -m pip install --quiet Pillow || python3 -m pip install --quiet --break-system-packages Pillow) && python3 tools/optimize.py || echo 'optimize step skipped'"
