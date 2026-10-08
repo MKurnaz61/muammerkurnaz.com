@@ -210,7 +210,7 @@ dialog.lbx button{position:absolute;top:8px;right:8px;border:0;border-radius:50%
     var ph = PH[key(s.latin)] || [];
     return '<li id="' + esc(slug(s.latin)) + '"><button type="button" class="row-h" aria-expanded="false">' +
       '<span class="ln"><i>' + esc(s.latin) + '</i><small>' + esc(s.yazar || '') + '</small></span>' +
-      '<span class="tn">' + (s.tr ? esc(s.tr) : '<em>' + bi('no Turkish name yet', 'Türkçe adı henüz yok') + '</em>') + (s.en ? '<span class="en"> · ' + esc(s.en) + '</span>' : '') + '</span>' +
+      '<span class="tn"><span class="tr">' + (s.tr ? esc(s.tr) : '<em>Türkçe adı henüz yok</em>') + '</span><span class="en">' + (s.en ? esc(s.en) : '<em>no English name yet</em>') + '</span></span>' +
       '<span class="marks">' + (s.endemik ? '<span class="chip end">' + bi('ENDEMIC', 'ENDEMİK') + '</span>' : '') + iucnChip(s.iucn) +
       (ph.length ? '<span class="cam" title="' + ph.length + '"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M4 8h3l2-3h6l2 3h3v11H4z"/><circle cx="12" cy="13" r="3.5"/></svg></span>' : '') +
       '<svg class="chev" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><path d="M9 6l6 6-6 6"/></svg></span></button></li>';
