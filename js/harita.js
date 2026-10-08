@@ -1,6 +1,7 @@
-/* Field map ("Saha haritası") under the photo gallery. Photos that have a latitude and longitude in the
-   panel ("7. Fotoğraflar": Enlem / Boylam) appear as points on a map of Türkiye; the section stays
-   hidden until at least one photo has coordinates.
+/* Field map ("Saha haritası") under the photo gallery. A photo appears on the map when it has a place
+   name in the panel ("7. Fotoğraflar": Yer, e.g. "Kelkit, Gümüşhane"; located at publish time into
+   data/geo.json) or exact Enlem / Boylam values, which take priority. The section stays hidden until
+   at least one photo can be placed.
    Protecting localities: unless "Kesin konumu göster" is ticked for a photo, its point is rounded to
    0.1 degree (about 10 km), so exact sites of rare species are not published. */
 (function () {
@@ -22,9 +23,15 @@
     '@media (max-width:760px){.fieldmap .mapbox{height:340px}}';
   document.head.appendChild(css);
 
-  fetch('photos.json', { cache: 'no-cache' }).then(function (r) { return r.ok ? r.json() : {}; }).catch(function () { return {}; }).then(function (d) {
-    var pts = (d.photos || []).filter(function (p) { return p && num(p.lat) != null && num(p.lon) != null; }).map(function (p) {
-      var lat = num(p.lat), lon = num(p.lon);
+  function getJson(u) { return fetch(u, { cache: 'no-cache' }).then(function (r) { return r.ok ? r.json() : {}; }).catch(function () { return {}; }); }
+  Promise.all([getJson('photos.json'), getJson('data/geo.json')]).then(function (r) {
+    var d = r[0], geo = r[1] || {};
+    function where(p) {
+      if (num(p.lat) != null && num(p.lon) != null) return [num(p.lat), num(p.lon)];
+      var g = geo[String(p.place || '').trim()]; return g ? [g[0], g[1]] : null;
+    }
+    var pts = (d.photos || []).filter(function (p) { return p && where(p); }).map(function (p) {
+      var w = where(p), lat = w[0], lon = w[1];
       if (!p.exact) { lat = Math.round(lat * 10) / 10; lon = Math.round(lon * 10) / 10; }
       return { lat: lat, lon: lon, p: p };
     });

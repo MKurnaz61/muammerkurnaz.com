@@ -42,6 +42,7 @@ collections:
           - { label: "Tanıtım paragrafı (EN)", name: "lede_en", widget: "text", required: false }
           - { label: "Portre fotoğrafı", name: "portrait", widget: "image", required: false, media_folder: "/images", public_folder: "images", choose_url: false, hint: "Ana sayfada adının yanında görünür. Dikey (3:4) fotoğraf önerilir." }
           - { label: "Özgeçmiş (CV) PDF dosyası", name: "cv", widget: "file", required: false, media_folder: "/files/cv", public_folder: "/files/cv", choose_url: false, hint: "Sitede 'CV indir' düğmeleriyle indirilebilir. Telefon numarası gibi paylaşmak istemediğin bilgileri çıkarılmış sürümü yükle." }
+          - { label: "Google Search Console doğrulama kodu", name: "gsc", widget: "string", required: false, hint: "Search Console > HTML etiketi yönteminde verilen <meta ...> satırını ya da yalnızca content içindeki kodu yapıştır. Kaydedince bir sonraki yayında siteye eklenir." }
           - { label: "Unvan satırı (TR)", name: "role_tr", widget: "string" }
           - { label: "Unvan satırı (EN)", name: "role_en", widget: "string", required: false }
           - { label: "Son çalışmalar kutusundaki yıl", name: "recent_year", widget: "string", required: false }
@@ -359,7 +360,7 @@ collections:
               - { label: "Küçük görsel (boş bırakılabilir)", name: "thumb", widget: "image", required: false }
               - { label: "Türkçe adı", name: "tr_name", widget: "string", required: false }
               - { label: "Latince adı", name: "latin", widget: "string" }
-              - { label: "Yer", name: "place", widget: "string", required: false }
+              - { label: "Yer (ör. Kelkit, Gümüşhane)", name: "place", widget: "string", required: false, hint: "İl ve ilçe yazman yeterli; fotoğraf saha haritasında bu yere kendiliğinden yerleşir. Kesin nokta istersen aşağıya enlem ve boylam gir." }
               - { label: "Yıl veya tarih", name: "date", widget: "string", required: false }
               - { label: "Enlem (ör. 40.9123)", name: "lat", widget: "string", required: false, hint: "Saha haritası için. Ondalık derece; boş bırakılırsa fotoğraf haritada görünmez." }
               - { label: "Boylam (ör. 39.7215)", name: "lon", widget: "string", required: false }

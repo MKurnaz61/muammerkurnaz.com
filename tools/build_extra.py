@@ -9,12 +9,17 @@ It never changes the GitHub repository; everything it writes exists only in the 
   - rss.xml : a feed of the blog posts for feed readers.
   - data/openalex.json : citation counts from OpenAlex (total, h-index and per article by DOI).
     If OpenAlex cannot be reached, the file is simply not written and the site works as before.
+  - data/geo.json : coordinates for the place names typed in the panel's photo "Yer" field
+    (OpenStreetMap Nominatim, one request per second), used by the field map.
+  - Google Search Console: if a verification code is set in the panel, its meta tag is added
+    to index.html.
 """
 import datetime
 import html
 import json
 import os
 import re
+import urllib.parse
 import urllib.request
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -132,6 +137,45 @@ def openalex():
     return out
 
 
+def geocode():
+    with open(os.path.join(ROOT, "photos.json"), encoding="utf-8") as f:
+        photos = json.load(f).get("photos", [])
+    places = sorted({str(p.get("place") or "").strip() for p in photos
+                     if p and str(p.get("place") or "").strip() and not (str(p.get("lat") or "").strip() and str(p.get("lon") or "").strip())})
+    out, import_time = {}, __import__("time")
+    for name in places[:200]:
+        for extra in ("&countrycodes=tr", ""):
+            try:
+                r = get("https://nominatim.openstreetmap.org/search?format=json&limit=1&accept-language=tr%s&q=%s"
+                        % (extra, urllib.parse.quote(name)))
+            except Exception:
+                r = []
+            import_time.sleep(1.1)
+            if r:
+                out[name] = [round(float(r[0]["lat"]), 4), round(float(r[0]["lon"]), 4)]
+                break
+    write("data/geo.json", json.dumps(out, ensure_ascii=False))
+    return len(places), len(out)
+
+
+def search_console():
+    with open(os.path.join(ROOT, "data/genel.json"), encoding="utf-8") as f:
+        code = str(json.load(f).get("gsc") or "").strip()
+    m = re.search(r'content="([^"]+)"', code)
+    code = m.group(1) if m else code
+    if not re.fullmatch(r"[A-Za-z0-9_\-]{10,100}", code or ""):
+        return False
+    path = os.path.join(ROOT, "index.html")
+    with open(path, encoding="utf-8") as f:
+        page = f.read()
+    tag = '<meta name="google-site-verification" content="%s">' % code
+    if tag not in page:
+        page = page.replace("<meta charset=\"utf-8\">", "<meta charset=\"utf-8\">\n" + tag, 1)
+        with open(path, "w", encoding="utf-8") as f:
+            f.write(page)
+    return True
+
+
 def main():
     try:
         with open(os.path.join(ROOT, "posts.json"), encoding="utf-8") as f:
@@ -151,6 +195,15 @@ def main():
         print("build_extra: OpenAlex %s citations, %d works" % (o["citations"], len(o["works"])))
     except Exception as err:
         print("build_extra: OpenAlex skipped (%s)" % err)
+    try:
+        n, ok = geocode()
+        print("build_extra: field map places %d, located %d" % (n, ok))
+    except Exception as err:
+        print("build_extra: geocoding skipped (%s)" % err)
+    try:
+        print("build_extra: Search Console tag %s" % ("added" if search_console() else "not set"))
+    except Exception as err:
+        print("build_extra: Search Console skipped (%s)" % err)
 
 
 if __name__ == "__main__":
