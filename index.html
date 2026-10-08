@@ -204,6 +204,10 @@ h3.sub{margin:0;font-family:var(--display);font-weight:600;font-size:20px}
 .tl{list-style:none;margin:0;padding:0;display:flex;flex-direction:column}
 .tl li{display:grid;grid-template-columns:140px minmax(0,1fr);gap:16px;padding-block:10px;border-top:1px solid var(--rule);font-size:15px;line-height:1.5}
 .tl .when{font-family:var(--mono);font-size:12px;color:var(--muted);padding-top:3px}
+.cvi{display:flex;gap:14px;align-items:flex-start;min-width:0}.cvi>span:last-child{min-width:0}
+.uni{flex:none;width:52px;height:52px;border-radius:12px;background:#fff;border:1px solid var(--rule);display:flex;align-items:center;justify-content:center;overflow:hidden;padding:5px}
+.uni img{max-width:100%;max-height:100%;object-fit:contain;display:block}
+.uni.ini{background:var(--navy,#16304F);border-color:var(--navy,#16304F);color:#fff;font:700 14px var(--display);letter-spacing:.02em}
 .tl b{font-family:var(--display);font-weight:600}
 .rev{list-style:none;margin:0;padding:0;columns:3 240px;column-gap:32px;font-size:14px;line-height:1.45}
 .rev li{break-inside:avoid;padding-block:4px;border-top:1px solid var(--rule)}
@@ -910,8 +914,17 @@ window.postSlug = function (p) {
       (orcidUrl ? '<a href="' + e(orcidUrl) + '">ORCID</a>' : '') + (L.researchgate ? '<a href="' + e(L.researchgate) + '">ResearchGate</a>' : ''));
 
     var C = D.ozgecmis || {};
-    put('positions', list(C.positions).map(function (p) { return '<li><span class="when">' + bi(p.period_en, p.period_tr) + '</span><span><b>' + bi(p.title_en, p.title_tr) + '</b><br>' + bi(p.place_en, p.place_tr) + '</span></li>'; }).join(''));
-    put('education', list(C.education).map(function (p) { return '<li><span class="when">' + e(p.period) + '</span><span><b>' + bi(p.degree_en, p.degree_tr) + '</b><br>' + bi(p.school_en, p.school_tr) + '</span></li>'; }).join(''));
+    /* institution logo uploaded in the panel; until then a badge with the institution's initials */
+    function initials(t) {
+      t = String(t || '').split(',')[0];
+      var w = t.replace(/Üniversitesi|University/gi, '').split(/\s+/).filter(function (x) { return x && /^[A-ZÇĞİÖŞÜ]/.test(x); });
+      return (w.map(function (x) { return x[0]; }).join('') + (/Üniversitesi/i.test(t) ? 'Ü' : /University/i.test(t) ? 'U' : '')).slice(0, 4);
+    }
+    function logo(src, name) {
+      return src ? '<span class="uni"><img src="' + e(src) + '" alt="' + e(name) + '" loading="lazy"></span>' : '<span class="uni ini" aria-hidden="true">' + e(initials(name)) + '</span>';
+    }
+    put('positions', list(C.positions).map(function (p) { return '<li><span class="when">' + bi(p.period_en, p.period_tr) + '</span><span class="cvi">' + logo(p.logo, p.place_tr || p.place_en) + '<span><b>' + bi(p.title_en, p.title_tr) + '</b><br>' + bi(p.place_en, p.place_tr) + '</span></span></li>'; }).join(''));
+    put('education', list(C.education).map(function (p) { return '<li><span class="when">' + e(p.period) + '</span><span class="cvi">' + logo(p.logo, p.school_tr || p.school_en) + '<span><b>' + bi(p.degree_en, p.degree_tr) + '</b><br>' + bi(p.school_en, p.school_tr) + '</span></span></li>'; }).join(''));
     put('theses', list(C.theses).map(function (p) { return '<li><span class="when">' + e(p.year) + '</span><span><b>' + bi(p.type_en, p.type_tr) + '</b><br><span lang="tr">' + fmt(p.title) + '</span>' + (p.supervisor ? ' ' + bi('Supervisor', 'Danışman') + ': ' + fmt(p.supervisor) : '') + pdfx(p, p.title, true) + '</span></li>'; }).join(''));
     put('editorial', list(C.editorial).map(function (p) { return '<li><span class="when">' + bi(p.period_en, p.period_tr) + '</span><span>' + fmt(p.journal) + '</span></li>'; }).join(''));
     var rv = list(C.reviews).slice().sort(function (a, b) { return (b.count || 1) - (a.count || 1) || String(a.journal).localeCompare(String(b.journal)); });

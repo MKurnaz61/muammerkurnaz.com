@@ -273,6 +273,7 @@ collections:
               - { label: "Unvan (EN)", name: "title_en", widget: "string", required: false }
               - { label: "Kurum (TR)", name: "place_tr", widget: "string" }
               - { label: "Kurum (EN)", name: "place_en", widget: "string", required: false }
+              - { label: "Kurum logosu (isteğe bağlı)", name: "logo", widget: "image", required: false, media_folder: "/images/logolar", public_folder: "images/logolar", choose_url: false, hint: "Kare ya da yuvarlak, şeffaf arka planlı PNG önerilir. Aynı üniversite için bir kez yüklemen yeter; diğer satırlarda aynı dosyayı seçebilirsin. Boş bırakılırsa kurumun kısaltması gösterilir." }
           - label: "Eğitim"
             name: "education"
             widget: "list"
@@ -283,6 +284,7 @@ collections:
               - { label: "Derece (EN)", name: "degree_en", widget: "string", required: false }
               - { label: "Üniversite (TR)", name: "school_tr", widget: "string" }
               - { label: "Üniversite (EN)", name: "school_en", widget: "string", required: false }
+              - { label: "Kurum logosu (isteğe bağlı)", name: "logo", widget: "image", required: false, media_folder: "/images/logolar", public_folder: "images/logolar", choose_url: false, hint: "Kare ya da yuvarlak, şeffaf arka planlı PNG önerilir. Aynı üniversite için bir kez yüklemen yeter; diğer satırlarda aynı dosyayı seçebilirsin. Boş bırakılırsa kurumun kısaltması gösterilir." }
           - label: "Tezler"
             name: "theses"
             widget: "list"
