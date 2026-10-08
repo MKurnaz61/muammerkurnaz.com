@@ -467,7 +467,14 @@ window.postSlug = function (p) {
   setLang(start === 'en' ? 'en' : 'tr');
 
   function esc(t) { return String(t || '').replace(/[&<>"]/g, function (c) { return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]; }); }
-  function fmt(t) { return esc(t).replace(/\*([^*]+)\*/g, '<i>$1</i>'); }
+  function fmt(t) {
+    /* light Markdown: \* escapes, **bold** / __bold__, *italic* / _italic_, blank line = new paragraph */
+    var s = esc(t).replace(/\\([\\*_])/g, function (m, c) { return '\u0001' + c.charCodeAt(0) + '\u0002'; });
+    s = s.replace(/\*\*([^*]+)\*\*/g, '<b>$1</b>').replace(/__([^_]+)__/g, '<b>$1</b>')
+         .replace(/\*([^*]+)\*/g, '<i>$1</i>').replace(/(^|[^A-Za-z0-9À-ſ])_([^_]+)_(?![A-Za-z0-9À-ſ])/g, '$1<i>$2</i>')
+         .replace(/\n\s*\n/g, '<br><br>');
+    return s.replace(/\u0001(\d+)\u0002/g, function (m, n) { return String.fromCharCode(+n); });
+  }
   function bi(en, tr) { en = en || tr || ''; tr = tr || en || ''; return '<span class="en">' + fmt(en) + '</span><span class="tr">' + fmt(tr) + '</span>'; }
   var MON = { en: ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'],
               tr: ['Ocak', 'Şubat', 'Mart', 'Nisan', 'Mayıs', 'Haziran', 'Temmuz', 'Ağustos', 'Eylül', 'Ekim', 'Kasım', 'Aralık'] };

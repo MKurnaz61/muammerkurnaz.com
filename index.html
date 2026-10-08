@@ -389,7 +389,7 @@ footer .simple .addr{max-width:72ch;font-size:15px;line-height:1.55}
 .tk-motto{display:flex;align-items:center;gap:10px;padding:8px 16px;border-radius:999px;background:rgba(11,26,46,.62);border:1px solid rgba(255,255,255,.28);font-family:var(--display);font-weight:800;font-size:15px;letter-spacing:.14em;color:#fff}
 .tk-motto i{font-style:normal;color:var(--ochre)}.tk-motto .d{width:5px;height:5px;border-radius:50%;background:#A6D65A}
 .tk-shot{position:relative;z-index:1;display:flex;justify-content:center}
-.tk-shot img{display:block;max-width:100%;max-height:620px;border-radius:14px;box-shadow:0 24px 50px -18px rgba(0,0,0,.8);transition:opacity .35s}
+.tk-shot img{display:block;max-width:100%;max-height:440px;border-radius:14px;box-shadow:0 24px 50px -18px rgba(0,0,0,.8);transition:opacity .35s}
 .tk-big{font-family:var(--body);font-style:italic;font-weight:600;font-size:40px;line-height:1.05;color:#fff;text-shadow:0 2px 18px rgba(0,0,0,.45)}
 .tk-dots{display:flex;gap:8px}
 .tk-dots button{width:46px;height:32px;border-radius:6px;border:2px solid rgba(255,255,255,.35);padding:0;overflow:hidden;cursor:pointer;background:#000}
@@ -404,16 +404,19 @@ footer .simple .addr{max-width:72ch;font-size:15px;line-height:1.55}
 .tk-tax{display:flex;gap:8px;flex-wrap:wrap}
 .tk-tax span{font-family:var(--mono);font-size:12px;color:#DCE6F2;border:1px solid rgba(255,255,255,.22);border-radius:6px;padding:4px 9px}
 .tk-iucn .lbl{display:flex;justify-content:space-between;font-family:var(--mono);font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:#A8B6C8;margin-bottom:8px}
-.tk-iucn .lbl b{font-weight:500}
+.tk-iucn .lbl b{font-weight:500;text-align:right}
 .tk-scale{display:grid;grid-template-columns:repeat(7,1fr);gap:4px}
 .tk-scale span{font-family:var(--display);font-weight:700;font-size:12px;text-align:center;padding:7px 0;border-radius:6px;color:rgba(255,255,255,.45);background:rgba(255,255,255,.07)}
 .tk-scale .on{color:#fff;box-shadow:0 0 0 2px rgba(255,255,255,.85),0 0 22px var(--glow);transform:scale(1.08)}
 .tk-ne{font-family:var(--mono);font-size:12px;color:#A8B6C8;margin-top:8px}
+.tk-iucns{display:flex;flex-direction:column;gap:16px}
+.tk-scale.tr{grid-template-columns:repeat(6,1fr)}
+.tk-scale.off span{opacity:.55}
 .tk-facts{display:flex;flex-direction:column;gap:14px}
 .tk-f{display:grid;grid-template-columns:38px minmax(0,1fr);gap:12px;align-items:start}
 .tk-f .ic{width:38px;height:38px;border-radius:10px;display:flex;align-items:center;justify-content:center;background:rgba(156,203,234,.14);color:var(--spot)}
 .tk-f small{display:block;font-family:var(--mono);font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:#A8B6C8}
-.tk-f p{margin:2px 0 0;font-size:16px;line-height:1.45;color:#E8EEF6}
+.tk-f p{margin:2px 0 0;font-size:17.5px;line-height:1.45;color:#E8EEF6}
 .tk-dyk{border-radius:14px;padding:14px 16px;background:linear-gradient(135deg,rgba(224,161,46,.22),rgba(224,161,46,.06));border:1px solid rgba(224,161,46,.45);font-size:15.5px;line-height:1.5;color:#F6E7C8}
 .tk-dyk b{display:block;font-family:var(--display);font-size:14px;color:var(--ochre);margin-bottom:2px}
 .tk-ctrl{display:flex;gap:10px;flex-wrap:wrap}
@@ -641,7 +644,14 @@ window.postSlug = function (p) {
   /* ---------- page content from data/*.json (edited in the admin panel) ---------- */
   var FILES = ['genel', 'arastirma', 'projeler', 'yayinlar', 'ozgecmis', 'dersler'];
   function e(t) { return String(t == null ? '' : t).replace(/[&<>"]/g, function (c) { return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]; }); }
-  function fmt(t) { return e(t).replace(/\*([^*]+)\*/g, '<i>$1</i>'); }
+  function fmt(t) {
+    /* light Markdown: \* escapes, **bold** / __bold__, *italic* / _italic_, blank line = new paragraph */
+    var s = e(t).replace(/\\([\\*_])/g, function (m, c) { return '\u0001' + c.charCodeAt(0) + '\u0002'; });
+    s = s.replace(/\*\*([^*]+)\*\*/g, '<b>$1</b>').replace(/__([^_]+)__/g, '<b>$1</b>')
+         .replace(/\*([^*]+)\*/g, '<i>$1</i>').replace(/(^|[^A-Za-z0-9À-ſ])_([^_]+)_(?![A-Za-z0-9À-ſ])/g, '$1<i>$2</i>')
+         .replace(/\n\s*\n/g, '<br><br>');
+    return s.replace(/\u0001(\d+)\u0002/g, function (m, n) { return String.fromCharCode(+n); });
+  }
   function bi(en, tr) { en = en || tr || ''; tr = tr || en || ''; return '<span class="en">' + fmt(en) + '</span><span class="tr">' + fmt(tr) + '</span>'; }
   function me(a) { return fmt(a).replace(/Kurnaz M(?![a-zçğıöşü])/g, '<b>Kurnaz M</b>'); }
   function doiUrl(d) { d = String(d || '').trim(); return !d ? '' : (/^https?:/i.test(d) ? d : 'https://doi.org/' + d); }
@@ -652,7 +662,7 @@ window.postSlug = function (p) {
   var GC = 'https://muammerkurnaz.goatcounter.com';
   var CONTACT = '';
   function dlPath(f) { return '/indir/' + String(f || '').replace(/^\/+/, ''); }
-  function plain(t) { return String(t || '').replace(/\*/g, ''); }
+  function plain(t) { return String(t || '').replace(/\\([*_])/g, '$1').replace(/\*/g, ''); }
   /* PDF button: open PDF with download count, or a 'request PDF' e-mail link */
   function pdfx(item, title, allowRequest) {
     if (item && item.pdf && item.pdf_open) {
@@ -1056,10 +1066,11 @@ window.postSlug = function (p) {
     var GR = { kertenkele: ['Reptile · Lizard', 'Sürüngen · Kertenkele'], yilan: ['Reptile · Snake', 'Sürüngen · Yılan'], kaplumbaga: ['Reptile · Turtle', 'Sürüngen · Kaplumbağa'],
                kurbaga: ['Amphibian · Frog', 'Amfibi · Kurbağa'], semender: ['Amphibian · Salamander', 'Amfibi · Semender'] };
     var CATS = ['LC', 'NT', 'VU', 'EN', 'CR', 'EW', 'EX'];
-    var CCOL = { LC: '#3E9B4F', NT: '#8DB33A', VU: '#E3A21A', EN: '#E2412A', CR: '#C0172B', EW: '#5B2A6E', EX: '#222' };
+    var CATS_TR = ['LC', 'NT', 'VU', 'EN', 'CR', 'RE'];
+    var CCOL = { LC: '#3E9B4F', NT: '#8DB33A', VU: '#E3A21A', EN: '#E2412A', CR: '#C0172B', EW: '#5B2A6E', EX: '#222', RE: '#5B2A6E' };
     var CNAME = { LC: ['Least Concern', 'Düşük endişe'], NT: ['Near Threatened', 'Tehdide yakın'], VU: ['Vulnerable', 'Hassas'], EN: ['Endangered', 'Tehlikede'],
                   CR: ['Critically Endangered', 'Kritik tehlikede'], EW: ['Extinct in the Wild', 'Doğada tükenmiş'], EX: ['Extinct', 'Tükenmiş'],
-                  DD: ['Data Deficient', 'Veri yetersiz'], NE: ['Not Evaluated', 'Değerlendirilmemiş'] };
+                  DD: ['Data Deficient', 'Veri yetersiz'], NE: ['Not Evaluated', 'Değerlendirilmemiş'], RE: ['Regionally Extinct', 'Bölgesel olarak tükenmiş'], NA: ['Not Applicable', 'Uygulanamaz'] };
     var IC = {
       pin: '<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg>',
       hab: '<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M3 20l6-10 4 6 3-4 5 8z"/><circle cx="17" cy="6" r="2"/></svg>',
@@ -1074,6 +1085,7 @@ window.postSlug = function (p) {
       var g = GR[c.group] || GR.kertenkele;
       document.getElementById('tkBg').style.backgroundImage = src ? 'url("' + src + '")' : '';
       var cat = String(c.iucn || 'NE').toUpperCase(), assessed = CATS.indexOf(cat) >= 0, cn = CNAME[cat] || CNAME.NE;
+      var catTr = String(c.iucn_tr || 'NE').toUpperCase(), trOn = CATS_TR.indexOf(catTr) >= 0, cnTr = CNAME[catTr] || CNAME.NE;
       document.getElementById('tkCard').innerHTML =
         '<div class="tk-ph">' + (src ? '<div class="fill" style="background-image:url(&quot;' + e(src) + '&quot;)"></div>' : '') +
           '<div class="tk-top"><div class="tk-badges"><span class="tk-b cls">' + bi(g[0], g[1]) + '</span>' +
@@ -1089,17 +1101,19 @@ window.postSlug = function (p) {
           '<div><span class="tk-num">' + bi('SPECIES ' + (view + 1) + ' / ' + list.length, 'TÜR ' + (view + 1) + ' / ' + list.length) + '</span>' +
             '<h3>' + bi(c.en || c.tr, c.tr || c.en) + '</h3><p class="tk-lat"><i>' + e(c.latin) + '</i> <span>' + e(c.author) + '</span></p></div>' +
           '<div class="tk-tax">' + [c.order, c.family, String(c.latin).split(' ')[0]].filter(Boolean).map(function (t) { return '<span>' + e(t) + '</span>'; }).join('') + '</div>' +
-          '<div class="tk-iucn"><div class="lbl"><span>' + bi('IUCN Red List', 'IUCN Kırmızı Liste') + '</span><b style="color:' + (assessed ? CCOL[cat] : '#A8B6C8') + '">' + bi(cn[0], cn[1]) + '</b></div>' +
+          '<div class="tk-iucns"><div class="tk-iucn"><div class="lbl"><span>' + bi('IUCN global', 'IUCN küresel') + '</span><b style="color:' + (assessed ? CCOL[cat] : '#A8B6C8') + '">' + bi(cn[0], cn[1]) + '</b></div>' +
             '<div class="tk-scale">' + CATS.map(function (k) { return '<span' + (k === cat ? ' class="on" style="background:' + CCOL[k] + ';--glow:' + CCOL[k] + '"' : '') + '>' + k + '</span>'; }).join('') + '</div>' +
             (assessed ? '' : '<p class="tk-ne">' + bi(cat + ': no separate global assessment yet', cat + ': henüz ayrı bir küresel değerlendirmesi yok') + '</p>') + '</div>' +
+          '<div class="tk-iucn"><div class="lbl"><span>' + bi('IUCN Türkiye', 'IUCN Türkiye') + '</span><b style="color:' + (trOn ? CCOL[catTr] : '#A8B6C8') + '">' + bi(cnTr[0], cnTr[1]) + '</b></div>' +
+            '<div class="tk-scale tr' + (trOn ? '' : ' off') + '">' + CATS_TR.map(function (k) { return '<span' + (k === catTr ? ' class="on" style="background:' + CCOL[k] + ';--glow:' + CCOL[k] + '"' : '') + '>' + k + '</span>'; }).join('') + '</div>' +
+            (trOn ? '' : '<p class="tk-ne">' + (catTr === 'NE' ? bi('The Red List of Türkiye has not been published yet', 'Türkiye Kırmızı Listesi henüz yayımlanmadı') : bi(cnTr[0], cnTr[1])) + '</p>') + '</div></div>' +
+        '</div><div class="tk-colB"><div class="tk-facts">' +
+          ((c.dist_tr || c.dist_en) ? '<div class="tk-f"><span class="ic">' + IC.pin + '</span><div><small>' + bi('Distribution', 'Yayılış') + '</small><p>' + bi(c.dist_en, c.dist_tr) + '</p></div></div>' : '') +
+        '</div>' +
           '<div class="tk-ctrl"><button type="button" class="p" data-go="1">' + bi('Next species', 'Sonraki tür') + '</button><button type="button" class="g" data-go="-1">' + bi('Previous', 'Önceki') + '</button>' +
             (view !== liveIdx ? '<button type="button" class="g" data-go="0">' + bi('Back to now', 'Şu anki türe dön') + '</button>' : '') +
             '<a class="g" href="#photos">' + bi('See in photos', 'Fotoğraflarda gör') + '</a></div>' +
-        '</div><div class="tk-colB"><div class="tk-facts">' +
-          ((c.dist_tr || c.dist_en) ? '<div class="tk-f"><span class="ic">' + IC.pin + '</span><div><small>' + bi('Distribution', 'Yayılış') + '</small><p>' + bi(c.dist_en, c.dist_tr) + '</p></div></div>' : '') +
-          ((c.hab_tr || c.hab_en) ? '<div class="tk-f"><span class="ic">' + IC.hab + '</span><div><small>' + bi('Habitat', 'Yaşam alanı') + '</small><p>' + bi(c.hab_en, c.hab_tr) + '</p></div></div>' : '') +
-          ((c.id_tr || c.id_en) ? '<div class="tk-f"><span class="ic">' + IC.id + '</span><div><small>' + bi('Identification', 'Tanı') + '</small><p>' + bi(c.id_en, c.id_tr) + '</p></div></div>' : '') +
-        '</div>' + ((c.fact_tr || c.fact_en) ? '<div class="tk-dyk"><b>' + bi('Did you know?', 'Biliyor muydunuz?') + '</b>' + bi(c.fact_en, c.fact_tr) + '</div>' : '') + '</div></div>';
+        '</div></div>';
       var strip = [], base = slotNow();
       for (var k = 1; k <= 4; k++) {
         var i = (liveIdx + k) % list.length, n = list[i];

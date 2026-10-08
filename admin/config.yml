@@ -389,17 +389,33 @@ collections:
                 widget: "select"
                 default: "NE"
                 options: ["LC", "NT", "VU", "EN", "CR", "EW", "EX", "DD", "NE"]
+              - label: "IUCN Türkiye (Türkiye Kırmızı Listesi kategorisi)"
+                name: "iucn_tr"
+                widget: "select"
+                default: "NE"
+                required: false
+                hint: "Türkiye Kırmızı Listesi yayımlanınca buradan seçin. 'Henüz değerlendirilmedi' seçiliyken kartta liste henüz yayımlanmadı yazar."
+                options:
+                  - { label: "Henüz değerlendirilmedi", value: "NE" }
+                  - { label: "LC · Düşük endişe", value: "LC" }
+                  - { label: "NT · Tehdide yakın", value: "NT" }
+                  - { label: "VU · Hassas", value: "VU" }
+                  - { label: "EN · Tehlikede", value: "EN" }
+                  - { label: "CR · Kritik tehlikede", value: "CR" }
+                  - { label: "RE · Bölgesel olarak tükenmiş", value: "RE" }
+                  - { label: "DD · Veri yetersiz", value: "DD" }
+                  - { label: "NA · Uygulanamaz", value: "NA" }
               - { label: "Bölge etiketi (TR), ör. Doğu Karadeniz", name: "region_tr", widget: "string", required: false }
               - { label: "Bölge etiketi (EN)", name: "region_en", widget: "string", required: false }
               - { label: "Türkiye endemiği", name: "endemic", widget: "boolean", default: false, required: false }
-              - { label: "Yayılış (TR)", name: "dist_tr", widget: "text", required: false }
-              - { label: "Yayılış (EN)", name: "dist_en", widget: "text", required: false }
-              - { label: "Yaşam alanı (TR)", name: "hab_tr", widget: "text", required: false }
-              - { label: "Yaşam alanı (EN)", name: "hab_en", widget: "text", required: false }
-              - { label: "Tanı (TR)", name: "id_tr", widget: "text", required: false }
-              - { label: "Tanı (EN)", name: "id_en", widget: "text", required: false }
-              - { label: "Biliyor muydunuz? (TR)", name: "fact_tr", widget: "text", required: false }
-              - { label: "Biliyor muydunuz? (EN)", name: "fact_en", widget: "text", required: false }
+              - { label: "Yayılış (TR) · sitede görünür", name: "dist_tr", widget: "markdown", buttons: ["bold", "italic"], editor_components: [], modes: ["rich_text", "raw"], minimal: true, required: false, hint: "Yazıyı seçip B (kalın) veya I (italik) düğmesine basın." }
+              - { label: "Yayılış (EN) · sitede görünür", name: "dist_en", widget: "markdown", buttons: ["bold", "italic"], editor_components: [], modes: ["rich_text", "raw"], minimal: true, required: false }
+              - { label: "Yaşam alanı (TR) · sitede gösterilmez, kitap için saklanır", name: "hab_tr", widget: "markdown", buttons: ["bold", "italic"], editor_components: [], modes: ["rich_text", "raw"], minimal: true, required: false }
+              - { label: "Yaşam alanı (EN) · sitede gösterilmez, kitap için saklanır", name: "hab_en", widget: "markdown", buttons: ["bold", "italic"], editor_components: [], modes: ["rich_text", "raw"], minimal: true, required: false }
+              - { label: "Tanı (TR) · sitede gösterilmez, kitap için saklanır", name: "id_tr", widget: "markdown", buttons: ["bold", "italic"], editor_components: [], modes: ["rich_text", "raw"], minimal: true, required: false }
+              - { label: "Tanı (EN) · sitede gösterilmez, kitap için saklanır", name: "id_en", widget: "markdown", buttons: ["bold", "italic"], editor_components: [], modes: ["rich_text", "raw"], minimal: true, required: false }
+              - { label: "Biliyor muydunuz? (TR) · sitede gösterilmez, kitap için saklanır", name: "fact_tr", widget: "markdown", buttons: ["bold", "italic"], editor_components: [], modes: ["rich_text", "raw"], minimal: true, required: false }
+              - { label: "Biliyor muydunuz? (EN) · sitede gösterilmez, kitap için saklanır", name: "fact_en", widget: "markdown", buttons: ["bold", "italic"], editor_components: [], modes: ["rich_text", "raw"], minimal: true, required: false }
               - label: "Fotoğraflar (ilk fotoğraf kartta önce görünür; hayvana göre kırpılmış yatay fotoğraf önerilir)"
                 name: "photos"
                 widget: "list"

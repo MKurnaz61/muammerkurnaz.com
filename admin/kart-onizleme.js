@@ -5,11 +5,18 @@
   if (!window.CMS || !window.createClass || !window.h) return;
   var h = window.h;
   var GR = { kertenkele: 'Sürüngen · Kertenkele', yilan: 'Sürüngen · Yılan', kaplumbaga: 'Sürüngen · Kaplumbağa', kurbaga: 'Amfibi · Kurbağa', semender: 'Amfibi · Semender' };
-  var CATS = ['LC', 'NT', 'VU', 'EN', 'CR', 'EW', 'EX'];
-  var CCOL = { LC: '#3E9B4F', NT: '#8DB33A', VU: '#E3A21A', EN: '#E2412A', CR: '#C0172B', EW: '#5B2A6E', EX: '#222' };
+  var CATS = ['LC', 'NT', 'VU', 'EN', 'CR', 'EW', 'EX'], CATS_TR = ['LC', 'NT', 'VU', 'EN', 'CR', 'RE'];
+  var CCOL = { LC: '#3E9B4F', NT: '#8DB33A', VU: '#E3A21A', EN: '#E2412A', CR: '#C0172B', EW: '#5B2A6E', EX: '#222', RE: '#5B2A6E' };
+  /* light Markdown as on the site: \* escapes, **bold** / __bold__, *italic* / _italic_ */
   function italic(t) {
     t = window.MKStil ? MKStil.stars(t) : String(t || '');
-    return t.split(/(\*[^*]+\*)/).map(function (p, i) { return /^\*[^*]+\*$/.test(p) ? h('i', { key: i }, p.slice(1, -1)) : p; });
+    t = t.replace(/\\([\\*_])/g, function (m, c) { return '\u0001' + c.charCodeAt(0) + '\u0002'; });
+    function un(s) { return s.replace(/\u0001(\d+)\u0002/g, function (m, n) { return String.fromCharCode(+n); }); }
+    return t.split(/(\*\*[^*]+\*\*|__[^_]+__|\*[^*]+\*|(?:^|\b)_[^_]+_(?=\b|$))/).map(function (p, i) {
+      if (/^\*\*[^*]+\*\*$/.test(p) || /^__[^_]+__$/.test(p)) return h('b', { key: i }, un(p.slice(2, -2)));
+      if (/^\*[^*]+\*$/.test(p) || /^_[^_]+_$/.test(p)) return h('i', { key: i }, un(p.slice(1, -1)));
+      return un(p);
+    });
   }
   function src(p) { p = String(p || ''); return /^https?:/.test(p) ? p : '/' + p.replace(/^\/+/, ''); }
 
@@ -35,7 +42,7 @@
           h('div', { className: 'pv-tools' }, btn('taslak', 'Taslaklar'), btn('onay', 'Onaylılar'), btn('tumu', 'Tümü'),
             h('input', { type: 'search', placeholder: 'Tür ara', value: self.state.q, onChange: function (e) { self.setState({ q: e.target.value }); } }))),
         shown.map(function (x) {
-          var c = x.c, ph = (c.photos || []).filter(Boolean), cat = String(c.iucn || 'NE').toUpperCase();
+          var c = x.c, ph = (c.photos || []).filter(Boolean), cat = String(c.iucn || 'NE').toUpperCase(), catTr = String(c.iucn_tr || 'NE').toUpperCase();
           return h('article', { key: x.n, className: 'card' + (c.onay ? ' ok' : '') },
             h('div', { className: 'ph' },
               h('div', { className: 'top' },
@@ -50,13 +57,18 @@
               h('h2', {}, c.tr || '(Türkçe ad yok)'),
               h('p', { className: 'lat' }, h('i', {}, c.latin), ' ', h('span', {}, c.author || '')),
               h('p', { className: 'tax' }, [c.order, c.family].filter(Boolean).join(' · ')),
+              h('div', { className: 'lbl' }, 'IUCN küresel'),
               h('div', { className: 'scale' }, CATS.map(function (k) { return h('span', { key: k, className: k === cat ? 'on' : '', style: k === cat ? { background: CCOL[k] } : null }, k); })),
               CATS.indexOf(cat) < 0 ? h('p', { className: 'ne' }, 'IUCN: ' + cat) : null,
-              h('dl', {},
-                h('dt', {}, 'Yayılış'), h('dd', {}, italic(c.dist_tr)),
-                h('dt', {}, 'Yaşam alanı'), h('dd', {}, italic(c.hab_tr)),
-                h('dt', {}, 'Tanı'), h('dd', {}, italic(c.id_tr)),
-                h('dt', {}, 'Biliyor muydunuz?'), h('dd', {}, italic(c.fact_tr))),
+              h('div', { className: 'lbl' }, 'IUCN Türkiye (Türkiye Kırmızı Listesi)'),
+              h('div', { className: 'scale tr' }, CATS_TR.map(function (k) { return h('span', { key: k, className: k === catTr ? 'on' : '', style: k === catTr ? { background: CCOL[k] } : null }, k); })),
+              CATS_TR.indexOf(catTr) < 0 ? h('p', { className: 'ne' }, catTr === 'NE' ? 'Türkiye Kırmızı Listesi henüz yayımlanmadı' : 'IUCN Türkiye: ' + catTr) : null,
+              h('dl', {}, h('dt', {}, 'Yayılış'), h('dd', {}, italic(c.dist_tr)), h('dt', {}, 'Distribution (EN)'), h('dd', { className: 'en' }, italic(c.dist_en))),
+              h('details', { className: 'book' }, h('summary', {}, 'Kitap için saklanan metinler (sitede görünmez)'),
+                h('dl', {},
+                  h('dt', {}, 'Tanı'), h('dd', {}, italic(c.id_tr)),
+                  h('dt', {}, 'Yaşam alanı'), h('dd', {}, italic(c.hab_tr)),
+                  h('dt', {}, 'Biliyor muydunuz?'), h('dd', {}, italic(c.fact_tr)))),
               c.not ? h('p', { className: 'note' }, h('b', {}, 'Kontrol notu: '), c.not) : null));
         }),
         shown.length ? null : h('p', { className: 'empty' }, 'Bu filtrede kart yok.'));
@@ -105,6 +117,7 @@
     ".bd{padding:16px 18px 18px}.num{font:12px ui-monospace,monospace;color:#A8B6C8}.bd h2{margin:2px 0 0;font-family:system-ui,sans-serif;font-size:24px;color:#fff}" +
     ".lat{margin:4px 0;color:#9CCBEA;font-size:17px}.lat span{color:#A8B6C8;font-size:14px}.tax{margin:0 0 10px;font:12px ui-monospace,monospace;color:#A8B6C8}" +
     ".scale{display:grid;grid-template-columns:repeat(7,1fr);gap:4px;margin-bottom:8px}.scale span{font:700 11px system-ui,sans-serif;text-align:center;padding:5px 0;border-radius:5px;background:rgba(255,255,255,.07);color:rgba(255,255,255,.45)}.scale .on{color:#fff}" +
+    ".lbl{font:11px ui-monospace,monospace;letter-spacing:.08em;text-transform:uppercase;color:#A8B6C8;margin:10px 0 4px}.scale.tr{grid-template-columns:repeat(6,1fr)}dd.en{color:#C3CEDC;font-size:14px}.book{margin-top:12px;border-top:1px solid rgba(255,255,255,.15);padding-top:8px}.book summary{cursor:pointer;font:12px ui-monospace,monospace;color:#A8B6C8}.ph>img{max-height:340px;object-fit:contain}" +
     ".ne{font:12px ui-monospace,monospace;color:#A8B6C8;margin:0 0 6px}" +
     "dl{margin:0;font-size:15px;line-height:1.45}dt{font:11px ui-monospace,monospace;letter-spacing:.06em;text-transform:uppercase;color:#A8B6C8;margin-top:8px}dd{margin:2px 0 0}" +
     ".note{margin:12px 0 0;font-size:13px;line-height:1.45;color:#F6E7C8;background:rgba(224,161,46,.14);border:1px solid rgba(224,161,46,.4);border-radius:8px;padding:8px 10px}" +
