@@ -478,3 +478,61 @@ collections:
           - { label: "Kısaltılmış biçimi de italik yap (Darevskia rudis eklenince 'D. rudis' da italik olur)", name: "kisaltma", widget: "boolean", default: true, required: false }
           - { label: "Her yerde kalın yazılacak sözcükler (isteğe bağlı, her satıra bir sözcük)", name: "kalin", widget: "text", required: false }
           - { label: "Önizleme için deneme cümlesi (sitede görünmez)", name: "deneme", widget: "text", required: false, default: "Darevskia rudis ve D. valentini Kars Platosu'nda birlikte yaşar; *Rana camerani* ise elle italik yazılmıştır. **Kalın** yazım da böyle yapılır." }
+
+  - name: "turkiye_turleri"
+    label: "11. Türkiye tür listesi"
+    description: "Sitede ayrı sekmede açılan 'Türkiye'nin amfibi ve sürüngenleri' listesi (muammerkurnaz.com/turler-listesi.html). Yeni tür eklemek için listenin sonundaki 'Ekle' düğmesini kullan; sıra, sitedeki gruplar içinde gösterim sırasıdır."
+    files:
+      - name: "turkiye_turleri"
+        label: "Türkiye amfibi ve sürüngen listesi"
+        file: "data/turkiye-turleri.json"
+        fields:
+          - { label: "Liste altındaki kaynak satırı (TR)", name: "kaynak_tr", widget: "string", required: false }
+          - { label: "Liste altındaki kaynak satırı (EN)", name: "kaynak_en", widget: "string", required: false }
+          - label: "Türler"
+            name: "species"
+            widget: "list"
+            summary: "{{fields.latin}} · {{fields.tr}}"
+            fields:
+              - { label: "Bilimsel ad", name: "latin", widget: "string" }
+              - { label: "Yazar ve yıl, ör. (Linnaeus, 1758)", name: "yazar", widget: "string", required: false }
+              - { label: "Türkçe adı", name: "tr", widget: "string", required: false }
+              - { label: "İngilizce adı", name: "en", widget: "string", required: false }
+              - label: "Grup"
+                name: "grup"
+                widget: "select"
+                options:
+                  - { label: "Kurbağa (Anura)", value: "kurbaga" }
+                  - { label: "Semender (Caudata)", value: "semender" }
+                  - { label: "Kertenkele (Sauria, Amphisbaenia)", value: "kertenkele" }
+                  - { label: "Yılan (Serpentes)", value: "yilan" }
+                  - { label: "Kaplumbağa (Testudines)", value: "kaplumbaga" }
+              - { label: "Takım", name: "takim", widget: "string", required: false }
+              - { label: "Familya", name: "familya", widget: "string" }
+              - { label: "Türkiye endemiği", name: "endemik", widget: "boolean", default: false, required: false }
+              - label: "IUCN küresel kategori"
+                name: "iucn"
+                widget: "select"
+                default: "NE"
+                options: ["LC", "NT", "VU", "EN", "CR", "EW", "EX", "DD", "NE"]
+              - label: "IUCN Türkiye (Türkiye Kırmızı Listesi)"
+                name: "iucn_tr"
+                widget: "select"
+                default: "NE"
+                required: false
+                options:
+                  - { label: "Henüz değerlendirilmedi", value: "NE" }
+                  - { label: "LC · Düşük endişe", value: "LC" }
+                  - { label: "NT · Tehdide yakın", value: "NT" }
+                  - { label: "VU · Hassas", value: "VU" }
+                  - { label: "EN · Tehlikede", value: "EN" }
+                  - { label: "CR · Kritik tehlikede", value: "CR" }
+                  - { label: "RE · Bölgesel olarak tükenmiş", value: "RE" }
+                  - { label: "DD · Veri yetersiz", value: "DD" }
+                  - { label: "NA · Uygulanamaz", value: "NA" }
+              - { label: "Açıklama (TR) · sitede türün altında görünür", name: "aciklama_tr", widget: "markdown", buttons: ["bold", "italic"], editor_components: [], modes: ["rich_text", "raw"], minimal: true, required: false }
+              - { label: "Açıklama (EN)", name: "aciklama_en", widget: "markdown", buttons: ["bold", "italic"], editor_components: [], modes: ["rich_text", "raw"], minimal: true, required: false }
+              - { label: "Kaynak bağlantısı (Reptile Database / ASW sayfası)", name: "kaynak", widget: "string", required: false }
+              - { label: "Kaynak notu (sitede görünmez)", name: "kaynak_notu", widget: "text", required: false }
+              - { label: "Türkiye'de kaydı doğrulanmış (kaynağa göre)", name: "turkiyede", widget: "boolean", default: true, required: false }
+              - { label: "Listede gizle", name: "gizle", widget: "boolean", default: false, required: false, hint: "Açıkken tür sitede görünmez ama panelde kalır." }

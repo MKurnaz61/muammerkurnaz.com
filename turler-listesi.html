@@ -1,0 +1,315 @@
+<!doctype html>
+<html lang="tr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Türkiye'nin Amfibi ve Sürüngenleri · Muammer Kurnaz</title>
+<meta name="description" content="Türkiye'de yayılış gösteren amfibi ve sürüngen türlerinin güncel listesi: bilimsel adlar, yazarlar, Türkçe adlar, endemizm ve IUCN kategorileri.">
+<link rel="canonical" href="https://muammerkurnaz.com/turler-listesi.html">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="/favicon-32.png" sizes="32x32" type="image/png">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Türkiye'nin Amfibi ve Sürüngenleri">
+<meta property="og:description" content="Türkiye amfibi ve sürüngen türlerinin güncel listesi.">
+<meta property="og:image" content="https://muammerkurnaz.com/images/og.jpg">
+<meta property="og:url" content="https://muammerkurnaz.com/turler-listesi.html">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,600;12..96,700;12..96,800&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;1,8..60,400&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+/* Türkiye checklist: one reading column; a field-guide index of species grouped by order and family.
+   Data: data/turkiye-turleri.json (panel "11. Türkiye tür listesi"), photos.json, data/turler.json. */
+:root{
+  --ground:#F2F3F0; --paper:#FFFFFF; --ink:#132235; --ink2:#334155; --muted:#5B6676; --rule:#D6DAE0;
+  --navy:#16304F; --navy-deep:#0E1F35; --spot:#9CCBEA; --ochre:#E0A12E; --ochre-text:#9A5F00; --endemic:#3E7D3A; --endemic-bg:#E7F1E4;
+  --display:'Bricolage Grotesque',system-ui,sans-serif; --body:'Source Serif 4',Georgia,serif; --mono:'IBM Plex Mono',ui-monospace,monospace;
+}
+*{box-sizing:border-box}
+[hidden]{display:none!important}
+html[lang="en"] .tr,html[lang="tr"] .en{display:none}
+body{margin:0;background:var(--ground);color:var(--ink);font-family:var(--body);font-size:17px;line-height:1.6}
+a{color:var(--navy);text-underline-offset:3px}
+.wrap{max-width:1080px;margin:0 auto;padding-inline:24px}
+header.top{background:var(--navy);color:#fff;position:sticky;top:0;z-index:5}
+header.top .wrap{display:flex;align-items:center;justify-content:space-between;gap:12px;padding-block:14px}
+.brand{display:inline-flex;align-items:center;gap:10px;color:#fff;text-decoration:none;font:800 18px var(--display);letter-spacing:-.01em}
+.brand::before{content:"";width:22px;height:22px;border-radius:50%;background:radial-gradient(circle at 35% 40%,var(--spot) 0 2px,transparent 3px),radial-gradient(circle at 65% 60%,var(--spot) 0 2px,transparent 3px),radial-gradient(circle at 45% 75%,var(--spot) 0 1.5px,transparent 2.5px),var(--navy-deep);box-shadow:0 0 0 2px var(--spot)}
+.top-r{display:flex;gap:8px;align-items:center}
+.back{color:#DCE6F2;font:600 14px var(--display);text-decoration:none;border:1px solid rgba(255,255,255,.35);border-radius:6px;padding:7px 12px}
+.back:hover{color:#fff;border-color:#fff}
+.lang{display:flex;gap:4px}
+.lang button{min-width:40px;min-height:36px;border:1px solid rgba(255,255,255,.45);border-radius:4px;background:transparent;color:#fff;font:13px var(--mono);cursor:pointer}
+.lang button[aria-pressed="true"]{background:var(--ochre);border-color:var(--ochre);color:var(--navy-deep)}
+.hero{background:var(--navy-deep);color:#E8EEF6;padding-block:48px 40px}
+.eyebrow{font:500 13px var(--mono);letter-spacing:.12em;text-transform:uppercase;color:var(--ochre);display:flex;align-items:center;gap:10px}
+.eyebrow::before{content:"";width:8px;height:8px;border-radius:50%;background:var(--ochre)}
+h1{margin:12px 0 10px;font:800 44px/1.05 var(--display);letter-spacing:-.025em;color:#fff;text-wrap:balance}
+.lede{margin:0;max-width:720px;color:#C3CEDC;font-size:18px}
+.lede small{display:block;margin-top:8px;font:13px/1.5 var(--mono);color:#93A2B6}
+.tally{display:flex;flex-wrap:wrap;gap:28px;margin-top:26px}
+.tally div{display:flex;flex-direction:column}
+.tally b{font:800 34px var(--display);color:#fff;font-variant-numeric:tabular-nums;line-height:1}
+.tally span{font:12px var(--mono);letter-spacing:.06em;text-transform:uppercase;color:#93A2B6;margin-top:6px}
+.tools{position:sticky;top:64px;z-index:4;background:var(--ground);border-bottom:1px solid var(--rule)}
+.tools .wrap{display:flex;flex-wrap:wrap;gap:10px;align-items:center;padding-block:14px}
+.tools input[type=search]{flex:1 1 240px;min-width:0;max-width:360px;font:16px var(--body);padding:9px 14px;border:1px solid #B9C3D0;border-radius:999px;background:#fff;color:var(--ink)}
+.chips{display:flex;flex-wrap:wrap;gap:6px}
+.chips button,.tog{display:inline-flex;align-items:center;gap:6px;min-height:38px;padding:5px 13px;border-radius:999px;border:1px solid #B9C3D0;background:#fff;color:var(--ink);font:600 14px var(--display);cursor:pointer}
+.chips button b,.tog b{font:400 12px var(--mono);color:var(--muted)}
+.chips button[aria-pressed="true"]{background:var(--navy);border-color:var(--navy);color:#fff}
+.chips button[aria-pressed="true"] b{color:#C3CEDC}
+.tog[aria-pressed="true"]{background:var(--endemic-bg);border-color:var(--endemic);color:var(--endemic)}
+.tools button:focus-visible,.tools input:focus-visible,.row-h:focus-visible{outline:2px solid var(--ochre);outline-offset:2px}
+.count{font:13px var(--mono);color:var(--muted);margin-left:auto}
+main{padding-block:28px 64px}
+.grp{margin-top:36px}
+.grp>h2{margin:0;font:800 30px var(--display);letter-spacing:-.02em;color:var(--navy);display:flex;align-items:baseline;gap:12px}
+.grp>h2 small{font:13px var(--mono);color:var(--muted);letter-spacing:0}
+.fam{margin-top:18px}
+.fam h3{margin:0 0 6px;font:500 12px var(--mono);letter-spacing:.1em;text-transform:uppercase;color:var(--ochre-text);display:flex;gap:8px}
+.fam h3 span{color:var(--muted)}
+.rows{list-style:none;margin:0;padding:0;background:var(--paper);border:1px solid var(--rule);border-radius:12px;overflow:hidden}
+.rows>li{border-top:1px solid var(--rule)}
+.rows>li:first-child{border-top:0}
+.row-h{width:100%;display:grid;grid-template-columns:minmax(0,1.3fr) minmax(0,1fr) auto;gap:14px;align-items:center;padding:12px 16px;border:0;background:transparent;text-align:left;cursor:pointer;color:inherit;font:inherit}
+.row-h:hover{background:#F6F8FA}
+.row-h .ln{min-width:0}
+.row-h .ln i{font-size:17px;font-weight:600;color:var(--navy)}
+.row-h .ln small{display:block;font:12.5px/1.4 var(--mono);color:var(--muted);margin-top:1px}
+.rows>li{scroll-margin-top:200px}
+.row-h .tn{color:var(--ink2);font-size:16px;min-width:0}
+.row-h .tn em{color:#9AA5B4;font-style:normal;font-size:14px}
+.marks{display:flex;gap:6px;align-items:center;justify-content:flex-end}
+.chip{font:600 11px var(--mono);letter-spacing:.03em;padding:2px 7px;border-radius:4px;white-space:nowrap}
+.chip.end{background:var(--endemic-bg);color:var(--endemic);border:1px solid #B9D6B3}
+.chip.iu{color:#fff}
+.chip.ne{background:transparent;color:var(--muted);border:1px solid var(--rule)}
+.cam{color:var(--muted);display:inline-flex}
+.chev{transition:transform .2s;color:var(--muted)}
+li.open .chev{transform:rotate(90deg)}
+.det{padding:4px 16px 18px;display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.2fr);gap:18px 26px}
+.det .ph{display:flex;flex-wrap:wrap;gap:8px;align-content:flex-start}
+.det .ph button{padding:0;border:0;border-radius:8px;overflow:hidden;cursor:zoom-in;background:#ddd;width:150px;height:100px}
+.det .ph img{width:100%;height:100%;object-fit:cover;display:block}
+.det .noph{font:13px var(--mono);color:var(--muted);padding:10px 0}
+.det dl{margin:0;display:grid;grid-template-columns:auto minmax(0,1fr);gap:6px 16px;font-size:15.5px}
+.det dt{font:500 11px var(--mono);letter-spacing:.08em;text-transform:uppercase;color:var(--muted);padding-top:4px}
+.det dd{margin:0;min-width:0}
+.det .dist{grid-column:1/-1;padding:12px 14px;background:#F6F8FA;border-radius:10px;font-size:15.5px}
+.det .dist b{display:block;font:500 11px var(--mono);letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin-bottom:4px}
+.det .lnk{grid-column:1/-1;display:flex;flex-wrap:wrap;gap:8px}
+.det .lnk a{font:600 13px var(--display);border:1px solid #B9C3D0;border-radius:999px;padding:6px 12px;text-decoration:none;background:#fff}
+.det .lnk a:hover{border-color:var(--navy)}
+.empty{padding:30px 0;color:var(--muted)}
+.src{margin-top:40px;font-size:14.5px;color:var(--muted);border-top:1px solid var(--rule);padding-top:16px}
+dialog.lbx{border:0;padding:0;background:transparent;max-width:min(1100px,94vw)}
+dialog.lbx::backdrop{background:rgba(8,18,32,.85)}
+dialog.lbx img{display:block;max-width:100%;max-height:82vh;border-radius:10px}
+dialog.lbx p{margin:8px 0 0;color:#DCE6F2;text-align:center;font-size:15px}
+dialog.lbx button{position:absolute;top:8px;right:8px;border:0;border-radius:50%;width:38px;height:38px;background:rgba(0,0,0,.55);color:#fff;font-size:20px;cursor:pointer}
+@media (max-width:760px){
+  .wrap{padding-inline:16px}
+  h1{font-size:32px}
+  .tools{position:static}
+  .chips{flex-wrap:nowrap;overflow-x:auto;width:100%;padding-bottom:4px;-webkit-overflow-scrolling:touch}
+  .chips button{flex:none}
+  .rows>li{scroll-margin-top:70px}
+  .row-h{grid-template-columns:minmax(0,1fr) auto;gap:4px 10px}
+  .row-h .tn{grid-column:1;grid-row:2;font-size:15px}
+  .marks{grid-row:1/3;grid-column:2}
+  .det{grid-template-columns:minmax(0,1fr)}
+  .det .ph button{width:calc(50% - 4px);height:110px}
+  .back span.lbl{display:none}
+  .count{margin-left:0}
+}
+@media (prefers-reduced-motion:reduce){.chev{transition:none}}
+</style>
+</head>
+<body>
+<header class="top">
+  <div class="wrap">
+    <a class="brand" href="/">Muammer Kurnaz</a>
+    <div class="top-r">
+      <a class="back" href="/"><span aria-hidden="true">←</span> <span class="lbl"><span class="en">Main site</span><span class="tr">Ana site</span></span></a>
+      <div class="lang" role="group" aria-label="Language">
+        <button type="button" data-lang="en" aria-pressed="false">EN</button>
+        <button type="button" data-lang="tr" aria-pressed="true">TR</button>
+      </div>
+    </div>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="wrap">
+    <div class="eyebrow"><span class="en">Herpetofauna of Türkiye</span><span class="tr">Türkiye herpetofaunası</span></div>
+    <h1><span class="en">Amphibians and reptiles of Türkiye</span><span class="tr">Türkiye'nin amfibi ve sürüngenleri</span></h1>
+    <p class="lede"><span class="en">An up-to-date checklist of the species occurring in Türkiye, with authors, Turkish names, endemism and IUCN categories. Select a species to see its details and photographs.</span><span class="tr">Türkiye'de yayılış gösteren türlerin güncel listesi; yazarlar, Türkçe adlar, endemizm ve IUCN kategorileriyle. Ayrıntıları ve fotoğrafları görmek için bir türe tıklayın.</span>
+      <small id="basis"></small></p>
+    <div class="tally" id="tally"></div>
+  </div>
+</section>
+
+<div class="tools">
+  <div class="wrap">
+    <input type="search" id="q" placeholder="Tür ara" aria-label="Tür ara / Search species" autocomplete="off">
+    <div class="chips" id="chips" role="group" aria-label="Grup"></div>
+    <button type="button" class="tog" id="endOnly" aria-pressed="false"><span class="en">Endemic only</span><span class="tr">Yalnızca endemikler</span> <b id="endN"></b></button>
+    <span class="count" id="count"></span>
+  </div>
+</div>
+
+<main class="wrap">
+  <div id="list"></div>
+  <p class="empty" id="empty" hidden><span class="en">No species match this search.</span><span class="tr">Bu aramaya uyan tür yok.</span></p>
+  <p class="src"><span class="en">Names and authors checked against The Reptile Database and Amphibian Species of the World. IUCN: global Red List category; IUCN Türkiye will be added when the national Red List is published.</span><span class="tr">Bilimsel adlar ve yazarlar The Reptile Database ve Amphibian Species of the World ile karşılaştırılmıştır. IUCN: küresel Kırmızı Liste kategorisi; IUCN Türkiye, ulusal Kırmızı Liste yayımlandığında eklenecektir.</span></p>
+</main>
+
+<dialog class="lbx" id="lbx"><button type="button" aria-label="Kapat / Close">×</button><img alt=""><p></p></dialog>
+
+<script>
+(function () {
+  var GROUPS = [
+    ['kurbaga', 'Frogs and toads', 'Kurbağalar', 'Anura'],
+    ['semender', 'Salamanders and newts', 'Semenderler', 'Caudata'],
+    ['kertenkele', 'Lizards', 'Kertenkeleler', 'Squamata: Sauria'],
+    ['yilan', 'Snakes', 'Yılanlar', 'Squamata: Serpentes'],
+    ['kaplumbaga', 'Turtles and tortoises', 'Kaplumbağalar', 'Testudines']
+  ];
+  var ICOL = { LC: '#3E9B4F', NT: '#8DB33A', VU: '#C98A12', EN: '#E2412A', CR: '#C0172B', DD: '#6B7F99', EW: '#5B2A6E', EX: '#222' };
+  var INAME = { LC: ['Least Concern', 'Düşük endişe'], NT: ['Near Threatened', 'Tehdide yakın'], VU: ['Vulnerable', 'Hassas'], EN: ['Endangered', 'Tehlikede'], CR: ['Critically Endangered', 'Kritik tehlikede'], DD: ['Data Deficient', 'Veri yetersiz'], NE: ['Not evaluated', 'Değerlendirilmemiş'], RE: ['Regionally Extinct', 'Bölgesel olarak tükenmiş'], NA: ['Not Applicable', 'Uygulanamaz'] };
+  var S = [], PH = {}, CARD = {}, grp = 'all', endOnly = false;
+
+  function esc(t) { return String(t == null ? '' : t).replace(/[&<>"]/g, function (c) { return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]; }); }
+  function bi(en, tr) { en = en || tr || ''; tr = tr || en || ''; return '<span class="en">' + en + '</span><span class="tr">' + tr + '</span>'; }
+  function md(t) { return esc(t).replace(/\*\*([^*]+)\*\*/g, '<b>$1</b>').replace(/\*([^*]+)\*/g, '<i>$1</i>').replace(/(^|[^\w])_([^_]+)_(?!\w)/g, '$1<i>$2</i>'); }
+  function norm(t) { return String(t || '').replace(/[İI]/g, 'i').replace(/ı/g, 'i').toLowerCase().normalize('NFD').replace(/[̀-ͯ]/g, ''); }
+  function slug(l) { return String(l || '').trim().replace(/\s+/g, '-'); }
+  function thumb(src) { return String(src || '').replace(/(-k)?\.(jpe?g|png|webp)$/i, '-k.jpg'); }
+  function key(l) { return String(l || '').replace(/[*_]/g, '').trim().toLowerCase(); }
+  function get(u) { return fetch(u, { cache: 'no-cache' }).then(function (r) { return r.ok ? r.json() : {}; }).catch(function () { return {}; }); }
+
+  /* language, shared with the main site */
+  function setLang(l) {
+    document.documentElement.lang = l;
+    document.querySelectorAll('.lang button').forEach(function (b) { b.setAttribute('aria-pressed', String(b.dataset.lang === l)); });
+    document.getElementById('q').placeholder = l === 'en' ? 'Search species' : 'Tür ara';
+    try { localStorage.setItem('lang', l); } catch (e) {}
+  }
+  var start = 'tr'; try { start = localStorage.getItem('lang') || ((navigator.language || '').toLowerCase().indexOf('tr') === 0 ? 'tr' : 'en'); } catch (e) {}
+  setLang(start);
+  document.querySelectorAll('.lang button').forEach(function (b) { b.addEventListener('click', function () { setLang(b.dataset.lang); }); });
+
+  function iucnChip(c) {
+    c = String(c || 'NE').toUpperCase();
+    if (!ICOL[c]) return '<span class="chip ne" title="IUCN">' + (c === 'NE' ? 'NE' : esc(c)) + '</span>';
+    return '<span class="chip iu" title="IUCN: ' + esc(INAME[c][0]) + '" style="background:' + ICOL[c] + '">' + c + '</span>';
+  }
+  function row(s) {
+    var ph = PH[key(s.latin)] || [];
+    return '<li id="' + esc(slug(s.latin)) + '"><button type="button" class="row-h" aria-expanded="false">' +
+      '<span class="ln"><i>' + esc(s.latin) + '</i><small>' + esc(s.yazar || '') + '</small></span>' +
+      '<span class="tn">' + (s.tr ? esc(s.tr) : '<em>' + bi('no Turkish name yet', 'Türkçe adı henüz yok') + '</em>') + (s.en ? '<span class="en"> · ' + esc(s.en) + '</span>' : '') + '</span>' +
+      '<span class="marks">' + (s.endemik ? '<span class="chip end">' + bi('ENDEMIC', 'ENDEMİK') + '</span>' : '') + iucnChip(s.iucn) +
+      (ph.length ? '<span class="cam" title="' + ph.length + '"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M4 8h3l2-3h6l2 3h3v11H4z"/><circle cx="12" cy="13" r="3.5"/></svg></span>' : '') +
+      '<svg class="chev" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><path d="M9 6l6 6-6 6"/></svg></span></button></li>';
+  }
+  function detail(s) {
+    var ph = PH[key(s.latin)] || [], c = CARD[key(s.latin)], tri = String(s.iucn_tr || 'NE').toUpperCase(), gi = String(s.iucn || 'NE').toUpperCase();
+    var src = /amphibiansoftheworld/.test(s.kaynak || '') ? 'Amphibian Species of the World' : 'The Reptile Database';
+    return '<div class="det">' +
+      '<div class="ph">' + (ph.length ? ph.slice(0, 6).map(function (p, i) { return '<button type="button" data-img="' + esc(p.image) + '" data-cap="' + esc((p.tr_name ? p.tr_name + ' · ' : '') + p.latin + (p.place ? ' · ' + p.place : '')) + '"><img src="' + esc(p.thumb || thumb(p.image)) + '" onerror="this.onerror=null;this.src=\'' + esc(p.image) + '\'" alt="' + esc(s.latin) + '" loading="lazy"></button>'; }).join('') :
+        '<p class="noph">' + bi('No photograph yet', 'Henüz fotoğraf yok') + '</p>') + '</div>' +
+      '<dl>' +
+        '<dt>' + bi('Scientific name', 'Bilimsel ad') + '</dt><dd><i>' + esc(s.latin) + '</i> ' + esc(s.yazar || '') + '</dd>' +
+        (s.tr ? '<dt>' + bi('Turkish name', 'Türkçe ad') + '</dt><dd>' + esc(s.tr) + '</dd>' : '') +
+        (s.en ? '<dt>' + bi('English name', 'İngilizce ad') + '</dt><dd>' + esc(s.en) + '</dd>' : '') +
+        '<dt>' + bi('Order · Family', 'Takım · Familya') + '</dt><dd>' + esc(s.takim || '') + ' · ' + esc(s.familya || '') + '</dd>' +
+        '<dt>' + bi('Endemic', 'Endemizm') + '</dt><dd>' + (s.endemik ? bi('Endemic to Türkiye', 'Türkiye endemiği') : bi('Not endemic', 'Endemik değil')) + '</dd>' +
+        '<dt>IUCN</dt><dd>' + bi('Global: ', 'Küresel: ') + bi(INAME[gi] ? INAME[gi][0] : gi, INAME[gi] ? INAME[gi][1] : gi) + (ICOL[gi] ? ' (' + gi + ')' : '') + '<br>' +
+          bi('Türkiye: ', 'Türkiye: ') + (tri === 'NE' ? bi('national Red List not yet published', 'Türkiye Kırmızı Listesi henüz yayımlanmadı') : bi(INAME[tri] ? INAME[tri][0] : tri, INAME[tri] ? INAME[tri][1] : tri) + ' (' + esc(tri) + ')') + '</dd>' +
+      '</dl>' +
+      (c && (c.dist_tr || c.dist_en) ? '<div class="dist"><b>' + bi('Distribution', 'Yayılış') + '</b><span class="en">' + md(c.dist_en || c.dist_tr) + '</span><span class="tr">' + md(c.dist_tr || c.dist_en) + '</span></div>' : '') +
+      (s.aciklama_tr || s.aciklama_en ? '<div class="dist"><b>' + bi('Notes', 'Not') + '</b><span class="en">' + md(s.aciklama_en || s.aciklama_tr) + '</span><span class="tr">' + md(s.aciklama_tr || s.aciklama_en) + '</span></div>' : '') +
+      '<div class="lnk">' + (s.kaynak ? '<a href="' + esc(s.kaynak) + '" target="_blank" rel="noopener">' + src + ' ↗</a>' : '') +
+        (ph.length ? '<a href="/#photos">' + bi('All photographs', 'Tüm fotoğraflar') + '</a>' : '') + '</div>' +
+      '</div>';
+  }
+
+  function render() {
+    var q = norm(document.getElementById('q').value.trim()), shown = 0, html = '';
+    var counts = { all: 0 }; S.forEach(function (s) { counts.all++; counts[s.grup] = (counts[s.grup] || 0) + 1; });
+    GROUPS.forEach(function (g) {
+      if (grp !== 'all' && grp !== g[0]) return;
+      var list = S.filter(function (s) {
+        if (s.grup !== g[0]) return false;
+        if (endOnly && !s.endemik) return false;
+        return !q || norm([s.latin, s.tr, s.en, s.familya, s.yazar].join(' ')).indexOf(q) >= 0;
+      });
+      if (!list.length) return;
+      shown += list.length;
+      var fams = []; list.forEach(function (s) { if (fams.indexOf(s.familya) < 0) fams.push(s.familya); });
+      html += '<section class="grp"><h2>' + bi(g[1], g[2]) + ' <small>' + g[3] + ' · ' + list.length + '</small></h2>' +
+        fams.map(function (f) {
+          var fl = list.filter(function (s) { return s.familya === f; });
+          return '<div class="fam"><h3>' + esc(f) + ' <span>' + fl.length + '</span></h3><ul class="rows">' + fl.map(row).join('') + '</ul></div>';
+        }).join('') + '</section>';
+    });
+    document.getElementById('list').innerHTML = html;
+    document.getElementById('empty').hidden = shown > 0;
+    document.getElementById('count').innerHTML = bi(shown + ' of ' + S.length + ' species', S.length + ' türden ' + shown);
+  }
+
+  function chips() {
+    var counts = {}; S.forEach(function (s) { counts[s.grup] = (counts[s.grup] || 0) + 1; });
+    var amph = (counts.kurbaga || 0) + (counts.semender || 0), rep = S.length - amph, end = S.filter(function (s) { return s.endemik; }).length;
+    document.getElementById('tally').innerHTML =
+      '<div><b>' + S.length + '</b><span>' + bi('species', 'tür') + '</span></div>' +
+      '<div><b>' + amph + '</b><span>' + bi('amphibians', 'amfibi') + '</span></div>' +
+      '<div><b>' + rep + '</b><span>' + bi('reptiles', 'sürüngen') + '</span></div>' +
+      '<div><b>' + end + '</b><span>' + bi('endemic to Türkiye', 'Türkiye endemiği') + '</span></div>';
+    document.getElementById('endN').textContent = end;
+    document.getElementById('chips').innerHTML = [['all', 'All', 'Tümü']].concat(GROUPS).map(function (g) {
+      var n = g[0] === 'all' ? S.length : (counts[g[0]] || 0);
+      return '<button type="button" data-g="' + g[0] + '" aria-pressed="' + (grp === g[0]) + '">' + bi(g[1], g[2]) + ' <b>' + n + '</b></button>';
+    }).join('');
+  }
+
+  document.getElementById('chips').addEventListener('click', function (e) {
+    var b = e.target.closest('button'); if (!b) return; grp = b.dataset.g;
+    this.querySelectorAll('button').forEach(function (x) { x.setAttribute('aria-pressed', String(x === b)); }); render();
+  });
+  document.getElementById('endOnly').addEventListener('click', function () { endOnly = !endOnly; this.setAttribute('aria-pressed', String(endOnly)); render(); });
+  var t; document.getElementById('q').addEventListener('input', function () { clearTimeout(t); t = setTimeout(render, 80); });
+  function toggle(li, open) {
+    var s = S.filter(function (x) { return slug(x.latin) === li.id; })[0]; if (!s) return;
+    var d = li.querySelector('.det'), b = li.querySelector('.row-h');
+    if (open === undefined) open = !d;
+    if (open && !d) { li.insertAdjacentHTML('beforeend', detail(s)); li.classList.add('open'); b.setAttribute('aria-expanded', 'true'); }
+    if (!open && d) { d.remove(); li.classList.remove('open'); b.setAttribute('aria-expanded', 'false'); }
+    if (open) { try { history.replaceState(null, '', '#' + li.id); } catch (e) {} }
+  }
+  document.getElementById('list').addEventListener('click', function (e) {
+    var im = e.target.closest('.ph button');
+    if (im) { var dl = document.getElementById('lbx'); dl.querySelector('img').src = im.dataset.img; dl.querySelector('p').textContent = im.dataset.cap; dl.showModal ? dl.showModal() : window.open(im.dataset.img); return; }
+    var b = e.target.closest('.row-h'); if (b) toggle(b.closest('li'));
+  });
+  var lb = document.getElementById('lbx');
+  lb.addEventListener('click', function (e) { if (e.target === lb || e.target.tagName === 'BUTTON') lb.close(); });
+
+  Promise.all([get('data/turkiye-turleri.json'), get('photos.json'), get('data/turler.json')]).then(function (r) {
+    S = (r[0].species || []).filter(function (s) { return s && s.latin && s.gizle !== true; });
+    (r[1].photos || []).forEach(function (p) { if (p && p.image) (PH[key(p.latin)] = PH[key(p.latin)] || []).push(p); });
+    (r[2].species || []).forEach(function (c) { if (c && c.onay === true) CARD[key(c.latin)] = c; });
+    var b = r[0].kaynak_tr || r[0].kaynak_en;
+    if (b) document.getElementById('basis').innerHTML = bi(md(r[0].kaynak_en || r[0].kaynak_tr), md(r[0].kaynak_tr || r[0].kaynak_en));
+    chips(); render();
+    function fromHash() { if (!location.hash) return; var li = document.getElementById(decodeURIComponent(location.hash.slice(1))); if (li) { toggle(li, true); setTimeout(function () { li.scrollIntoView({ block: 'start' }); }, 400); } }
+    fromHash(); window.addEventListener('hashchange', fromHash);
+  });
+})();
+</script>
+<script src="js/stil.js"></script>
+</body>
+</html>

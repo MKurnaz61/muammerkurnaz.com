@@ -184,7 +184,7 @@ def main():
         print("build_extra: posts.json unreadable (%s)" % err)
         posts = []
     try:
-        paths = ["/", "/yazilar.html"] + post_pages(posts)
+        paths = ["/", "/yazilar.html", "/turler-listesi.html"] + post_pages(posts)
         sitemap(paths)
         rss(posts)
         print("build_extra: %d post pages, sitemap, robots, rss" % len(posts))

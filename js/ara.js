@@ -105,13 +105,17 @@
     if (items) return Promise.resolve(items);
     if (loading) return loading;
     var D = 'data/';
-    loading = Promise.all([get(D + 'yayinlar.json'), get(D + 'ozgecmis.json'), get(D + 'projeler.json'), get(D + 'arastirma.json'), get(D + 'dersler.json'), get('posts.json'), get('photos.json'), get(D + 'turler.json')])
+    loading = Promise.all([get(D + 'yayinlar.json'), get(D + 'ozgecmis.json'), get(D + 'projeler.json'), get(D + 'arastirma.json'), get(D + 'dersler.json'), get('posts.json'), get('photos.json'), get(D + 'turler.json'), get(D + 'turkiye-turleri.json')])
       .then(function (r) {
-        var Y = r[0], C = r[1], P = r[2], R = r[3], K = r[4], W = r[5], F = r[6], T = r[7], out = [];
+        var Y = r[0], C = r[1], P = r[2], R = r[3], K = r[4], W = r[5], F = r[6], T = r[7], TL = r[8], out = [];
         function add(o) { o.key = norm(o.key); o.head = norm(o.head); out.push(o); }
         A(T.species).filter(function (c) { return c && c.onay === true; }).forEach(function (c) {
           add({ g: ['Species cards', 'Tür kartları'], t: function () { return L(c.en, c.tr) + ' · ' + c.latin; }, s: function () { return L(c.dist_en, c.dist_tr); },
             head: c.latin + ' ' + c.tr + ' ' + c.en, key: [c.latin, c.tr, c.en, c.family, c.dist_tr, c.dist_en].join(' '), img: thumb((c.photos || [])[0]), go: { sec: 'turler', tur: c.latin } });
+        });
+        A(TL.species).filter(function (s) { return s && s.latin && !s.gizle; }).forEach(function (s) {
+          add({ g: ['Species list of Türkiye', 'Türkiye tür listesi'], t: function () { return s.latin + (s.tr ? ' · ' + s.tr : ''); }, s: function () { return [s.yazar, s.familya, s.endemik ? L('endemic', 'endemik') : ''].filter(Boolean).join(' · '); },
+            head: s.latin + ' ' + s.tr + ' ' + s.en, key: [s.latin, s.tr, s.en, s.familya, s.yazar].join(' '), href: 'turler-listesi.html#' + String(s.latin).trim().replace(/\s+/g, '-') });
         });
         A(W.posts).forEach(function (p) {
           add({ g: ['Writings', 'Yazılar'], t: function () { return L(p.title_en, p.title); }, s: function (tm) { return snippet(L(p.summary_en, p.summary) + ' ' + L(p.body_en, p.body), tm, 150); },
@@ -181,7 +185,7 @@
       terms.forEach(function (w) { if (it.head.indexOf(w) >= 0) score += 10; if ((' ' + it.head).indexOf(' ' + w) >= 0) score += 5; });
       hits.push({ it: it, score: score });
     });
-    var order = ['Tür kartları', 'Yazılar', 'Makaleler', 'Kitap bölümleri', 'Kongre bildirileri', 'Tezler', 'Araştırma', 'Projeler', 'Dersler', 'Fotoğraflar'];
+    var order = ['Tür kartları', 'Türkiye tür listesi', 'Yazılar', 'Makaleler', 'Kitap bölümleri', 'Kongre bildirileri', 'Tezler', 'Araştırma', 'Projeler', 'Dersler', 'Fotoğraflar'];
     hits.sort(function (a, b) { return order.indexOf(a.it.g[1]) - order.indexOf(b.it.g[1]) || b.score - a.score; });
     var re = termRe(terms), html = '', last = '', count = {};
     current = [];
