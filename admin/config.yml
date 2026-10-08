@@ -40,6 +40,8 @@ collections:
           - { label: "Ana başlık (EN)", name: "headline_en", widget: "text", required: false }
           - { label: "Tanıtım paragrafı (TR)", name: "lede_tr", widget: "text" }
           - { label: "Tanıtım paragrafı (EN)", name: "lede_en", widget: "text", required: false }
+          - { label: "Portre fotoğrafı", name: "portrait", widget: "image", required: false, media_folder: "/images", public_folder: "images", choose_url: false, hint: "Ana sayfada adının yanında görünür. Dikey (3:4) fotoğraf önerilir." }
+          - { label: "Özgeçmiş (CV) PDF dosyası", name: "cv", widget: "file", required: false, media_folder: "/files/cv", public_folder: "/files/cv", choose_url: false, hint: "Sitede 'CV indir' düğmeleriyle indirilebilir. Telefon numarası gibi paylaşmak istemediğin bilgileri çıkarılmış sürümü yükle." }
           - { label: "Unvan satırı (TR)", name: "role_tr", widget: "string" }
           - { label: "Unvan satırı (EN)", name: "role_en", widget: "string", required: false }
           - { label: "Son çalışmalar kutusundaki yıl", name: "recent_year", widget: "string", required: false }
@@ -359,6 +361,9 @@ collections:
               - { label: "Latince adı", name: "latin", widget: "string" }
               - { label: "Yer", name: "place", widget: "string", required: false }
               - { label: "Yıl veya tarih", name: "date", widget: "string", required: false }
+              - { label: "Enlem (ör. 40.9123)", name: "lat", widget: "string", required: false, hint: "Saha haritası için. Ondalık derece; boş bırakılırsa fotoğraf haritada görünmez." }
+              - { label: "Boylam (ör. 39.7215)", name: "lon", widget: "string", required: false }
+              - { label: "Kesin konumu göster", name: "exact", widget: "boolean", default: false, required: false, hint: "Kapalıyken nokta yaklaşık 10 km'ye yuvarlanır. Nadir ve korunan türlerde kapalı bırak." }
               - { label: "Not", name: "note", widget: "text", required: false }
 
   # ---------------------------------------------------------------- 8. Yazılar

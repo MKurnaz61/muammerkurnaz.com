@@ -59,6 +59,7 @@
           '<button type="button" class="ilt-copy" data-mail="' + esc(m.email) + '">' + bi('Copy', 'Kopyala') + '</button></div>';
       }).join('') + '</div></section>' : '') +
       (g.address_tr || g.address_en ? '<section><h3>' + bi('Affiliation and address', 'Kurum ve adres') + '</h3><div class="ilt-aff">' + bi(g.address_en, g.address_tr) + '</div></section>' : '') +
+      (g.cv ? '<section><h3>' + bi('Curriculum vitae', 'Özgeçmiş') + '</h3><div class="ilt-links"><a href="' + esc(g.cv) + '" target="_blank" rel="noopener">' + bi('Download CV (PDF)', 'Özgeçmişi indir (PDF)') + '</a></div></section>' : '') +
       (prof.length ? '<section><h3>' + bi('Academic profiles', 'Akademik profiller') + '</h3><div class="ilt-links">' + prof.map(link).join('') + '</div></section>' : '') +
       (soc.length ? '<section><h3>' + bi('Social media', 'Sosyal medya') + '</h3><div class="ilt-links">' + soc.map(link).join('') + '</div></section>' : '') +
       '</div>';
