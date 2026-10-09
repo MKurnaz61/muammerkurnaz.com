@@ -133,7 +133,7 @@
      "turkiyede": true,
      "tr": "Ova Kurbağası",
      "yerli_degil": false,
-     "harita": ""
+     "harita": "images/haritalar/Pelophylax-ridibundus.jpg"
     },
     {
      "kod": "Rana dalmatina",
@@ -522,7 +522,7 @@
      "turkiyede": true,
      "tr": "Kafkas Semenderi",
      "yerli_degil": false,
-     "harita": ""
+     "harita": "images/haritalar/Mertensiella-caucasica.jpg"
     },
     {
      "kod": "Neurergus crocatus",
