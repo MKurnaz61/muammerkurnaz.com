@@ -81,7 +81,7 @@
      "turkiyede": true,
      "tr": "Toprak Kurbağası",
      "yerli_degil": false,
-     "harita": ""
+     "harita": "images/haritalar/Pelobates-syriacus.jpg"
     }
    ]
   },
@@ -152,7 +152,7 @@
      "turkiyede": true,
      "tr": "Çevik Kurbağa",
      "yerli_degil": false,
-     "harita": ""
+     "harita": "images/haritalar/Rana-dalmatina.jpg"
     },
     {
      "kod": "Rana macrocnemis",
@@ -541,7 +541,7 @@
      "turkiyede": true,
      "tr": "Urmiye Semenderi",
      "yerli_degil": false,
-     "harita": ""
+     "harita": "images/haritalar/Neurergus-crocatus.jpg"
     },
     {
      "kod": "Neurergus strauchii",
@@ -937,7 +937,7 @@
      "turkiyede": true,
      "tr": "Leopar Keleri",
      "yerli_degil": false,
-     "harita": ""
+     "harita": "images/haritalar/Eublepharis-angramainyu.jpg"
     }
    ]
   },
@@ -982,7 +982,7 @@
      "turkiyede": true,
      "tr": "Geniş Parmaklı Keler",
      "yerli_degil": false,
-     "harita": ""
+     "harita": "images/haritalar/Hemidactylus-turcicus.jpg"
     },
     {
      "kod": "Mediodactylus danilewskii",
@@ -1350,7 +1350,7 @@
      "turkiyede": true,
      "tr": "Hemşin Kertenkelesi",
      "yerli_degil": false,
-     "harita": ""
+     "harita": "images/haritalar/Darevskia-armeniaca.jpg"
     },
     {
      "kod": "Darevskia bithynica",
@@ -1464,7 +1464,7 @@
      "turkiyede": false,
      "tr": "Nairi Kertenkelesi",
      "yerli_degil": false,
-     "harita": ""
+     "harita": "images/haritalar/Darevskia-nairensis.jpg"
     },
     {
      "kod": "Darevskia obscura",
@@ -1483,7 +1483,7 @@
      "turkiyede": true,
      "tr": "Gürcü Kertenkelesi",
      "yerli_degil": false,
-     "harita": ""
+     "harita": "images/haritalar/Darevskia-obscura.jpg"
     },
     {
      "kod": "Darevskia parvula",
@@ -1540,7 +1540,7 @@
      "turkiyede": true,
      "tr": "Radde Kertenkelesi",
      "yerli_degil": false,
-     "harita": ""
+     "harita": "images/haritalar/Darevskia-raddei.jpg"
     },
     {
      "kod": "Darevskia rudis",
@@ -1559,7 +1559,7 @@
      "turkiyede": true,
      "tr": "Trabzon Kertenkelesi",
      "yerli_degil": false,
-     "harita": ""
+     "harita": "images/haritalar/Darevskia-rudis.jpg"
     },
     {
      "kod": "Darevskia salihae",
@@ -2321,7 +2321,7 @@
      "turkiyede": true,
      "tr": "Çöl Varanı",
      "yerli_degil": false,
-     "harita": ""
+     "harita": "images/haritalar/Varanus-griseus.jpg"
     }
    ]
   },
@@ -2347,7 +2347,7 @@
      "turkiyede": true,
      "tr": "Mahmuzlu Yılan",
      "yerli_degil": false,
-     "harita": ""
+     "harita": "images/haritalar/Eryx-jaculus.jpg"
     }
    ]
   },
@@ -2373,7 +2373,7 @@
      "turkiyede": true,
      "tr": "Avusturya Yılanı",
      "yerli_degil": false,
-     "harita": ""
+     "harita": "images/haritalar/Coronella-austriaca.jpg"
     },
     {
      "kod": "Dolichophis caspius",
@@ -2392,7 +2392,7 @@
      "turkiyede": true,
      "tr": "Hazer Yılanı",
      "yerli_degil": false,
-     "harita": ""
+     "harita": "images/haritalar/Dolichophis-caspius.jpg"
     },
     {
      "kod": "Dolichophis jugularis",
@@ -2411,7 +2411,7 @@
      "turkiyede": true,
      "tr": "Kara Yılan",
      "yerli_degil": false,
-     "harita": ""
+     "harita": "images/haritalar/Dolichophis-jugularis.jpg"
     },
     {
      "kod": "Dolichophis schmidti",
@@ -2430,7 +2430,7 @@
      "turkiyede": true,
      "tr": "Kırmızı Yılan",
      "yerli_degil": false,
-     "harita": ""
+     "harita": "images/haritalar/Dolichophis-schmidti.jpg"
     },
     {
      "kod": "Eirenis aurolineatus",
@@ -2696,7 +2696,7 @@
      "turkiyede": false,
      "tr": "Aras Yılanı",
      "yerli_degil": false,
-     "harita": ""
+     "harita": "images/haritalar/Elaphe-dione.jpg"
     },
     {
      "kod": "Elaphe sauromates",
@@ -2715,7 +2715,7 @@
      "turkiyede": true,
      "tr": "Sarı Yılan",
      "yerli_degil": false,
-     "harita": ""
+     "harita": "images/haritalar/Elaphe-sauromates.jpg"
     },
     {
      "kod": "Elaphe urartica",
@@ -2734,7 +2734,7 @@
      "turkiyede": true,
      "tr": "Urartu Yılanı",
      "yerli_degil": false,
-     "harita": ""
+     "harita": "images/haritalar/Elaphe-urartica.jpg"
     },
     {
      "kod": "Hemorrhois nummifer",
@@ -2753,7 +2753,7 @@
      "turkiyede": true,
      "tr": "Sikkeli Yılan",
      "yerli_degil": false,
-     "harita": ""
+     "harita": "images/haritalar/Hemorrhois-nummifer.jpg"
     },
     {
      "kod": "Hemorrhois ravergieri",
@@ -2772,7 +2772,7 @@
      "turkiyede": true,
      "tr": "Kocabaş Yılan",
      "yerli_degil": false,
-     "harita": ""
+     "harita": "images/haritalar/Hemorrhois-ravergieri.jpg"
     },
     {
      "kod": "Muhtarophis barani",
@@ -2810,7 +2810,7 @@
      "turkiyede": true,
      "tr": "Toros Yılanı",
      "yerli_degil": false,
-     "harita": ""
+     "harita": "images/haritalar/Platyceps-collaris.jpg"
     },
     {
      "kod": "Platyceps karelini",
@@ -2829,7 +2829,7 @@
      "turkiyede": false,
      "tr": "Benekli Çöl Yılanı",
      "yerli_degil": false,
-     "harita": ""
+     "harita": "images/haritalar/Platyceps-karelini.jpg"
     },
     {
      "kod": "Platyceps najadum",
@@ -2867,7 +2867,7 @@
      "turkiyede": true,
      "tr": "Vadi Yılanı",
      "yerli_degil": false,
-     "harita": ""
+     "harita": "images/haritalar/Platyceps-rhodorachis.jpg"
     },
     {
      "kod": "Rhynchocalamus melanocephalus",
@@ -2886,7 +2886,7 @@
      "turkiyede": true,
      "tr": "Siyah Başlı Toprak Yılanı",
      "yerli_degil": false,
-     "harita": ""
+     "harita": "images/haritalar/Rhynchocalamus-melanocephalus.jpg"
     },
     {
      "kod": "Rhynchocalamus satunini",
@@ -2905,7 +2905,7 @@
      "turkiyede": true,
      "tr": "Yakalı Toprak Yılanı",
      "yerli_degil": false,
-     "harita": ""
+     "harita": "images/haritalar/Rhynchocalamus-satunini.jpg"
     },
     {
      "kod": "Spalerosophis diadema",
@@ -2924,7 +2924,7 @@
      "turkiyede": true,
      "tr": "Urfa Yılanı",
      "yerli_degil": false,
-     "harita": ""
+     "harita": "images/haritalar/Spalerosophis-diadema.jpg"
     },
     {
      "kod": "Telescopus fallax",
@@ -2943,7 +2943,7 @@
      "turkiyede": true,
      "tr": "Kedi Gözlü Yılan",
      "yerli_degil": false,
-     "harita": ""
+     "harita": "images/haritalar/Telescopus-fallax.jpg"
     },
     {
      "kod": "Telescopus nigriceps",
@@ -2962,7 +2962,7 @@
      "turkiyede": true,
      "tr": "Siyah Başlı Kedi Gözlü Yılan",
      "yerli_degil": false,
-     "harita": ""
+     "harita": "images/haritalar/Telescopus-nigriceps.jpg"
     },
     {
      "kod": "Zamenis hohenackeri",
@@ -3161,7 +3161,7 @@
      "turkiyede": true,
      "tr": "Sivri Burunlu Kör Yılan",
      "yerli_degil": false,
-     "harita": ""
+     "harita": "images/haritalar/Letheobia-episcopus.jpg"
     },
     {
      "kod": "Xerotyphlops vermicularis",
@@ -3206,7 +3206,7 @@
      "turkiyede": false,
      "tr": "Filistin Engereği",
      "yerli_degil": false,
-     "harita": ""
+     "harita": "images/haritalar/Daboia-palaestinae.jpg"
     },
     {
      "kod": "Macrovipera lebetinus",
@@ -3263,7 +3263,7 @@
      "turkiyede": true,
      "tr": "Ağrı Engereği",
      "yerli_degil": false,
-     "harita": ""
+     "harita": "images/haritalar/Montivipera-raddei.jpg"
     },
     {
      "kod": "Montivipera wagneri",
@@ -3396,7 +3396,7 @@
      "turkiyede": true,
      "tr": "Doğu Burunlu Engereği",
      "yerli_degil": false,
-     "harita": ""
+     "harita": "images/haritalar/Vipera-meridionalis.jpg"
     },
     {
      "kod": "Vipera eriwanensis",
