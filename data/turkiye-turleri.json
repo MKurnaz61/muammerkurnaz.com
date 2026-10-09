@@ -666,7 +666,7 @@
    ]
   },
   {
-   "familya": "Amphisbaenidae",
+   "familya": "Blanidae",
    "grup": "kertenkele",
    "takim": "Squamata (Amphisbaenia)",
    "turler": [
@@ -2852,6 +2852,42 @@
      "turkiyede": true,
      "tr": "Ev Yılanı",
      "yerli_degil": false
+    },
+    {
+     "kod": "Natrix natrix",
+     "yazar": "(Linnaeus, 1758)",
+     "latin": "Natrix natrix",
+     "endemik": false,
+     "iucn_tr": "NE",
+     "en": "Common Grass Snake",
+     "kaynak_notu": "RDB family: Colubridae. RDB places Natrix in Colubridae (Natricinae), not Natricidae. Turkey appears only under subspecies (N. n. scutata; persa and megalocephala listed as invalid), not in the main country list. IUCN badge text read as 'Least Concern (LR)'.",
+     "aciklama_tr": "",
+     "gizle": false,
+     "iucn_yil": "1996",
+     "kaynak": "https://reptile-database.reptarium.cz/Natrix/natrix",
+     "iucn": "LC",
+     "aciklama_en": "",
+     "turkiyede": true,
+     "tr": "Küpeli Su Yılanı",
+     "yerli_degil": false
+    },
+    {
+     "kod": "Natrix tessellata",
+     "yazar": "(Laurenti, 1768)",
+     "latin": "Natrix tessellata",
+     "endemik": false,
+     "iucn_tr": "NE",
+     "en": "Dice Snake",
+     "kaynak_notu": "RDB family: Colubridae. RDB places Natrix in Colubridae (Natricinae), not Natricidae.",
+     "aciklama_tr": "",
+     "gizle": false,
+     "iucn_yil": "2021",
+     "kaynak": "https://reptile-database.reptarium.cz/Natrix/tessellata",
+     "iucn": "LC",
+     "aciklama_en": "",
+     "turkiyede": true,
+     "tr": "Su Yılanı",
+     "yerli_degil": false
     }
    ]
   },
@@ -2901,49 +2937,6 @@
      "aciklama_en": "",
      "turkiyede": true,
      "tr": "İpliksi Yılan",
-     "yerli_degil": false
-    }
-   ]
-  },
-  {
-   "familya": "Natricidae",
-   "grup": "yilan",
-   "takim": "Squamata (Serpentes)",
-   "turler": [
-    {
-     "kod": "Natrix natrix",
-     "yazar": "(Linnaeus, 1758)",
-     "latin": "Natrix natrix",
-     "endemik": false,
-     "iucn_tr": "NE",
-     "en": "Common Grass Snake",
-     "kaynak_notu": "RDB family: Colubridae. RDB places Natrix in Colubridae (Natricinae), not Natricidae. Turkey appears only under subspecies (N. n. scutata; persa and megalocephala listed as invalid), not in the main country list. IUCN badge text read as 'Least Concern (LR)'.",
-     "aciklama_tr": "",
-     "gizle": false,
-     "iucn_yil": "1996",
-     "kaynak": "https://reptile-database.reptarium.cz/Natrix/natrix",
-     "iucn": "LC",
-     "aciklama_en": "",
-     "turkiyede": true,
-     "tr": "Küpeli Su Yılanı",
-     "yerli_degil": false
-    },
-    {
-     "kod": "Natrix tessellata",
-     "yazar": "(Laurenti, 1768)",
-     "latin": "Natrix tessellata",
-     "endemik": false,
-     "iucn_tr": "NE",
-     "en": "Dice Snake",
-     "kaynak_notu": "RDB family: Colubridae. RDB places Natrix in Colubridae (Natricinae), not Natricidae.",
-     "aciklama_tr": "",
-     "gizle": false,
-     "iucn_yil": "2021",
-     "kaynak": "https://reptile-database.reptarium.cz/Natrix/tessellata",
-     "iucn": "LC",
-     "aciklama_en": "",
-     "turkiyede": true,
-     "tr": "Su Yılanı",
      "yerli_degil": false
     }
    ]
@@ -4372,18 +4365,6 @@
    "en": "Leopard Snake"
   },
   {
-   "kod": "Walterinnesia aegyptia",
-   "latin": "Walterinnesia aegyptia",
-   "tr": "Mısır Kobrası",
-   "en": "Desert Cobra"
-  },
-  {
-   "kod": "Myriopholis macrorhyncha",
-   "latin": "Myriopholis macrorhyncha",
-   "tr": "İpliksi Yılan",
-   "en": "Longnosed Worm Snake"
-  },
-  {
    "kod": "Natrix natrix",
    "latin": "Natrix natrix",
    "tr": "Küpeli Su Yılanı",
@@ -4394,6 +4375,18 @@
    "latin": "Natrix tessellata",
    "tr": "Su Yılanı",
    "en": "Dice Snake"
+  },
+  {
+   "kod": "Walterinnesia aegyptia",
+   "latin": "Walterinnesia aegyptia",
+   "tr": "Mısır Kobrası",
+   "en": "Desert Cobra"
+  },
+  {
+   "kod": "Myriopholis macrorhyncha",
+   "latin": "Myriopholis macrorhyncha",
+   "tr": "İpliksi Yılan",
+   "en": "Longnosed Worm Snake"
   },
   {
    "kod": "Malpolon insignitus",
