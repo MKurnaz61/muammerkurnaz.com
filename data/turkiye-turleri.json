@@ -1238,7 +1238,7 @@
       "aciklama_en": "",
       "turkiyede": true,
       "familya": "Lacertidae",
-      "tr": ""
+      "tr": "Bitlis Kertenkelesi"
     },
     {
       "kod": "Apathya wolteri",
@@ -1258,7 +1258,7 @@
       "aciklama_en": "",
       "turkiyede": true,
       "familya": "Lacertidae",
-      "tr": ""
+      "tr": "Wolter Kertenkelesi"
     },
     {
       "kod": "Darevskia adjarica",
@@ -2238,7 +2238,7 @@
       "aciklama_en": "",
       "turkiyede": true,
       "familya": "Scincidae",
-      "tr": ""
+      "tr": "Birecik Kertenkelesi"
     },
     {
       "kod": "Heremites vittatus",
@@ -2278,7 +2278,7 @@
       "aciklama_en": "",
       "turkiyede": true,
       "familya": "Scincidae",
-      "tr": "Anadolu Bacaksız Kertenkelesi"
+      "tr": "Toprak Kertenkelesi"
     },
     {
       "kod": "Varanus griseus",
@@ -2438,7 +2438,7 @@
       "aciklama_en": "",
       "turkiyede": true,
       "familya": "Colubridae",
-      "tr": "Baran Uysal Yılanı"
+      "tr": "Adana Yılanı"
     },
     {
       "kod": "Eirenis collaris",
@@ -2518,7 +2518,7 @@
       "aciklama_en": "",
       "turkiyede": true,
       "familya": "Colubridae",
-      "tr": "Eiselt Cüce Yılanı"
+      "tr": "Şırnak Yılanı"
     },
     {
       "kod": "Eirenis levantinus",
@@ -2598,7 +2598,7 @@
       "aciklama_en": "",
       "turkiyede": true,
       "familya": "Colubridae",
-      "tr": "Mezopotamya Uysal Yılanı"
+      "tr": "Siverek Yılanı"
     },
     {
       "kod": "Eirenis punctatolineatus",
@@ -2658,7 +2658,7 @@
       "aciklama_en": "",
       "turkiyede": true,
       "familya": "Colubridae",
-      "tr": "Tuşpa Uysal Yılanı"
+      "tr": "Hakkari Yılanı"
     },
     {
       "kod": "Elaphe dione",
@@ -2678,7 +2678,7 @@
       "aciklama_en": "",
       "turkiyede": false,
       "familya": "Colubridae",
-      "tr": "Step Yılanı"
+      "tr": "Aras Yılanı"
     },
     {
       "kod": "Elaphe sauromates",
@@ -2878,7 +2878,7 @@
       "aciklama_en": "",
       "turkiyede": true,
       "familya": "Colubridae",
-      "tr": "Toprak Yılanı"
+      "tr": "Siyah Başlı Toprak Yılanı"
     },
     {
       "kod": "Rhynchocalamus satunini",
@@ -2898,7 +2898,7 @@
       "aciklama_en": "",
       "turkiyede": true,
       "familya": "Colubridae",
-      "tr": "Atkılı Toprak Yılanı"
+      "tr": "Yakalı Toprak Yılanı"
     },
     {
       "kod": "Spalerosophis diadema",
@@ -3138,7 +3138,7 @@
       "aciklama_en": "",
       "turkiyede": true,
       "familya": "Typhlopidae",
-      "tr": "Basık Burunlu Kör Yılan"
+      "tr": "Sivri Burunlu Kör Yılan"
     },
     {
       "kod": "Xerotyphlops vermicularis",
@@ -3418,7 +3418,7 @@
       "aciklama_en": "",
       "turkiyede": true,
       "familya": "Cheloniidae",
-      "tr": "İribaşlı Deniz Kaplumbağası"
+      "tr": "Deniz Kaplumbağası"
     },
     {
       "kod": "Chelonia mydas",
@@ -3579,6 +3579,40 @@
       "turkiyede": true,
       "familya": "Trionychidae",
       "tr": "Nil Kaplumbağası"
+    },
+    {
+      "kod": "Dermochelys coriacea",
+      "takim": "Testudines",
+      "yazar": "Vandelli, 1761",
+      "latin": "Dermochelys coriacea",
+      "endemik": false,
+      "grup": "kaplumbaga",
+      "iucn_tr": "NE",
+      "en": "Leatherback Sea Turtle",
+      "gizle": false,
+      "iucn_yil": "2013",
+      "iucn": "VU",
+      "turkiyede": true,
+      "familya": "Dermochelyidae",
+      "tr": "Deri Sırtlı Kaplumbağa"
+    },
+    {
+      "kod": "Trachemys scripta",
+      "takim": "Testudines",
+      "yazar": "Thunberg, 1792",
+      "latin": "Trachemys scripta",
+      "endemik": false,
+      "grup": "kaplumbaga",
+      "iucn_tr": "NE",
+      "en": "Red-eared Slider",
+      "aciklama_tr": "Pet şoplarla Türkiye'ye sokulan ve doğal yaşamda üremeyi başaran istilacı tür.",
+      "gizle": false,
+      "iucn_yil": "2010",
+      "iucn": "LC",
+      "aciklama_en": "An invasive species introduced into Türkiye via pet shops that has successfully reproduced in the wild.",
+      "turkiyede": true,
+      "familya": "Emydidae",
+      "tr": "Kırmızı Yanaklı Kaplumbağa"
     }
   ]
 }
