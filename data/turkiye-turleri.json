@@ -1711,7 +1711,7 @@
      "turkiyede": true,
      "tr": "Aras Kertenkelesi",
      "yerli_degil": false,
-     "harita": ""
+     "harita": "images/haritalar/Eremias-pleskei.jpg"
     },
     {
      "kod": "Eremias strauchi",
@@ -1730,7 +1730,7 @@
      "turkiyede": true,
      "tr": "Step Kertenkelesi",
      "yerli_degil": false,
-     "harita": ""
+     "harita": "images/haritalar/Eremias-strauchi.jpg"
     },
     {
      "kod": "Eremias suphani",
@@ -1749,7 +1749,7 @@
      "turkiyede": true,
      "tr": "Süphan Kertenkelesi",
      "yerli_degil": false,
-     "harita": ""
+     "harita": "images/haritalar/Eremias-suphani.jpg"
     },
     {
      "kod": "Iranolacerta brandtii",
@@ -1768,7 +1768,7 @@
      "turkiyede": true,
      "tr": "İran Kertenkelesi",
      "yerli_degil": false,
-     "harita": ""
+     "harita": "images/haritalar/Iranolacerta-brandtii.jpg"
     },
     {
      "kod": "Lacerta agilis",
@@ -1787,7 +1787,7 @@
      "turkiyede": true,
      "tr": "Çevik Kertenkele",
      "yerli_degil": false,
-     "harita": ""
+     "harita": "images/haritalar/Lacerta-agilis.jpg"
     },
     {
      "kod": "Lacerta diplochondrodes",
@@ -1806,7 +1806,7 @@
      "turkiyede": true,
      "tr": "Büyük Yeşil Kertenkele",
      "yerli_degil": false,
-     "harita": ""
+     "harita": "images/haritalar/Lacerta-diplochondrodes.jpg"
     },
     {
      "kod": "Lacerta media",
@@ -1825,7 +1825,7 @@
      "turkiyede": true,
      "tr": "Doğu Yeşil Kertenkelesi",
      "yerli_degil": false,
-     "harita": ""
+     "harita": "images/haritalar/Lacerta-media.jpg"
     },
     {
      "kod": "Lacerta pamphylica",
@@ -1863,7 +1863,7 @@
      "turkiyede": true,
      "tr": "Çizgili Kertenkele",
      "yerli_degil": false,
-     "harita": ""
+     "harita": "images/haritalar/Lacerta-strigata.jpg"
     },
     {
      "kod": "Lacerta viridis",
@@ -1901,7 +1901,7 @@
      "turkiyede": false,
      "tr": "Kısa Burunlu Çöl Kertenkelesi",
      "yerli_degil": false,
-     "harita": ""
+     "harita": "images/haritalar/Mesalina-microlepis.jpg"
     },
     {
      "kod": "Ophisops elegans",
