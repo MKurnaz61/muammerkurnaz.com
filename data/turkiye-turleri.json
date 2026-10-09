@@ -783,7 +783,7 @@
      "turkiyede": true,
      "tr": "Dikenli Keler",
      "yerli_degil": false,
-     "harita": ""
+     "harita": "images/haritalar/Laudakia-stellio.jpg"
     },
     {
      "kod": "Paralaudakia caucasia",
@@ -802,7 +802,7 @@
      "turkiyede": true,
      "tr": "Kafkas Keleri",
      "yerli_degil": false,
-     "harita": ""
+     "harita": "images/haritalar/Paralaudakia-caucasia.jpg"
     },
     {
      "kod": "Phrynocephalus horvathi",
@@ -821,7 +821,7 @@
      "turkiyede": true,
      "tr": "Topbaş Keler",
      "yerli_degil": false,
-     "harita": ""
+     "harita": "images/haritalar/Phrynocephalus-horvathi.jpg"
     },
     {
      "kod": "Trapelus ruderatus",
@@ -840,7 +840,7 @@
      "turkiyede": true,
      "tr": "Bozkır Keleri",
      "yerli_degil": false,
-     "harita": ""
+     "harita": "images/haritalar/Trapelus-ruderatus.jpg"
     }
    ]
   },
@@ -911,7 +911,7 @@
      "turkiyede": true,
      "tr": "Bukalemun",
      "yerli_degil": false,
-     "harita": ""
+     "harita": "images/haritalar/Chamaeleo-chamaeleon.jpg"
     }
    ]
   },
@@ -3509,7 +3509,7 @@
      "turkiyede": true,
      "tr": "Benekli Kaplumbağa",
      "yerli_degil": false,
-     "harita": ""
+     "harita": "images/haritalar/Emys-orbicularis.jpg"
     },
     {
      "kod": "Trachemys scripta",
@@ -3553,7 +3553,7 @@
      "turkiyede": true,
      "tr": "Hazar Çizgili Kaplumbağası",
      "yerli_degil": false,
-     "harita": ""
+     "harita": "images/haritalar/Mauremys-caspica.jpg"
     },
     {
      "kod": "Mauremys rivulata",
@@ -3572,7 +3572,7 @@
      "turkiyede": true,
      "tr": "Balkan Çizgili Kaplumbağası",
      "yerli_degil": false,
-     "harita": ""
+     "harita": "images/haritalar/Mauremys-rivulata.jpg"
     }
    ]
   },
@@ -3598,7 +3598,7 @@
      "turkiyede": true,
      "tr": "Tosbağa",
      "yerli_degil": false,
-     "harita": ""
+     "harita": "images/haritalar/Testudo-graeca.jpg"
     },
     {
      "kod": "Testudo hermanni",
@@ -3643,7 +3643,7 @@
      "turkiyede": true,
      "tr": "Fırat Kaplumbağası",
      "yerli_degil": false,
-     "harita": ""
+     "harita": "images/haritalar/Rafetus-euphraticus.jpg"
     },
     {
      "kod": "Trionyx triunguis",
@@ -3662,7 +3662,7 @@
      "turkiyede": true,
      "tr": "Nil Kaplumbağası",
      "yerli_degil": false,
-     "harita": ""
+     "harita": "images/haritalar/Trionyx-triunguis.jpg"
     }
    ]
   }
