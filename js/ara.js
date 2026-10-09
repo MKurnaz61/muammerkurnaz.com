@@ -8,6 +8,7 @@
   var KEY = 'mkAra';
 
   /* ---------- text helpers ---------- */
+  function flatTL(d) { d = d || {}; if (d.species) return d.species; var o = []; (d.familyalar || []).forEach(function (f) { (f && f.turler || []).forEach(function (t) { if (!t) return; var x = {}; for (var k in t) x[k] = t[k]; x.familya = f.familya; x.grup = f.grup; x.takim = f.takim; o.push(x); }); }); return o; }
   function norm(t) {
     return String(t || '').replace(/[*_\\]/g, '').replace(/[İI]/g, 'i').replace(/ı/g, 'i').toLowerCase()
       .normalize('NFD').replace(/[̀-ͯ]/g, '').replace(/\s+/g, ' ').trim();
@@ -114,7 +115,8 @@
           add({ g: ['Species cards', 'Tür kartları'], t: function () { return L(c.en, c.tr) + ' · ' + c.latin; }, s: function () { return L(c.dist_en, c.dist_tr); },
             head: c.latin + ' ' + c.tr + ' ' + c.en, key: [c.latin, c.tr, c.en, c.family, c.dist_tr, c.dist_en].join(' '), img: thumb((c.photos || [])[0]), go: { sec: 'turler', tur: c.latin } });
         });
-        A(TL.species).filter(function (s) { return s && s.latin && !s.gizle; }).forEach(function (s) {
+        var TLS = flatTL(TL);
+        A(TLS).filter(function (s) { return s && s.latin && !s.gizle; }).forEach(function (s) {
           add({ g: ['TR Species List', 'TR Tür Listesi'], t: function () { return s.latin + (s.tr ? ' · ' + s.tr : ''); }, s: function () { return [s.yazar, s.familya, s.endemik ? L('endemic', 'endemik') : ''].filter(Boolean).join(' · '); },
             head: s.latin + ' ' + s.tr + ' ' + s.en, key: [s.latin, s.tr, s.en, s.familya, s.yazar].join(' '), href: 'turler-listesi.html#' + String(s.latin).trim().replace(/\s+/g, '-') });
         });
@@ -155,8 +157,8 @@
         });
         /* photo names come from the TR species list: the photo stores the species code, the list holds the names */
         var TLK = {};
-        A(TL.species).forEach(function (s) { if (s && s.latin) TLK[norm(s.latin)] = s; });
-        A(TL.species).forEach(function (s) { if (s && s.kod) TLK[norm(s.kod)] = s; });
+        A(TLS).forEach(function (s) { if (s && s.latin) TLK[norm(s.latin)] = s; });
+        A(TLS).forEach(function (s) { if (s && s.kod) TLK[norm(s.kod)] = s; });
         var seen = {};
         A(F.photos).filter(function (p) { return p && p.image; }).forEach(function (p, i) {
           var sp = TLK[norm(p.latin)], la = sp ? sp.latin : p.latin, tn = (sp && sp.tr) || p.tr_name || '', en = (sp && sp.en) || '';

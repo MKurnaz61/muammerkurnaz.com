@@ -363,9 +363,9 @@ collections:
                 widget: "relation"
                 collection: "turkiye_turleri"
                 file: "turkiye_turleri"
-                value_field: "species.*.kod"
-                search_fields: ["species.*.latin", "species.*.tr", "species.*.en"]
-                display_fields: ["species.*.latin", "species.*.tr", "species.*.en"]
+                value_field: "dizin.*.kod"
+                search_fields: ["dizin.*.latin", "dizin.*.tr", "dizin.*.en"]
+                display_fields: ["dizin.*.latin", "dizin.*.tr", "dizin.*.en"]
                 options_length: 40
                 hint: "Örneğin 'Darev' yazınca Darevskia türleri sıralanır. Türkçe ve İngilizce ad listeden kendiliğinden gelir; tür listede adı değişirse fotoğrafta da değişir. Tür listede yoksa önce '11. TR Tür Listesi' bölümüne ekleyin."
               - { label: "Türkçe adı", name: "tr_name", widget: "hidden", required: false }
@@ -491,7 +491,8 @@ collections:
 
   - name: "turkiye_turleri"
     label: "11. TR Tür Listesi"
-    description: "Sitede ayrı sekmede açılan 'Türkiye'nin amfibi ve sürüngenleri' listesi (muammerkurnaz.com/turler-listesi.html). Yeni tür eklemek için listenin sonundaki 'Ekle' düğmesini kullan; sıra, sitedeki gruplar içinde gösterim sırasıdır."
+    editor: { preview: false }
+    description: "Sitede ayrı sekmede açılan 'Türkiye'nin amfibi ve sürüngenleri' listesi (muammerkurnaz.com/turler-listesi.html). Türler familya bölümleri içinde durur; sıra, sitedeki gösterim sırasıdır."
     files:
       - name: "turkiye_turleri"
         label: "Türkiye amfibi ve sürüngen listesi"
@@ -516,16 +517,15 @@ collections:
               - { label: "Alt başlık (takım)", name: "alt", widget: "string", required: false }
           - { label: "Liste altındaki kaynak satırı (TR)", name: "kaynak_tr", widget: "string", required: false }
           - { label: "Liste altındaki kaynak satırı (EN)", name: "kaynak_en", widget: "string", required: false }
-          - label: "Türler"
-            name: "species"
+          - { label: "Tür dizini (kaydederken kendiliğinden oluşur)", name: "dizin", widget: "hidden", required: false }
+          - label: "Familyalar"
+            name: "familyalar"
             widget: "list"
-            summary: "{{fields.latin}} · {{fields.tr}}"
+            collapsed: true
+            summary: "{{fields.familya}} · {{fields.takim}}"
+            hint: "Türler familyalarına göre ayrılmıştır. Bir familyaya tür eklemek için o familyayı açıp içindeki 'Ekle' düğmesini kullanın. Yeni bir familya için en alttaki 'Ekle' ile familya bölümü açın."
             fields:
-              - { label: "Tür kodu", name: "kod", widget: "hidden", required: false }
-              - { label: "Bilimsel ad", name: "latin", widget: "string", hint: "Burada yapılan değişiklik fotoğraflarda, saha haritasında, aramada ve listede her yerde görünür. Fotoğraflar türe sabit bir kodla bağlıdır." }
-              - { label: "Yazar ve yıl, ör. (Linnaeus, 1758)", name: "yazar", widget: "string", required: false }
-              - { label: "Türkçe adı", name: "tr", widget: "string", required: false }
-              - { label: "İngilizce adı", name: "en", widget: "string", required: false }
+              - { label: "Familya", name: "familya", widget: "string" }
               - label: "Grup"
                 name: "grup"
                 widget: "select"
@@ -535,33 +535,45 @@ collections:
                   - { label: "Kertenkele (Sauria, Amphisbaenia)", value: "kertenkele" }
                   - { label: "Yılan (Serpentes)", value: "yilan" }
                   - { label: "Kaplumbağa (Testudines)", value: "kaplumbaga" }
-              - { label: "Takım", name: "takim", widget: "string", required: false }
-              - { label: "Familya", name: "familya", widget: "string" }
-              - { label: "Türkiye endemiği", name: "endemik", widget: "boolean", default: false, required: false }
-              - label: "IUCN küresel kategori"
-                name: "iucn"
-                widget: "select"
-                default: "NE"
-                options: ["LC", "NT", "VU", "EN", "CR", "EW", "EX", "DD", "NE"]
-              - { label: "IUCN değerlendirme yılı", name: "iucn_yil", widget: "string", required: false, hint: "Ör. 2023. Sitede kategorinin yanında görünür." }
-              - label: "IUCN Türkiye (Türkiye Kırmızı Listesi)"
-                name: "iucn_tr"
-                widget: "select"
-                default: "NE"
-                required: false
-                options:
-                  - { label: "Henüz değerlendirilmedi", value: "NE" }
-                  - { label: "LC · Düşük endişe", value: "LC" }
-                  - { label: "NT · Tehdide yakın", value: "NT" }
-                  - { label: "VU · Hassas", value: "VU" }
-                  - { label: "EN · Tehlikede", value: "EN" }
-                  - { label: "CR · Kritik tehlikede", value: "CR" }
-                  - { label: "RE · Bölgesel olarak tükenmiş", value: "RE" }
-                  - { label: "DD · Veri yetersiz", value: "DD" }
-                  - { label: "NA · Uygulanamaz", value: "NA" }
-              - { label: "Açıklama (TR) · sitede türün altında görünür", name: "aciklama_tr", widget: "markdown", buttons: ["bold", "italic"], editor_components: [], modes: ["rich_text", "raw"], minimal: true, required: false }
-              - { label: "Açıklama (EN)", name: "aciklama_en", widget: "markdown", buttons: ["bold", "italic"], editor_components: [], modes: ["rich_text", "raw"], minimal: true, required: false }
-              - { label: "Kaynak bağlantısı (Reptile Database / ASW sayfası)", name: "kaynak", widget: "string", required: false }
-              - { label: "Kaynak notu (sitede görünmez)", name: "kaynak_notu", widget: "text", required: false }
-              - { label: "Türkiye'de kaydı doğrulanmış (kaynağa göre)", name: "turkiyede", widget: "boolean", default: true, required: false }
-              - { label: "Listede gizle", name: "gizle", widget: "boolean", default: false, required: false, hint: "Açıkken tür sitede görünmez ama panelde kalır." }
+              - { label: "Takım", name: "takim", widget: "string", required: false, hint: "Ör. Squamata (Sauria)" }
+              - label: "Türler"
+                name: "turler"
+                widget: "list"
+                collapsed: true
+                summary: "{{fields.latin}} · {{fields.tr}}"
+                fields:
+                  - { label: "Tür kodu", name: "kod", widget: "hidden", required: false }
+                  - { label: "Bilimsel ad", name: "latin", widget: "string", hint: "Burada yapılan değişiklik fotoğraflarda, saha haritasında, aramada ve listede her yerde görünür. Fotoğraflar türe sabit bir kodla bağlıdır." }
+                  - { label: "Yazar ve yıl, ör. (Linnaeus, 1758)", name: "yazar", widget: "string", required: false }
+                  - { label: "Türkçe adı", name: "tr", widget: "string", required: false }
+                  - { label: "İngilizce adı", name: "en", widget: "string", required: false }
+                  - { label: "Türkiye endemiği", name: "endemik", widget: "boolean", default: false, required: false }
+                  - { label: "Yerli olmayan (sonradan gelmiş / istilacı) tür", name: "yerli_degil", widget: "boolean", default: false, required: false, hint: "İşaretlenen tür listede YERLİ DEĞİL etiketiyle görünür ve yerli tür sayısına katılmaz." }
+                  - label: "IUCN küresel kategori"
+                    name: "iucn"
+                    widget: "select"
+                    default: "NE"
+                    options: ["LC", "NT", "VU", "EN", "CR", "EW", "EX", "DD", "NE"]
+                  - { label: "IUCN değerlendirme yılı", name: "iucn_yil", widget: "string", required: false, hint: "Ör. 2023. Sitede kategorinin yanında görünür." }
+                  - label: "IUCN Türkiye (Türkiye Kırmızı Listesi)"
+                    name: "iucn_tr"
+                    widget: "select"
+                    default: "NE"
+                    required: false
+                    options:
+                      - { label: "Henüz değerlendirilmedi", value: "NE" }
+                      - { label: "LC · Düşük endişe", value: "LC" }
+                      - { label: "NT · Tehdide yakın", value: "NT" }
+                      - { label: "VU · Hassas", value: "VU" }
+                      - { label: "EN · Tehlikede", value: "EN" }
+                      - { label: "CR · Kritik tehlikede", value: "CR" }
+                      - { label: "RE · Bölgesel olarak tükenmiş", value: "RE" }
+                      - { label: "DD · Veri yetersiz", value: "DD" }
+                      - { label: "NA · Uygulanamaz", value: "NA" }
+                  - { label: "Açıklama (TR) · sitede türün altında görünür", name: "aciklama_tr", widget: "markdown", buttons: ["bold", "italic"], editor_components: [], modes: ["rich_text", "raw"], minimal: true, required: false }
+                  - { label: "Açıklama (EN)", name: "aciklama_en", widget: "markdown", buttons: ["bold", "italic"], editor_components: [], modes: ["rich_text", "raw"], minimal: true, required: false }
+                  - { label: "Kaynak bağlantısı (Reptile Database / ASW sayfası)", name: "kaynak", widget: "string", required: false }
+                  - { label: "Kaynak notu (sitede görünmez)", name: "kaynak_notu", widget: "text", required: false }
+                  - { label: "Türkiye'de kaydı doğrulanmış (kaynağa göre)", name: "turkiyede", widget: "boolean", default: true, required: false }
+                  - { label: "Listede gizle", name: "gizle", widget: "boolean", default: false, required: false, hint: "Açıkken tür sitede görünmez ama panelde kalır." }
+                  - { label: "Başka familyaya taşı", name: "tasi", widget: "string", required: false, hint: "Tür yanlış familyaya eklendiyse doğru familya adını yazın (ör. Lacertidae). Kaydedince tür o familyaya geçer; familya yoksa yeni familya bölümü açılır. Bu kutu kayıttan sonra kendiliğinden boşalır." }

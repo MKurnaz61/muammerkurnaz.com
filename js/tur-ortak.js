@@ -7,11 +7,13 @@
 (function () {
   if (window.MKTur) return;
   var byKey = {}, list = [];
+  /* the list is stored family by family (familyalar > turler); this turns it into one species list */
+  function flatTL(d) { d = d || {}; if (d.species) return d.species; var o = []; (d.familyalar || []).forEach(function (f) { (f && f.turler || []).forEach(function (t) { if (!t) return; var x = {}; for (var k in t) x[k] = t[k]; x.familya = f.familya; x.grup = f.grup; x.takim = f.takim; o.push(x); }); }); return o; }
   function norm(t) { return String(t == null ? '' : t).replace(/[*_]/g, '').replace(/\s+/g, ' ').trim().toLowerCase(); }
   var ready = fetch('/data/turkiye-turleri.json', { cache: 'no-cache' })
     .then(function (r) { return r.ok ? r.json() : {}; }).catch(function () { return {}; })
     .then(function (d) {
-      list = (d.species || []).filter(function (s) { return s && s.latin; });
+      list = flatTL(d).filter(function (s) { return s && s.latin; });
       list.forEach(function (s) { byKey[norm(s.latin)] = s; });
       /* codes win over names, so a renamed species is still found by its old code */
       list.forEach(function (s) { if (s.kod) byKey[norm(s.kod)] = s; });
@@ -31,5 +33,5 @@
     };
   }
   function key(name) { var s = find(name); return s ? norm(s.kod || s.latin) : norm(name); }
-  window.MKTur = { ready: ready, find: find, names: names, key: key, norm: norm, all: function () { return list; } };
+  window.MKTur = { flat: flatTL, ready: ready, find: find, names: names, key: key, norm: norm, all: function () { return list; } };
 })();

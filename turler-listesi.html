@@ -85,6 +85,7 @@ main{padding-block:28px 64px}
 .marks{display:flex;gap:6px;align-items:center;justify-content:flex-end}
 .chip{font:600 11px var(--mono);letter-spacing:.03em;padding:2px 7px;border-radius:4px;white-space:nowrap}
 .chip.end{background:var(--endemic-bg);color:var(--endemic);border:1px solid #B9D6B3}
+.chip.intro{background:#FBEBDD;color:#8A3C0C;border:1px solid #E9C3A3}
 .chip.iu{color:#fff}
 .chip.ne{background:transparent;color:var(--muted);border:1px solid var(--rule)}
 .cam{color:var(--muted);display:inline-flex}
@@ -190,6 +191,7 @@ dialog.lbx button{position:absolute;top:8px;right:8px;border:0;border-radius:50%
   function thumb(src) { return String(src || '').replace(/(-k)?\.(jpe?g|png|webp)$/i, '-k.jpg'); }
   /* photos and cards are linked by the species code ("kod"), so a renamed species keeps its photos */
   var ALIAS = {};
+  function flatTL(d) { d = d || {}; if (d.species) return d.species; var o = []; (d.familyalar || []).forEach(function (f) { (f && f.turler || []).forEach(function (t) { if (!t) return; var x = {}; for (var k in t) x[k] = t[k]; x.familya = f.familya; x.grup = f.grup; x.takim = f.takim; o.push(x); }); }); return o; }
   function nk(l) { return String(l || '').replace(/[*_]/g, '').replace(/\s+/g, ' ').trim().toLowerCase(); }
   function key(l) { var n = nk(l); return ALIAS[n] || n; }
   function get(u) { return fetch(u, { cache: 'no-cache' }).then(function (r) { return r.ok ? r.json() : {}; }).catch(function () { return {}; }); }
@@ -215,7 +217,7 @@ dialog.lbx button{position:absolute;top:8px;right:8px;border:0;border-radius:50%
     return '<li id="' + esc(slug(s.latin)) + '"><button type="button" class="row-h" aria-expanded="false">' +
       '<span class="ln"><i>' + esc(s.latin) + '</i><small>' + esc(s.yazar || '') + '</small></span>' +
       '<span class="tn"><span class="tr">' + (s.tr ? esc(s.tr) : '<em>Türkçe adı henüz yok</em>') + '</span><span class="en">' + (s.en ? esc(s.en) : '<em>no English name yet</em>') + '</span></span>' +
-      '<span class="marks">' + (s.endemik ? '<span class="chip end">' + bi('ENDEMIC', 'ENDEMİK') + '</span>' : '') + iucnChip(s.iucn) +
+      '<span class="marks">' + (s.endemik ? '<span class="chip end">' + bi('ENDEMIC', 'ENDEMİK') + '</span>' : '') + (s.yerli_degil ? '<span class="chip intro">' + bi('INTRODUCED', 'YERLİ DEĞİL') + '</span>' : '') + iucnChip(s.iucn) +
       (ph.length ? '<span class="cam" title="' + ph.length + '"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M4 8h3l2-3h6l2 3h3v11H4z"/><circle cx="12" cy="13" r="3.5"/></svg></span>' : '') +
       '<svg class="chev" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><path d="M9 6l6 6-6 6"/></svg></span></button></li>';
   }
@@ -230,7 +232,7 @@ dialog.lbx button{position:absolute;top:8px;right:8px;border:0;border-radius:50%
         (s.tr ? '<dt>' + bi('Turkish name', 'Türkçe ad') + '</dt><dd>' + esc(s.tr) + '</dd>' : '') +
         (s.en ? '<dt>' + bi('English name', 'İngilizce ad') + '</dt><dd>' + esc(s.en) + '</dd>' : '') +
         '<dt>' + bi('Order · Family', 'Takım · Familya') + '</dt><dd>' + esc(s.takim || '') + ' · ' + esc(s.familya || '') + '</dd>' +
-        '<dt>' + bi('Endemic', 'Endemizm') + '</dt><dd>' + (s.endemik ? bi('Endemic to Türkiye', 'Türkiye endemiği') : bi('Not endemic', 'Endemik değil')) + '</dd>' +
+        '<dt>' + bi('Endemic', 'Endemizm') + '</dt><dd>' + (s.endemik ? bi('Endemic to Türkiye', 'Türkiye endemiği') : bi('Not endemic', 'Endemik değil')) + (s.yerli_degil ? ' · ' + bi('Introduced (not native)', 'Yerli olmayan (sonradan gelmiş) tür') : '') + '</dd>' +
         '<dt>IUCN</dt><dd>' + bi('Global: ', 'Küresel: ') + bi(INAME[gi] ? INAME[gi][0] : gi, INAME[gi] ? INAME[gi][1] : gi) + (ICOL[gi] ? ' (' + gi + (s.iucn_yil ? ', ' + esc(s.iucn_yil) : '') + ')' : '') + '<br>' +
           bi('Türkiye: ', 'Türkiye: ') + (tri === 'NE' ? bi('national Red List not yet published', 'Türkiye Kırmızı Listesi henüz yayımlanmadı') : bi(INAME[tri] ? INAME[tri][0] : tri, INAME[tri] ? INAME[tri][1] : tri) + ' (' + esc(tri) + ')') + '</dd>' +
       '</dl>' +
@@ -257,7 +259,7 @@ dialog.lbx button{position:absolute;top:8px;right:8px;border:0;border-radius:50%
       html += '<section class="grp"><h2>' + bi(g[1], g[2]) + ' <small>' + g[3] + ' · ' + list.length + '</small></h2>' +
         fams.map(function (f) {
           var fl = list.filter(function (s) { return s.familya === f; });
-          return '<div class="fam"><h3>' + esc(f) + ' <span>' + fl.length + '</span></h3><ul class="rows">' + fl.map(row).join('') + '</ul></div>';
+          return '<div class="fam"><h3 lang="la">' + esc(f) + ' <span>' + fl.length + '</span></h3><ul class="rows">' + fl.map(row).join('') + '</ul></div>';
         }).join('') + '</section>';
     });
     document.getElementById('list').innerHTML = html;
@@ -266,13 +268,16 @@ dialog.lbx button{position:absolute;top:8px;right:8px;border:0;border-radius:50%
   }
 
   function chips() {
-    var counts = {}; S.forEach(function (s) { counts[s.grup] = (counts[s.grup] || 0) + 1; });
-    var amph = (counts.kurbaga || 0) + (counts.semender || 0), rep = S.length - amph, end = S.filter(function (s) { return s.endemik; }).length;
+    /* the tally counts native species; introduced ones stay in the list with their own label */
+    var N = S.filter(function (s) { return !s.yerli_degil; }), intro = S.length - N.length;
+    var counts = {}; N.forEach(function (s) { counts[s.grup] = (counts[s.grup] || 0) + 1; });
+    var amph = (counts.kurbaga || 0) + (counts.semender || 0), rep = N.length - amph, end = N.filter(function (s) { return s.endemik; }).length;
     document.getElementById('tally').innerHTML =
-      '<div><b>' + S.length + '</b><span>' + bi('species', 'tür') + '</span></div>' +
+      '<div><b>' + N.length + '</b><span>' + bi('native species', 'yerli tür') + '</span></div>' +
       '<div><b>' + amph + '</b><span>' + bi('amphibians', 'amfibi') + '</span></div>' +
       '<div><b>' + rep + '</b><span>' + bi('reptiles', 'sürüngen') + '</span></div>' +
-      '<div><b>' + end + '</b><span>' + bi('endemic to Türkiye', 'Türkiye endemiği') + '</span></div>';
+      '<div><b>' + end + '</b><span>' + bi('endemic to Türkiye', 'Türkiye endemiği') + '</span></div>' +
+      (intro ? '<div><b>' + intro + '</b><span>' + bi('introduced', 'yerli olmayan') + '</span></div>' : '');
     document.getElementById('endN').textContent = end;
     document.getElementById('chips').innerHTML = [['all', 'All', 'Tümü']].concat(GROUPS).map(function (g) {
       var n = g[0] === 'all' ? S.length : (counts[g[0]] || 0);
@@ -303,8 +308,9 @@ dialog.lbx button{position:absolute;top:8px;right:8px;border:0;border-radius:50%
   lb.addEventListener('click', function (e) { if (e.target === lb || e.target.tagName === 'BUTTON') lb.close(); });
 
   Promise.all([get('data/turkiye-turleri.json'), get('photos.json'), get('data/turler.json')]).then(function (r) {
-    S = (r[0].species || []).filter(function (s) { return s && s.latin && s.gizle !== true; });
-    (r[0].species || []).forEach(function (s) { if (s && s.latin) { ALIAS[nk(s.latin)] = nk(s.latin); if (s.kod) ALIAS[nk(s.kod)] = nk(s.latin); } });
+    var ALL = flatTL(r[0]);
+    S = ALL.filter(function (s) { return s && s.latin && s.gizle !== true; });
+    ALL.forEach(function (s) { if (s && s.latin) { ALIAS[nk(s.latin)] = nk(s.latin); if (s.kod) ALIAS[nk(s.kod)] = nk(s.latin); } });
     (r[1].photos || []).forEach(function (p) { if (p && p.image) (PH[key(p.latin)] = PH[key(p.latin)] || []).push(p); });
     (r[2].species || []).forEach(function (c) { if (c && c.onay === true) CARD[key(c.latin)] = c; });
     var b = r[0].kaynak_tr || r[0].kaynak_en;
