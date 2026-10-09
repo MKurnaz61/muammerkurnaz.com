@@ -1020,7 +1020,7 @@
      "turkiyede": true,
      "tr": "Mardin Keleri",
      "yerli_degil": false,
-     "harita": ""
+     "harita": "images/haritalar/Mediodactylus-heterocercus.jpg"
     },
     {
      "kod": "Mediodactylus orientalis",
@@ -1058,7 +1058,7 @@
      "turkiyede": true,
      "tr": "Tombul Keleri",
      "yerli_degil": false,
-     "harita": ""
+     "harita": "images/haritalar/Stenodactylus-grandiceps.jpg"
     }
    ]
   },
@@ -1407,7 +1407,7 @@
      "turkiyede": true,
      "tr": "Artvin Kertenkelesi",
      "yerli_degil": false,
-     "harita": ""
+     "harita": "images/haritalar/Darevskia-derjugini.jpg"
     },
     {
      "kod": "Darevskia josefschmidtleri",
@@ -2079,7 +2079,7 @@
      "turkiyede": true,
      "tr": "Yaprak Parmaklı Keler",
      "yerli_degil": false,
-     "harita": ""
+     "harita": "images/haritalar/Asaccus-barani.jpg"
     }
    ]
   },
