@@ -1103,7 +1103,7 @@
      "turkiyede": true,
      "tr": "Harran Kertenkelesi",
      "yerli_degil": false,
-     "harita": ""
+     "harita": "images/haritalar/Acanthodactylus-harranensis.jpg"
     },
     {
      "kod": "Acanthodactylus ilgazi",
@@ -1141,7 +1141,7 @@
      "turkiyede": true,
      "tr": "İskenderun Kertenkelesi",
      "yerli_degil": false,
-     "harita": ""
+     "harita": "images/haritalar/Acanthodactylus-schreiberi.jpg"
     },
     {
      "kod": "Anatololacerta anatolica",
