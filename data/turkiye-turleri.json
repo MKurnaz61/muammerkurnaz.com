@@ -107,7 +107,7 @@
      "turkiyede": true,
      "tr": "Kafkas Kurbağası",
      "yerli_degil": false,
-     "harita": ""
+     "harita": "images/haritalar/Pelodytes-caucasicus.jpg"
     }
    ]
   },
@@ -171,7 +171,7 @@
      "turkiyede": true,
      "tr": "Uludağ Kurbağası/Yayla Kurbağası",
      "yerli_degil": false,
-     "harita": ""
+     "harita": "images/haritalar/Rana-macrocnemis.jpg"
     },
     {
      "kod": "Rana tavasensis",
@@ -216,7 +216,7 @@
      "turkiyede": true,
      "tr": "Kırmızılı Kurbağa",
      "yerli_degil": false,
-     "harita": ""
+     "harita": "images/haritalar/Bombina-bombina.jpg"
     },
     {
      "kod": "Bombina variegata",
@@ -235,7 +235,7 @@
      "turkiyede": true,
      "tr": "Sarı Karınlı Kurbağa",
      "yerli_degil": false,
-     "harita": ""
+     "harita": "images/haritalar/Bombina-variegata.jpg"
     }
    ]
   },
@@ -261,7 +261,7 @@
      "turkiyede": true,
      "tr": "Siğilli Kurbağa",
      "yerli_degil": false,
-     "harita": ""
+     "harita": "images/haritalar/Bufo-bufo.jpg"
     },
     {
      "kod": "Bufotes viridis",
@@ -280,7 +280,7 @@
      "turkiyede": true,
      "tr": "Gece Kurbağası",
      "yerli_degil": false,
-     "harita": ""
+     "harita": "images/haritalar/Bufotes-viridis.jpg"
     }
    ]
   },
@@ -306,7 +306,7 @@
      "turkiyede": true,
      "tr": "Ağaç Kurbağası",
      "yerli_degil": false,
-     "harita": ""
+     "harita": "images/haritalar/Hyla-orientalis.jpg"
     },
     {
      "kod": "Hyla savignyi",
@@ -325,7 +325,7 @@
      "turkiyede": true,
      "tr": "Yeşil Kurbağa",
      "yerli_degil": false,
-     "harita": ""
+     "harita": "images/haritalar/Hyla-savignyi.jpg"
     }
    ]
   },
@@ -370,7 +370,7 @@
      "turkiyede": true,
      "tr": "Cüce Semender",
      "yerli_degil": false,
-     "harita": ""
+     "harita": "images/haritalar/Lissotriton-vulgaris.jpg"
     },
     {
      "kod": "Lyciasalamandra antalyana",
@@ -674,7 +674,7 @@
      "turkiyede": true,
      "tr": "Balkan Pürtüklü Semenderi",
      "yerli_degil": false,
-     "harita": ""
+     "harita": "images/haritalar/Triturus-ivanbureschi.jpg"
     },
     {
      "kod": "Triturus karelinii",
@@ -693,7 +693,7 @@
      "turkiyede": true,
      "tr": "Pürtüklü Semender",
      "yerli_degil": false,
-     "harita": ""
+     "harita": "images/haritalar/Triturus-karelinii.jpg"
     }
    ]
   },
