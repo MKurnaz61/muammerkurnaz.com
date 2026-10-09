@@ -1,6 +1,134 @@
 {
   "photos": [
     {
+      "exact": false,
+      "image": "images/photos/img_8500.jpg",
+      "latin": "Podarcis siculus",
+      "date": "2016",
+      "tr_name": "İstanbul Kertenkelesi",
+      "en_name": "Italian Wall Lizard"
+    },
+    {
+      "exact": false,
+      "image": "images/photos/img_8374.jpg",
+      "latin": "Podarcis siculus",
+      "date": "2016",
+      "tr_name": "İstanbul Kertenkelesi",
+      "en_name": "Italian Wall Lizard"
+    },
+    {
+      "exact": false,
+      "image": "images/photos/img_8183.jpg",
+      "latin": "Podarcis muralis",
+      "date": "2016",
+      "tr_name": "Duvar Kertenkelesi",
+      "en_name": "Common Wall Lizard"
+    },
+    {
+      "exact": false,
+      "image": "images/photos/img_6356.jpg",
+      "latin": "Anatololacerta pelasgiana",
+      "date": "2026",
+      "tr_name": "Pelasg Kaya Kertenkelesi",
+      "en_name": "Pelasgian Rock Lizard"
+    },
+    {
+      "exact": false,
+      "image": "images/photos/img_6196.jpg",
+      "latin": "Testudo graeca",
+      "date": "2026",
+      "tr_name": "Tosbağa",
+      "en_name": "Mediterranean Spur-thighed Tortoise"
+    },
+    {
+      "exact": false,
+      "image": "images/photos/img_6164.jpg",
+      "latin": "Pelophylax ridibundus",
+      "date": "2026",
+      "tr_name": "Ova Kurbağası",
+      "en_name": "Marsh Frog"
+    },
+    {
+      "exact": false,
+      "image": "images/photos/img_6141.jpg",
+      "latin": "Pelophylax ridibundus",
+      "date": "2026",
+      "tr_name": "Ova Kurbağası",
+      "en_name": "Marsh Frog"
+    },
+    {
+      "exact": false,
+      "image": "images/photos/img_5475.jpg",
+      "latin": "Heremites auratus",
+      "date": "2026",
+      "tr_name": "Tıknaz Kertenkele",
+      "en_name": "Golden Grass Mabuya"
+    },
+    {
+      "exact": false,
+      "image": "images/photos/img_5246.jpg",
+      "date": "2026",
+      "latin": "Ablepharus anatolicus",
+      "tr_name": "Anadolu İnce Kertenkelesi",
+      "en_name": "Lycian Snake-eyed Skink"
+    },
+    {
+      "exact": false,
+      "image": "images/photos/img_5118.jpg",
+      "latin": "Ablepharus anatolicus",
+      "date": "2026",
+      "tr_name": "Anadolu İnce Kertenkelesi",
+      "en_name": "Lycian Snake-eyed Skink"
+    },
+    {
+      "exact": false,
+      "image": "images/photos/img_4997.jpg",
+      "latin": "Testudo graeca",
+      "date": "2026",
+      "tr_name": "Tosbağa",
+      "en_name": "Mediterranean Spur-thighed Tortoise"
+    },
+    {
+      "exact": false,
+      "image": "images/photos/img_4923.jpg",
+      "latin": "Ophisops elegans",
+      "date": "2026",
+      "tr_name": "Tarla Kertenkelesi",
+      "en_name": "Snake-eyed Lizard"
+    },
+    {
+      "exact": false,
+      "image": "images/photos/img_4709.jpg",
+      "latin": "Eirenis modestus",
+      "date": "2026",
+      "tr_name": "Uysal Yılan",
+      "en_name": "Asia Minor Dwarf Racer"
+    },
+    {
+      "exact": false,
+      "image": "images/photos/img_4383.jpg",
+      "latin": "Rana dalmatina",
+      "date": "2017",
+      "tr_name": "Çevik Kurbağa",
+      "en_name": "Agile Frog"
+    },
+    {
+      "exact": false,
+      "image": "images/photos/img_3951.jpg",
+      "latin": "Mauremys rivulata",
+      "date": "2026",
+      "tr_name": "Balkan Çizgili Kaplumbağası",
+      "en_name": "Western Caspian Turtle"
+    },
+    {
+      "exact": false,
+      "image": "images/photos/img_0775.jpg",
+      "latin": "Pelophylax ridibundus",
+      "date": "2021",
+      "tr_name": "Ova Kurbağası",
+      "en_name": "Marsh Frog"
+    },
+    {
       "image": "images/photos/podarcis-siculus.jpg",
       "tr_name": "İstanbul Kertenkelesi",
       "latin": "Podarcis siculus",
