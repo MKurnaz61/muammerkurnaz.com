@@ -572,6 +572,7 @@ collections:
                       - { label: "NA · Uygulanamaz", value: "NA" }
                   - { label: "Açıklama (TR) · sitede türün altında görünür", name: "aciklama_tr", widget: "markdown", buttons: ["bold", "italic"], editor_components: [], modes: ["rich_text", "raw"], minimal: true, required: false }
                   - { label: "Açıklama (EN)", name: "aciklama_en", widget: "markdown", buttons: ["bold", "italic"], editor_components: [], modes: ["rich_text", "raw"], minimal: true, required: false }
+                  - { label: "Dağılım haritası", name: "harita", widget: "image", required: false, media_folder: "/images/haritalar", public_folder: "images/haritalar", choose_url: false, hint: "Sitede türün ayrıntısında görünür. Yeni harita yüklemek için 'Farklı bir resim seçin'; kaldırmak için 'Resmi kaldır'." }
                   - { label: "Kaynak bağlantısı (Reptile Database / ASW sayfası)", name: "kaynak", widget: "string", required: false }
                   - { label: "Kaynak notu (sitede görünmez)", name: "kaynak_notu", widget: "text", required: false }
                   - { label: "Türkiye'de kaydı doğrulanmış (kaynağa göre)", name: "turkiyede", widget: "boolean", default: true, required: false }

@@ -99,6 +99,10 @@ li.open .chev{transform:rotate(90deg)}
 .det dl{margin:0;display:grid;grid-template-columns:auto minmax(0,1fr);gap:6px 16px;font-size:15.5px}
 .det dt{font:500 11px var(--mono);letter-spacing:.08em;text-transform:uppercase;color:var(--muted);padding-top:4px}
 .det dd{margin:0;min-width:0}
+.det .map{grid-column:1/-1;margin:0}
+.det .map button{display:block;width:100%;padding:0;border:1px solid var(--line,#DCE3EA);border-radius:10px;overflow:hidden;background:#DCE8F1;cursor:zoom-in}
+.det .map img{display:block;width:100%;height:auto}
+.det .map figcaption{margin-top:6px;font:12px var(--mono);color:var(--muted)}
 .det .dist{grid-column:1/-1;padding:12px 14px;background:#F6F8FA;border-radius:10px;font-size:15.5px}
 .det .dist b{display:block;font:500 11px var(--mono);letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin-bottom:4px}
 .det .lnk{grid-column:1/-1;display:flex;flex-wrap:wrap;gap:8px}
@@ -236,6 +240,8 @@ dialog.lbx button{position:absolute;top:8px;right:8px;border:0;border-radius:50%
         '<dt>IUCN</dt><dd>' + bi('Global: ', 'Küresel: ') + bi(INAME[gi] ? INAME[gi][0] : gi, INAME[gi] ? INAME[gi][1] : gi) + (ICOL[gi] ? ' (' + gi + (s.iucn_yil ? ', ' + esc(s.iucn_yil) : '') + ')' : '') + '<br>' +
           bi('Türkiye: ', 'Türkiye: ') + (tri === 'NE' ? bi('national Red List not yet published', 'Türkiye Kırmızı Listesi henüz yayımlanmadı') : bi(INAME[tri] ? INAME[tri][0] : tri, INAME[tri] ? INAME[tri][1] : tri) + ' (' + esc(tri) + ')') + '</dd>' +
       '</dl>' +
+      (s.harita ? '<figure class="map"><button type="button" data-img="' + esc(s.harita) + '" data-cap="' + esc(s.latin + (s.tr ? ' · ' + s.tr : '')) + '"><img src="' + esc(s.harita) + '" alt="' + esc(s.latin) + '" loading="lazy" width="1200" height="541"></button>' +
+        '<figcaption>' + bi('Representative distribution area in Türkiye', 'Türkiye\'deki temsilî dağılım alanı') + '</figcaption></figure>' : '') +
       (c && (c.dist_tr || c.dist_en) ? '<div class="dist"><b>' + bi('Distribution', 'Yayılış') + '</b><span class="en">' + md(c.dist_en || c.dist_tr) + '</span><span class="tr">' + md(c.dist_tr || c.dist_en) + '</span></div>' : '') +
       (s.aciklama_tr || s.aciklama_en ? '<div class="dist"><b>' + bi('Notes', 'Not') + '</b><span class="en">' + md(s.aciklama_en || s.aciklama_tr) + '</span><span class="tr">' + md(s.aciklama_tr || s.aciklama_en) + '</span></div>' : '') +
       '<div class="lnk">' + (s.kaynak ? '<a href="' + esc(s.kaynak) + '" target="_blank" rel="noopener">' + src + ' ↗</a>' : '') +
@@ -300,7 +306,7 @@ dialog.lbx button{position:absolute;top:8px;right:8px;border:0;border-radius:50%
     if (open) { try { history.replaceState(null, '', '#' + li.id); } catch (e) {} }
   }
   document.getElementById('list').addEventListener('click', function (e) {
-    var im = e.target.closest('.ph button');
+    var im = e.target.closest('.ph button, .map button');
     if (im) { var dl = document.getElementById('lbx'); dl.querySelector('img').src = im.dataset.img; dl.querySelector('p').textContent = im.dataset.cap; dl.showModal ? dl.showModal() : window.open(im.dataset.img); return; }
     var b = e.target.closest('.row-h'); if (b) toggle(b.closest('li'));
   });
