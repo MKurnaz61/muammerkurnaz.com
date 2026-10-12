@@ -171,7 +171,25 @@
      "turkiyede": true,
      "tr": "Uludağ Kurbağası/Yayla Kurbağası",
      "yerli_degil": false,
-     "harita": "images/haritalar/Rana-macrocnemis.jpg"
+     "harita": "images/haritalar/Rana-macrocnemis.jpg",
+     "alturler": [
+      {
+       "latin": "Rana macrocnemis macrocnemis",
+       "yazar": "Boulenger, 1885",
+       "yayilis": "",
+       "durum": "tartismali",
+       "not": "Amphibian Species of the World: https://amphibiansoftheworld.amnh.org/Amphibia/Anura/Ranidae/Rana/Rana-macrocnemis; ASW: alttürler tartışmalı",
+       "goster": false
+      },
+      {
+       "latin": "Rana macrocnemis holtzi",
+       "yazar": "(Werner, 1898)",
+       "yayilis": "Toroslar (Bolkar, Aladağlar)",
+       "durum": "tartismali",
+       "not": "Amphibian Species of the World: https://amphibiansoftheworld.amnh.org/Amphibia/Anura/Ranidae/Rana/Rana-macrocnemis; tartışmalı; camerani sinonim",
+       "goster": false
+      }
+     ]
     },
     {
      "kod": "Rana tavasensis",
@@ -216,7 +234,25 @@
      "turkiyede": true,
      "tr": "Kırmızılı Kurbağa",
      "yerli_degil": false,
-     "harita": "images/haritalar/Bombina-bombina.jpg"
+     "harita": "images/haritalar/Bombina-bombina.jpg",
+     "alturler": [
+      {
+       "latin": "Bombina bombina bombina",
+       "yazar": "(Linnaeus, 1761)",
+       "yayilis": "Trakya",
+       "durum": "teyitli",
+       "not": "Amphibian Species of the World: https://amphibiansoftheworld.amnh.org/Amphibia/Anura/Bombinatoridae/Bombina/Bombina-bombina",
+       "goster": false
+      },
+      {
+       "latin": "Bombina bombina arifiyensis",
+       "yazar": "Özeti & Yılmaz, 1987",
+       "yayilis": "Sakarya (Arifiye)",
+       "durum": "teyitli",
+       "not": "Amphibian Species of the World: https://amphibiansoftheworld.amnh.org/Amphibia/Anura/Bombinatoridae/Bombina/Bombina-bombina",
+       "goster": false
+      }
+     ]
     },
     {
      "kod": "Bombina variegata",
@@ -235,7 +271,17 @@
      "turkiyede": true,
      "tr": "Sarı Karınlı Kurbağa",
      "yerli_degil": false,
-     "harita": "images/haritalar/Bombina-variegata.jpg"
+     "harita": "images/haritalar/Bombina-variegata.jpg",
+     "alturler": [
+      {
+       "latin": "Bombina variegata scabra",
+       "yazar": "(Küster, 1843)",
+       "yayilis": "Trakya",
+       "durum": "teyitli",
+       "not": "Amphibian Species of the World: https://amphibiansoftheworld.amnh.org/Amphibia/Anura/Bombinatoridae/Bombina/Bombina-variegata",
+       "goster": false
+      }
+     ]
     }
    ]
   },
@@ -280,7 +326,25 @@
      "turkiyede": true,
      "tr": "Gece Kurbağası",
      "yerli_degil": false,
-     "harita": "images/haritalar/Bufotes-viridis.jpg"
+     "harita": "images/haritalar/Bufotes-viridis.jpg",
+     "alturler": [
+      {
+       "latin": "Bufotes viridis viridis",
+       "yazar": "(Laurenti, 1768)",
+       "yayilis": "Trakya",
+       "durum": "teyitli",
+       "not": "Amphibian Species of the World: https://amphibiansoftheworld.amnh.org/Amphibia/Anura/Bufonidae/Bufotes/Bufotes-viridis",
+       "goster": false
+      },
+      {
+       "latin": "Bufotes viridis sitibundus",
+       "yazar": "(Pallas, 1771)",
+       "yayilis": "Anadolu",
+       "durum": "teyitli",
+       "not": "Amphibian Species of the World: https://amphibiansoftheworld.amnh.org/Amphibia/Anura/Bufonidae/Bufotes/Bufotes-viridis",
+       "goster": false
+      }
+     ]
     }
    ]
   },
@@ -370,7 +434,25 @@
      "turkiyede": true,
      "tr": "Cüce Semender",
      "yerli_degil": false,
-     "harita": "images/haritalar/Lissotriton-vulgaris.jpg"
+     "harita": "images/haritalar/Lissotriton-vulgaris.jpg",
+     "alturler": [
+      {
+       "latin": "Lissotriton vulgaris schmidtleri",
+       "yazar": "(Raxworthy, 1988)",
+       "yayilis": "Batı Anadolu, Trakya",
+       "durum": "teyitli",
+       "not": "Amphibian Species of the World: https://amphibiansoftheworld.amnh.org/Amphibia/Caudata/Salamandridae/Pleurodelinae/Lissotriton/Lissotriton-vulgaris",
+       "goster": false
+      },
+      {
+       "latin": "Lissotriton vulgaris lantzi",
+       "yazar": "(Wolterstorff, 1914)",
+       "yayilis": "KD Anadolu",
+       "durum": "teyitli",
+       "not": "Amphibian Species of the World: https://amphibiansoftheworld.amnh.org/Amphibia/Caudata/Salamandridae/Pleurodelinae/Lissotriton/Lissotriton-vulgaris",
+       "goster": false
+      }
+     ]
     },
     {
      "kod": "Lyciasalamandra antalyana",
@@ -389,7 +471,25 @@
      "turkiyede": true,
      "tr": "Antalya Likya Semenderi",
      "yerli_degil": false,
-     "harita": "images/haritalar/Lyciasalamandra-antalyana.jpg"
+     "harita": "images/haritalar/Lyciasalamandra-antalyana.jpg",
+     "alturler": [
+      {
+       "latin": "Lyciasalamandra antalyana antalyana",
+       "yazar": "(Başoğlu & Baran, 1976)",
+       "yayilis": "",
+       "durum": "teyitli",
+       "not": "Amphibian Species of the World: https://amphibiansoftheworld.amnh.org/Amphibia/Caudata/Salamandridae/Salamandrinae/Lyciasalamandra/Lyciasalamandra-antalyana",
+       "goster": false
+      },
+      {
+       "latin": "Lyciasalamandra antalyana gocmeni",
+       "yazar": "Akman & Godmann, 2014",
+       "yayilis": "Antalya",
+       "durum": "teyitli",
+       "not": "Amphibian Species of the World: https://amphibiansoftheworld.amnh.org/Amphibia/Caudata/Salamandridae/Salamandrinae/Lyciasalamandra/Lyciasalamandra-antalyana",
+       "goster": false
+      }
+     ]
     },
     {
      "kod": "Lyciasalamandra atifi",
@@ -408,7 +508,57 @@
      "turkiyede": true,
      "tr": "Atıf'ın Likya Semenderi",
      "yerli_degil": false,
-     "harita": "images/haritalar/Lyciasalamandra-atifi.jpg"
+     "harita": "images/haritalar/Lyciasalamandra-atifi.jpg",
+     "alturler": [
+      {
+       "latin": "Lyciasalamandra atifi atifi",
+       "yazar": "(Başoğlu, 1967)",
+       "yayilis": "",
+       "durum": "teyitli",
+       "not": "Amphibian Species of the World: https://amphibiansoftheworld.amnh.org/Amphibia/Caudata/Salamandridae/Salamandrinae/Lyciasalamandra/Lyciasalamandra-atifi",
+       "goster": false
+      },
+      {
+       "latin": "Lyciasalamandra atifi bayrami",
+       "yazar": "Yıldız & Akman, 2015",
+       "yayilis": "Alanya",
+       "durum": "teyitli",
+       "not": "Amphibian Species of the World: https://amphibiansoftheworld.amnh.org/Amphibia/Caudata/Salamandridae/Salamandrinae/Lyciasalamandra/Lyciasalamandra-atifi",
+       "goster": false
+      },
+      {
+       "latin": "Lyciasalamandra atifi godmanni",
+       "yazar": "Oğuz, Göçmen & Yalçınkaya, 2016",
+       "yayilis": "Selge",
+       "durum": "teyitli",
+       "not": "Amphibian Species of the World: https://amphibiansoftheworld.amnh.org/Amphibia/Caudata/Salamandridae/Salamandrinae/Lyciasalamandra/Lyciasalamandra-atifi",
+       "goster": false
+      },
+      {
+       "latin": "Lyciasalamandra atifi kunti",
+       "yazar": "Oğuz, Göçmen & Yalçınkaya, 2016",
+       "yayilis": "Güzelbağ",
+       "durum": "teyitli",
+       "not": "Amphibian Species of the World: https://amphibiansoftheworld.amnh.org/Amphibia/Caudata/Salamandridae/Salamandrinae/Lyciasalamandra/Lyciasalamandra-atifi",
+       "goster": false
+      },
+      {
+       "latin": "Lyciasalamandra atifi oezi",
+       "yazar": "Tok, Afsar & Yakın, 2016",
+       "yayilis": "Gazipaşa",
+       "durum": "teyitli",
+       "not": "Amphibian Species of the World: https://amphibiansoftheworld.amnh.org/Amphibia/Caudata/Salamandridae/Salamandrinae/Lyciasalamandra/Lyciasalamandra-atifi",
+       "goster": false
+      },
+      {
+       "latin": "Lyciasalamandra atifi veithi",
+       "yazar": "Oğuz, Göçmen & Yalçınkaya, 2016",
+       "yayilis": "Akseki",
+       "durum": "teyitli",
+       "not": "Amphibian Species of the World: https://amphibiansoftheworld.amnh.org/Amphibia/Caudata/Salamandridae/Salamandrinae/Lyciasalamandra/Lyciasalamandra-atifi",
+       "goster": false
+      }
+     ]
     },
     {
      "kod": "Lyciasalamandra billae",
@@ -427,7 +577,49 @@
      "turkiyede": true,
      "tr": "Beydağları Semenderi",
      "yerli_degil": false,
-     "harita": "images/haritalar/Lyciasalamandra-billae.jpg"
+     "harita": "images/haritalar/Lyciasalamandra-billae.jpg",
+     "alturler": [
+      {
+       "latin": "Lyciasalamandra billae billae",
+       "yazar": "(Franzen & Klewen, 1987)",
+       "yayilis": "",
+       "durum": "teyitli",
+       "not": "Amphibian Species of the World: https://amphibiansoftheworld.amnh.org/Amphibia/Caudata/Salamandridae/Salamandrinae/Lyciasalamandra/Lyciasalamandra-billae",
+       "goster": false
+      },
+      {
+       "latin": "Lyciasalamandra billae arikani",
+       "yazar": "Göçmen & Akman, 2012",
+       "yayilis": "",
+       "durum": "teyitli",
+       "not": "Amphibian Species of the World: https://amphibiansoftheworld.amnh.org/Amphibia/Caudata/Salamandridae/Salamandrinae/Lyciasalamandra/Lyciasalamandra-billae",
+       "goster": false
+      },
+      {
+       "latin": "Lyciasalamandra billae eikeae",
+       "yazar": "Godmann, Kariş & Göçmen, 2016",
+       "yayilis": "Konyaaltı",
+       "durum": "teyitli",
+       "not": "Amphibian Species of the World: https://amphibiansoftheworld.amnh.org/Amphibia/Caudata/Salamandridae/Salamandrinae/Lyciasalamandra/Lyciasalamandra-billae",
+       "goster": false
+      },
+      {
+       "latin": "Lyciasalamandra billae irfani",
+       "yazar": "Göçmen, Arıkan & Yalçınkaya, 2011",
+       "yayilis": "",
+       "durum": "teyitli",
+       "not": "Amphibian Species of the World: https://amphibiansoftheworld.amnh.org/Amphibia/Caudata/Salamandridae/Salamandrinae/Lyciasalamandra/Lyciasalamandra-billae",
+       "goster": false
+      },
+      {
+       "latin": "Lyciasalamandra billae yehudahi",
+       "yazar": "Göçmen & Akman, 2012",
+       "yayilis": "",
+       "durum": "teyitli",
+       "not": "Amphibian Species of the World: https://amphibiansoftheworld.amnh.org/Amphibia/Caudata/Salamandridae/Salamandrinae/Lyciasalamandra/Lyciasalamandra-billae",
+       "goster": false
+      }
+     ]
     },
     {
      "kod": "Lyciasalamandra fazilae",
@@ -446,7 +638,25 @@
      "turkiyede": true,
      "tr": "Kırmızı Semender",
      "yerli_degil": false,
-     "harita": "images/haritalar/Lyciasalamandra-fazilae.jpg"
+     "harita": "images/haritalar/Lyciasalamandra-fazilae.jpg",
+     "alturler": [
+      {
+       "latin": "Lyciasalamandra fazilae fazilae",
+       "yazar": "(Başoğlu & Atatür, 1974)",
+       "yayilis": "",
+       "durum": "teyitli",
+       "not": "Amphibian Species of the World: https://amphibiansoftheworld.amnh.org/Amphibia/Caudata/Salamandridae/Salamandrinae/Lyciasalamandra/Lyciasalamandra-fazilae",
+       "goster": false
+      },
+      {
+       "latin": "Lyciasalamandra fazilae ulfetae",
+       "yazar": "Göçmen vd., 2018",
+       "yayilis": "Köyceğiz",
+       "durum": "teyitli",
+       "not": "Amphibian Species of the World: https://amphibiansoftheworld.amnh.org/Amphibia/Caudata/Salamandridae/Salamandrinae/Lyciasalamandra/Lyciasalamandra-fazilae",
+       "goster": false
+      }
+     ]
     },
     {
      "kod": "Lyciasalamandra finikensis",
@@ -484,7 +694,25 @@
      "turkiyede": true,
      "tr": "Marmaris Semenderi",
      "yerli_degil": false,
-     "harita": "images/haritalar/Lyciasalamandra-flavimembris.jpg"
+     "harita": "images/haritalar/Lyciasalamandra-flavimembris.jpg",
+     "alturler": [
+      {
+       "latin": "Lyciasalamandra flavimembris flavimembris",
+       "yazar": "(Mutz & Steinfartz, 1995)",
+       "yayilis": "",
+       "durum": "teyitli",
+       "not": "Amphibian Species of the World: https://amphibiansoftheworld.amnh.org/Amphibia/Caudata/Salamandridae/Salamandrinae/Lyciasalamandra/Lyciasalamandra-flavimembris",
+       "goster": false
+      },
+      {
+       "latin": "Lyciasalamandra flavimembris ilgazi",
+       "yazar": "Üzüm, Avcı, Bozkurt & Olgun, 2015",
+       "yayilis": "Muğla",
+       "durum": "teyitli",
+       "not": "Amphibian Species of the World: https://amphibiansoftheworld.amnh.org/Amphibia/Caudata/Salamandridae/Salamandrinae/Lyciasalamandra/Lyciasalamandra-flavimembris",
+       "goster": false
+      }
+     ]
     },
     {
      "kod": "Lyciasalamandra luschani",
@@ -503,7 +731,25 @@
      "turkiyede": true,
      "tr": "Likya Semenderi",
      "yerli_degil": false,
-     "harita": ""
+     "harita": "",
+     "alturler": [
+      {
+       "latin": "Lyciasalamandra luschani luschani",
+       "yazar": "(Steindachner, 1891)",
+       "yayilis": "",
+       "durum": "teyitli",
+       "not": "Amphibian Species of the World: https://amphibiansoftheworld.amnh.org/Amphibia/Caudata/Salamandridae/Salamandrinae/Lyciasalamandra/Lyciasalamandra-luschani",
+       "goster": false
+      },
+      {
+       "latin": "Lyciasalamandra luschani basoglui",
+       "yazar": "(Baran & Atatür, 1980)",
+       "yayilis": "",
+       "durum": "tartismali",
+       "not": "Amphibian Species of the World: https://amphibiansoftheworld.amnh.org/Amphibia/Caudata/Salamandridae/Salamandrinae/Lyciasalamandra/Lyciasalamandra-luschani; ASW: tartışmalı",
+       "goster": false
+      }
+     ]
     },
     {
      "kod": "Mertensiella caucasica",
@@ -560,7 +806,33 @@
      "turkiyede": true,
      "tr": "Anadolu Benekli Semenderi",
      "yerli_degil": false,
-     "harita": "images/haritalar/Neurergus-strauchii.jpg"
+     "harita": "images/haritalar/Neurergus-strauchii.jpg",
+     "alturler": [
+      {
+       "latin": "Neurergus strauchii strauchii",
+       "yazar": "(Steindachner, 1887)",
+       "yayilis": "Van, Bitlis, Muş",
+       "durum": "teyitli",
+       "not": "Amphibian Species of the World: https://amphibiansoftheworld.amnh.org/Amphibia/Caudata/Salamandridae/Pleurodelinae/Neurergus/Neurergus-strauchii",
+       "goster": false
+      },
+      {
+       "latin": "Neurergus strauchii barani",
+       "yazar": "Öz, 1994",
+       "yayilis": "Malatya",
+       "durum": "tartismali",
+       "not": "Amphibian Species of the World: https://amphibiansoftheworld.amnh.org/Amphibia/Caudata/Salamandridae/Pleurodelinae/Neurergus/Neurergus-strauchii; ASW ayrı tür sayfası; Koster vd. 2025 tür ve alttür statüsünü reddetti",
+       "goster": false
+      },
+      {
+       "latin": "Neurergus strauchii munzurensis",
+       "yazar": "Olgun vd., 2016",
+       "yayilis": "Tunceli (Munzur)",
+       "durum": "tartismali",
+       "not": "Amphibian Species of the World: https://amphibiansoftheworld.amnh.org/Amphibia/Caudata/Salamandridae/Pleurodelinae/Neurergus/Neurergus-strauchii; ASW ayrı tür sayfası; tartışmalı",
+       "goster": false
+      }
+     ]
     },
     {
      "kod": "Ommatotriton nesterovi",
@@ -617,7 +889,25 @@
      "turkiyede": true,
      "tr": "Şeritli Semender",
      "yerli_degil": false,
-     "harita": "images/haritalar/Ommatotriton-vittatus.jpg"
+     "harita": "images/haritalar/Ommatotriton-vittatus.jpg",
+     "alturler": [
+      {
+       "latin": "Ommatotriton vittatus vittatus",
+       "yazar": "(Gray, 1835)",
+       "yayilis": "Hatay",
+       "durum": "teyitli",
+       "not": "Amphibian Species of the World: https://amphibiansoftheworld.amnh.org/Amphibia/Caudata/Salamandridae/Pleurodelinae/Ommatotriton/Ommatotriton-vittatus",
+       "goster": false
+      },
+      {
+       "latin": "Ommatotriton vittatus cilicensis",
+       "yazar": "(Wolterstorff, 1906)",
+       "yayilis": "Adana, Mersin",
+       "durum": "teyitli",
+       "not": "Amphibian Species of the World: https://amphibiansoftheworld.amnh.org/Amphibia/Caudata/Salamandridae/Pleurodelinae/Ommatotriton/Ommatotriton-vittatus",
+       "goster": false
+      }
+     ]
     },
     {
      "kod": "Salamandra infraimmaculata",
@@ -636,7 +926,33 @@
      "turkiyede": true,
      "tr": "Ateş Semenderi",
      "yerli_degil": false,
-     "harita": "images/haritalar/Salamandra-infraimmaculata.jpg"
+     "harita": "images/haritalar/Salamandra-infraimmaculata.jpg",
+     "alturler": [
+      {
+       "latin": "Salamandra infraimmaculata infraimmaculata",
+       "yazar": "(Martens, 1885)",
+       "yayilis": "Hatay, Akdeniz",
+       "durum": "tartismali",
+       "not": "Amphibian Species of the World: https://amphibiansoftheworld.amnh.org/Amphibia/Caudata/Salamandridae/Salamandrinae/Salamandra/Salamandra-infraimmaculata; ASW: taksonomi belirsiz",
+       "goster": false
+      },
+      {
+       "latin": "Salamandra infraimmaculata orientalis",
+       "yazar": "(Wolterstorff, 1925)",
+       "yayilis": "Toroslar, GD Anadolu",
+       "durum": "tartismali",
+       "not": "Amphibian Species of the World: https://amphibiansoftheworld.amnh.org/Amphibia/Caudata/Salamandridae/Salamandrinae/Salamandra/Salamandra-infraimmaculata; ASW: taksonomi belirsiz",
+       "goster": false
+      },
+      {
+       "latin": "Salamandra infraimmaculata semenovi",
+       "yazar": "(Nesterov, 1916)",
+       "yayilis": "Doğu Anadolu (Bitlis, Hakkari)",
+       "durum": "teyitli",
+       "not": "Amphibian Species of the World: https://amphibiansoftheworld.amnh.org/Amphibia/Caudata/Salamandridae/Salamandrinae/Salamandra/Salamandra-infraimmaculata",
+       "goster": false
+      }
+     ]
     },
     {
      "kod": "Triturus anatolicus",
@@ -757,7 +1073,25 @@
      "turkiyede": true,
      "tr": "Kör Kertenkele",
      "yerli_degil": false,
-     "harita": "images/haritalar/Blanus-strauchi.jpg"
+     "harita": "images/haritalar/Blanus-strauchi.jpg",
+     "alturler": [
+      {
+       "latin": "Blanus strauchi strauchi",
+       "yazar": "(Bedriaga, 1884)",
+       "yayilis": "Species range 'Turkey (Anatolia)'; type locality Smyrna (Izmir). No separate per-subspecies note for nominate.",
+       "durum": "teyitli",
+       "not": "Reptile Database: https://reptile-database.reptarium.cz/Blanus/strauchi",
+       "goster": false
+      },
+      {
+       "latin": "Blanus strauchi bedriagae",
+       "yazar": "Boulenger, 1884",
+       "yayilis": "Turkey (between Fethiye and Kas), Iraq; type locality river Xanthus, Asia Minor",
+       "durum": "teyitli",
+       "not": "Reptile Database: https://reptile-database.reptarium.cz/Blanus/strauchi",
+       "goster": false
+      }
+     ]
     }
    ]
   },
@@ -783,7 +1117,25 @@
      "turkiyede": true,
      "tr": "Dikenli Keler",
      "yerli_degil": false,
-     "harita": "images/haritalar/Laudakia-stellio.jpg"
+     "harita": "images/haritalar/Laudakia-stellio.jpg",
+     "alturler": [
+      {
+       "latin": "Laudakia stellio daani",
+       "yazar": "(Beutler & Frör, 1980)",
+       "yayilis": "W and SW Turkey",
+       "durum": "teyitli",
+       "not": "Reptile Database: https://reptile-database.reptarium.cz/Laudakia/stellio",
+       "goster": false
+      },
+      {
+       "latin": "Laudakia stellio stellio",
+       "yazar": "(Linnaeus, 1758)",
+       "yayilis": "central, south and southeast Turkey",
+       "durum": "teyitli",
+       "not": "Reptile Database: https://reptile-database.reptarium.cz/Laudakia/stellio",
+       "goster": false
+      }
+     ]
     },
     {
      "kod": "Paralaudakia caucasia",
@@ -885,7 +1237,25 @@
      "turkiyede": true,
      "tr": "Oluklu Kertenkele",
      "yerli_degil": false,
-     "harita": "images/haritalar/Pseudopus-apodus.jpg"
+     "harita": "images/haritalar/Pseudopus-apodus.jpg",
+     "alturler": [
+      {
+       "latin": "Pseudopus apodus apodus",
+       "yazar": "(Pallas, 1775)",
+       "yayilis": "No per-subspecies note; species range includes Turkey (nominate assumed for remaining range, not stated explicitly).",
+       "durum": "cikarim",
+       "not": "Reptile Database: https://reptile-database.reptarium.cz/Pseudopus/apodus; çıkarım",
+       "goster": false
+      },
+      {
+       "latin": "Pseudopus apodus levantinus",
+       "yazar": "Jablonski, Ribeiro-Junior, Meiri, Maza, Mikulíček & Janzik, 2021",
+       "yayilis": "southern Turkey, western Syria, northern and central Israel",
+       "durum": "teyitli",
+       "not": "Reptile Database: https://reptile-database.reptarium.cz/Pseudopus/apodus",
+       "goster": false
+      }
+     ]
     }
    ]
   },
@@ -911,7 +1281,17 @@
      "turkiyede": true,
      "tr": "Bukalemun",
      "yerli_degil": false,
-     "harita": "images/haritalar/Chamaeleo-chamaeleon.jpg"
+     "harita": "images/haritalar/Chamaeleo-chamaeleon.jpg",
+     "alturler": [
+      {
+       "latin": "Chamaeleo chamaeleon chamaeleon",
+       "yazar": "(Linnaeus, 1758)",
+       "yayilis": "Species range includes 'S/E Turkey'; the database gives no per-subspecies note for the nominate form and does not state which subspecies occurs in Turkey (nominate inferred).",
+       "durum": "cikarim",
+       "not": "Reptile Database: https://reptile-database.reptarium.cz/Chamaeleo/chamaeleon; çıkarım",
+       "goster": false
+      }
+     ]
     }
    ]
   },
@@ -1020,7 +1400,17 @@
      "turkiyede": true,
      "tr": "Mardin Keleri",
      "yerli_degil": false,
-     "harita": "images/haritalar/Mediodactylus-heterocercus.jpg"
+     "harita": "images/haritalar/Mediodactylus-heterocercus.jpg",
+     "alturler": [
+      {
+       "latin": "Mediodactylus heterocercus mardinensis",
+       "yazar": "(Mertens, 1924)",
+       "yayilis": "Turkey (SE Anatolia), N Syria, N Iraq",
+       "durum": "teyitli",
+       "not": "Reptile Database: https://reptile-database.reptarium.cz/Mediodactylus/heterocercus",
+       "goster": false
+      }
+     ]
     },
     {
      "kod": "Mediodactylus orientalis",
@@ -1369,7 +1759,25 @@
      "turkiyede": true,
      "tr": "Uludağ Kertenkelesi",
      "yerli_degil": false,
-     "harita": "images/haritalar/Darevskia-bithynica.jpg"
+     "harita": "images/haritalar/Darevskia-bithynica.jpg",
+     "alturler": [
+      {
+       "latin": "Darevskia bithynica bithynica",
+       "yazar": "(Méhely, 1909)",
+       "yayilis": "No explicit per-subspecies line; lectotype locality Uludağ (Bithynian Olympus), Bursa Province, Turkey.",
+       "durum": "teyitli",
+       "not": "Reptile Database: https://reptile-database.reptarium.cz/Darevskia/bithynica",
+       "goster": false
+      },
+      {
+       "latin": "Darevskia bithynica tristis",
+       "yazar": "(Lantz & Cyrén, 1936)",
+       "yayilis": "N Turkey; lectotype locality Lafaka Dere ravine, Sakarya Province",
+       "durum": "teyitli",
+       "not": "Reptile Database: https://reptile-database.reptarium.cz/Darevskia/bithynica",
+       "goster": false
+      }
+     ]
     },
     {
      "kod": "Darevskia clarkorum",
@@ -1407,7 +1815,25 @@
      "turkiyede": true,
      "tr": "Artvin Kertenkelesi",
      "yerli_degil": false,
-     "harita": "images/haritalar/Darevskia-derjugini.jpg"
+     "harita": "images/haritalar/Darevskia-derjugini.jpg",
+     "alturler": [
+      {
+       "latin": "Darevskia derjugini derjugini",
+       "yazar": "(Nikolskij, 1898)",
+       "yayilis": "No per-subspecies note; general distribution mentions NE coastal regions of Turkey / adjacent NE Turkey. Comment: Kurnaz et al. 2017 synonymized the Turkish populations of barani with the nominate form.",
+       "durum": "cikarim",
+       "not": "Reptile Database: https://reptile-database.reptarium.cz/Darevskia/derjugini; çıkarım",
+       "goster": false
+      },
+      {
+       "latin": "Darevskia derjugini barani",
+       "yazar": "(Bischoff, 1982)",
+       "yayilis": "Black Sea coast from Batumi (Georgia) to NE Turkey (but Turkish populations synonymized with nominate per Comment; barani possibly a synonym of derjugini altogether).",
+       "durum": "teyitli",
+       "not": "Reptile Database: https://reptile-database.reptarium.cz/Darevskia/derjugini",
+       "goster": false
+      }
+     ]
     },
     {
      "kod": "Darevskia josefschmidtleri",
@@ -1483,7 +1909,33 @@
      "turkiyede": true,
      "tr": "Gürcü Kertenkelesi",
      "yerli_degil": false,
-     "harita": "images/haritalar/Darevskia-obscura.jpg"
+     "harita": "images/haritalar/Darevskia-obscura.jpg",
+     "alturler": [
+      {
+       "latin": "Darevskia obscura bischoffi",
+       "yazar": "(Böhme & Budak, 1977)",
+       "yayilis": "NE Turkey; type locality 6 km SW of Arhavi, Artvin Province",
+       "durum": "teyitli",
+       "not": "Reptile Database: https://reptile-database.reptarium.cz/Darevskia/obscura",
+       "goster": false
+      },
+      {
+       "latin": "Darevskia obscura macromaculata",
+       "yazar": "(Darevsky, 1967)",
+       "yayilis": "Republic of Georgia, NE Turkey",
+       "durum": "teyitli",
+       "not": "Reptile Database: https://reptile-database.reptarium.cz/Darevskia/obscura",
+       "goster": false
+      },
+      {
+       "latin": "Darevskia obscura obscura",
+       "yazar": "(Lantz & Cyrén, 1936)",
+       "yayilis": "Republic of Georgia, NE Turkey",
+       "durum": "teyitli",
+       "not": "Reptile Database: https://reptile-database.reptarium.cz/Darevskia/obscura",
+       "goster": false
+      }
+     ]
     },
     {
      "kod": "Darevskia parvula",
@@ -1521,7 +1973,17 @@
      "turkiyede": true,
      "tr": "Çayır Kertenkelesi",
      "yerli_degil": false,
-     "harita": "images/haritalar/Darevskia-praticola.jpg"
+     "harita": "images/haritalar/Darevskia-praticola.jpg",
+     "alturler": [
+      {
+       "latin": "Darevskia praticola pontica",
+       "yazar": "(Lantz & Cyrén, 1918)",
+       "yayilis": "W Caucasus (Black Sea coast), Georgia, Romania, Serbia, Bulgaria, Turkey, Greece; general range also lists 'European Turkey'",
+       "durum": "teyitli",
+       "not": "Reptile Database: https://reptile-database.reptarium.cz/Darevskia/praticola",
+       "goster": false
+      }
+     ]
     },
     {
      "kod": "Darevskia raddei",
@@ -1540,7 +2002,17 @@
      "turkiyede": true,
      "tr": "Radde Kertenkelesi",
      "yerli_degil": false,
-     "harita": "images/haritalar/Darevskia-raddei.jpg"
+     "harita": "images/haritalar/Darevskia-raddei.jpg",
+     "alturler": [
+      {
+       "latin": "Darevskia raddei vanensis",
+       "yazar": "(Eiselt, Schmidtler & Darevsky, 1993)",
+       "yayilis": "E Anatolia (Turkey), Iran; type locality castle hill of Van, 1720 m",
+       "durum": "teyitli",
+       "not": "Reptile Database: https://reptile-database.reptarium.cz/Darevskia/raddei",
+       "goster": false
+      }
+     ]
     },
     {
      "kod": "Darevskia rudis",
@@ -1559,7 +2031,33 @@
      "turkiyede": true,
      "tr": "Trabzon Kertenkelesi",
      "yerli_degil": false,
-     "harita": "images/haritalar/Darevskia-rudis.jpg"
+     "harita": "images/haritalar/Darevskia-rudis.jpg",
+     "alturler": [
+      {
+       "latin": "Darevskia rudis rudis",
+       "yazar": "(Bedriaga, 1886)",
+       "yayilis": "No per-subspecies line; general range Turkey (Trabzon region, Uludağ), SE Black Sea coast in Georgia and Turkey; type locality Batumi and Trabzon.",
+       "durum": "cikarim",
+       "not": "Reptile Database: https://reptile-database.reptarium.cz/Darevskia/rudis; çıkarım",
+       "goster": false
+      },
+      {
+       "latin": "Darevskia rudis bolkardaghica",
+       "yazar": "Arribas, Ilgaz, Kumlutaş, Durmuş, Avcı & Üzüm, 2013",
+       "yayilis": "Turkey (C Anatolia); type locality Karagöl, Ulukışla, Niğde",
+       "durum": "teyitli",
+       "not": "Reptile Database: https://reptile-database.reptarium.cz/Darevskia/rudis",
+       "goster": false
+      },
+      {
+       "latin": "Darevskia rudis lantzicyreni",
+       "yazar": "(Darevsky & Eiselt, 1967)",
+       "yayilis": "Turkey; type locality Erciyes Mountain",
+       "durum": "teyitli",
+       "not": "Reptile Database: https://reptile-database.reptarium.cz/Darevskia/rudis",
+       "goster": false
+      }
+     ]
     },
     {
      "kod": "Darevskia salihae",
@@ -1616,7 +2114,25 @@
      "turkiyede": true,
      "tr": "Hakkari Kertenkelesi",
      "yerli_degil": false,
-     "harita": "images/haritalar/Darevskia-spitzenbergerae.jpg"
+     "harita": "images/haritalar/Darevskia-spitzenbergerae.jpg",
+     "alturler": [
+      {
+       "latin": "Darevskia spitzenbergerae spitzenbergerae",
+       "yazar": "(Eiselt, Darevsky & Schmidtler, 1992)",
+       "yayilis": "E Turkey; type locality Mergan Yayla, Cilo-Sat Mts, Hakkari, 2500 m (no separate per-subspecies note)",
+       "durum": "teyitli",
+       "not": "Reptile Database: https://reptile-database.reptarium.cz/Darevskia/spitzenbergerae",
+       "goster": false
+      },
+      {
+       "latin": "Darevskia spitzenbergerae wernermayeri",
+       "yazar": "Arribas et al., 2022",
+       "yayilis": "No per-subspecies distribution note; holotype from Yukarınarlıca village, Çatak, Van, Turkey (Types field)",
+       "durum": "cikarim",
+       "not": "Reptile Database: https://reptile-database.reptarium.cz/Darevskia/spitzenbergerae; çıkarım",
+       "goster": false
+      }
+     ]
     },
     {
      "kod": "Darevskia tuniyevi",
@@ -1768,7 +2284,17 @@
      "turkiyede": true,
      "tr": "İran Kertenkelesi",
      "yerli_degil": false,
-     "harita": "images/haritalar/Iranolacerta-brandtii.jpg"
+     "harita": "images/haritalar/Iranolacerta-brandtii.jpg",
+     "alturler": [
+      {
+       "latin": "Iranolacerta brandtii brandtii",
+       "yazar": "(De Filippi, 1863)",
+       "yayilis": "Turkey (Anatolia) appears only in the species-level range; the nominate note lists NW Iran and neighbouring Azerbaijan, not Turkey (assignment of Turkish records to the nominate is inferred).",
+       "durum": "cikarim",
+       "not": "Reptile Database: https://reptile-database.reptarium.cz/Iranolacerta/brandtii; çıkarım",
+       "goster": false
+      }
+     ]
     },
     {
      "kod": "Lacerta agilis",
@@ -1787,7 +2313,25 @@
      "turkiyede": true,
      "tr": "Çevik Kertenkele",
      "yerli_degil": false,
-     "harita": "images/haritalar/Lacerta-agilis.jpg"
+     "harita": "images/haritalar/Lacerta-agilis.jpg",
+     "alturler": [
+      {
+       "latin": "Lacerta agilis brevicaudata",
+       "yazar": "Peters, 1958",
+       "yayilis": "NE Turkey, Armenia, Republic of Georgia; up to 1900 m",
+       "durum": "teyitli",
+       "not": "Reptile Database: https://reptile-database.reptarium.cz/Lacerta/agilis",
+       "goster": false
+      },
+      {
+       "latin": "Lacerta agilis grusinica",
+       "yazar": "Peters, 1960",
+       "yayilis": "Republic of Georgia, NE Turkey, Caucasus",
+       "durum": "teyitli",
+       "not": "Reptile Database: https://reptile-database.reptarium.cz/Lacerta/agilis",
+       "goster": false
+      }
+     ]
     },
     {
      "kod": "Lacerta diplochondrodes",
@@ -1806,7 +2350,33 @@
      "turkiyede": true,
      "tr": "Büyük Yeşil Kertenkele",
      "yerli_degil": false,
-     "harita": "images/haritalar/Lacerta-diplochondrodes.jpg"
+     "harita": "images/haritalar/Lacerta-diplochondrodes.jpg",
+     "alturler": [
+      {
+       "latin": "Lacerta diplochondrodes cariensis",
+       "yazar": "Peters, 1964",
+       "yayilis": "W Turkey, Greece (Samos, Chios, Lesvos)",
+       "durum": "teyitli",
+       "not": "Reptile Database: https://reptile-database.reptarium.cz/Lacerta/diplochondrodes",
+       "goster": false
+      },
+      {
+       "latin": "Lacerta diplochondrodes dobrogica",
+       "yazar": "Fuhn & Mertens, 1959",
+       "yayilis": "Black Sea coast (Bulgaria, Romania, W Turkey)",
+       "durum": "teyitli",
+       "not": "Reptile Database: https://reptile-database.reptarium.cz/Lacerta/diplochondrodes",
+       "goster": false
+      },
+      {
+       "latin": "Lacerta diplochondrodes galatiensis",
+       "yazar": "Peters, 1964",
+       "yayilis": "NW and C Turkey",
+       "durum": "teyitli",
+       "not": "Reptile Database: https://reptile-database.reptarium.cz/Lacerta/diplochondrodes",
+       "goster": false
+      }
+     ]
     },
     {
      "kod": "Lacerta media",
@@ -1825,7 +2395,41 @@
      "turkiyede": true,
      "tr": "Doğu Yeşil Kertenkelesi",
      "yerli_degil": false,
-     "harita": "images/haritalar/Lacerta-media.jpg"
+     "harita": "images/haritalar/Lacerta-media.jpg",
+     "alturler": [
+      {
+       "latin": "Lacerta media media",
+       "yazar": "Lantz & Cyrén, 1920",
+       "yayilis": "Nominate note reads 'Iran, etc.'; species range includes E Turkey (eastern south coast, eastern Central Anatolia, Hatay); Turkish assignment of nominate not stated explicitly.",
+       "durum": "teyitli",
+       "not": "Reptile Database: https://reptile-database.reptarium.cz/Lacerta/media",
+       "goster": false
+      },
+      {
+       "latin": "Lacerta media ciliciensis",
+       "yazar": "Schmidtler, 1975",
+       "yayilis": "SE Turkey; type locality 15 km N Kozan, Adana",
+       "durum": "teyitli",
+       "not": "Reptile Database: https://reptile-database.reptarium.cz/Lacerta/media",
+       "goster": false
+      },
+      {
+       "latin": "Lacerta media isaurica",
+       "yazar": "Schmidtler, 1975",
+       "yayilis": "CS Turkey",
+       "durum": "teyitli",
+       "not": "Reptile Database: https://reptile-database.reptarium.cz/Lacerta/media",
+       "goster": false
+      },
+      {
+       "latin": "Lacerta media wolterstorffi",
+       "yazar": "Mertens, 1922",
+       "yayilis": "extreme SE Turkey, Lebanon, Syria (Golan)",
+       "durum": "teyitli",
+       "not": "Reptile Database: https://reptile-database.reptarium.cz/Lacerta/media",
+       "goster": false
+      }
+     ]
     },
     {
      "kod": "Lacerta pamphylica",
@@ -1882,7 +2486,17 @@
      "turkiyede": true,
      "tr": "Yeşil Kertenkele",
      "yerli_degil": false,
-     "harita": "images/haritalar/Lacerta-viridis.jpg"
+     "harita": "images/haritalar/Lacerta-viridis.jpg",
+     "alturler": [
+      {
+       "latin": "Lacerta viridis meridionalis",
+       "yazar": "Cyrén, 1933",
+       "yayilis": "NW Turkey, S Romania, Greece (incl. Corfu); type locality restricted to Adapazarı, Turkey",
+       "durum": "teyitli",
+       "not": "Reptile Database: https://reptile-database.reptarium.cz/Lacerta/viridis",
+       "goster": false
+      }
+     ]
     },
     {
      "kod": "Mesalina microlepis",
@@ -1920,7 +2534,57 @@
      "turkiyede": true,
      "tr": "Tarla Kertenkelesi",
      "yerli_degil": false,
-     "harita": "images/haritalar/Ophisops-elegans.jpg"
+     "harita": "images/haritalar/Ophisops-elegans.jpg",
+     "alturler": [
+      {
+       "latin": "Ophisops elegans basoglui",
+       "yazar": "Baran & Budak, 1978",
+       "yayilis": "Turkey (S Anatolia, Alanya area)",
+       "durum": "teyitli",
+       "not": "Reptile Database: https://reptile-database.reptarium.cz/Ophisops/elegans",
+       "goster": false
+      },
+      {
+       "latin": "Ophisops elegans budakibarani",
+       "yazar": "Tok, Afsar, Yakın, Ayaz & Çiçek, 2017",
+       "yayilis": "Turkey; type locality Karaekşi National Park, Mut, Mersin",
+       "durum": "teyitli",
+       "not": "Reptile Database: https://reptile-database.reptarium.cz/Ophisops/elegans",
+       "goster": false
+      },
+      {
+       "latin": "Ophisops elegans centralanatoliae",
+       "yazar": "Bodenheimer, 1944",
+       "yayilis": "C/E/S Turkey (C Anatolia)",
+       "durum": "teyitli",
+       "not": "Reptile Database: https://reptile-database.reptarium.cz/Ophisops/elegans",
+       "goster": false
+      },
+      {
+       "latin": "Ophisops elegans ehrenbergii",
+       "yazar": "(Wiegmann, 1835)",
+       "yayilis": "S Turkey (incl. Anatolia)",
+       "durum": "teyitli",
+       "not": "Reptile Database: https://reptile-database.reptarium.cz/Ophisops/elegans",
+       "goster": false
+      },
+      {
+       "latin": "Ophisops elegans elegans",
+       "yazar": "Ménétriés, 1832",
+       "yayilis": "Turkey (incl. Anatolia); type locality Baku",
+       "durum": "teyitli",
+       "not": "Reptile Database: https://reptile-database.reptarium.cz/Ophisops/elegans",
+       "goster": false
+      },
+      {
+       "latin": "Ophisops elegans macrodactylus",
+       "yazar": "Berthold, 1840",
+       "yayilis": "W Turkey (Anatolia); type locality Constantinople (Istanbul)",
+       "durum": "teyitli",
+       "not": "Reptile Database: https://reptile-database.reptarium.cz/Ophisops/elegans",
+       "goster": false
+      }
+     ]
     },
     {
      "kod": "Parvilacerta parva",
@@ -2015,7 +2679,17 @@
      "turkiyede": true,
      "tr": "İstanbul Kertenkelesi",
      "yerli_degil": false,
-     "harita": "images/haritalar/Podarcis-siculus.jpg"
+     "harita": "images/haritalar/Podarcis-siculus.jpg",
+     "alturler": [
+      {
+       "latin": "Podarcis siculus hieroglyphicus",
+       "yazar": "(Berthold, 1840)",
+       "yayilis": "NW Turkey (islands in the Marmara Sea, İstanbul), Bursa and Çakırca (~10 km W of İznik), Kazdağları; type locality Istanbul",
+       "durum": "teyitli",
+       "not": "Reptile Database: https://reptile-database.reptarium.cz/Podarcis/siculus",
+       "goster": false
+      }
+     ]
     },
     {
      "kod": "Podarcis tauricus",
@@ -2162,7 +2836,41 @@
      "turkiyede": true,
      "tr": "Çernov Kertenkelesi",
      "yerli_degil": false,
-     "harita": "images/haritalar/Ablepharus-chernovi.jpg"
+     "harita": "images/haritalar/Ablepharus-chernovi.jpg",
+     "alturler": [
+      {
+       "latin": "Ablepharus chernovi chernovi",
+       "yazar": "Darevsky, 1953",
+       "yayilis": "Armenia, Turkey (Anatolia), Syria",
+       "durum": "teyitli",
+       "not": "Reptile Database: https://reptile-database.reptarium.cz/Ablepharus/chernovi",
+       "goster": false
+      },
+      {
+       "latin": "Ablepharus chernovi eiselti",
+       "yazar": "Schmidtler, 1997",
+       "yayilis": "Turkey (Adana region); type locality 6 km S Karsantı (Aladağ), Adana",
+       "durum": "teyitli",
+       "not": "Reptile Database: https://reptile-database.reptarium.cz/Ablepharus/chernovi",
+       "goster": false
+      },
+      {
+       "latin": "Ablepharus chernovi isauriensis",
+       "yazar": "Schmidtler, 1997",
+       "yayilis": "Turkey (CS Anatolia); type locality 50 km N Anamur, Mersin",
+       "durum": "teyitli",
+       "not": "Reptile Database: https://reptile-database.reptarium.cz/Ablepharus/chernovi",
+       "goster": false
+      },
+      {
+       "latin": "Ablepharus chernovi ressli",
+       "yazar": "Schmidtler, 1997",
+       "yayilis": "S Turkey (N of Mersin)",
+       "durum": "teyitli",
+       "not": "Reptile Database: https://reptile-database.reptarium.cz/Ablepharus/chernovi",
+       "goster": false
+      }
+     ]
     },
     {
      "kod": "Ablepharus kitaibelii",
@@ -2181,7 +2889,17 @@
      "turkiyede": true,
      "tr": "İnce Kertenkele",
      "yerli_degil": false,
-     "harita": "images/haritalar/Ablepharus-kitaibelii.jpg"
+     "harita": "images/haritalar/Ablepharus-kitaibelii.jpg",
+     "alturler": [
+      {
+       "latin": "Ablepharus kitaibelii kitaibelii",
+       "yazar": "(Bibron & Bory, 1833)",
+       "yayilis": "Greece, Aegean islands, Turkey, Cyprus, Syria, Transjordan, Iraq, Sinai",
+       "durum": "teyitli",
+       "not": "Reptile Database: https://reptile-database.reptarium.cz/Ablepharus/kitaibelii",
+       "goster": false
+      }
+     ]
     },
     {
      "kod": "Chalcides ocellatus",
@@ -2200,7 +2918,17 @@
      "turkiyede": true,
      "tr": "Benekli Kertenkele",
      "yerli_degil": false,
-     "harita": "images/haritalar/Chalcides-ocellatus.jpg"
+     "harita": "images/haritalar/Chalcides-ocellatus.jpg",
+     "alturler": [
+      {
+       "latin": "Chalcides ocellatus ocellatus",
+       "yazar": "(Forskal, 1775)",
+       "yayilis": "Turkey listed only in the species-level distribution; RDB gives no subspecific assignment ('Cyprus, Turkey (Anatolia)')",
+       "durum": "cikarim",
+       "not": "Reptile Database: https://reptile-database.reptarium.cz/Chalcides/ocellatus; çıkarım",
+       "goster": false
+      }
+     ]
     },
     {
      "kod": "Eumeces schneiderii",
@@ -2219,7 +2947,17 @@
      "turkiyede": true,
      "tr": "Sarı Kertenkele",
      "yerli_degil": false,
-     "harita": "images/haritalar/Eumeces-schneiderii.jpg"
+     "harita": "images/haritalar/Eumeces-schneiderii.jpg",
+     "alturler": [
+      {
+       "latin": "Eumeces schneiderii barani",
+       "yazar": "Kumlutaş, Arıkan, Ilgaz & Kaska, 2007",
+       "yayilis": "Turkey (Anatolia)",
+       "durum": "teyitli",
+       "not": "Reptile Database: https://reptile-database.reptarium.cz/Eumeces/schneiderii",
+       "goster": false
+      }
+     ]
     },
     {
      "kod": "Heremites auratus",
@@ -2238,7 +2976,17 @@
      "turkiyede": true,
      "tr": "Tıknaz Kertenkele",
      "yerli_degil": false,
-     "harita": "images/haritalar/Heremites-auratus.jpg"
+     "harita": "images/haritalar/Heremites-auratus.jpg",
+     "alturler": [
+      {
+       "latin": "Heremites auratus auratus",
+       "yazar": "(Linnaeus, 1758)",
+       "yayilis": "Turkey (Burdur, Alanya, Mardin, Urfa) [Clark & Clark 1973] in nominate/general entry; type locality amended to 'Asia minor' (Moravec et al. 2006)",
+       "durum": "teyitli",
+       "not": "Reptile Database: https://reptile-database.reptarium.cz/Heremites/auratus",
+       "goster": false
+      }
+     ]
     },
     {
      "kod": "Heremites septemtaeniatus",
@@ -2321,7 +3069,17 @@
      "turkiyede": true,
      "tr": "Çöl Varanı",
      "yerli_degil": false,
-     "harita": "images/haritalar/Varanus-griseus.jpg"
+     "harita": "images/haritalar/Varanus-griseus.jpg",
+     "alturler": [
+      {
+       "latin": "Varanus griseus griseus",
+       "yazar": "(Daudin, 1803)",
+       "yayilis": "Turkey listed only in the species-level distribution; RDB gives no subspecific assignment ('Turkey (from Urfa)')",
+       "durum": "cikarim",
+       "not": "Reptile Database: https://reptile-database.reptarium.cz/Varanus/griseus; çıkarım",
+       "goster": false
+      }
+     ]
     }
    ]
   },
@@ -2373,7 +3131,17 @@
      "turkiyede": true,
      "tr": "Avusturya Yılanı",
      "yerli_degil": false,
-     "harita": "images/haritalar/Coronella-austriaca.jpg"
+     "harita": "images/haritalar/Coronella-austriaca.jpg",
+     "alturler": [
+      {
+       "latin": "Coronella austriaca austriaca",
+       "yazar": "(Laurenti, 1768)",
+       "yayilis": "Turkey listed only in the species-level distribution; RDB gives no subspecific assignment",
+       "durum": "cikarim",
+       "not": "Reptile Database: https://reptile-database.reptarium.cz/Coronella/austriaca; çıkarım",
+       "goster": false
+      }
+     ]
     },
     {
      "kod": "Dolichophis caspius",
@@ -2411,7 +3179,17 @@
      "turkiyede": true,
      "tr": "Kara Yılan",
      "yerli_degil": false,
-     "harita": "images/haritalar/Dolichophis-jugularis.jpg"
+     "harita": "images/haritalar/Dolichophis-jugularis.jpg",
+     "alturler": [
+      {
+       "latin": "Dolichophis jugularis jugularis",
+       "yazar": "(Linnaeus, 1758)",
+       "yayilis": "Turkey [O. Cetin, pers. comm.]; type locality 'Aegypto' restricted to SW Turkey (Selçuk and Ephesus) by Zinner 1972",
+       "durum": "teyitli",
+       "not": "Reptile Database: https://reptile-database.reptarium.cz/Dolichophis/jugularis",
+       "goster": false
+      }
+     ]
     },
     {
      "kod": "Dolichophis schmidti",
@@ -2468,7 +3246,25 @@
      "turkiyede": true,
      "tr": "Adana Yılanı",
      "yerli_degil": false,
-     "harita": "images/haritalar/Eirenis-barani.jpg"
+     "harita": "images/haritalar/Eirenis-barani.jpg",
+     "alturler": [
+      {
+       "latin": "Eirenis barani barani",
+       "yazar": "Schmidtler, 1988",
+       "yayilis": "S Anatolia (and NW Syria); type locality Akdam, 35 km W Kozan, Adana",
+       "durum": "teyitli",
+       "not": "Reptile Database: https://reptile-database.reptarium.cz/Eirenis/barani",
+       "goster": false
+      },
+      {
+       "latin": "Eirenis barani bischofforum",
+       "yazar": "Schmidtler, 1997",
+       "yayilis": "Turkey (Adana); type locality N Saimbeyli, 1450 m",
+       "durum": "teyitli",
+       "not": "Reptile Database: https://reptile-database.reptarium.cz/Eirenis/barani",
+       "goster": false
+      }
+     ]
     },
     {
      "kod": "Eirenis collaris",
@@ -2487,7 +3283,17 @@
      "turkiyede": true,
      "tr": "Yakalı Yılan",
      "yerli_degil": false,
-     "harita": "images/haritalar/Eirenis-collaris.jpg"
+     "harita": "images/haritalar/Eirenis-collaris.jpg",
+     "alturler": [
+      {
+       "latin": "Eirenis collaris macrospilotus",
+       "yazar": "(Werner, 1903)",
+       "yayilis": "Turkey; type locality restricted (Eiselt 1982) to Mt Takjaltu near Kasıkoporan, ~20 km WSW Tuzluca, Kars",
+       "durum": "teyitli",
+       "not": "Reptile Database: https://reptile-database.reptarium.cz/Eirenis/collaris",
+       "goster": false
+      }
+     ]
     },
     {
      "kod": "Eirenis coronelloides",
@@ -2601,7 +3407,33 @@
      "turkiyede": true,
      "tr": "Uysal Yılan",
      "yerli_degil": false,
-     "harita": "images/haritalar/Eirenis-modestus.jpg"
+     "harita": "images/haritalar/Eirenis-modestus.jpg",
+     "alturler": [
+      {
+       "latin": "Eirenis modestus modestus",
+       "yazar": "(Martin, 1838)",
+       "yayilis": "Turkey, Iran etc.; type locality Trabzon",
+       "durum": "teyitli",
+       "not": "Reptile Database: https://reptile-database.reptarium.cz/Eirenis/modestus",
+       "goster": false
+      },
+      {
+       "latin": "Eirenis modestus semimaculatus",
+       "yazar": "(Boettger, 1876)",
+       "yayilis": "Turkey (C/W Anatolia)",
+       "durum": "teyitli",
+       "not": "Reptile Database: https://reptile-database.reptarium.cz/Eirenis/modestus",
+       "goster": false
+      },
+      {
+       "latin": "Eirenis modestus cilicius",
+       "yazar": "(Schmidtler, 1993)",
+       "yayilis": "S Turkey (S/W Anatolia); type locality ~10 km NW Limonlu, Mersin",
+       "durum": "teyitli",
+       "not": "Reptile Database: https://reptile-database.reptarium.cz/Eirenis/modestus",
+       "goster": false
+      }
+     ]
     },
     {
      "kod": "Eirenis occidentalis",
@@ -2639,7 +3471,17 @@
      "turkiyede": true,
      "tr": "Van Yılanı",
      "yerli_degil": false,
-     "harita": "images/haritalar/Eirenis-punctatolineatus.jpg"
+     "harita": "images/haritalar/Eirenis-punctatolineatus.jpg",
+     "alturler": [
+      {
+       "latin": "Eirenis punctatolineatus punctatolineatus",
+       "yazar": "(Boettger, 1892)",
+       "yayilis": "central-eastern Turkey (also Armenia, Azerbaijan, Nakhichevan, N/W Iran)",
+       "durum": "teyitli",
+       "not": "Reptile Database: https://reptile-database.reptarium.cz/Eirenis/punctatolineatus",
+       "goster": false
+      }
+     ]
     },
     {
      "kod": "Eirenis rothii",
@@ -2810,7 +3652,25 @@
      "turkiyede": true,
      "tr": "Toros Yılanı",
      "yerli_degil": false,
-     "harita": "images/haritalar/Platyceps-collaris.jpg"
+     "harita": "images/haritalar/Platyceps-collaris.jpg",
+     "alturler": [
+      {
+       "latin": "Platyceps collaris rubriceps",
+       "yazar": "Venzmer, 1919",
+       "yayilis": "Jordan, Turkey; type localities 'cilicischer Taurus' and 'Bulghar Dagh'",
+       "durum": "teyitli",
+       "not": "Reptile Database: https://reptile-database.reptarium.cz/Platyceps/collaris",
+       "goster": false
+      },
+      {
+       "latin": "Platyceps collaris collaris",
+       "yazar": "(Müller, 1878)",
+       "yayilis": "Turkey listed only in the species-level distribution; RDB gives no subspecific assignment (species range: Bulgaria, Turkey, Syria, Israel, West Bank, Jordan, Lebanon)",
+       "durum": "cikarim",
+       "not": "Reptile Database: https://reptile-database.reptarium.cz/Platyceps/collaris; çıkarım",
+       "goster": false
+      }
+     ]
     },
     {
      "kod": "Platyceps karelini",
@@ -2829,7 +3689,17 @@
      "turkiyede": false,
      "tr": "Benekli Çöl Yılanı",
      "yerli_degil": false,
-     "harita": "images/haritalar/Platyceps-karelini.jpg"
+     "harita": "images/haritalar/Platyceps-karelini.jpg",
+     "alturler": [
+      {
+       "latin": "Platyceps karelini chesneii",
+       "yazar": "(Martin, 1838)",
+       "yayilis": "No direct field entry; comment cites Sindaco et al. 2013 range (Libya to W Iran) that includes SE Anatolia",
+       "durum": "teyitli",
+       "not": "Reptile Database: https://reptile-database.reptarium.cz/Platyceps/karelini",
+       "goster": false
+      }
+     ]
     },
     {
      "kod": "Platyceps najadum",
@@ -2867,7 +3737,17 @@
      "turkiyede": true,
      "tr": "Vadi Yılanı",
      "yerli_degil": false,
-     "harita": "images/haritalar/Platyceps-rhodorachis.jpg"
+     "harita": "images/haritalar/Platyceps-rhodorachis.jpg",
+     "alturler": [
+      {
+       "latin": "Platyceps rhodorachis rhodorachis",
+       "yazar": "(Jan in Filippi, 1863)",
+       "yayilis": "Turkey listed only in the species-level distribution; RDB gives no subspecific assignment ('Europe: Turkey'; first Turkish record Yılmaz et al. 2020)",
+       "durum": "cikarim",
+       "not": "Reptile Database: https://reptile-database.reptarium.cz/Platyceps/rhodorachis; çıkarım",
+       "goster": false
+      }
+     ]
     },
     {
      "kod": "Rhynchocalamus melanocephalus",
@@ -2924,7 +3804,17 @@
      "turkiyede": true,
      "tr": "Urfa Yılanı",
      "yerli_degil": false,
-     "harita": "images/haritalar/Spalerosophis-diadema.jpg"
+     "harita": "images/haritalar/Spalerosophis-diadema.jpg",
+     "alturler": [
+      {
+       "latin": "Spalerosophis diadema cliffordii",
+       "yazar": "(Schlegel, 1837)",
+       "yayilis": "listed with Turkey (N Africa, Syria, Jordan, Turkey, Iran, UAE, Yemen); species range 'SE Turkey'",
+       "durum": "teyitli",
+       "not": "Reptile Database: https://reptile-database.reptarium.cz/Spalerosophis/diadema",
+       "goster": false
+      }
+     ]
     },
     {
      "kod": "Telescopus fallax",
@@ -2943,7 +3833,33 @@
      "turkiyede": true,
      "tr": "Kedi Gözlü Yılan",
      "yerli_degil": false,
-     "harita": "images/haritalar/Telescopus-fallax.jpg"
+     "harita": "images/haritalar/Telescopus-fallax.jpg",
+     "alturler": [
+      {
+       "latin": "Telescopus fallax fallax",
+       "yazar": "(Fleischmann, 1831)",
+       "yayilis": "Turkey listed only in the species-level distribution; RDB gives no subspecific assignment",
+       "durum": "cikarim",
+       "not": "Reptile Database: https://reptile-database.reptarium.cz/Telescopus/fallax; çıkarım",
+       "goster": false
+      },
+      {
+       "latin": "Telescopus fallax iberus",
+       "yazar": "Eichwald, 1831",
+       "yayilis": "E Turkey, N Iran, S Russia, Armenia, S Georgia, Azerbaijan",
+       "durum": "teyitli",
+       "not": "Reptile Database: https://reptile-database.reptarium.cz/Telescopus/fallax",
+       "goster": false
+      },
+      {
+       "latin": "Telescopus fallax syriacus",
+       "yazar": "(Boettger, 1880)",
+       "yayilis": "SE Turkey, Lebanon, Syria, Jordan, N Israel, West Bank",
+       "durum": "teyitli",
+       "not": "Reptile Database: https://reptile-database.reptarium.cz/Telescopus/fallax",
+       "goster": false
+      }
+     ]
     },
     {
      "kod": "Telescopus nigriceps",
@@ -2981,7 +3897,33 @@
      "turkiyede": true,
      "tr": "Kafkas Yılanı",
      "yerli_degil": false,
-     "harita": "images/haritalar/Zamenis-hohenackeri.jpg"
+     "harita": "images/haritalar/Zamenis-hohenackeri.jpg",
+     "alturler": [
+      {
+       "latin": "Zamenis hohenackeri hohenackeri",
+       "yazar": "(Strauch, 1873)",
+       "yayilis": "Turkey listed only in the species-level distribution; RDB gives no subspecific assignment",
+       "durum": "cikarim",
+       "not": "Reptile Database: https://reptile-database.reptarium.cz/Zamenis/hohenackeri; çıkarım",
+       "goster": false
+      },
+      {
+       "latin": "Zamenis hohenackeri lyciensis",
+       "yazar": "Hofmann, Mebert, Schulz, Helfenberger, Göçmen & Böhme, 2018",
+       "yayilis": "Turkey (Antalya); type locality Kohu Dağ, Elmalı, ~1700 m; mostly Lycia (Antalya and Muğla); paratype Akşehir, Konya",
+       "durum": "teyitli",
+       "not": "Reptile Database: https://reptile-database.reptarium.cz/Zamenis/hohenackeri",
+       "goster": false
+      },
+      {
+       "latin": "Zamenis hohenackeri taurica",
+       "yazar": "(Werner, 1898)",
+       "yayilis": "Type locality Gülek, Cilician Taurus, Mersin; RDB distribution field is internally inconsistent (Syria / Chanlar) and etymology says it does not occur in the Cilician Taurus",
+       "durum": "teyitli",
+       "not": "Reptile Database: https://reptile-database.reptarium.cz/Zamenis/hohenackeri",
+       "goster": false
+      }
+     ]
     },
     {
      "kod": "Zamenis longissimus",
@@ -3038,7 +3980,25 @@
      "turkiyede": true,
      "tr": "Küpeli Su Yılanı",
      "yerli_degil": false,
-     "harita": "images/haritalar/Natrix-natrix.jpg"
+     "harita": "images/haritalar/Natrix-natrix.jpg",
+     "alturler": [
+      {
+       "latin": "Natrix natrix scutata",
+       "yazar": "(Pallas, 1771)",
+       "yayilis": "listed for Turkey (with Finland, Russia E of Dnieper, W Caucasus, Ukraine, Baltic, Poland, Belarus)",
+       "durum": "teyitli",
+       "not": "Reptile Database: https://reptile-database.reptarium.cz/Natrix/natrix",
+       "goster": false
+      },
+      {
+       "latin": "Natrix natrix syriaca",
+       "yazar": "(Hecht, 1930)",
+       "yayilis": "distribution given as N Syria, but type locality Zincirli, İslahiye/Gaziantep, Turkey; placed incertae sedis by Asztalos et al. 2021",
+       "durum": "teyitli",
+       "not": "Reptile Database: https://reptile-database.reptarium.cz/Natrix/natrix",
+       "goster": false
+      }
+     ]
     },
     {
      "kod": "Natrix tessellata",
@@ -3135,7 +4095,17 @@
      "turkiyede": true,
      "tr": "Çukurbaşlı Yılan",
      "yerli_degil": false,
-     "harita": "images/haritalar/Malpolon-insignitus.jpg"
+     "harita": "images/haritalar/Malpolon-insignitus.jpg",
+     "alturler": [
+      {
+       "latin": "Malpolon insignitus fuscus",
+       "yazar": "(Fleischmann, 1831)",
+       "yayilis": "Turkey: Adana, Ankara, Balıkesir, Diyarbakır, Hatay, İstanbul, İzmir, Kars, Konya, Mardin, Siirt, Urfa",
+       "durum": "teyitli",
+       "not": "Reptile Database: https://reptile-database.reptarium.cz/Malpolon/insignitus",
+       "goster": false
+      }
+     ]
     }
    ]
   },
@@ -3225,7 +4195,17 @@
      "turkiyede": true,
      "tr": "Koca Engerek",
      "yerli_degil": false,
-     "harita": "images/haritalar/Macrovipera-lebetinus.jpg"
+     "harita": "images/haritalar/Macrovipera-lebetinus.jpg",
+     "alturler": [
+      {
+       "latin": "Macrovipera lebetinus obtusa",
+       "yazar": "(Dwigubsky, 1832)",
+       "yayilis": "NE Turkey (also Iraq, Syria, Transcaucasia, Lebanon, Iran, Afghanistan, Pakistan, Jordan)",
+       "durum": "teyitli",
+       "not": "Reptile Database: https://reptile-database.reptarium.cz/Macrovipera/lebetinus",
+       "goster": false
+      }
+     ]
     },
     {
      "kod": "Montivipera bulgardaghica",
@@ -3263,7 +4243,25 @@
      "turkiyede": true,
      "tr": "Ağrı Engereği",
      "yerli_degil": false,
-     "harita": "images/haritalar/Montivipera-raddei.jpg"
+     "harita": "images/haritalar/Montivipera-raddei.jpg",
+     "alturler": [
+      {
+       "latin": "Montivipera raddei raddei",
+       "yazar": "(Boettger, 1890)",
+       "yayilis": "E Turkey, NW Iran, adjacent areas; type locality Armenia",
+       "durum": "teyitli",
+       "not": "Reptile Database: https://reptile-database.reptarium.cz/Montivipera/raddei",
+       "goster": false
+      },
+      {
+       "latin": "Montivipera raddei kurdistanica",
+       "yazar": "(Nilson & Andrén, 1986)",
+       "yayilis": "SE Turkey, adjacent Iraq and Iran",
+       "durum": "teyitli",
+       "not": "Reptile Database: https://reptile-database.reptarium.cz/Montivipera/raddei",
+       "goster": false
+      }
+     ]
     },
     {
      "kod": "Montivipera wagneri",
@@ -3301,7 +4299,25 @@
      "turkiyede": true,
      "tr": "Osmanlı Engereği/Şeritli Engerek",
      "yerli_degil": false,
-     "harita": "images/haritalar/Montivipera-xanthina.jpg"
+     "harita": "images/haritalar/Montivipera-xanthina.jpg",
+     "alturler": [
+      {
+       "latin": "Montivipera xanthina xanthina",
+       "yazar": "(Gray, 1849)",
+       "yayilis": "W Turkey (and Greek islands/NE Greece); type locality Xanthus, SW Turkey",
+       "durum": "teyitli",
+       "not": "Reptile Database: https://reptile-database.reptarium.cz/Montivipera/xanthina",
+       "goster": false
+      },
+      {
+       "latin": "Montivipera xanthina varoli",
+       "yazar": "Afsar, Yakın, Çiçek & Ayaz, 2019",
+       "yayilis": "S Turkey (Antalya); type locality Mühür Dağı, W Geyik Mts, Gündoğmuş, 1601 m",
+       "durum": "teyitli",
+       "not": "Reptile Database: https://reptile-database.reptarium.cz/Montivipera/xanthina",
+       "goster": false
+      }
+     ]
     },
     {
      "kod": "Vipera anatolica",
@@ -3320,7 +4336,25 @@
      "turkiyede": true,
      "tr": "Anadolu Engereği",
      "yerli_degil": false,
-     "harita": "images/haritalar/Vipera-anatolica.jpg"
+     "harita": "images/haritalar/Vipera-anatolica.jpg",
+     "alturler": [
+      {
+       "latin": "Vipera anatolica anatolica",
+       "yazar": "Eiselt & Baran, 1970",
+       "yayilis": "S/W Turkey; type locality Çığlıkara Ormanı, 50 km SSW Elmalı",
+       "durum": "teyitli",
+       "not": "Reptile Database: https://reptile-database.reptarium.cz/Vipera/anatolica",
+       "goster": false
+      },
+      {
+       "latin": "Vipera anatolica senliki",
+       "yazar": "Göçmen, Mebert, Kariş, Oğuz & Ursenbacher, 2017",
+       "yayilis": "Turkey (Antalya); terra typica Serinyaka Plateau, Mühür Dağı, Gündoğmuş, 1755 m",
+       "durum": "teyitli",
+       "not": "Reptile Database: https://reptile-database.reptarium.cz/Vipera/anatolica",
+       "goster": false
+      }
+     ]
     },
     {
      "kod": "Vipera berus",
@@ -3339,7 +4373,17 @@
      "turkiyede": true,
      "tr": "Kutup Engereği",
      "yerli_degil": false,
-     "harita": "images/haritalar/Vipera-berus.jpg"
+     "harita": "images/haritalar/Vipera-berus.jpg",
+     "alturler": [
+      {
+       "latin": "Vipera berus barani",
+       "yazar": "Böhme & Joger, 1983",
+       "yayilis": "NW Turkey; type locality ~60 km N Adapazarı",
+       "durum": "teyitli",
+       "not": "Reptile Database: https://reptile-database.reptarium.cz/Vipera/berus",
+       "goster": false
+      }
+     ]
     },
     {
      "kod": "Vipera darevskii",
@@ -3358,7 +4402,33 @@
      "turkiyede": true,
      "tr": "Darevski Engereği",
      "yerli_degil": false,
-     "harita": "images/haritalar/Vipera-darevskii.jpg"
+     "harita": "images/haritalar/Vipera-darevskii.jpg",
+     "alturler": [
+      {
+       "latin": "Vipera darevskii kumlutasi",
+       "yazar": "(Tuniyev, Avcı, Tuniyev, Ilgaz, Olgun, Petrova, Bodrov, Geniez & Teynié, 2018)",
+       "yayilis": "Turkey (Ardahan); type locality Yalnızçam Dağları ridge near Bağdaşan Village",
+       "durum": "teyitli",
+       "not": "Reptile Database: https://reptile-database.reptarium.cz/Vipera/darevskii",
+       "goster": false
+      },
+      {
+       "latin": "Vipera darevskii olguni",
+       "yazar": "(Tuniyev, Avcı, Tuniyev, Agasian & Agasian, 2012)",
+       "yayilis": "Turkey, upper Kura River; type locality Mt Ilgar Dağ near Posof, Ardahan, 2020 m (closing parenthesis missing in RDB)",
+       "durum": "teyitli",
+       "not": "Reptile Database: https://reptile-database.reptarium.cz/Vipera/darevskii",
+       "goster": false
+      },
+      {
+       "latin": "Vipera darevskii uzumorum",
+       "yazar": "(Tuniyev, Avcı, Tuniyev, Ilgaz, Olgun, Petrova, Bodrov, Geniez & Teynié, 2018)",
+       "yayilis": "Turkey (Artvin); type locality Yalnızçam Dağları ridge near Zekeriya Village, ~2000 m",
+       "durum": "teyitli",
+       "not": "Reptile Database: https://reptile-database.reptarium.cz/Vipera/darevskii",
+       "goster": false
+      }
+     ]
     },
     {
      "kod": "Vipera kaznakovi",
@@ -3396,7 +4466,25 @@
      "turkiyede": true,
      "tr": "Doğu Burunlu Engereği",
      "yerli_degil": false,
-     "harita": "images/haritalar/Vipera-meridionalis.jpg"
+     "harita": "images/haritalar/Vipera-meridionalis.jpg",
+     "alturler": [
+      {
+       "latin": "Vipera meridionalis transcaucasiana",
+       "yazar": "Boulenger, 1913",
+       "yayilis": "N Turkey (with Georgia, NW Azerbaijan)",
+       "durum": "teyitli",
+       "not": "Reptile Database: https://reptile-database.reptarium.cz/Vipera/meridionalis",
+       "goster": false
+      },
+      {
+       "latin": "Vipera meridionalis meridionalis",
+       "yazar": "Boulenger, 1903",
+       "yayilis": "Greece in RDB range; RDB cites Welch (1994) listing it also from European Turkey (Thrace)",
+       "durum": "teyitli",
+       "not": "Reptile Database: https://reptile-database.reptarium.cz/Vipera/meridionalis",
+       "goster": false
+      }
+     ]
     },
     {
      "kod": "Vipera eriwanensis",
@@ -3509,7 +4597,33 @@
      "turkiyede": true,
      "tr": "Benekli Kaplumbağa",
      "yerli_degil": false,
-     "harita": "images/haritalar/Emys-orbicularis.jpg"
+     "harita": "images/haritalar/Emys-orbicularis.jpg",
+     "alturler": [
+      {
+       "latin": "Emys orbicularis orbicularis",
+       "yazar": "(Linnaeus, 1758)",
+       "yayilis": "Turkey in the list of countries for the nominate",
+       "durum": "teyitli",
+       "not": "Reptile Database: https://reptile-database.reptarium.cz/Emys/orbicularis",
+       "goster": false
+      },
+      {
+       "latin": "Emys orbicularis eiselti",
+       "yazar": "Fritz, Baran, Budak & Amthauer, 1998",
+       "yayilis": "SE Turkey, Syria",
+       "durum": "teyitli",
+       "not": "Reptile Database: https://reptile-database.reptarium.cz/Emys/orbicularis",
+       "goster": false
+      },
+      {
+       "latin": "Emys orbicularis hellenica",
+       "yazar": "(Valenciennes, 1832)",
+       "yayilis": "Aegean Turkey (also Balkans, Italy, Greece)",
+       "durum": "teyitli",
+       "not": "Reptile Database: https://reptile-database.reptarium.cz/Emys/orbicularis",
+       "goster": false
+      }
+     ]
     },
     {
      "kod": "Trachemys scripta",
@@ -3598,7 +4712,25 @@
      "turkiyede": true,
      "tr": "Tosbağa",
      "yerli_degil": false,
-     "harita": "images/haritalar/Testudo-graeca.jpg"
+     "harita": "images/haritalar/Testudo-graeca.jpg",
+     "alturler": [
+      {
+       "latin": "Testudo graeca ibera",
+       "yazar": "Pallas, 1814",
+       "yayilis": "Range given as S Serbia, Greece (Lesbos, Samos), Romania through Iran; comment section states ibera occurs in Turkey",
+       "durum": "teyitli",
+       "not": "Reptile Database: https://reptile-database.reptarium.cz/Testudo/graeca",
+       "goster": false
+      },
+      {
+       "latin": "Testudo graeca terrestris",
+       "yazar": "Forskål, 1775",
+       "yayilis": "SE Turkey (with Israel, Lebanon, Jordan, Syria)",
+       "durum": "teyitli",
+       "not": "Reptile Database: https://reptile-database.reptarium.cz/Testudo/graeca",
+       "goster": false
+      }
+     ]
     },
     {
      "kod": "Testudo hermanni",
@@ -3617,7 +4749,17 @@
      "turkiyede": true,
      "tr": "Trakya Tosbağası",
      "yerli_degil": false,
-     "harita": "images/haritalar/Testudo-hermanni.jpg"
+     "harita": "images/haritalar/Testudo-hermanni.jpg",
+     "alturler": [
+      {
+       "latin": "Testudo hermanni boettgeri",
+       "yazar": "Mojsisovics, 1889",
+       "yayilis": "RDB range: former Yugoslavia, Albania, Greece, Bulgaria to the Black Sea; Turkey not named for boettgeri, but a cited 2019 paper concerns T. h. boettgeri in Turkey",
+       "durum": "teyitli",
+       "not": "Reptile Database: https://reptile-database.reptarium.cz/Testudo/hermanni",
+       "goster": false
+      }
+     ]
     }
    ]
   },

@@ -104,6 +104,7 @@ li.open .chev{transform:rotate(90deg)}
 .det .map img{display:block;width:100%;height:auto}
 .det .map figcaption{margin-top:6px;font:12px var(--mono);color:var(--muted)}
 .det .dist{grid-column:1/-1;padding:12px 14px;background:#F6F8FA;border-radius:10px;font-size:15.5px}
+.det .ssp ul{margin:2px 0 0;padding:0;list-style:none;display:grid;gap:6px}.det .ssp li{line-height:1.4}.det .ssp small{display:block;font-size:13px;color:var(--muted)}
 .det .dist b{display:block;font:500 11px var(--mono);letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin-bottom:4px}
 .det .lnk{grid-column:1/-1;display:flex;flex-wrap:wrap;gap:8px}
 .det .lnk a{font:600 13px var(--display);border:1px solid #B9C3D0;border-radius:999px;padding:6px 12px;text-decoration:none;background:#fff}
@@ -243,6 +244,7 @@ dialog.lbx button{position:absolute;top:8px;right:8px;border:0;border-radius:50%
       (s.harita ? '<figure class="map"><button type="button" data-img="' + esc(s.harita) + '" data-cap="' + esc(s.latin + (s.tr ? ' · ' + s.tr : '')) + '"><img src="' + esc(s.harita) + '" alt="' + esc(s.latin) + '" loading="lazy" width="1200" height="541"></button>' +
         '<figcaption>' + bi('Representative distribution area in Türkiye', 'Türkiye\'deki temsilî dağılım alanı') + '</figcaption></figure>' : '') +
       (c && (c.dist_tr || c.dist_en) ? '<div class="dist"><b>' + bi('Distribution', 'Yayılış') + '</b><span class="en">' + md(c.dist_en || c.dist_tr) + '</span><span class="tr">' + md(c.dist_tr || c.dist_en) + '</span></div>' : '') +
+      (function () { var ss = (s.alturler || []).filter(function (a) { return a && a.goster && a.latin; }); return ss.length ? '<div class="dist ssp"><b>' + bi('Subspecies in Türkiye', "Türkiye'deki alttürler") + '</b><ul>' + ss.map(function (a) { return '<li><i lang="la">' + esc(a.latin) + '</i>' + (a.yazar ? ' ' + esc(a.yazar) : '') + (a.yayilis ? '<small>' + esc(a.yayilis) + '</small>' : '') + '</li>'; }).join('') + '</ul></div>' : ''; })() +
       (s.aciklama_tr || s.aciklama_en ? '<div class="dist"><b>' + bi('Notes', 'Not') + '</b><span class="en">' + md(s.aciklama_en || s.aciklama_tr) + '</span><span class="tr">' + md(s.aciklama_tr || s.aciklama_en) + '</span></div>' : '') +
       '<div class="lnk">' + (s.kaynak ? '<a href="' + esc(s.kaynak) + '" target="_blank" rel="noopener">' + src + ' ↗</a>' : '') +
         (ph.length ? '<a href="/#photos">' + bi('All photographs', 'Tüm fotoğraflar') + '</a>' : '') + '</div>' +

@@ -574,6 +574,28 @@ collections:
                   - { label: "Açıklama (TR) · sitede türün altında görünür", name: "aciklama_tr", widget: "markdown", buttons: ["bold", "italic"], editor_components: [], modes: ["rich_text", "raw"], minimal: true, required: false }
                   - { label: "Açıklama (EN)", name: "aciklama_en", widget: "markdown", buttons: ["bold", "italic"], editor_components: [], modes: ["rich_text", "raw"], minimal: true, required: false }
                   - { label: "Dağılım haritası", name: "harita", widget: "image", required: false, media_folder: "/images/haritalar", public_folder: "images/haritalar", choose_url: false, hint: "Sitede türün ayrıntısında görünür. Yeni harita yüklemek için 'Farklı bir resim seçin'; kaldırmak için 'Resmi kaldır'." }
+                  - label: "Türkiye'deki alttürler"
+                    name: "alturler"
+                    widget: "list"
+                    required: false
+                    collapsed: true
+                    summary: "{{fields.latin}} · {{fields.durum}}"
+                    hint: "Sitede yalnızca 'Sitede göster' kutusu açık olan alttürler görünür. Durum alanı yalnızca sizin içindir."
+                    fields:
+                      - { label: "Alttür (Latince ad)", name: "latin", widget: "string" }
+                      - { label: "Yazar ve yıl", name: "yazar", widget: "string", required: false }
+                      - { label: "Türkiye'deki yayılışı", name: "yayilis", widget: "text", required: false }
+                      - label: "Durum (sitede görünmez)"
+                        name: "durum"
+                        widget: "select"
+                        required: false
+                        default: "teyitli"
+                        options:
+                          - { label: "Kaynakta Türkiye için teyitli", value: "teyitli" }
+                          - { label: "Tartışmalı", value: "tartismali" }
+                          - { label: "Çıkarım (kaynak alttür düzeyinde Türkiye demiyor)", value: "cikarim" }
+                      - { label: "Kaynak / not (sitede görünmez)", name: "not", widget: "text", required: false }
+                      - { label: "Sitede göster", name: "goster", widget: "boolean", default: false, required: false, hint: "Doğruluğunu onayladığınız alttürde açın." }
                   - { label: "Kaynak bağlantısı (Reptile Database / ASW sayfası)", name: "kaynak", widget: "string", required: false }
                   - { label: "Kaynak notu (sitede görünmez)", name: "kaynak_notu", widget: "text", required: false }
                   - { label: "Türkiye'de kaydı doğrulanmış (kaynağa göre)", name: "turkiyede", widget: "boolean", default: true, required: false }
