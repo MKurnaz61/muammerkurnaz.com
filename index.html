@@ -263,7 +263,7 @@ h2{font-weight:800;letter-spacing:-.025em}
 
 header.top{background:var(--navy);border-bottom:0}
 header.top .brand{color:var(--white);font-weight:800;letter-spacing:-.01em;display:inline-flex;align-items:center;gap:10px}
-header.top .brand::before{content:"";width:22px;height:22px;border-radius:50%;background:radial-gradient(circle at 35% 40%,var(--spot) 0 2px,transparent 3px),radial-gradient(circle at 65% 60%,var(--spot) 0 2px,transparent 3px),radial-gradient(circle at 45% 75%,var(--spot) 0 1.5px,transparent 2.5px),var(--navy-deep);box-shadow:0 0 0 2px var(--spot)}
+header.top .brand::before{content:"";width:30px;height:30px;flex:none;background:url(/images/logo.svg) center/contain no-repeat}
 header.top nav.links a{color:#DCE6F2}
 header.top nav.links a:hover{color:var(--white)}
 header.top .lang button{border-color:#6F87A6;color:#DCE6F2}
@@ -366,7 +366,7 @@ footer .addr{color:#C3D0E0}
 .profiles .ic svg{display:block}
 /* ---------- simplified footer ---------- */
 footer .wrap.simple{display:flex;flex-direction:column;align-items:center;text-align:center;gap:8px;padding-block:44px 34px}
-footer .simple .addr{max-width:72ch;font-size:15px;line-height:1.55}
+footer .simple .flogo{width:64px;height:64px;margin-bottom:6px}footer .simple .addr{max-width:72ch;font-size:15px;line-height:1.55}
 /* ---------- back to top ---------- */
 .to-top{position:fixed;right:20px;bottom:20px;width:50px;height:50px;border-radius:50%;border:0;background:var(--ochre);color:var(--navy-deep);box-shadow:0 10px 24px -8px rgba(0,0,0,.45);cursor:pointer;display:flex;align-items:center;justify-content:center;opacity:0;transform:translateY(14px);pointer-events:none;transition:opacity .2s ease,transform .2s ease;z-index:30}
 .to-top.show{opacity:1;transform:none;pointer-events:auto}
@@ -705,6 +705,7 @@ dialog.lb .cnt{font-family:var(--mono);font-size:12px;color:#A8B6C8;white-space:
 
 <footer>
   <div class="wrap simple">
+    <img class="flogo" src="/images/logo-b.svg" alt="" width="64" height="64" loading="lazy">
     <span class="name"><span class="en">Assoc. Prof. Muammer Kurnaz</span><span class="tr">Doç. Dr. Muammer Kurnaz</span></span>
     <span class="addr" id="address"></span>
   </div>
