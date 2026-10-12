@@ -183,6 +183,7 @@ collections:
               - { label: "DOI (ör. 10.3390/d18070429)", name: "doi", widget: "string", required: false }
               - { label: "PDF dosyası", name: "pdf", widget: "file", required: false, media_folder: "/files/yayinlar", public_folder: "/files/yayinlar", choose_url: false, hint: "Ücretli (kapalı erişim) yayınların PDF'ini yükleme. Yüklenen her dosya, düğme kapalı olsa bile bağlantıyı bilen herkesçe indirilebilir." }
               - { label: "PDF herkese açık", name: "pdf_open", widget: "boolean", default: false, required: false, hint: "Açık ve PDF yüklüyse sitede PDF düğmesi ve indirme sayısı görünür. Kapalıysa ziyaretçiye 'PDF iste' düğmesi gösterilir." }
+              - { label: "Makale görseli", name: "gorsel", widget: "image", required: false, media_folder: "/images/yayinlar", public_folder: "/images/yayinlar", choose_url: false, hint: "Makaleden bir şekil ya da fotoğraf. Listede başlığın yanında küçük resim olarak görünür, tıklanınca büyür. Boş bırakılırsa görsel gösterilmez." }
               - label: "Konu (filtre)"
                 name: "topic"
                 widget: "select"
