@@ -84,7 +84,7 @@ def post_pages(posts):
 <p><a href="%s">%s</a></p>
 </body></html>
 """ % (e(title), e(desc), e(url), e(title), e(desc), e(img), e(url), e(str(p.get("date") or "")[:10]),
-            e(target), json.dumps(target), e(target), e(title)))
+            e(target), json.dumps(target).replace("<", "\\u003c"), e(target), e(title)))
     return ["/yazi/%s/" % slug(p) for p in posts]
 
 
@@ -152,7 +152,7 @@ def geocode():
                 r = []
             import_time.sleep(1.1)
             if r:
-                out[name] = [round(float(r[0]["lat"]), 4), round(float(r[0]["lon"]), 4)]
+                out[name] = [round(float(r[0]["lat"]), 1), round(float(r[0]["lon"]), 1)]  # 0.1 degree, same as the photo map
                 break
     write("data/geo.json", json.dumps(out, ensure_ascii=False))
     return len(places), len(out)

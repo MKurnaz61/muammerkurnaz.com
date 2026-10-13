@@ -4,6 +4,7 @@ backend:
   name: github
   repo: MKurnaz61/muammerkurnaz.com
   branch: main
+  auth_scope: public_repo   # the panel's GitHub key can only reach public repositories
   base_url: https://api.netlify.com
   site_domain: splendid-faun-77c026.netlify.app
   commit_messages:

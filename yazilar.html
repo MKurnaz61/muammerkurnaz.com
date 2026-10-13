@@ -2,6 +2,7 @@
 <html lang="tr">
 <head>
 <meta charset="utf-8">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' https://gc.zgo.at https://cdn.jsdelivr.net; style-src 'self' 'unsafe-inline' https://cdn.jsdelivr.net; img-src 'self' data: blob: https://*.basemaps.cartocdn.com https://cdn.jsdelivr.net https://muammerkurnaz.goatcounter.com; font-src 'self'; connect-src 'self' https://muammerkurnaz.goatcounter.com; media-src 'self'; frame-src 'self'; object-src 'none'; base-uri 'self'; form-action 'self' mailto:; upgrade-insecure-requests">
 <script src="js/tur-ortak.js"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Yazılar | Muammer Kurnaz</title>
@@ -19,9 +20,9 @@
 <meta property="og:title" content="Yazılar · Muammer Kurnaz">
 <meta property="og:description" content="Herpetoloji, biyocoğrafya ve doğa üzerine yazılar.">
 <meta property="og:url" content="https://muammerkurnaz.com/yazilar.html">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,600;12..96,700;12..96,800&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;1,8..60,400&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<link rel="preload" href="/fonts/bricolage-grotesque-latin-opsz-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/fonts/source-serif-4-latin-opsz-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="/fonts/fonts.css">
 <style>
 /* Layout: one column of full-width bands, content on a 1180px measure; field-label card in the hero. */
 :root{

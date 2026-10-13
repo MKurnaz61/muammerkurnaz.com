@@ -9,8 +9,9 @@
   function esc(t) { return String(t == null ? '' : t).replace(/[&<>"]/g, function (c) { return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]; }); }
   function num(v) { v = parseFloat(String(v == null ? '' : v).replace(',', '.')); return isFinite(v) ? v : null; }
   function thumb(src) { return String(src || '').replace(/(-k)?\.(jpe?g|png|webp)$/i, '-k.jpg'); }
-  function loadJs(src) { return new Promise(function (ok, no) { var s = document.createElement('script'); s.src = src; s.onload = ok; s.onerror = no; document.head.appendChild(s); }); }
-  function loadCss(href) { var l = document.createElement('link'); l.rel = 'stylesheet'; l.href = href; document.head.appendChild(l); }
+  /* Leaflet comes from jsDelivr with a fixed version and an integrity hash, so a changed file is refused by the browser. */
+  function loadJs(src, sri) { return new Promise(function (ok, no) { var s = document.createElement('script'); s.src = src; if (sri) { s.integrity = sri; s.crossOrigin = 'anonymous'; } s.onload = ok; s.onerror = no; document.head.appendChild(s); }); }
+  function loadCss(href, sri) { var l = document.createElement('link'); l.rel = 'stylesheet'; l.href = href; if (sri) { l.integrity = sri; l.crossOrigin = 'anonymous'; } document.head.appendChild(l); }
 
   var css = document.createElement('style');
   css.textContent =
@@ -47,8 +48,8 @@
     var started = false;
     function start() {
       if (started) return; started = true;
-      loadCss('https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.css');
-      loadJs('https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.js').then(function () {
+      loadCss('https://cdn.jsdelivr.net/npm/leaflet@1.9.4/dist/leaflet.css', 'sha384-sHL9NAb7lN7rfvG5lfHpm643Xkcjzp4jFvuavGOndn6pjVqS6ny56CAt3nsEVT4H');
+      loadJs('https://cdn.jsdelivr.net/npm/leaflet@1.9.4/dist/leaflet.js', 'sha384-cxOPjt7s7Iz04uaHJceBmS+qpjv2JkIHNVcuOrM+YHwZOmJGBXI00mdUXEq65HTH').then(function () {
         var map = L.map('fieldMapBox', { scrollWheelZoom: false, attributionControl: true }).setView([39.2, 35.3], 6);
         L.tileLayer('https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png', {
           maxZoom: 12, subdomains: 'abcd', attribution: '&copy; OpenStreetMap &copy; CARTO'
