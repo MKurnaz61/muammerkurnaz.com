@@ -90,7 +90,7 @@
     },
     {
       "journal": "Diversity",
-      "count": 8
+      "count": 9
     },
     {
       "journal": "Biology",
@@ -219,6 +219,10 @@
     {
       "journal": "Frontiers in Marine Science",
       "count": 1
+    },
+    {
+      "count": 1,
+      "journal": "Frontiers in Endocrinology"
     }
   ]
 }
